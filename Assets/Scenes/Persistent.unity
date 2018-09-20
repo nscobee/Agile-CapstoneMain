@@ -148,7 +148,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 217164796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fffe03971f765e5419f48d1481f97f6f, type: 3}
   m_Name: 
@@ -165,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 877835260}
   - component: {fileID: 877835259}
+  - component: {fileID: 877835261}
   m_Layer: 0
   m_Name: SaveManager
   m_TagString: Untagged
@@ -178,14 +179,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 877835258}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d467714f258276847997a24b7f3e8ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveFile: {fileID: 0}
   loadFile: {fileID: 11400000, guid: bda9520ddba7ccc45be9df838b854aba, type: 2}
-  saveButton: 0
   loadButton: 0
   sceneMangment: {fileID: 1419567765}
 --- !u!4 &877835260
@@ -201,34 +200,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &935620377
-GameObject:
+--- !u!114 &877835261
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 935620378}
-  m_Layer: 0
-  m_Name: Tester
-  m_TagString: Poop
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &935620378
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 935620377}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 877835258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d708fde64af733b46907366fb35154a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dummyCurrentLocationFile: {fileID: 0}
 --- !u!1 &1419567763
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +223,7 @@ GameObject:
   - component: {fileID: 1419567765}
   m_Layer: 0
   m_Name: SceneManager
-  m_TagString: Untagged
+  m_TagString: SceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,9 +253,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstScene: 
+  oldScene: MainMenu
   phantomPrefab: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
     type: 2}
-  pointsManager: {fileID: 0}
+  scribePrefab: {fileID: 0}
+  entryGameObject: {fileID: 0}
+  entryPoint: 0
 --- !u!1 &1787136331
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,5 +319,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

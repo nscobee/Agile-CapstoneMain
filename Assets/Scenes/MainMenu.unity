@@ -610,7 +610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &691949254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1693,7 +1693,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1593348818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1970181617}
+        m_MethodName: _StartLoadingSaveFromSaves
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1593348818
@@ -1747,7 +1758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1637642324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2029,7 +2040,11 @@ MonoBehaviour:
   newGameCanvas: {fileID: 1637642323}
   newSceneInput: {fileID: 974084531}
   loadCanvas: {fileID: 691949253}
+  loadPrefab: {fileID: 1305479998490442, guid: 450341874f23485468ebfd235be0157e, type: 2}
+  inspectorSaveData: {fileID: 11400000, guid: e7aa9aebc997faa4da9d0b92b45d4131, type: 2}
+  loadSaveData: 0
   optionsCanvas: {fileID: 422407380}
+  sceneManager: {fileID: 0}
 --- !u!4 &1970181618
 Transform:
   m_ObjectHideFlags: 0
