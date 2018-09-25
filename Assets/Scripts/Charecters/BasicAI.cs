@@ -59,6 +59,7 @@ public class BasicAI : MonoBehaviour
   public void Possess(GameObject phantom)
   {
     Destroy(phantom);
+    
 
     playerMovement.enabled = true;
     this.enabled = false;

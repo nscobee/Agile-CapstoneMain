@@ -20,7 +20,13 @@ public class BasicMovement : MonoBehaviour
       FuckingDED();
 
     }
-  }
+
+    if (Input.GetKeyDown(KeyCode.Space))
+     {
+       WithDraw();
+     }
+
+    }
 
   // used when player dies in a body
   // makes a new phantom to use and destories the charecter the player was previously possessing
@@ -34,6 +40,9 @@ public class BasicMovement : MonoBehaviour
   // TODO: Make function for becoming non Possed but not killing the AI
   public void WithDraw()
   {
-    // do something like adding phantom and swaping ai and movement enables
-  }
+        // do something like adding phantom and swaping ai and movement enables
+        Instantiate(phantomPrefab, this.transform.position, new Quaternion());
+        aiControls.enabled = true;
+        this.enabled = false;
+    }
 }
