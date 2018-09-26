@@ -36,4 +36,5 @@ public class BasicMovement : MonoBehaviour
   {
     // do something like adding phantom and swaping ai and movement enables
   }
+
 }
