@@ -10,7 +10,18 @@ public class BasicMovement : MonoBehaviour
 
   public GameObject phantomPrefab;
 
-  private void Update()
+    public GameObject phantom; //obtain info on phantom for possession
+    public BoxCollider phantomBox; //reinable when depossessing
+    public MeshRenderer phantomMesh; //^^same
+
+    private void Start()
+    {
+        phantom = GameObject.FindWithTag("Player"); 
+        phantomBox = phantom.GetComponent<BoxCollider>();
+        phantomMesh = phantom.GetComponent<MeshRenderer>();
+    }
+
+    private void Update()
   {
     // calls the generic movement passing the speed
     transform.position += GenericFunctions.BasePlayerMovement(movementSpeed);
@@ -32,8 +43,10 @@ public class BasicMovement : MonoBehaviour
   // makes a new phantom to use and destories the charecter the player was previously possessing
   public void FuckingDED()
   {
-    Instantiate(phantomPrefab, this.transform.position, new Quaternion());
-    Destroy(this.gameObject);
+
+        phantomBox.enabled = true; //re-enable phantom
+        phantomMesh.enabled = true; //^^same
+        Destroy(this.gameObject); //kill off the dead Ai
 
   }
 
@@ -41,7 +54,10 @@ public class BasicMovement : MonoBehaviour
   public void WithDraw()
   {
         // do something like adding phantom and swaping ai and movement enables
-        Instantiate(phantomPrefab, this.transform.position, new Quaternion());
+        
+        phantomBox.enabled = true; //re-enable phantom
+        phantomMesh.enabled = true; //^^^what he said
+
         aiControls.enabled = true;
         this.enabled = false;
     }
