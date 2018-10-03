@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PatrolPoint
-  - SavePoints
-  - EntryPoints
-  - Poop
+  - enemy
+  - bullet
+  - splashArea
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -17,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - Phantom
-  - PhantomRange
-  - AI
-  - World
+  - PostProcessing
+  - playerLayer
+  - 
+  - 
   - 
   - 
   - 
