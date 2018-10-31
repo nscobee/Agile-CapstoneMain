@@ -20,9 +20,11 @@ public class BasicAI : MonoBehaviour
     public GameObject phantom;  //Obtain info about phantom to have it persist
     public BoxCollider phantomBox; //to be hidden while phantom is possessing
     public MeshRenderer phantomMesh; //same as ^^
-    
 
-  private void Start()
+    public static ReaperCountdown reaper;
+
+
+    private void Start()
   {
     // if you want points to be gathered it does that
     if (gatherPoints)
