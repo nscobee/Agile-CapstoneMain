@@ -5,24 +5,36 @@ using UnityEngine;
 public class MeleeAttack : MonoBehaviour
 {
     private Transform target;
+    public float damage = 10.0f;
 
-    public Collider attackArea;
+    //public Collider attackArea;
 
     // Use this for initialization
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter(Collision collision)
     {
-        this.gameObject.transform.LookAt(target);
+        print(target.name + " collided with " + this.name);
+
+        if (collision.gameObject.tag == "Player")
+        {
+            
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print(target.name + " collided with " + this.name);
+        this.transform.LookAt(target);
+
     }
 }
