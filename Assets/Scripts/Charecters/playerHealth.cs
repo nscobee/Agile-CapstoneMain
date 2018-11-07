@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerHealth : MonoBehaviour {
 
@@ -8,13 +9,16 @@ public class playerHealth : MonoBehaviour {
 
 	public float currentHealth;
     public float maxHealth;
-
+    
     public dealDamage damageScript;
-
+    public Slider healthSlider;
     public float healthPotionHealAmount;
 
     float incomingDamage;
-
+    private void Update()
+    {
+        healthSlider.value = currentHealth;
+    }
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "healthPotion")
