@@ -10,6 +10,8 @@ TagManager:
   - Poop
   - healthPotion
   - DamageSource
+  - NoPossess
+  - Scribe
   layers:
   - Default
   - TransparentFX

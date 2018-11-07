@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;
 
 public static class SaveLoadSystem
 {
-
   public static bool MakeNewPlayerSave(string saveName)
   {
+    
     if (!File.Exists(Application.persistentDataPath + "/" + saveName + "/Position.loc"))
     {
       SaveData newSave = ScriptableObject.CreateInstance("SaveData") as SaveData;
-
+      
       Directory.CreateDirectory(Application.persistentDataPath + "/" + saveName);
 
 

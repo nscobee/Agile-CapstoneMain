@@ -8,8 +8,8 @@ public class BasicAI : MonoBehaviour
 
     private Transform currentTarget;
 
-    public static int speed = 5;
-    public static int stopDistance = 1;
+    public static float speed = 5f;
+    public static float stopDistance = 1f;
 
     public bool gatherPoints = false;
 
@@ -21,6 +21,8 @@ public class BasicAI : MonoBehaviour
     public BoxCollider phantomBox; //to be hidden while phantom is possessing
     public MeshRenderer phantomMesh; //same as ^^
 
+    private IEnumerator wanderCoroutine;
+    private IEnumerator idleCoroutine;
 
     private void Start()
     {
@@ -37,24 +39,25 @@ public class BasicAI : MonoBehaviour
 
     private void Update()
     {
+        float startTime = Time.time;
         // if there is no target it gets one
-        if (currentTarget == null)
+        if (currentTarget == null && patrolPoints.Count > 0)
         {
-            if (patrolPoints.Count > 0)
-            {
-                currentTarget = FindTarget(patrolPoints);
-            }
+            currentTarget = FindTarget(patrolPoints);
         }
 
         if (currentTarget != null)
         {
+            print("moving to target: " + currentTarget.ToString());
+
             // Move toward the target
-            this.transform.position = MoveTowardsObject(this.transform.position, currentTarget.transform.position, speed);
+            Wander(this.transform, currentTarget.transform);
+            //this.transform.position = Vector3.MoveTowards(this.transform.position, currentTarget.transform.position, speed * Time.deltaTime);
 
             // checks if its too close to target
-            if (CheckToStop(this.transform, currentTarget.transform, stopDistance))
+            if (Vector3.Distance(this.transform.position, currentTarget.transform.position) < stopDistance)
             {
-                currentTarget = null;
+                    currentTarget = null;
             }
         }
     }
@@ -79,27 +82,39 @@ public class BasicAI : MonoBehaviour
         return transformList[randomNumber];
     }
 
-    // Checks if two transform points are within a certain distance of each other
-    public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distanceOfSat)
+    public void Idle(Transform mover, Transform currentTarget)
     {
-        return Vector3.Distance(currentPosition.position, targetPosition.position) < distanceOfSat;
+        Vector3 idleSpot = new Vector3(currentTarget.position.x + Random.Range(-3f, 3f), currentTarget.position.y + Random.Range(-3f, 3f));
+        Vector3.RotateTowards(mover.transform.position, idleSpot, 2f, 1f);
+        mover.position = Vector3.MoveTowards(mover.transform.position, idleSpot, 3f);
+
     }
 
-    // moves one object towards another by set speed
-    public Vector3 MoveTowardsObject(Vector3 mover, Vector3 target, float speed)
+    public IEnumerator Idle(Transform mover)
     {
-        float targetXVariance = Random.Range(-5 + target.x, 5 + target.x);
-        float targetYVariance = Random.Range(-5 + target.y, 5 + target.y);
-        Vector3 targetWanderArea = new Vector3(targetXVariance, targetYVariance);
+        mover.rotation = new Quaternion(0, 0, Random.Range(-180, 180), 1);
 
-        if(Vector3.Distance(mover, target) < 2)
+        //mover.transform.position += transform.position * 2f;
+
+        yield return new WaitForSecondsRealtime(Random.Range(100f, 150f));
+    }
+
+    //does the wander thingy
+    public void Wander(Transform mover, Transform target)
+    {
+        //sets the target to a random spot within a certain distance from the target point
+        if (Vector3.Distance(mover.position, target.position) > 1f)
         {
-            targetXVariance = Random.Range(-target.x, target.x);
-            targetXVariance = Random.Range(-target.y, target.y);
+            Vector3 newTarget = new Vector3(Random.Range(target.position.x - .5f, target.position.x + .5f),
+                Random.Range(target.position.y - .5f, target.position.y + .5f), 0);
+
+            //float angleToTurn = Vector3.Angle(mover.position, target.position);
+            //Vector3 wanderTarget = Vector3.RotateTowards(mover.position, newTarget, Random.Range(-angleToTurn, angleToTurn), 1f);
+            
+            //move towards spot
+            mover.transform.position = Vector3.MoveTowards(mover.position, newTarget, speed * Time.deltaTime);
         }
-        
-        return Vector3.MoveTowards(mover, targetWanderArea, speed * Time.deltaTime);
-        
+        //yield return new WaitForSecondsRealtime(Random.Range(5f, 15f));
     }
 
     // this is to let the spawner know that it can send out another AI
@@ -109,5 +124,11 @@ public class BasicAI : MonoBehaviour
         {
             homeSpawner.AI.Remove(this.gameObject);
         }
+    }
+    
+    // Checks if two transform points are within a certain distance of each other
+    public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distanceOfSat)
+    {
+        return Vector3.Distance(currentPosition.position, targetPosition.position) < distanceOfSat;
     }
 }
