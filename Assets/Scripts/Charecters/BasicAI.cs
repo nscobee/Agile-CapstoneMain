@@ -17,7 +17,14 @@ public class BasicAI : MonoBehaviour
 
   public AISpawner homeSpawner;
 
-  private void Start()
+    public GameObject phantom;  //Obtain info about phantom to have it persist
+    public BoxCollider phantomBox; //to be hidden while phantom is possessing
+    public MeshRenderer phantomMesh; //same as ^^
+
+    public static ReaperCountdown reaper;
+
+
+    private void Start()
   {
     // if you want points to be gathered it does that
     if (gatherPoints)
@@ -26,6 +33,10 @@ public class BasicAI : MonoBehaviour
 
 
     }
+
+        phantom = GameObject.FindWithTag("Player");
+        phantomBox = phantom.GetComponent<BoxCollider>();
+        phantomMesh = phantom.GetComponent<MeshRenderer>();
   }
 
   private void Update()
@@ -58,7 +69,11 @@ public class BasicAI : MonoBehaviour
   // when the player possess a AI it destroys the phantom and enables the player movement on the 
   public void Possess(GameObject phantom)
   {
-    Destroy(phantom);
+        phantomBox.enabled = false; //hide the phantom without nuking him
+        phantomMesh.enabled = false; //^^^same
+
+        phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
+    
 
     playerMovement.enabled = true;
     this.enabled = false;

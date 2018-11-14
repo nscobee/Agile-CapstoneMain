@@ -8,6 +8,9 @@ TagManager:
   - SavePoints
   - EntryPoints
   - Poop
+  - healthPotion
+  - DamageSource
+  - Reaper
   layers:
   - Default
   - TransparentFX
