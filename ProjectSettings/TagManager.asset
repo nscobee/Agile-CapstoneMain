@@ -12,6 +12,12 @@ TagManager:
   - DamageSource
   - fighter
   - mage
+  - NoPossess
+  - Scribe
+  - Melee
+  - SpellCaster
+  - Reaper
+
   layers:
   - Default
   - TransparentFX

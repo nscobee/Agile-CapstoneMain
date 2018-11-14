@@ -15,6 +15,7 @@ public class playerHealth : MonoBehaviour {
     public float healthPotionHealAmount;
 
     float incomingDamage;
+
     private void Update()
     {
         healthSlider.value = currentHealth;
