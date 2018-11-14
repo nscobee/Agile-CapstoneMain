@@ -8,6 +8,8 @@ public class MeleeAttack : MonoBehaviour
     public float primaryAtkDmg = 25f;
     public float secondaryAtkDmg = 50f;
 
+    private Transform target;
+
 
     // Use this for initialization
     void Start()

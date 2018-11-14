@@ -15,50 +15,31 @@ public class PhantomControls : MonoBehaviour
     public float speed;
     public GameObject phantomTarget = null;
     public static ReaperCountdown reaper;
-
-    private void Start()
-    {
-        reaper.outOfBody = true;
-    }
-
     public bool isPossessing;
-
-  public float speed;
-  public GameObject phantomTarget = null;
     public GameObject phantom;
-  public static ReaperCountdown reaper;
 
-  private void Start()
-  {
-        reaper = phantom.GetComponent<ReaperCountdown>();
-    
 
+ 
     private void Start()
     {
-        reaper.outOfBody = true;
+            reaper = phantom.GetComponent<ReaperCountdown>();
+            reaper.outOfBody = true;
 
     }
 
-    private void Update()
-
-      if (Input.GetKeyDown(KeyCode.Space))
-      {
-        phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
-                reaper.outOfBody = false;
-                isPossessing = true;
-
-
-    private void Update()
+     private void Update()
     {
         // uses the generic movement for movement passing desired speed
         transform.position += GenericFunctions.BasePlayerMovement(speed);
 
         // if the phantom has a target when the player presses space they could call the possession function on that AI
-        if (phantomTarget && phantomTarget.tag != "NoPossess")
+        if (phantomTarget && phantomTarget.tag != "NoPossess" && phantomTarget.tag != "Reaper")
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
+                reaper.outOfBody = false;
+                isPossessing = true;
 
                 isShowing = !isShowing;
                 healthAndAbilities.SetActive(isShowing);

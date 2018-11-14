@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+ * Check and see what this is supposted to do at later time, remove in not needed
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,3 +67,4 @@ public class UnitPlayer : MonoBehaviour
     }
   }
 }
+*/

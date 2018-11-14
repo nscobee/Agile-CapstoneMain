@@ -44,20 +44,22 @@ public class BasicAI : MonoBehaviour
 
 
     private void Start()
-  {
-    // if you want points to be gathered it does that
-    if (gatherPoints)
     {
         // if you want points to be gathered it does that
         if (gatherPoints)
         {
-            GenericFunctions.GatherComponetFromSceneByTag<Transform>(ref patrolPoints, "PatrolPoint");
+            // if you want points to be gathered it does that
+            if (gatherPoints)
+            {
+                GenericFunctions.GatherComponetFromSceneByTag<Transform>(ref patrolPoints, "PatrolPoint");
 
-    private IEnumerator wanderCoroutine;
-    private IEnumerator idleCoroutine;
+                // private IEnumerator wanderCoroutine;
+                //private IEnumerator idleCoroutine;
 
+            }
+
+            
         }
-
         phantom = GameObject.FindWithTag("Player");
         phantomBox = phantom.GetComponent<BoxCollider>();
         phantomMesh = phantom.GetComponent<MeshRenderer>();
@@ -94,7 +96,9 @@ public class BasicAI : MonoBehaviour
     {
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
-        
+        playerMovement.enabled = true;
+        this.enabled = false;
+
         if (gameObject.tag == "fighter")
         {
             hpSlider.value = fighterHp;
@@ -129,10 +133,8 @@ public class BasicAI : MonoBehaviour
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
 
 
-        playerMovement.enabled = true;
-        this.enabled = false;
-        this.tag = "Player";
-
+        
+     
     }
 
     // this will be called from update if the AI has no target and will get a target from the given List
@@ -158,18 +160,6 @@ public class BasicAI : MonoBehaviour
 
     }
 
-    // this is to let the spawner know that it can send out another AI
-    private void OnDestroy()
-    {
-        if (homeSpawner)
-        {
-            homeSpawner.AI.Remove(this.gameObject);
-
-        }
-
-        
-    }
-
 
     public void Idle(Transform mover, Transform currentTarget)
     {
@@ -189,17 +179,7 @@ public class BasicAI : MonoBehaviour
         yield return new WaitForSecondsRealtime(Random.Range(100f, 150f));
     }
 
-  // Checks if two transform points are within a certain distance of each other
-  public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distance)
-  {
-    return Vector3.Distance(currentPosition.position, targetPosition.position) < distance;
-  }
 
-  // moves one object towards another by set speed
-  public Vector3 MoveTowardsObject(Vector3 mover, Vector3 target, float speed)
-  {
-    return Vector3.MoveTowards(mover, target, speed * Time.deltaTime);
-  }
 
 
     //does the wander thingy
@@ -230,9 +210,4 @@ public class BasicAI : MonoBehaviour
         }
     }
     
-    // Checks if two transform points are within a certain distance of each other
-    public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distanceOfSat)
-    {
-        return Vector3.Distance(currentPosition.position, targetPosition.position) < distanceOfSat;
-    }
 }

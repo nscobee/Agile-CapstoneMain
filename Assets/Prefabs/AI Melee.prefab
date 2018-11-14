@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54639543261224218}
   - component: {fileID: 114361774644988710}
   m_Layer: 10
-  m_Name: AI
+  m_Name: AI Melee
   m_TagString: SpellCaster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

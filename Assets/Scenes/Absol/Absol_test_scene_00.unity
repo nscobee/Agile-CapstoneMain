@@ -205,6 +205,10 @@ Prefab:
       propertyPath: phantom
       value: 
       objectReference: {fileID: 411183151}
+    - target: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f327babb851b2514d833ede69c4652b3, type: 2}
   m_IsPrefabAsset: 0
@@ -277,6 +281,10 @@ Prefab:
       propertyPath: phantomMesh
       value: 
       objectReference: {fileID: 411183154}
+    - target: {fileID: 1326686080439248, guid: af6a0b1c571305f40bc2b25fcffc60bd, type: 2}
+      propertyPath: m_TagString
+      value: Melee
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6a0b1c571305f40bc2b25fcffc60bd, type: 2}
   m_IsPrefabAsset: 0
@@ -291,7 +299,7 @@ GameObject:
   m_Layer: 0
   m_Name: reaperSpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -418,6 +426,7 @@ MonoBehaviour:
   currentHealth: 10
   maxHealth: 10
   damageScript: {fileID: 0}
+  healthSlider: {fileID: 0}
   healthPotionHealAmount: 0
 --- !u!1 &2092487156
 GameObject:

@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * Check and see what this is supposted to do at later time, remove in not needed
+ * 
+ * using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -225,3 +228,4 @@ public class UnitAI : MonoBehaviour
   }
   #endregion
 }
+*/
