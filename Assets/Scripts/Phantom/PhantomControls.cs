@@ -8,13 +8,17 @@ using UnityEngine;
 
 public class PhantomControls : MonoBehaviour
 {
+    public bool isPossessing;
+
   public float speed;
   public GameObject phantomTarget = null;
+    public GameObject phantom;
   public static ReaperCountdown reaper;
 
   private void Start()
   {
-    reaper.outOfBody = true;
+        reaper = phantom.GetComponent<ReaperCountdown>();
+    
 
   }
 
@@ -29,6 +33,8 @@ public class PhantomControls : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.Space))
       {
         phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
+                reaper.outOfBody = false;
+                isPossessing = true;
 
       }
     }
@@ -36,6 +42,6 @@ public class PhantomControls : MonoBehaviour
 
   private void OnDestroy()
   {
-    reaper.outOfBody = false;
+   
   }
 }

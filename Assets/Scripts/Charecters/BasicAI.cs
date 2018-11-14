@@ -20,9 +20,11 @@ public class BasicAI : MonoBehaviour
     public GameObject phantom;  //Obtain info about phantom to have it persist
     public BoxCollider phantomBox; //to be hidden while phantom is possessing
     public MeshRenderer phantomMesh; //same as ^^
-    
 
-  private void Start()
+    public static ReaperCountdown reaper;
+
+
+    private void Start()
   {
     // if you want points to be gathered it does that
     if (gatherPoints)
@@ -64,7 +66,7 @@ public class BasicAI : MonoBehaviour
     }
   }
 
-  // when the player possess a AI it destories the phantom and enables the player movement on the 
+  // when the player possess a AI it destroys the phantom and enables the player movement on the 
   public void Possess(GameObject phantom)
   {
         phantomBox.enabled = false; //hide the phantom without nuking him
@@ -75,6 +77,8 @@ public class BasicAI : MonoBehaviour
 
     playerMovement.enabled = true;
     this.enabled = false;
+
+      this.tag = "Player";
 
   }
 
@@ -91,14 +95,12 @@ public class BasicAI : MonoBehaviour
   public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distance)
   {
     return Vector3.Distance(currentPosition.position, targetPosition.position) < distance;
-
   }
 
   // moves one object towards another by set speed
   public Vector3 MoveTowardsObject(Vector3 mover, Vector3 target, float speed)
   {
     return Vector3.MoveTowards(mover, target, speed * Time.deltaTime);
-
   }
 
   // this is to let the spawner know that it can send out another AI

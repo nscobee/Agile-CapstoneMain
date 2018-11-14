@@ -1,5 +1,11 @@
 fileFormatVersion: 2
+
+guid: 8b91de575b62c9f469e0b751b72f3b94
+timeCreated: 1537900809
+licenseType: Free
+
 guid: eb011f73c566c5e4da5c0ba939d87c9f
+
 TextScriptImporter:
   externalObjects: {}
   userData: 

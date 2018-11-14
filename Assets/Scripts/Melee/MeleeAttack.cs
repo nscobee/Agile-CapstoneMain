@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
+
     public float primaryAtkDmg = 25f;
     public float secondaryAtkDmg = 50f;
+
 
     // Use this for initialization
     void Start()
     {
+
+        target = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
 
@@ -18,6 +22,7 @@ public class MeleeAttack : MonoBehaviour
     {
 
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -33,4 +38,5 @@ public class MeleeAttack : MonoBehaviour
             Debug.Log("Secondary attack used, " + secondaryAtkDmg + " dmg.");
         }
     }
+
 }

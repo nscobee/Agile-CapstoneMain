@@ -13,12 +13,14 @@ public class BasicMovement : MonoBehaviour
     public GameObject phantom; //obtain info on phantom for possession
     public BoxCollider phantomBox; //reinable when depossessing
     public MeshRenderer phantomMesh; //^^same
+    public static ReaperCountdown reaper;
 
     private void Start()
     {
         phantom = GameObject.FindWithTag("Player"); 
         phantomBox = phantom.GetComponent<BoxCollider>();
         phantomMesh = phantom.GetComponent<MeshRenderer>();
+        reaper = phantom.GetComponent<ReaperCountdown>();
     }
 
     private void Update()
@@ -29,13 +31,19 @@ public class BasicMovement : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Backslash))
     {
       FuckingDED();
+            reaper.outOfBody = true;
+            phantom.GetComponent<PhantomControls>().isPossessing = false;
+            phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
 
-    }
+        }
 
     if (Input.GetKeyDown(KeyCode.Space))
      {
        WithDraw();
-     }
+            reaper.outOfBody = true;
+            phantom.GetComponent<PhantomControls>().isPossessing = false;
+            phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
+        }
 
     }
 
@@ -53,6 +61,11 @@ public class BasicMovement : MonoBehaviour
   // TODO: Make function for becoming non Possed but not killing the AI
   public void WithDraw()
   {
+
+    // do something like adding phantom and swaping ai and movement enables
+  
+
+
         // do something like adding phantom and swaping ai and movement enables
         
         phantomBox.enabled = true; //re-enable phantom
@@ -61,4 +74,5 @@ public class BasicMovement : MonoBehaviour
         aiControls.enabled = true;
         this.enabled = false;
     }
+
 }

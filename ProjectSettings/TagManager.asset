@@ -12,6 +12,7 @@ TagManager:
   - DamageSource
   - Melee
   - SpellCaster
+  - Reaper
   layers:
   - Default
   - TransparentFX
