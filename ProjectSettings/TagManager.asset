@@ -10,9 +10,12 @@ TagManager:
   - Poop
   - healthPotion
   - DamageSource
+  - NoPossess
+  - Scribe
   - Melee
   - SpellCaster
   - Reaper
+
   layers:
   - Default
   - TransparentFX
