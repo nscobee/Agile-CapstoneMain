@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 /**
  * handals the basic movement of the phantom
@@ -8,7 +10,8 @@ using UnityEngine;
 
 public class PhantomControls : MonoBehaviour
 {
-
+    public GameObject healthAndAbilities;
+    public bool isShowing;
     public float speed;
     public GameObject phantomTarget = null;
     public static ReaperCountdown reaper;
@@ -30,16 +33,14 @@ public class PhantomControls : MonoBehaviour
         reaper = phantom.GetComponent<ReaperCountdown>();
     
 
-  }
-
-  private void Update()
-  {
-    // uses the generic movement for movement passing desired speed
-    transform.position += GenericFunctions.BasePlayerMovement(speed);
-
-    // if the phantom has a target when the player presses space they could call the possession function on that AI
-    if (phantomTarget)
+    private void Start()
     {
+        reaper.outOfBody = true;
+
+    }
+
+    private void Update()
+
       if (Input.GetKeyDown(KeyCode.Space))
       {
         phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
@@ -59,6 +60,8 @@ public class PhantomControls : MonoBehaviour
             {
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
 
+                isShowing = !isShowing;
+                healthAndAbilities.SetActive(isShowing);
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe")
                 {
