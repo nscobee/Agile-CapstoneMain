@@ -4,6 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - enemy
+  - bullet
+  - splashArea
+  - ground
   - PatrolPoint
   - SavePoints
   - EntryPoints
@@ -27,10 +31,10 @@ TagManager:
   - UI
   - 
   - 
-  - Phantom
-  - PhantomRange
-  - AI
-  - World
+  - PostProcessing
+  - playerLayer
+  - 
+  - 
   - 
   - 
   - 
