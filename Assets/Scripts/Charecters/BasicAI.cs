@@ -21,6 +21,16 @@ public class BasicAI : MonoBehaviour
     public BoxCollider phantomBox; //to be hidden while phantom is possessing
     public MeshRenderer phantomMesh; //same as ^^
 
+    public static ReaperCountdown reaper;
+
+
+    private void Start()
+  {
+    // if you want points to be gathered it does that
+    if (gatherPoints)
+    {
+      GenericFunctions.GatherComponetFromSceneByTag<Transform>(ref patrolPoints, "PatrolPoint");
+
     private IEnumerator wanderCoroutine;
     private IEnumerator idleCoroutine;
 
@@ -62,6 +72,7 @@ public class BasicAI : MonoBehaviour
         }
     }
 
+
     // when the player possess a AI it destories the phantom and enables the player movement on the 
     public void Possess(GameObject phantom)
     {
@@ -70,10 +81,13 @@ public class BasicAI : MonoBehaviour
 
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
 
+
         playerMovement.enabled = true;
         this.enabled = false;
+        this.tag = "Player";
     }
 
+      
     // this will be called from update if the AI has no target and will get a target from the given List
     public Transform FindTarget(List<Transform> transformList)
     {
@@ -88,6 +102,7 @@ public class BasicAI : MonoBehaviour
         Vector3.RotateTowards(mover.transform.position, idleSpot, 2f, 1f);
         mover.position = Vector3.MoveTowards(mover.transform.position, idleSpot, 3f);
 
+
     }
 
     public IEnumerator Idle(Transform mover)
@@ -98,6 +113,19 @@ public class BasicAI : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(Random.Range(100f, 150f));
     }
+
+  // Checks if two transform points are within a certain distance of each other
+  public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distance)
+  {
+    return Vector3.Distance(currentPosition.position, targetPosition.position) < distance;
+  }
+
+  // moves one object towards another by set speed
+  public Vector3 MoveTowardsObject(Vector3 mover, Vector3 target, float speed)
+  {
+    return Vector3.MoveTowards(mover, target, speed * Time.deltaTime);
+  }
+
 
     //does the wander thingy
     public void Wander(Transform mover, Transform target)

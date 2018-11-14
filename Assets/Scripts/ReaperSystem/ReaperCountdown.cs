@@ -6,82 +6,84 @@ using UnityEngine;
 public class ReaperCountdown : MonoBehaviour
 {
   public bool outOfBody;
+    public bool reaperHasSpawned = false;
 
-  public static bool allowReaper = false;
+    public GameObject phantom;
 
   public GameObject reaperPrefab;
   public GameObject currentReaper;
+    public Transform reaperSpawnPoint;
 
-  private float _countDownTime = 0;
-  public float CountDownTime
-  {
-    get { return _countDownTime; }
+    public float countDownTime = 0;
+    public float timeTillReaperSpawn;
+    public float reaperSpawnMultiplier = 1;
+
+    public float despawnTime = 0;
+    public float timeTillDespawn;
+    public float reaperDespawnMultiplier = 1;
+
+    public float countdownTimerReset = 0;
+    public float timeTillCountdownReset;
+    public float timerResetMultiplier = 1;
 
 
-    set
-    {
-      if (value >= 0)
-      {
-        _countDownTime = value;
-      }
-      else
-      {
-        _countDownTime = 0;
-      }
-    }
-  }
+  
 
   private void Start()
-  {
-    PhantomControls.reaper = this;
+    {
+        if (phantom.GetComponent<PhantomControls>().isPossessing) outOfBody = false;
+        else outOfBody = true;
 
-  }
+    }
+  
 
   void Update ()
   {
-    if (allowReaper)
-    {
-      CheckToSpawnReaper();
-      CheckToDespawnReaper();
-      CountDownTimer();
+        if (outOfBody && !reaperHasSpawned)
+        {
+            countDownTime += Time.deltaTime * reaperSpawnMultiplier;
+        }
 
-    }
+        if(!outOfBody && reaperHasSpawned)
+        {
+            despawnTime += Time.deltaTime * reaperDespawnMultiplier;
+        }
+
+        if(countDownTime >= timeTillReaperSpawn)
+        {
+            SpawnReaper();
+            reaperHasSpawned = true;
+            countDownTime = 0;            
+        }
+
+        if(despawnTime >= timeTillDespawn)
+        {
+            DespawnReaper();
+            reaperHasSpawned = false;
+            despawnTime = 0;            
+        }
+
+        if(!outOfBody && !reaperHasSpawned && countDownTime > 0)
+        {
+            countdownTimerReset += Time.deltaTime * timerResetMultiplier;
+        }
+
+        if(countdownTimerReset > timeTillCountdownReset)
+        {
+            countDownTime = 0;
+            countdownTimerReset = 0;
+        }
+        
   }
 
-  private void CountDownTimer()
-  {
-    if (outOfBody)
-    {
-      CountDownTime -= Time.deltaTime;
-    }
-  }
-
-  private void CheckToDespawnReaper()
-  {
-    if (CountDownTime <= 0 && !outOfBody)
-    {
-      DespawnReaper();
-
-    }
-  }
-
-  private void CheckToSpawnReaper()
-  {
-    if (CountDownTime <= 0 && outOfBody)
-    {
-      SpawnReaper();
-
-    }
-  }
 
   private void DespawnReaper()
   {
-    throw new NotImplementedException();
+        Destroy(GameObject.FindWithTag("Reaper"));
   }
 
   private void SpawnReaper()
   {
-    throw new NotImplementedException("Spawn Reaper");
-
+        Instantiate(currentReaper, reaperSpawnPoint);
   }
 }
