@@ -5,8 +5,9 @@ using UnityEngine;
 public class BasicMovement : MonoBehaviour
 {
   public float movementSpeed;
-
-  public BasicAI aiControls;
+    public GameObject healthAndAbilities;
+    
+    public BasicAI aiControls;
 
   public GameObject phantomPrefab;
 
@@ -14,6 +15,7 @@ public class BasicMovement : MonoBehaviour
     public BoxCollider phantomBox; //reinable when depossessing
     public MeshRenderer phantomMesh; //^^same
     public static ReaperCountdown reaper;
+    
 
     private void Start()
     {
@@ -21,6 +23,7 @@ public class BasicMovement : MonoBehaviour
         phantomBox = phantom.GetComponent<BoxCollider>();
         phantomMesh = phantom.GetComponent<MeshRenderer>();
         reaper = phantom.GetComponent<ReaperCountdown>();
+     
     }
 
     private void Update()
@@ -31,6 +34,7 @@ public class BasicMovement : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Backslash))
     {
       FuckingDED();
+            
             reaper.outOfBody = true;
             phantom.GetComponent<PhantomControls>().isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
@@ -40,6 +44,7 @@ public class BasicMovement : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Space))
      {
        WithDraw();
+            
             reaper.outOfBody = true;
             phantom.GetComponent<PhantomControls>().isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;

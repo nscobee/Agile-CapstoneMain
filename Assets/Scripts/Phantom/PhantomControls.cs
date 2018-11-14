@@ -37,12 +37,13 @@ public class PhantomControls : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                isShowing = !isShowing;
+                healthAndAbilities.SetActive(isShowing);
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
                 reaper.outOfBody = false;
                 isPossessing = true;
 
-                isShowing = !isShowing;
-                healthAndAbilities.SetActive(isShowing);
+                
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe")
                 {
