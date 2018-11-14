@@ -61,6 +61,11 @@ public class BasicMovement : MonoBehaviour
   // TODO: Make function for becoming non Possed but not killing the AI
   public void WithDraw()
   {
+
+    // do something like adding phantom and swaping ai and movement enables
+  
+
+
         // do something like adding phantom and swaping ai and movement enables
         
         phantomBox.enabled = true; //re-enable phantom
@@ -69,4 +74,5 @@ public class BasicMovement : MonoBehaviour
         aiControls.enabled = true;
         this.enabled = false;
     }
+
 }
