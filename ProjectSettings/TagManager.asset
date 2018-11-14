@@ -10,6 +10,8 @@ TagManager:
   - Poop
   - healthPotion
   - DamageSource
+  - Melee
+  - SpellCaster
   - Reaper
   layers:
   - Default

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-    private Transform target;
-    public float damage = 10.0f;
 
-    //public Collider attackArea;
+    public float primaryAtkDmg = 25f;
+    public float secondaryAtkDmg = 50f;
+
 
     // Use this for initialization
     void Start()
     {
+
         target = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     // Update is called once per frame
@@ -21,20 +23,20 @@ public class MeleeAttack : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        print(target.name + " collided with " + this.name);
 
-        if (collision.gameObject.tag == "Player")
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            
+            collision.gameObject.GetComponent<AIHealth>().TakeDamage(primaryAtkDmg);
+            Debug.Log("Primary attack used, " + primaryAtkDmg + " dmg.");
+
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            collision.gameObject.GetComponent<AIHealth>().TakeDamage(secondaryAtkDmg);
+            Debug.Log("Secondary attack used, " + secondaryAtkDmg + " dmg.");
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        print(target.name + " collided with " + this.name);
-        this.transform.LookAt(target);
-
-    }
 }
