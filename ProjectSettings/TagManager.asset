@@ -8,6 +8,20 @@ TagManager:
   - bullet
   - splashArea
   - ground
+  - PatrolPoint
+  - SavePoints
+  - EntryPoints
+  - Poop
+  - healthPotion
+  - DamageSource
+  - fighter
+  - mage
+  - NoPossess
+  - Scribe
+  - Melee
+  - SpellCaster
+  - Reaper
+
   layers:
   - Default
   - TransparentFX
