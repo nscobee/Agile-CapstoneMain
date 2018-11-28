@@ -9,7 +9,9 @@ public class BasicMovement : MonoBehaviour
     
     public BasicAI aiControls;
 
-  public GameObject phantomPrefab;
+    public GameObject phantomPrefab;
+
+    public PhantomControls phantomControls;
 
     public GameObject phantom; //obtain info on phantom for possession
     public BoxCollider phantomBox; //reinable when depossessing
@@ -56,7 +58,7 @@ public class BasicMovement : MonoBehaviour
   // makes a new phantom to use and destories the charecter the player was previously possessing
   public void FuckingDED()
   {
-
+        phantomControls.resetLevel();
         phantomBox.enabled = true; //re-enable phantom
         phantomMesh.enabled = true; //^^same
         Destroy(this.gameObject); //kill off the dead Ai

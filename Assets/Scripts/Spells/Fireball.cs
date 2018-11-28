@@ -11,6 +11,9 @@ public class Fireball : BasicSpells
     public GameObject fireball;
     //public float spellSpeed = 3f;
 
+    public PhantomControls playerMovement;
+    
+
     // Use this for initialization
     void Start()
     {
@@ -23,7 +26,7 @@ public class Fireball : BasicSpells
         playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && playerMovement.isPossessing)
         {
             Fire();
         }

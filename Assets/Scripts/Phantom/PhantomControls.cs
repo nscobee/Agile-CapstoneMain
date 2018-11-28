@@ -18,12 +18,20 @@ public class PhantomControls : MonoBehaviour
     public bool isPossessing;
     public GameObject phantom;
 
+    //Simple Leveling System
+    public int currentLevel = 1;
+    public float currentExperience = 0;
+    public float experienceTillNextLevel;
+    private float startingExperienceTillNextLevel;
+    public int MAX_LEVEL = 5;
+
 
  
     private void Start()
     {
             reaper = phantom.GetComponent<ReaperCountdown>();
             reaper.outOfBody = true;
+        startingExperienceTillNextLevel = experienceTillNextLevel;
 
     }
 
@@ -60,12 +68,28 @@ public class PhantomControls : MonoBehaviour
                 }
             }
         }
+        //Simple Leveling System
+        if (currentLevel == MAX_LEVEL) currentExperience = 0;
+        if(currentExperience >= experienceTillNextLevel)
+        {
+            currentLevel++;
+            currentExperience = 0;
+            experienceTillNextLevel *= currentLevel;
+        }
+
     }
 
 
     private void OnDestroy()
     {
         reaper.outOfBody = false;
+    }
+
+    public void resetLevel()
+    {
+        currentLevel = 0;
+        currentExperience = 0;
+        experienceTillNextLevel = startingExperienceTillNextLevel;
     }
 
 }

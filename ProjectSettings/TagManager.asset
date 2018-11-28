@@ -21,6 +21,7 @@ TagManager:
   - Melee
   - SpellCaster
   - Reaper
+  - healer
   layers:
   - Default
   - TransparentFX
