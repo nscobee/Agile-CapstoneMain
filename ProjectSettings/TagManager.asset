@@ -21,6 +21,8 @@ TagManager:
   - Melee
   - SpellCaster
   - Reaper
+  - HealthSlider
+  - ApSlider
   layers:
   - Default
   - TransparentFX

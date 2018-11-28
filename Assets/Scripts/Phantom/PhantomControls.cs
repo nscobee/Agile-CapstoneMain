@@ -19,15 +19,15 @@ public class PhantomControls : MonoBehaviour
     public GameObject phantom;
 
 
- 
+
     private void Start()
     {
-            reaper = phantom.GetComponent<ReaperCountdown>();
-            reaper.outOfBody = true;
+        reaper = phantom.GetComponent<ReaperCountdown>();
+        reaper.outOfBody = true;
 
     }
 
-     private void Update()
+    private void Update()
     {
         // uses the generic movement for movement passing desired speed
         transform.position += GenericFunctions.BasePlayerMovement(speed);
@@ -42,10 +42,11 @@ public class PhantomControls : MonoBehaviour
                 isPossessing = true;
                 reaper.outOfBody = false;
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
-                
-                
+                if(phantomTarget.tag == "mage")
+                {
+                    phantomTarget.GetComponent<BasicAI>().isPosessingMage = true;
+                }
 
-                
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe")
                 {
@@ -54,9 +55,9 @@ public class PhantomControls : MonoBehaviour
 
                     //make a new save in the folder for that scene
                     SaveData newSaveTest = new SaveData("Scene01", 1);
-                   
+
                     //save the stuff
-                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");     
+                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");
                 }
             }
         }

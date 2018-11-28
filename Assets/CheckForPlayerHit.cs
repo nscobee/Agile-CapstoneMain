@@ -4,28 +4,36 @@ using UnityEngine;
 
 public class CheckForPlayerHit : MonoBehaviour
 {
-    playerController playerScript;
-    EnemyAI enemyai;
-    //MageAI mageai;
+    playerHealth playerScript;
+    MageAI mageai;
+    AIHealth aiHealth;
+    BasicAI basicAI;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Player hit, taking damage");
-        playerScript.takeDamage(enemyai.damageAmount);
-        this.enabled = false;
-    }
+        Debug.Log("Hit a thing");
+        if (other.tag == "Player")
+        {
+            playerScript = other.GetComponent<playerHealth>();
+            Debug.Log("Player hit, taking damage");
+            playerScript.takeDamage(mageai.fireballDamageAmount);
+            this.enabled = false;
+        }
 
+        if (other.tag == "mage")
+        {
+            aiHealth = other.GetComponent<AIHealth>();
+            Debug.Log("ai hit, taking damage");
+            aiHealth.TakeDamage(mageai.fireballDamageAmount);
+        }
+    }
     // Use this for initialization
     void Start ()
     {
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>();
-        enemyai = GameObject.FindGameObjectWithTag("enemy").GetComponent<EnemyAI>();
-        //mageai = GameObject.FindGameObjectWithTag("mage").GetComponent<MageAI>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>();
+        basicAI = GameObject.FindGameObjectWithTag("mage").GetComponent<BasicAI>();
+        //get if mage info
+        mageai = GameObject.FindGameObjectWithTag("mage").GetComponent<MageAI>();
     }
-	
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireSphere(enemyai.bullet.transform.position, enemyai.bulletSplashArea);
-    //}
+    
 }

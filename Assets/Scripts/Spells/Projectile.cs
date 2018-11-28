@@ -5,8 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private Vector2 target;
-    public float speed = 10f;
-    public float maxDistance = 5f;
+    public float speed = 25f;
+    public float maxDistance = 10f;
 
     // Use this for initialization
     void Start()

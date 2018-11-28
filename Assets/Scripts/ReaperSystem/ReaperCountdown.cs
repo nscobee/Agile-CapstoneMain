@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class ReaperCountdown : MonoBehaviour
 {
-  public bool outOfBody;
+    public bool outOfBody;
     public bool reaperHasSpawned = false;
 
     public GameObject phantom;
-
-  public GameObject reaperPrefab;
-  public GameObject currentReaper;
+    public GameObject reaperPrefab;
+    public GameObject currentReaper;
     public Transform reaperSpawnPoint;
 
     public float countDownTime = 0;
@@ -27,63 +26,63 @@ public class ReaperCountdown : MonoBehaviour
     public float timerResetMultiplier = 1;
 
 
-  
 
-  private void Start()
+
+    private void Start()
     {
         if (phantom.GetComponent<PhantomControls>().isPossessing) outOfBody = false;
         else outOfBody = true;
 
     }
-  
 
-  void Update ()
-  {
+
+    void Update()
+    {
         if (outOfBody && !reaperHasSpawned)
         {
             countDownTime += Time.deltaTime * reaperSpawnMultiplier;
         }
 
-        if(!outOfBody && reaperHasSpawned)
+        if (!outOfBody && reaperHasSpawned)
         {
             despawnTime += Time.deltaTime * reaperDespawnMultiplier;
         }
 
-        if(countDownTime >= timeTillReaperSpawn)
+        if (countDownTime >= timeTillReaperSpawn)
         {
             SpawnReaper();
             reaperHasSpawned = true;
-            countDownTime = 0;            
+            countDownTime = 0;
         }
 
-        if(despawnTime >= timeTillDespawn)
+        if (despawnTime >= timeTillDespawn)
         {
             DespawnReaper();
             reaperHasSpawned = false;
-            despawnTime = 0;            
+            despawnTime = 0;
         }
 
-        if(!outOfBody && !reaperHasSpawned && countDownTime > 0)
+        if (!outOfBody && !reaperHasSpawned && countDownTime > 0)
         {
             countdownTimerReset += Time.deltaTime * timerResetMultiplier;
         }
 
-        if(countdownTimerReset > timeTillCountdownReset)
+        if (countdownTimerReset > timeTillCountdownReset)
         {
             countDownTime = 0;
             countdownTimerReset = 0;
         }
-        
-  }
+
+    }
 
 
-  private void DespawnReaper()
-  {
+    private void DespawnReaper()
+    {
         Destroy(GameObject.FindWithTag("Reaper"));
-  }
+    }
 
-  private void SpawnReaper()
-  {
+    private void SpawnReaper()
+    {
         Instantiate(currentReaper, reaperSpawnPoint);
-  }
+    }
 }
