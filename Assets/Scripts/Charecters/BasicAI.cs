@@ -18,12 +18,15 @@ public class BasicAI : MonoBehaviour
 
     public AISpawner homeSpawner;
 
+    public PhantomControls phantomControls;
+
     public Slider hpSlider;
     public Slider apSlider;
     public GameObject abilityImage;
     public GameObject fighterAbilities;
     public GameObject mageAbilities;
     public GameObject commonAbilities;
+    public GameObject healerAbilities;
 
     public float commonHp = 25f;
     public float commonAp = 25f;
@@ -34,6 +37,17 @@ public class BasicAI : MonoBehaviour
     public float mageHp = 40f;
     public float mageAp = 90f;
 
+    public float healerHp = 45f;
+    public float healerAp = 75f;
+
+    public float currentHP;
+    public float currentAP;
+
+    public float maxHP;
+    public float maxAP;
+
+    public float levelMultiplierHP;
+    public float levelMultiplierAP;
 
 
     public GameObject phantom;  //Obtain info about phantom to have it persist
@@ -63,11 +77,21 @@ public class BasicAI : MonoBehaviour
         phantom = GameObject.FindWithTag("Player");
         phantomBox = phantom.GetComponent<BoxCollider>();
         phantomMesh = phantom.GetComponent<MeshRenderer>();
+
+        
     }
 
     private void Update()
     {
+        
+        if(!phantomControls.isPossessing)
+        {
+            levelMultiplierAP = 1;
+            levelMultiplierHP = 1;
+        }
+        
 
+        
        float startTime = Time.time;
         // if there is no target it gets one
         if (currentTarget == null && patrolPoints.Count > 0)
@@ -89,11 +113,26 @@ public class BasicAI : MonoBehaviour
                     currentTarget = null;
             }
         }
+
+        if(phantomControls.isPossessing)
+        {
+            hpSlider.value = currentHP;
+            apSlider.value = currentAP;
+        }
+
+        
+        
+        if (currentHP > maxHP) currentHP = maxHP;
+        if (currentAP > maxAP) currentAP = maxAP;
+
     }
 
     // when the player possess a AI it destories the phantom and enables the player movement on the 
     public void Possess(GameObject phantom)
     {
+
+        updateLevelMultiplier();
+
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
         playerMovement.enabled = true;
@@ -103,31 +142,43 @@ public class BasicAI : MonoBehaviour
         {
             hpSlider.value = fighterHp;
             apSlider.value = fighterAp;
+            maxHP = fighterHp;
+            maxAP = fighterAp;
 
-            abilityImage.SetActive (false);
+            setInactive();
             fighterAbilities.SetActive (true);
-            mageAbilities.SetActive(false);
-            commonAbilities.SetActive(false);
+            
 
         }
         else if(gameObject.tag == "mage")
         {
             hpSlider.value = mageHp;
             apSlider.value = mageAp;
+            maxHP = mageHp;
+            maxAP = mageAp;
 
-            abilityImage.SetActive(false);
-            fighterAbilities.SetActive(false);
+            setInactive();
             mageAbilities.SetActive(true);
-            commonAbilities.SetActive(false);
+            
+        }
+        else if(gameObject.tag == "healer")
+        {
+            hpSlider.value = healerHp;
+            apSlider.value = healerAp;
+            maxHP = healerHp;
+            maxAP = healerAp;
+
+            setInactive();
+            healerAbilities.SetActive(true);
         }
         else
         {
             hpSlider.value = commonHp;
             apSlider.value = commonAp;
+            maxHP = commonHp;
+            maxAP = commonAp;
 
-            abilityImage.SetActive(false);
-            fighterAbilities.SetActive(false);
-            mageAbilities.SetActive(false);
+            setInactive();
             commonAbilities.SetActive(true);
         }
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
@@ -209,5 +260,32 @@ public class BasicAI : MonoBehaviour
             homeSpawner.AI.Remove(this.gameObject);
         }
     }
+
+    private void setInactive()
+    {
+        abilityImage.SetActive(false);
+        fighterAbilities.SetActive(false);
+        mageAbilities.SetActive(false);
+        commonAbilities.SetActive(false);
+        healerAbilities.SetActive(false);
+    }
     
+    private void updateLevelMultiplier() //Is called when the player possesses an NPC, will set values to current level
+    {
+        levelMultiplierAP *= phantomControls.currentLevel;
+        levelMultiplierHP *= phantomControls.currentLevel;
+
+        mageHp *= levelMultiplierHP;
+        mageAp *= levelMultiplierAP;
+
+        commonAp *= levelMultiplierAP;
+        commonHp *= levelMultiplierHP;
+
+        fighterAp *= levelMultiplierAP;
+        fighterHp *= levelMultiplierHP;
+
+        healerAp *= levelMultiplierAP;
+        healerHp *= levelMultiplierHP;
+    }
+
 }
