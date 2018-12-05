@@ -6,19 +6,25 @@ using UnityEngine.SceneManagement;
 public class OurSceneManager : MonoBehaviour
 {
   public string firstScene;
-  private string oldScene = null;
+  public string oldScene = null;
 
   public GameObject phantomPrefab;
+  public GameObject scribePrefab;
 
-  public GameObject pointsManager;
+  public GameObject entryGameObject;
+  public int entryPoint;
+
+  public static OurSceneManager ourSceneMangager;
 
   private void Start()
   {
-    if (firstScene != "")
-    {
-      SceneManager.LoadScene(firstScene, LoadSceneMode.Additive);
+    ourSceneMangager = this;
 
-      oldScene = firstScene;
+    //if (firstScene != "")
+    {
+      //SceneManager.LoadScene(firstScene, LoadSceneMode.Additive);
+
+      //oldScene = firstScene;
 
     }
 
@@ -26,17 +32,18 @@ public class OurSceneManager : MonoBehaviour
 
   public void LoadNewSceneAdditive(string newScene)
   {
-    SceneManager.LoadScene(newScene, LoadSceneMode.Additive);
-
     if (oldScene != null)
     {
       SceneManager.UnloadSceneAsync(oldScene);
 
     }
 
+    SceneManager.LoadScene(newScene, LoadSceneMode.Additive);
+
     oldScene = newScene;
 
   }
+
 
   /**
  * What is does is takes in a newScene and a savePoint
