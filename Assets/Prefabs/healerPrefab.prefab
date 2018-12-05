@@ -197,8 +197,8 @@ MonoBehaviour:
   healerAp: 75
   currentHP: 0
   currentAP: 0
-  maxHP: 0
-  maxAP: 0
+  maxHP: 100
+  maxAP: 100
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   phantom: {fileID: 0}

@@ -59,6 +59,7 @@ public class BasicAI : MonoBehaviour
 
     private void Start()
     {
+        phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         // if you want points to be gathered it does that
         if (gatherPoints)
         {
@@ -78,6 +79,8 @@ public class BasicAI : MonoBehaviour
         phantomBox = phantom.GetComponent<BoxCollider>();
         phantomMesh = phantom.GetComponent<MeshRenderer>();
 
+        currentHP = maxHP;
+        currentAP = maxAP;
         
     }
 
@@ -124,6 +127,11 @@ public class BasicAI : MonoBehaviour
         
         if (currentHP > maxHP) currentHP = maxHP;
         if (currentAP > maxAP) currentAP = maxAP;
+
+        if(currentHP <= 0 && !phantomControls.isPossessing)
+        {
+            Die();
+        }
 
     }
 
@@ -286,6 +294,17 @@ public class BasicAI : MonoBehaviour
 
         healerAp *= levelMultiplierAP;
         healerHp *= levelMultiplierHP;
+    }
+
+    public void ReceiveDamage(float damage)
+    {
+        currentHP -= damage;
+    }
+
+    private void Die()
+    {
+        //Drop stuff for player? exp/items
+        Destroy(this.gameObject);
     }
 
 }

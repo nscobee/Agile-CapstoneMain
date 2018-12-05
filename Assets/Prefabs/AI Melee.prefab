@@ -25,10 +25,25 @@ GameObject:
   - component: {fileID: 114343144908863274}
   - component: {fileID: 114443481937730140}
   - component: {fileID: 54639543261224218}
-  - component: {fileID: 114361774644988710}
+  - component: {fileID: 114024292634913850}
   m_Layer: 10
   m_Name: AI Melee
-  m_TagString: SpellCaster
+  m_TagString: Melee
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1434214220861312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4219350398192022}
+  m_Layer: 10
+  m_Name: hitboxOrigin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,10 +55,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1326686080439248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.45, y: -1.68, z: 0}
+  m_LocalPosition: {x: 5.53, y: 0.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4219350398192022}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4219350398192022
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434214220861312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4107299161409936}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23643142206965410
@@ -115,6 +144,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114024292634913850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1326686080439248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937bc23180987d743bfb526e1ded2122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
+  nextAttack: 0
+  attackRate: 0
+  weakAttackDamage: 0
+  strongAttackDamage: 0
+  phantomControls: {fileID: 0}
+  basicAI: {fileID: 0}
+  meleeHitbox: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
+    type: 2}
+  hitboxOrigin: {fileID: 4219350398192022}
+  damageMultiplier: 0
+  inRange: []
 --- !u!114 &114343144908863274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +189,7 @@ MonoBehaviour:
   gatherPoints: 1
   playerMovement: {fileID: 114443481937730140}
   homeSpawner: {fileID: 0}
+  phantomControls: {fileID: 0}
   hpSlider: {fileID: 0}
   apSlider: {fileID: 0}
   abilityImage: {fileID: 0}
@@ -150,26 +203,17 @@ MonoBehaviour:
   fighterAp: 40
   mageHp: 40
   mageAp: 90
-  healerHP: 45
-  healerAP: 75
+  healerHp: 45
+  healerAp: 75
+  currentHP: 0
+  currentAP: 0
+  maxHP: 100
+  maxAP: 100
+  levelMultiplierHP: 0
+  levelMultiplierAP: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
---- !u!114 &114361774644988710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326686080439248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 881333bdaee1ad143a3f7584553cea31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPos: {x: 4.4501133, y: 3.1465192, z: 0}
-  mousePos: {x: 17.079206, y: 4.034653, z: -10}
-  fireball: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 2}
-  playerMovement: {fileID: 0}
 --- !u!114 &114443481937730140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,6 +230,7 @@ MonoBehaviour:
   aiControls: {fileID: 114343144908863274}
   phantomPrefab: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
     type: 2}
+  phantomControls: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}

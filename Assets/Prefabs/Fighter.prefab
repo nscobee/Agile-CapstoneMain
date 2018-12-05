@@ -126,9 +126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  healthAndAbilities: {fileID: 0}
   aiControls: {fileID: 114508103232764044}
   phantomPrefab: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
     type: 2}
+  phantomControls: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -154,18 +156,28 @@ MonoBehaviour:
   gatherPoints: 1
   playerMovement: {fileID: 114355956683043754}
   homeSpawner: {fileID: 0}
+  phantomControls: {fileID: 0}
   hpSlider: {fileID: 0}
   apSlider: {fileID: 0}
   abilityImage: {fileID: 0}
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
   commonAbilities: {fileID: 0}
+  healerAbilities: {fileID: 0}
   commonHp: 25
   commonAp: 25
   fighterHp: 90
   fighterAp: 40
   mageHp: 40
   mageAp: 90
+  healerHp: 45
+  healerAp: 75
+  currentHP: 0
+  currentAP: 0
+  maxHP: 100
+  maxAP: 100
+  levelMultiplierHP: 0
+  levelMultiplierAP: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
