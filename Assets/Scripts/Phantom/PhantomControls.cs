@@ -38,8 +38,12 @@ public class PhantomControls : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isShowing = !isShowing;
-                healthAndAbilities.SetActive(isShowing);
+                //healthAndAbilities.SetActive(isShowing);
                 isPossessing = true;
+                if (isPossessing)
+                {
+                    healthAndAbilities.SetActive(true);
+                }
                 reaper.outOfBody = false;
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
                 if(phantomTarget.tag == "mage")

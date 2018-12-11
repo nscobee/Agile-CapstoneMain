@@ -99,7 +99,10 @@ public class BasicMovement : MonoBehaviour
         //aiControls.isPosessingFighter = false;
 
         phantomControls.isPossessing = false;
-
+        if(healthAndAbilities == true)
+        {
+            healthAndAbilities.SetActive(false);
+        }
         phantomBox.enabled = true; //re-enable phantom
         phantomMesh.enabled = true; //^^^what he said
         

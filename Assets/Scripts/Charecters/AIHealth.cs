@@ -7,6 +7,10 @@ public class AIHealth : MonoBehaviour
     public const float MAX_HEALTH = 100;
     public float currentHealth;
 
+    public float currentMana;
+
+    
+
    // public dealDamage damageScript;
 
     private float incomingDamage;
@@ -21,6 +25,11 @@ public class AIHealth : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoseMana(float amount)
+    {
+        currentMana -= amount;
     }
 
     public void TakeDamage(float amount)

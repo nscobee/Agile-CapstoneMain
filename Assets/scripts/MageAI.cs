@@ -18,6 +18,10 @@ public class MageAI : EnemyAI
     public int fireDamageAmount = 5;
     public float fireRange = 2f;
 
+    public float fireballManaLoss = 7f;
+    public float fireManaLoss = 2f;
+
+
     private float fireballNextRound = 0.0f;
     public float fireballFireRate = 7.0f;
     // Use this for initialization
@@ -40,10 +44,12 @@ public class MageAI : EnemyAI
             if (thingsToHit[i].tag == "Player")
             {
                 thingsToHit[i].GetComponent<playerController>().takeDamage(fireDamageAmount);
+                thingsToHit[i].GetComponent<AIHealth>().LoseMana(fireballManaLoss);
             }
             if(thingsToHit[i].tag == "mage")
             {
                 thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireDamageAmount);
+                thingsToHit[i].GetComponent<AIHealth>().LoseMana(fireManaLoss);
             }
         }
         Debug.Log("Secondary spell used, " + fireDamageAmount + " dmg.");
