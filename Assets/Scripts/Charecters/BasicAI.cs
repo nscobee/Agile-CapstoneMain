@@ -47,7 +47,7 @@ public class BasicAI : MonoBehaviour
 
     public GameObject phantom;  //Obtain info about phantom to have it persist
     public BoxCollider2D phantomBox; //to be hidden while phantom is possessing
-    public MeshRenderer phantomMesh; //same as ^^
+    public SpriteRenderer phantomMesh; //same as ^^
 
     public Transform playerObjTransform;
 
@@ -72,7 +72,7 @@ public class BasicAI : MonoBehaviour
         }
         phantom = GameObject.FindWithTag("Player");
         phantomBox = phantom.GetComponent<BoxCollider2D>();
-        phantomMesh = phantom.GetComponent<MeshRenderer>();
+        phantomMesh = phantom.GetComponent<SpriteRenderer>();
 
         //needed to assign these i think?
         phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
@@ -127,7 +127,7 @@ public class BasicAI : MonoBehaviour
                 //this.transform.position = Vector3.MoveTowards(this.transform.position, currentTarget.transform.position, speed * Time.deltaTime);
 
                 // checks if its too close to target
-                if (Vector3.Distance(this.transform.position, currentTarget.transform.position) < stopDistance)
+                if (Vector2.Distance(this.transform.position, currentTarget.transform.position) < stopDistance)
                 {
                     currentTarget = null;
                 }
@@ -141,6 +141,7 @@ public class BasicAI : MonoBehaviour
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
         playerMovement.enabled = true;
+
         this.enabled = false;
         phantomControls.isPossessing = true;
 
@@ -157,6 +158,8 @@ public class BasicAI : MonoBehaviour
             isPosessingMage = false;
             isPosessingCommon = false;
             isPosessingFighter = true;
+
+           
         }
         else if (gameObject.tag == "mage")
         {
@@ -168,9 +171,10 @@ public class BasicAI : MonoBehaviour
             mageAbilities.SetActive(true);
             commonAbilities.SetActive(false);
 
+            isPosessingMage = true;
             isPosessingCommon = false;
             isPosessingFighter = false;
-            isPosessingMage = true;
+            
         }
         else
         {
@@ -185,12 +189,14 @@ public class BasicAI : MonoBehaviour
             isPosessingMage = false;
             isPosessingFighter = false;
             isPosessingCommon = true;
+            
         }
 
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
 
     }
 
+    #region automove?
     // this will be called from update if the AI has no target and will get a target from the given List
     public Transform FindTarget(List<Transform> transformList)
     {
@@ -248,6 +254,8 @@ public class BasicAI : MonoBehaviour
         //yield return new WaitForSecondsRealtime(Random.Range(5f, 15f));
 
     }
+    
+    #endregion
 
     // this is to let the spawner know that it can send out another AI
     private void OnDestroy()
@@ -295,7 +303,6 @@ public class BasicAI : MonoBehaviour
         if (other.tag == "bullet")
         {
             print("I (the ai) Got hit by fireball");
-            //this.GetComponent<AIHealth>().TakeDamage(10f);
         }
     }
 

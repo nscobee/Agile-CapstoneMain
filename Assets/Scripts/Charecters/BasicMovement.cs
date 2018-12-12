@@ -14,7 +14,7 @@ public class BasicMovement : MonoBehaviour
 
     public GameObject phantom; //obtain info on phantom for possession
     public BoxCollider2D phantomBox; //reinable when depossessing
-    public MeshRenderer phantomMesh; //^^same
+    public SpriteRenderer phantomMesh; //^^same
     public static ReaperCountdown reaper;
 
 
@@ -22,7 +22,7 @@ public class BasicMovement : MonoBehaviour
     {
         phantom = GameObject.FindWithTag("Player");
         phantomBox = phantom.GetComponent<BoxCollider2D>();
-        phantomMesh = phantom.GetComponent<MeshRenderer>();
+        phantomMesh = phantom.GetComponent<SpriteRenderer>();
         reaper = phantom.GetComponent<ReaperCountdown>();
         phantomControls = phantom.GetComponent<PhantomControls>();
         if(phantomControls == null)

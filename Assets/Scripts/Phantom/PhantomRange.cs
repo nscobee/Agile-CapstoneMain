@@ -39,8 +39,8 @@ public class PhantomRange : MonoBehaviour
                 }
                 else
                 {
-                    if (Vector3.Distance(this.transform.position, closest.transform.position) >
-                      Vector3.Distance(this.transform.position, target.transform.position))
+                    if (Vector2.Distance(this.transform.position, closest.transform.position) >
+                      Vector2.Distance(this.transform.position, target.transform.position))
                     {
                         closest = target;
                     }
@@ -67,7 +67,7 @@ public class PhantomRange : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("something is hitting me (the phantom): " + other.transform.name);
+        Debug.Log("something is hitting me (the phantom): " + other.transform.name);
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if (other.gameObject.tag == "mage")
         {

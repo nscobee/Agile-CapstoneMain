@@ -49,11 +49,11 @@ public class MageAI : EnemyAI
             if(thingsToHit[i].tag == "mage")
             {
                 thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireDamageAmount);
-                thingsToHit[i].GetComponent<AIHealth>().LoseMana(fireManaLoss);
+                
             }
         }
         Debug.Log("Secondary spell used, " + fireDamageAmount + " dmg.");
-
+        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
     }
 
     public void FireballAttack()
@@ -62,19 +62,20 @@ public class MageAI : EnemyAI
         fireballNextRound = Time.time + fireballFireRate;
         var projectileBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
         projectileBullet.transform.position += projectileBullet.transform.forward * 25f;
+        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
 
+        
         Collider2D[] thingsToHit = Physics2D.OverlapCircleAll(fireball.transform.position, bulletSplashArea);
         for (int i = 0; i < thingsToHit.Length; i++)
         {
-            thingsToHit[i].GetComponent<playerController>().takeDamage(fireballDamageAmount);
-
-        }
-
-        Collider2D[] thingsToHit2 = Physics2D.OverlapCircleAll(fireball.transform.position, bulletSplashArea);
-        for (int i = 0; i < thingsToHit.Length; i++)
-        {
-            thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireballDamageAmount);
-
+            if(thingsToHit[i].tag == "player")
+            {
+                thingsToHit[i].GetComponent<playerController>().takeDamage(fireballDamageAmount);
+            }
+            if (thingsToHit[i].tag == "mage")
+            {
+                thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireballDamageAmount);
+            }
         }
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
