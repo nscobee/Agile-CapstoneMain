@@ -11,6 +11,8 @@ public class BasicMovement : MonoBehaviour
     public PhantomControls phantomControls;
 
     public GameObject phantomPrefab;
+    public PhantomControls phantomControls;
+
 
     public GameObject phantom; //obtain info on phantom for possession
     public BoxCollider2D phantomBox; //reinable when depossessing
@@ -73,11 +75,12 @@ public class BasicMovement : MonoBehaviour
 
     }
 
-    // used when player dies in a body
-    // makes a new phantom to use and destories the charecter the player was previously possessing
-    public void DED()
-    {
 
+  // used when player dies in a body
+  // makes a new phantom to use and destories the charecter the player was previously possessing
+  public void FuckingDED()
+  {
+        phantomControls.resetLevel();
         phantomBox.enabled = true; //re-enable phantom
         phantomMesh.enabled = true; //^^same
         Destroy(this.gameObject); //kill off the dead Ai

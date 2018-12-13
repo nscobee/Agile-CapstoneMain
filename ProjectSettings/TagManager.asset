@@ -23,6 +23,7 @@ TagManager:
   - Reaper
   - HealthSlider
   - ApSlider
+  - healer
   layers:
   - Default
   - TransparentFX

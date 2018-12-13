@@ -23,12 +23,15 @@ public class BasicAI : MonoBehaviour
 
     public AISpawner homeSpawner;
 
+    public PhantomControls phantomControls;
+
     public Slider hpSlider;
     public Slider apSlider;
     public GameObject abilityImage;
     public GameObject fighterAbilities;
     public GameObject mageAbilities;
     public GameObject commonAbilities;
+    public GameObject healerAbilities;
 
     public float commonHp = 25f;
     public float commonAp = 25f;
@@ -40,6 +43,17 @@ public class BasicAI : MonoBehaviour
     public float mageAp = 90f;
 
     public bool playerInRange = false;
+    public float healerHp = 45f;
+    public float healerAp = 75f;
+
+    public float currentHP;
+    public float currentAP;
+
+    public float maxHP;
+    public float maxAP;
+
+    public float levelMultiplierHP;
+    public float levelMultiplierAP;
 
     public bool isPosessingMage = false;
     public bool isPosessingFighter = false;
@@ -58,6 +72,7 @@ public class BasicAI : MonoBehaviour
 
     private void Start()
     {
+        phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         // if you want points to be gathered it does that
         if (gatherPoints)
         {
@@ -79,10 +94,22 @@ public class BasicAI : MonoBehaviour
         hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
         apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
         mageAbilities = GameObject.Find("MageA");
+        phantomBox = phantom.GetComponent<BoxCollider>();
+        phantomMesh = phantom.GetComponent<MeshRenderer>();
+
+        currentHP = maxHP;
+        currentAP = maxAP;
+        
     }
 
     private void Update()
     {
+    if(!phantomControls.isPossessing)
+        {
+            levelMultiplierAP = 1;
+            levelMultiplierHP = 1;
+        }
+
         float startTime = Time.time;
         //isPatrolling = true;
        /* if (playerInRange)
@@ -92,8 +119,9 @@ public class BasicAI : MonoBehaviour
         }*/
 
         //check if posessing a character, then what character
-        
-        
+
+        if (currentTarget == null && patrolPoints.Count > 0)
+
         if (isPosessingMage)
         {
             hpSlider.value = mageHp;
@@ -134,11 +162,31 @@ public class BasicAI : MonoBehaviour
                 }
             }
         }
+
+        if(phantomControls.isPossessing)
+        {
+            hpSlider.value = currentHP;
+            apSlider.value = currentAP;
+        }
+
+        
+        
+        if (currentHP > maxHP) currentHP = maxHP;
+        if (currentAP > maxAP) currentAP = maxAP;
+
+        if(currentHP <= 0 && !phantomControls.isPossessing)
+        {
+            Die();
+        }
+
     }
 
     // when the player possess a AI it destories the phantom and enables the player movement on the 
     public void Possess(GameObject phantom)
     {
+
+        updateLevelMultiplier();
+
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
         playerMovement.enabled = true;
@@ -150,10 +198,12 @@ public class BasicAI : MonoBehaviour
         {
             hpSlider.value = fighterHp;
             apSlider.value = fighterAp;
+            maxHP = fighterHp;
+            maxAP = fighterAp;
 
             setInactive();
-            fighterAbilities.SetActive(false);
-
+            fighterAbilities.SetActive (true);
+            
             isPosessingMage = false;
             isPosessingCommon = false;
             isPosessingFighter = true;
@@ -167,6 +217,8 @@ public class BasicAI : MonoBehaviour
             
             hpSlider.value = mageHp;
             apSlider.value = mageAp;
+            maxHP = mageHp;
+            maxAP = mageAp;
 
             setInactive();
             mageAbilities.SetActive(true);
@@ -174,21 +226,34 @@ public class BasicAI : MonoBehaviour
             isPosessingMage = true;
             isPosessingCommon = false;
             isPosessingFighter = false;
-            
+ 
+        }
+        else if(gameObject.tag == "healer")
+        {
+            hpSlider.value = healerHp;
+            apSlider.value = healerAp;
+            maxHP = healerHp;
+            maxAP = healerAp;
+
+            setInactive();
+            healerAbilities.SetActive(true);
         }
         else
         {
             hpSlider.value = commonHp;
             apSlider.value = commonAp;
+            maxHP = commonHp;
+            maxAP = commonAp;
 
             setInactive();
+
             //commonAbilities.SetActive(true);
             //phantomControls.isPossessing = false;
 
             isPosessingMage = false;
             isPosessingFighter = false;
             isPosessingCommon = true;
-            
+
         }
 
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
@@ -278,6 +343,7 @@ public class BasicAI : MonoBehaviour
         }
     }
 
+
     public void ChaseThePlayer()
     {
         //this.transform.LookAt(playerObjTransform);
@@ -312,15 +378,52 @@ public class BasicAI : MonoBehaviour
         {
             playerInRange = false;
         }
+
+    private void setInactive()
+    {
+        abilityImage.SetActive(false);
+        fighterAbilities.SetActive(false);
+        mageAbilities.SetActive(false);
+        commonAbilities.SetActive(false);
+        healerAbilities.SetActive(false);
+    }
+    
+    private void updateLevelMultiplier() //Is called when the player possesses an NPC, will set values to current level
+    {
+        levelMultiplierAP *= phantomControls.currentLevel;
+        levelMultiplierHP *= phantomControls.currentLevel;
+
+        mageHp *= levelMultiplierHP;
+        mageAp *= levelMultiplierAP;
+
+        commonAp *= levelMultiplierAP;
+        commonHp *= levelMultiplierHP;
+
+        fighterAp *= levelMultiplierAP;
+        fighterHp *= levelMultiplierHP;
+
+        healerAp *= levelMultiplierAP;
+        healerHp *= levelMultiplierHP;
+    }
+
+    public void ReceiveDamage(float damage)
+    {
+        currentHP -= damage;
+
     }
 
     private void Die()
     {
+
         if (Random.Range(0, 100) > 50)
         {
             GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
             Destroy(healthpickup, 10f);
         }
+
+        //Drop stuff for player? exp/items
+        Destroy(this.gameObject);
+
     }
 
 }
