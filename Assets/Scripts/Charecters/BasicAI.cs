@@ -76,8 +76,9 @@ public class BasicAI : MonoBehaviour
 
         //needed to assign these i think?
         phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
-        //hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
-        //apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
+        hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+        apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
+        mageAbilities = GameObject.Find("MageA");
     }
 
     private void Update()
@@ -150,10 +151,8 @@ public class BasicAI : MonoBehaviour
             hpSlider.value = fighterHp;
             apSlider.value = fighterAp;
 
-            abilityImage.SetActive(false);
-            fighterAbilities.SetActive(true);
-            mageAbilities.SetActive(false);
-            commonAbilities.SetActive(false);
+            setInactive();
+            fighterAbilities.SetActive(false);
 
             isPosessingMage = false;
             isPosessingCommon = false;
@@ -163,13 +162,14 @@ public class BasicAI : MonoBehaviour
         }
         else if (gameObject.tag == "mage")
         {
+            //hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+            //apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
+            
             hpSlider.value = mageHp;
             apSlider.value = mageAp;
 
-            abilityImage.SetActive(false);
-            fighterAbilities.SetActive(false);
+            setInactive();
             mageAbilities.SetActive(true);
-            commonAbilities.SetActive(false);
 
             isPosessingMage = true;
             isPosessingCommon = false;
@@ -181,10 +181,9 @@ public class BasicAI : MonoBehaviour
             hpSlider.value = commonHp;
             apSlider.value = commonAp;
 
-            abilityImage.SetActive(false);
-            fighterAbilities.SetActive(false);
-            mageAbilities.SetActive(false);
-            commonAbilities.SetActive(true);
+            setInactive();
+            //commonAbilities.SetActive(true);
+            //phantomControls.isPossessing = false;
 
             isPosessingMage = false;
             isPosessingFighter = false;
@@ -194,6 +193,14 @@ public class BasicAI : MonoBehaviour
 
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
 
+    }
+
+    private void setInactive()
+    {
+        abilityImage.SetActive(false);
+        fighterAbilities.SetActive(false);
+        mageAbilities.SetActive(false);
+        commonAbilities.SetActive(false);
     }
 
     #region automove?
@@ -260,6 +267,7 @@ public class BasicAI : MonoBehaviour
     // this is to let the spawner know that it can send out another AI
     private void OnDestroy()
     {
+        Die();
         isPosessingMage = false;
         isPosessingFighter = false;
         isPosessingCommon = true;
@@ -267,12 +275,6 @@ public class BasicAI : MonoBehaviour
         if (homeSpawner)
         {
             homeSpawner.AI.Remove(this.gameObject);
-        }
-
-        if (Random.Range(0, 100) > 50)
-        {
-            GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
-            Destroy(healthpickup, 10f);
         }
     }
 
@@ -289,9 +291,7 @@ public class BasicAI : MonoBehaviour
         this.transform.position += this.transform.forward * speed * Time.deltaTime;
 
     }//end chasePlayer
-
-
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("something is hitting me (the ai): " + other.name);
@@ -314,6 +314,13 @@ public class BasicAI : MonoBehaviour
         }
     }
 
-
+    private void Die()
+    {
+        if (Random.Range(0, 100) > 50)
+        {
+            GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
+            Destroy(healthpickup, 10f);
+        }
+    }
 
 }

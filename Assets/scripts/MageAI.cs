@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MageAI : EnemyAI
+public class MageAI : BasicAI
 {
 
     public float timeTillAttack;
@@ -10,7 +10,9 @@ public class MageAI : EnemyAI
     public LayerMask playerLayer;
     public LayerMask AILayer;
     public Transform fireball;
-
+    public Transform bulletSpawn;
+    public GameObject bullet;
+    public float bulletSplashArea = 1f;
     //bool for chase/attack
     //public bool isPursuing = false;
     //bool isFiring;
@@ -27,7 +29,7 @@ public class MageAI : EnemyAI
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

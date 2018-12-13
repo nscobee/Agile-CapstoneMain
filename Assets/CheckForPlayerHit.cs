@@ -23,31 +23,19 @@ public class CheckForPlayerHit : MonoBehaviour
         if (other.tag == "mage")
         {
             aiHealth = other.GetComponent<AIHealth>();
-            Debug.Log("ai hit, taking damage");
-            if(mageai == null)
-            {
-                Debug.Log("Mageai is null");
-            }
-            if (other.gameObject == null)
-            {
-                Debug.Log("game object is null?");
-            }
-            if (other.gameObject.GetComponent<AIHealth>() == null)
-            {
-                Debug.Log("aihealth is null");
-            }
-            
-            other.gameObject.GetComponent<AIHealth>().TakeDamage(mageai.fireballDamageAmount);
+            mageai = other.GetComponent<MageAI>();
+
+            aiHealth.TakeDamage(mageai.fireballDamageAmount);
         }
     }
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        
+
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>();
         basicAI = GameObject.FindGameObjectWithTag("mage").GetComponent<BasicAI>();
         //get if mage info
         mageai = GameObject.FindGameObjectWithTag("mage").GetComponent<MageAI>();
     }
-    
+
 }

@@ -65,6 +65,10 @@ public class PhantomControls : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            isPossessing = false;
+        }
     }
 
 
