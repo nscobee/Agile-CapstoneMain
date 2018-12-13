@@ -20,7 +20,7 @@ public class FireAttack : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse2))
+        if (Input.GetKey(KeyCode.Mouse1))
         {
             collision.gameObject.GetComponent<AIHealth>().TakeDamage(fireDamage);
             Debug.Log("Secondary spell used, " + fireDamage + " dmg.");

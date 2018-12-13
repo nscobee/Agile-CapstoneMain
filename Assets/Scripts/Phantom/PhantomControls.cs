@@ -26,16 +26,18 @@ public class PhantomControls : MonoBehaviour
     public int MAX_LEVEL = 5;
 
 
- 
+
     private void Start()
     {
+
             reaper = phantom.GetComponent<ReaperCountdown>();
             reaper.outOfBody = true;
         startingExperienceTillNextLevel = experienceTillNextLevel;
 
+
     }
 
-     private void Update()
+    private void Update()
     {
         // uses the generic movement for movement passing desired speed
         transform.position += GenericFunctions.BasePlayerMovement(speed);
@@ -46,14 +48,19 @@ public class PhantomControls : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isShowing = !isShowing;
-                healthAndAbilities.SetActive(isShowing);
+                //healthAndAbilities.SetActive(isShowing);
                 isPossessing = true;
+                if (isPossessing)
+                {
+                    healthAndAbilities.SetActive(true);
+                }
                 reaper.outOfBody = false;
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
-                
-                
+                if(phantomTarget.tag == "mage")
+                {
+                    phantomTarget.GetComponent<BasicAI>().isPosessingMage = true;
+                }
 
-                
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe")
                 {
@@ -62,12 +69,18 @@ public class PhantomControls : MonoBehaviour
 
                     //make a new save in the folder for that scene
                     SaveData newSaveTest = new SaveData("Scene01", 1);
-                   
+
                     //save the stuff
-                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");     
+                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");
                 }
             }
         }
+
+        else
+        {
+            isPossessing = false;
+        }
+
         //Simple Leveling System
         if (currentLevel == MAX_LEVEL) currentExperience = 0;
         if(currentExperience >= experienceTillNextLevel)
