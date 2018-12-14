@@ -68,9 +68,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1022283891611942}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4342155, y: 2.0282686, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.498133, y: -3.5363712, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 2}
   m_Children:
   - {fileID: 4703959113043760}
   m_Father: {fileID: 0}
@@ -110,7 +110,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 9
 --- !u!61 &61520167492083704
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -127,14 +127,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 4.42, y: 4.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!114 &114093041448378176
 MonoBehaviour:
@@ -172,9 +172,11 @@ MonoBehaviour:
   levelMultiplierAP: 0
   startingTag: 
   playerInRangeR: 0
+  isRetaliating: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
+  phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
   healthDrop: {fileID: 0}
   timeTillAttack: 0
@@ -244,9 +246,11 @@ MonoBehaviour:
   levelMultiplierAP: 0
   startingTag: 
   playerInRangeR: 0
+  isRetaliating: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
+  phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
   healthDrop: {fileID: 1640331636388708, guid: f13a544106c3c764cba361b41ab851fb, type: 2}
 --- !u!114 &114442683563566332
@@ -267,6 +271,7 @@ MonoBehaviour:
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
+  phantomRigid: {fileID: 0}
 --- !u!212 &212388671791356840
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -302,7 +307,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9931e7edc3f14cb40884758eb63d439c, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 6505413cc43b8cc45972fce0838b2acd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

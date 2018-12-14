@@ -11,6 +11,7 @@ public class BasicMovement : MonoBehaviour
     public PhantomControls phantomControls;
 
     public GameObject phantomPrefab;
+    
 
 
     public GameObject phantom; //obtain info on phantom for possession
@@ -22,6 +23,7 @@ public class BasicMovement : MonoBehaviour
 
     private void Start()
     {
+        
         phantom = GameObject.FindWithTag("Player");
         phantomBox = phantom.GetComponent<BoxCollider2D>();
         phantomMesh = phantom.GetComponent<SpriteRenderer>();
@@ -74,6 +76,7 @@ public class BasicMovement : MonoBehaviour
         Destroy(GameObject.FindGameObjectWithTag("UI"));
         Destroy(this.gameObject); //kill off the dead Ai
         phantom.transform.parent = null;
+        
     }
 
     public void ReallyDED()
@@ -104,6 +107,7 @@ public class BasicMovement : MonoBehaviour
         aiControls.resetTag();
 
         phantom.transform.parent = null;
+        
 
         aiControls.enabled = true;
         this.enabled = false;

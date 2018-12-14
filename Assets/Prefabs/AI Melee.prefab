@@ -53,9 +53,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1326686080439248}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.53, y: 0.92, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.514704, y: -9.600852, z: -1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4219350398192022}
   m_Father: {fileID: 0}
@@ -110,7 +110,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 3}
+    oldSize: {x: 6.5, y: 4.8}
     newSize: {x: 2.56, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   damageMultiplier: 0
   fighterHp: 90
   fighterAp: 40
+  playerInRange: 0
   inRange: []
 --- !u!114 &114343144908863274
 MonoBehaviour:
@@ -175,16 +176,20 @@ MonoBehaviour:
   statUI: {fileID: 1314489954474122, guid: 221002b84cd210c4fbbb34a6bce1e942, type: 2}
   commonHp: 25
   commonAp: 25
-  playerInRange: 0
+  InRange: 0
   currentHP: 100
   currentAP: 100
   maxHP: 100
   maxAP: 100
   levelMultiplierHP: 0
   levelMultiplierAP: 0
+  startingTag: 
+  playerInRangeR: 0
+  isRetaliating: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
+  phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
   healthDrop: {fileID: 0}
 --- !u!114 &114443481937730140
@@ -206,6 +211,7 @@ MonoBehaviour:
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
+  phantomRigid: {fileID: 0}
 --- !u!212 &212723535536114482
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -241,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd99486eba20fce4195a7c3f598f7259, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d21996dec635074f9b4003569f9c867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

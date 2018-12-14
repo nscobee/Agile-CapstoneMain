@@ -8,6 +8,8 @@ public class BasicAI : MonoBehaviour
     public List<Transform> patrolPoints = new List<Transform>();
     public bool isPatrolling = true;
 
+    
+
     private Transform currentTarget;
     private float nextRound = 0.0f;
     public float fireRate = 7.0f;
@@ -66,6 +68,7 @@ public class BasicAI : MonoBehaviour
 
     private void Start()
     {
+        
         startingTag = this.gameObject.tag;
         phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         // if you want points to be gathered it does that
@@ -194,6 +197,7 @@ public class BasicAI : MonoBehaviour
 
         phantom.transform.parent = this.transform;
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
+        
         
         this.gameObject.tag = "Player";
 

@@ -24,6 +24,7 @@ TagManager:
   - HealthSlider
   - ApSlider
   - healer
+  - UI
   layers:
   - Default
   - TransparentFX
