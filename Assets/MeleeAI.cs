@@ -24,6 +24,11 @@ public class MeleeAI : MonoBehaviour {
     private int currentPlayerLevel;
     public float damageMultiplier;
 
+    public float fighterHp = 90f;
+    public float fighterAp = 40f;
+
+    public bool playerInRange;
+
 
 
     public List<GameObject> inRange = new List<GameObject>();
@@ -31,25 +36,30 @@ public class MeleeAI : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        basicAI = this.gameObject.GetComponent<BasicAI>();
         phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         currentPlayerLevel = phantomControls.currentLevel;
         damageMultiplier *= currentPlayerLevel;
+
+        basicAI.setStats(fighterHp, fighterAp);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
-
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) && phantomControls.isPossessing)
+        if (this.gameObject.tag == "Player")
         {
-            meleeAttack(weakAttackDamage);
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse1) && phantomControls.isPossessing)
-        {
-            meleeAttack(strongAttackDamage);
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                meleeAttack(weakAttackDamage);
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                meleeAttack(strongAttackDamage);
+            }
         }
     }
 
@@ -59,22 +69,38 @@ public class MeleeAI : MonoBehaviour {
         isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
-        var swordHitbox = Instantiate(meleeHitbox, hitboxOrigin.position, hitboxOrigin.rotation);
+        var swordHitbox = Instantiate(meleeHitbox, hitboxOrigin.position, hitboxOrigin.rotation, this.gameObject.transform);
 
         //destroys bullet after 4 seconds ish
         Destroy(swordHitbox, 0.1f);
     }
 
-   /* public void Heal()
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (phantomControls.isPossessing)
-            basicAI.currentHP += healPlayerAmount;
-        else
+        if (other.gameObject.tag == "Player")
         {
-            foreach (GameObject target in inRange)
-            {
-                target.GetComponent<BasicAI>().currentHP += healAIAmount;
-            }
+            playerInRange = true;
         }
-    }*/
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            playerInRange = false;
+        }
+    }
+
+    /* public void Heal()
+     {
+         if (phantomControls.isPossessing)
+             basicAI.currentHP += healPlayerAmount;
+         else
+         {
+             foreach (GameObject target in inRange)
+             {
+                 target.GetComponent<BasicAI>().currentHP += healAIAmount;
+             }
+         }
+     }*/
 }

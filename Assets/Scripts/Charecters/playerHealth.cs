@@ -21,7 +21,7 @@ public class playerHealth : MonoBehaviour {
     }
     private void Update()
     {
-        healthSlider.value = currentHealth;
+       // healthSlider.value = currentHealth;
     }
     void OnTriggerEnter2D(Collider2D other)
     {

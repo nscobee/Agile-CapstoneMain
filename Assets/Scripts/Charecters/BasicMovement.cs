@@ -5,18 +5,18 @@ using UnityEngine;
 public class BasicMovement : MonoBehaviour
 {
     public float movementSpeed;
-    public GameObject healthAndAbilities;
+    //public GameObject healthAndAbilities;
 
     public BasicAI aiControls;
     public PhantomControls phantomControls;
 
     public GameObject phantomPrefab;
-    public PhantomControls phantomControls;
 
 
     public GameObject phantom; //obtain info on phantom for possession
     public BoxCollider2D phantomBox; //reinable when depossessing
     public SpriteRenderer phantomMesh; //^^same
+    public Rigidbody2D phantomRigid;
     public static ReaperCountdown reaper;
 
 
@@ -25,6 +25,7 @@ public class BasicMovement : MonoBehaviour
         phantom = GameObject.FindWithTag("Player");
         phantomBox = phantom.GetComponent<BoxCollider2D>();
         phantomMesh = phantom.GetComponent<SpriteRenderer>();
+        phantomRigid = phantom.GetComponent<Rigidbody2D>();
         reaper = phantom.GetComponent<ReaperCountdown>();
         phantomControls = phantom.GetComponent<PhantomControls>();
         if(phantomControls == null)
@@ -58,39 +59,28 @@ public class BasicMovement : MonoBehaviour
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
         }
 
-        //use primary attack for mage
-        if (this.GetComponent<BasicAI>().isPosessingMage)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                print("basic movement script is firing fireball");
-                this.GetComponent<MageAI>().FireballAttack();
-            }
-            if (Input.GetMouseButton(1))
-            {
-                print("basic movement script is using fire attack");
-                this.GetComponent<MageAI>().FireAttack();
-            }
-        }
 
     }
 
 
   // used when player dies in a body
   // makes a new phantom to use and destories the charecter the player was previously possessing
-  public void FuckingDED()
+  public void DED()
   {
         phantomControls.resetLevel();
         phantomBox.enabled = true; //re-enable phantom
         phantomMesh.enabled = true; //^^same
+        phantomRigid.WakeUp();
+        Destroy(GameObject.FindGameObjectWithTag("UI"));
         Destroy(this.gameObject); //kill off the dead Ai
-
+        phantom.transform.parent = null;
     }
 
     public void ReallyDED()
     {
         phantomBox.enabled = false;
         phantomMesh.enabled = false;
+        
         this.enabled = false;
     }
 
@@ -100,17 +90,35 @@ public class BasicMovement : MonoBehaviour
         // do something like adding phantom and swaping ai and movement enables
         //aiControls.isPosessingMage = false;
         //aiControls.isPosessingFighter = false;
-
+        removeUI();
+        
+        
         phantomControls.isPossessing = false;
-        if(healthAndAbilities == true)
-        {
-            healthAndAbilities.SetActive(false);
-        }
+        //if(healthAndAbilities == true)
+        //{
+        //    healthAndAbilities.SetActive(false);
+      //  }
         phantomBox.enabled = true; //re-enable phantom
         phantomMesh.enabled = true; //^^^what he said
-        
+        phantomRigid.WakeUp();
+        aiControls.resetTag();
+
+        phantom.transform.parent = null;
+
         aiControls.enabled = true;
         this.enabled = false;
+        
+    }
+
+    private void removeUI()
+    {
+        GameObject[] UI = GameObject.FindGameObjectsWithTag("UI");
+
+        foreach (GameObject item in UI)
+        {
+            Destroy(item);
+        }
+        
     }
 
 }

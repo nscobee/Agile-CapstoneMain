@@ -23,18 +23,44 @@ public class MageAI : BasicAI
     public float fireballManaLoss = 7f;
     public float fireManaLoss = 2f;
 
+    public float mageHp = 40f;
+    public float mageAp = 90f;
+
+    public BasicAI basicAI;
+
 
     private float fireballNextRound = 0.0f;
     public float fireballFireRate = 7.0f;
+
+    public bool playerInRange;
+
+
+
     // Use this for initialization
     void Start()
     {
-        
+        basicAI = this.gameObject.GetComponent<BasicAI>();
+        basicAI.setStats(mageHp, mageAp);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (this.gameObject.tag == "Player")
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                print("basic movement script is firing fireball");
+                FireballAttack();
+            }
+            if (Input.GetMouseButton(1))
+            {
+                print("basic movement script is using fire attack");
+                FireAttack();
+            }
+        }
+
         
     }
 
@@ -81,6 +107,22 @@ public class MageAI : BasicAI
         }
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            playerInRange = false;
+        }
     }
 
 }

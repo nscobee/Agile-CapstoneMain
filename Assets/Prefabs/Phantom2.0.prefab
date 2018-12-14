@@ -118,12 +118,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00744ff570fed8541ac6b9d53f441c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAndAbilities: {fileID: 0}
   isShowing: 0
   speed: 5
   phantomTarget: {fileID: 0}
   isPossessing: 0
   phantom: {fileID: 1660928347398176}
+  currentLevel: 1
+  currentExperience: 0
+  experienceTillNextLevel: 0
+  MAX_LEVEL: 5
 --- !u!114 &114693017029926454
 MonoBehaviour:
   m_ObjectHideFlags: 1

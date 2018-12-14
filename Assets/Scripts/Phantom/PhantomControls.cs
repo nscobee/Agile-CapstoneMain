@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 public class PhantomControls : MonoBehaviour
 {
-    public GameObject healthAndAbilities;
     public bool isShowing;
     public float speed;
     public GameObject phantomTarget = null;
@@ -47,19 +46,15 @@ public class PhantomControls : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                isShowing = !isShowing;
-                //healthAndAbilities.SetActive(isShowing);
+                this.gameObject.tag = "Player";
                 isPossessing = true;
                 if (isPossessing)
                 {
-                    healthAndAbilities.SetActive(true);
+              
                 }
                 reaper.outOfBody = false;
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
-                if(phantomTarget.tag == "mage")
-                {
-                    phantomTarget.GetComponent<BasicAI>().isPosessingMage = true;
-                }
+                
 
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe")

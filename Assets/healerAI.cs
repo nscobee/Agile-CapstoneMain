@@ -10,9 +10,15 @@ public class healerAI : MonoBehaviour {
     public GameObject bullet;
     public Transform bulletSpawn;
 
+    
+    public float speed = 5f;
+
     public PhantomControls phantomControls;
 
     public BasicAI basicAI;
+
+    public float healerHp = 45f;
+    public float healerAp = 75f;
 
     public float healPlayerAmount;
     public float healAIAmount;
@@ -20,42 +26,56 @@ public class healerAI : MonoBehaviour {
     private int currentPlayerLevel;
     public float healMultiplier;
 
+    public bool playerInRange;
+
+
+    
+
         
 
     public List<GameObject> inRange = new List<GameObject>();
 
     // Use this for initialization
     void Start () {
+        basicAI = this.gameObject.GetComponent<BasicAI>();
         currentPlayerLevel = phantomControls.currentLevel;
         healMultiplier *= currentPlayerLevel;
+        basicAI.setStats(healerHp, healerAp);
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        
+        if (this.gameObject.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                FireAttack();
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                Heal();
+            }
+        }
         
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && phantomControls.isPossessing)
-        {
-            FireAttack();
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse1) && phantomControls.isPossessing)
-        {
-            Heal();
-        }
+
     }
 
 
     public void FireAttack()
     {
-        isFiring = true;
-        nextRound = Time.time + fireRate;
-        var projectileBullet = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
-        projectileBullet.GetComponent<Rigidbody2D>().velocity = projectileBullet.transform.forward * 10f;
+         isFiring = true;
+         nextRound = Time.time + fireRate;
+         var projectileBullet = Instantiate(bullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
+         projectileBullet.GetComponent<Rigidbody2D>().velocity = projectileBullet.transform.forward * 10f;
 
-        //destroys bullet after 4 seconds ish
-        Destroy(projectileBullet, 4f);
+         //destroys bullet after 4 seconds ish
+         Destroy(projectileBullet, 4f);
+
+
+
     }
 
     public void Heal()
@@ -71,5 +91,21 @@ public class healerAI : MonoBehaviour {
         }
     }
 
-    
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            playerInRange = false;
+        }
+    }
+
+
 }

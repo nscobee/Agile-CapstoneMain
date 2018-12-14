@@ -7,8 +7,9 @@ public class meleeRange : MonoBehaviour {
     public GameObject meleeChar;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        meleeChar = transform.parent.gameObject;
 	}
 
     // Update is called once per frame
@@ -22,7 +23,8 @@ public class meleeRange : MonoBehaviour {
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if (other.gameObject.layer == LayerMask.NameToLayer("AI"))
         {
-            other.GetComponent<BasicAI>().ReceiveDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
+            print("Melee Hit!");
+            other.gameObject.GetComponent<BasicAI>().ReceiveDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
 
         }
     }
