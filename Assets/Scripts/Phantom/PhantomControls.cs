@@ -53,10 +53,10 @@ public class PhantomControls : MonoBehaviour
                     SaveLoadSystem.MakeNewPlayerSave("ScribeTests");
 
                     //make a new save in the folder for that scene
-                    SaveData newSaveTest = new SaveData("Scene01", 1);
+                    LocationSaveData newSaveTest = new LocationSaveData("Scene01", 1);
                    
                     //save the stuff
-                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");     
+                    SaveLoadSystem.SavePlayer("ScribeTests",newSaveTest);     
                 }
             }
         }

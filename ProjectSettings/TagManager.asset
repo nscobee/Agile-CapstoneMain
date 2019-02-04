@@ -21,6 +21,7 @@ TagManager:
   - Melee
   - SpellCaster
   - Reaper
+  - Phantom
   layers:
   - Default
   - TransparentFX
@@ -57,4 +58,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 3499925541
     locked: 0

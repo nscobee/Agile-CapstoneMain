@@ -57,7 +57,7 @@ public class MainMenuManager : MonoBehaviour
   {
     if (SaveLoadSystem.MakeNewPlayerSave(newSceneInput.text))
     {
-      SaveLoadSystem.LoadPlayer(newSceneInput.text);
+      SaveLoadSystem.LoadPlayerLocation(newSceneInput.text);
 
     }
 
