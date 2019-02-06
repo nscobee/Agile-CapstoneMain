@@ -116,8 +116,6 @@ public class BasicAI : MonoBehaviour
 
         //check if posessing a character, then what character
 
-        if (currentTarget == null && patrolPoints.Count > 0)
-
         
 
         if (isPatrolling)
