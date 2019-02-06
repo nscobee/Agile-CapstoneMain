@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class BasicAI : MonoBehaviour
 {
     public List<Transform> patrolPoints = new List<Transform>();
+    public bool isPatrolling = true;
+
+    
 
     private Transform currentTarget;
+    private float nextRound = 0.0f;
+    public float fireRate = 7.0f;
 
     public static float speed = 5f;
     public static float stopDistance = 1f;
@@ -16,156 +21,241 @@ public class BasicAI : MonoBehaviour
 
     public BasicMovement playerMovement;
 
+    public PhantomControls phantomControls;
+
     public AISpawner homeSpawner;
 
     public Slider hpSlider;
     public Slider apSlider;
-    public GameObject abilityImage;
+
+    public GameObject statUI;
+    /*public GameObject abilityImage;
     public GameObject fighterAbilities;
     public GameObject mageAbilities;
     public GameObject commonAbilities;
+    public GameObject healerAbilities;*/
 
     public float commonHp = 25f;
     public float commonAp = 25f;
 
-    public float fighterHp = 90f;
-    public float fighterAp = 40f;
+    public bool InRange = false;
 
-    public float mageHp = 40f;
-    public float mageAp = 90f;
+    public float currentHP;
+    public float currentAP;
 
+    public float maxHP;
+    public float maxAP;
+
+    public float levelMultiplierHP;
+    public float levelMultiplierAP;
+
+    public string startingTag;
+    public bool playerInRangeR;
+    public bool isRetaliating; 
 
 
     public GameObject phantom;  //Obtain info about phantom to have it persist
-    public BoxCollider phantomBox; //to be hidden while phantom is possessing
-    public MeshRenderer phantomMesh; //same as ^^
+    public BoxCollider2D phantomBox; //to be hidden while phantom is possessing
+    public SpriteRenderer phantomMesh; //same as ^^
+    public Rigidbody2D phantomRigid;
+
+    public Transform playerObjTransform;
 
     public static ReaperCountdown reaper;
+
+    public GameObject healthDrop;
 
 
     private void Start()
     {
+        
+        startingTag = this.gameObject.tag;
+        phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         // if you want points to be gathered it does that
         if (gatherPoints)
         {
-            // if you want points to be gathered it does that
-            if (gatherPoints)
-            {
+            
                 GenericFunctions.GatherComponetFromSceneByTag<Transform>(ref patrolPoints, "PatrolPoint");
 
-                // private IEnumerator wanderCoroutine;
+                //IEnumerator wanderCoroutine;
                 //private IEnumerator idleCoroutine;
-
-            }
-
             
         }
         phantom = GameObject.FindWithTag("Player");
-        phantomBox = phantom.GetComponent<BoxCollider>();
-        phantomMesh = phantom.GetComponent<MeshRenderer>();
+        phantomBox = phantom.GetComponent<BoxCollider2D>();
+        phantomMesh = phantom.GetComponent<SpriteRenderer>();
+        phantomRigid = phantom.GetComponent<Rigidbody2D>();
+
+        //needed to assign these i think?
+        phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
+        //hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+       // apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
+       // mageAbilities = GameObject.Find("MageA");
+ 
+
+        currentHP = maxHP;
+        currentAP = maxAP;
+        
     }
 
     private void Update()
     {
-
-       float startTime = Time.time;
-        // if there is no target it gets one
-        if (currentTarget == null && patrolPoints.Count > 0)
+    if(!phantomControls.isPossessing)
         {
-            currentTarget = FindTarget(patrolPoints);
+            levelMultiplierAP = 1;
+            levelMultiplierHP = 1;
         }
 
-        if (currentTarget != null)
+        float startTime = Time.time;
+        //isPatrolling = true;
+       /* if (playerInRange)
         {
-            print("moving to target: " + currentTarget.ToString());
+            isPatrolling = false;
+            ChaseThePlayer();
+        }*/
 
-            // Move toward the target
-            Wander(this.transform, currentTarget.transform);
-            //this.transform.position = Vector3.MoveTowards(this.transform.position, currentTarget.transform.position, speed * Time.deltaTime);
+        //check if posessing a character, then what character
 
-            // checks if its too close to target
-            if (Vector3.Distance(this.transform.position, currentTarget.transform.position) < stopDistance)
+        
+
+        if (isPatrolling)
+        {
+            // if there is no target it gets one
+            if (currentTarget == null && patrolPoints.Count > 0)
             {
+                currentTarget = FindTarget(patrolPoints);
+            }
+
+            if (currentTarget != null)
+            {
+                // print("moving to target: " + currentTarget.ToString());
+
+                // Move toward the target
+                Wander(this.transform, currentTarget.transform);
+                //this.transform.position = Vector3.MoveTowards(this.transform.position, currentTarget.transform.position, speed * Time.deltaTime);
+
+                // checks if its too close to target
+                if (Vector2.Distance(this.transform.position, currentTarget.transform.position) < stopDistance)
+                {
                     currentTarget = null;
+                }
             }
         }
+
+        if(phantomControls.isPossessing)
+        {
+
+            apSlider.value = currentAP;
+        }
+
+        
+        
+        if (currentHP > maxHP) currentHP = maxHP;
+        if (currentAP > maxAP) currentAP = maxAP;
+
+        if(currentHP <= 0 && !phantomControls.isPossessing)
+        {
+            Die();
+        }
+
+        if (this.gameObject.tag == "Melee")
+        {
+            playerInRangeR = this.gameObject.GetComponent<MeleeAI>().playerInRange;
+        }
+        if (this.gameObject.tag == "mage")
+        {
+            playerInRangeR = this.gameObject.GetComponent<MageAI>().playerInRange;
+        }
+        if (this.gameObject.tag == "healer")
+        {
+            playerInRangeR = this.gameObject.GetComponent<healerAI>().playerInRange;
+        }
+
+        if(isRetaliating) 
+        {
+            retaliate();
+        }
+
     }
 
     // when the player possess a AI it destories the phantom and enables the player movement on the 
     public void Possess(GameObject phantom)
     {
+
+        updateLevelMultiplier();
+
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
+        phantomRigid.Sleep();
         playerMovement.enabled = true;
+
         this.enabled = false;
+        setUI();
+        phantomControls.isPossessing = true;
 
-        if (gameObject.tag == "fighter")
-        {
-            hpSlider.value = fighterHp;
-            apSlider.value = fighterAp;
-
-            abilityImage.SetActive (false);
-            fighterAbilities.SetActive (true);
-            mageAbilities.SetActive(false);
-            commonAbilities.SetActive(false);
-
-        }
-        else if(gameObject.tag == "mage")
-        {
-            hpSlider.value = mageHp;
-            apSlider.value = mageAp;
-
-            abilityImage.SetActive(false);
-            fighterAbilities.SetActive(false);
-            mageAbilities.SetActive(true);
-            commonAbilities.SetActive(false);
-        }
-        else
-        {
-            hpSlider.value = commonHp;
-            apSlider.value = commonAp;
-
-            abilityImage.SetActive(false);
-            fighterAbilities.SetActive(false);
-            mageAbilities.SetActive(false);
-            commonAbilities.SetActive(true);
-        }
+        phantom.transform.parent = this.transform;
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
-
-
         
-     
+        
+        this.gameObject.tag = "Player";
+
+        phantom.transform.position = this.transform.position;
     }
 
-    // this will be called from update if the AI has no target and will get a target from the given List
-    public Transform FindTarget(List<Transform> transformList)
+     // this is to let the spawner know that it can send out another AI
+    private void OnDestroy()
     {
-        int randomNumber = Random.Range(0, patrolPoints.Count);
+        Die();
 
-        return transformList[randomNumber];
+        if (homeSpawner)
+        {
+            homeSpawner.AI.Remove(this.gameObject);
+        }
+        
+    }
+
+    //does the wander thingy
+    public void Wander(Transform mover, Transform target)
+    {
+        print("I've been told to wander");
+        //sets the target to a random spot within a certain distance from the target point
+        if (Vector2.Distance(mover.position, target.position) > 1f)
+        {
+            print("I've been told to move");
+            Vector2 newTarget = new Vector2(Random.Range(target.position.x - .5f, target.position.x + .5f),
+                Random.Range(target.position.y - .5f, target.position.y + .5f));
+
+            //float angleToTurn = Vector3.Angle(mover.position, target.position);
+            //Vector3 wanderTarget = Vector3.RotateTowards(mover.position, newTarget, Random.Range(-angleToTurn, angleToTurn), 1f);
+
+            //move towards spot
+            mover.transform.position = Vector2.MoveTowards(mover.position, newTarget, speed * Time.deltaTime);
+        }
+        //yield return new WaitForSecondsRealtime(Random.Range(5f, 15f));
 
     }
+
 
     // Checks if two transform points are within a certain distance of each other
     public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distance)
     {
-        return Vector3.Distance(currentPosition.position, targetPosition.position) < distance;
+        return Vector2.Distance(currentPosition.position, targetPosition.position) < distance;
 
     }
 
     // moves one object towards another by set speed
-    public Vector3 MoveTowardsObject(Vector3 mover, Vector3 target, float speed)
+    public Vector2 MoveTowardsObject(Vector2 mover, Vector2 target, float speed)
     {
-        return Vector3.MoveTowards(mover, target, speed * Time.deltaTime);
+        return Vector2.MoveTowards(mover, target, speed * Time.deltaTime);
 
     }
 
 
     public void Idle(Transform mover, Transform currentTarget)
     {
-        Vector3 idleSpot = new Vector3(currentTarget.position.x + Random.Range(-3f, 3f), currentTarget.position.y + Random.Range(-3f, 3f));
-        Vector3.RotateTowards(mover.transform.position, idleSpot, 2f, 1f);
-        mover.position = Vector3.MoveTowards(mover.transform.position, idleSpot, 3f);
+        Vector2 idleSpot = new Vector3(currentTarget.position.x + Random.Range(-3f, 3f), currentTarget.position.y + Random.Range(-3f, 3f));
+        //Vector2.RotateTowards(mover.transform.position, idleSpot, 2f, 1f);
+        mover.position = Vector2.MoveTowards(mover.transform.position, idleSpot, 3f);
 
 
     }
@@ -179,35 +269,182 @@ public class BasicAI : MonoBehaviour
         yield return new WaitForSecondsRealtime(Random.Range(100f, 150f));
     }
 
-
-
-
-    //does the wander thingy
-    public void Wander(Transform mover, Transform target)
+    public Transform FindTarget(List<Transform> transformList)
     {
-        //sets the target to a random spot within a certain distance from the target point
-        if (Vector3.Distance(mover.position, target.position) > 1f)
-        {
-            Vector3 newTarget = new Vector3(Random.Range(target.position.x - .5f, target.position.x + .5f),
-                Random.Range(target.position.y - .5f, target.position.y + .5f), 0);
+        int randomNumber = Random.Range(0, patrolPoints.Count);
 
-            //float angleToTurn = Vector3.Angle(mover.position, target.position);
-            //Vector3 wanderTarget = Vector3.RotateTowards(mover.position, newTarget, Random.Range(-angleToTurn, angleToTurn), 1f);
-            
-            //move towards spot
-            mover.transform.position = Vector3.MoveTowards(mover.position, newTarget, speed * Time.deltaTime);
-        }
-        //yield return new WaitForSecondsRealtime(Random.Range(5f, 15f));
+        return transformList[randomNumber];
 
     }
 
-    // this is to let the spawner know that it can send out another AI
-    private void OnDestroy()
+    public void ChaseThePlayer()
     {
-        if (homeSpawner)
-        {
-            homeSpawner.AI.Remove(this.gameObject);
-        }
-    }
+        //this.transform.LookAt(playerObjTransform);
+        //isPatrolling = false;
+        //isPursuing = true;
+        playerObjTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        float shooterYPos = transform.position.y;
+        Vector3 customPos = playerObjTransform.transform.position;
+        customPos.y = shooterYPos;
+        this.transform.LookAt(customPos);
+        this.transform.position += this.transform.forward * speed * Time.deltaTime;
+
+    }//end chasePlayer
     
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //Debug.Log("something is hitting me (the ai): " + other.name);
+        if (other.tag == "Player" && !phantomControls.isPossessing)
+        {
+            InRange = true;
+        }
+
+        if (other.tag == "bullet")
+        {
+            print("I (the ai) Got hit by fireball");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            InRange = false;
+        }
+    }
+
+   /* private void setInactive()
+    {
+        abilityImage.SetActive(false);
+        fighterAbilities.SetActive(false);
+        mageAbilities.SetActive(false);
+        commonAbilities.SetActive(false);
+        healerAbilities.SetActive(false);
+    }*/
+    
+    private void updateLevelMultiplier() //Is called when the player possesses an NPC, will set values to current level
+    {
+        levelMultiplierAP *= phantomControls.currentLevel;
+        levelMultiplierHP *= phantomControls.currentLevel;
+
+        commonAp *= levelMultiplierAP;
+        commonHp *= levelMultiplierHP;
+
+    }
+
+    public void ReceiveDamage(float damage)
+    {
+        print("taking damage");
+        currentHP -= damage;
+        isRetaliating = true;
+
+    }
+
+    public void setStats(float hp, float ap)
+    {
+        maxAP = ap;
+        maxHP = hp;
+        currentHP = maxHP;
+        currentAP = maxAP;
+    }
+
+    public void healOnPossess()
+    {
+        currentHP = maxHP;
+        currentAP = maxAP;
+    }
+
+    public void setUI()
+    {
+        Instantiate(statUI);
+        hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+        apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
+        hpSlider.maxValue = maxHP;
+        apSlider.maxValue = maxAP;
+        hpSlider.value = maxHP;
+        apSlider.value = maxAP;
+    }
+
+    public void resetTag()
+    {
+        this.gameObject.tag = startingTag;
+    }
+
+    public void retaliate()
+    {
+        print("Starting retaliation");
+        if(playerInRangeR)
+        {
+            print("Player in range");
+            float moveSelect = Random.Range(0, 100);
+            if (moveSelect < 70)
+            {
+                primaryAttack();
+            }
+            else secondaryAttack();
+                
+        }
+        else
+        {
+            print("Player not in range");
+            GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
+
+            
+            this.transform.LookAt(targets[0].transform);
+            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
+            
+            transform.position = Vector2.MoveTowards(transform.position, targets[0].transform.position, 5f * Time.deltaTime);
+            //move towards
+        }
+    }
+
+    public void primaryAttack()
+    {
+        if (this.gameObject.tag == "Melee")
+        {
+            this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().weakAttackDamage);
+        }
+
+        if (this.gameObject.tag == "mage")
+        {
+            this.gameObject.GetComponent<MageAI>().FireAttack();
+        }
+    
+        if (this.gameObject.tag == "healer")
+        {
+            this.gameObject.GetComponent<healerAI>().FireAttack();
+        }
+    }
+
+    public void secondaryAttack()
+    {
+        if (this.gameObject.tag == "Melee")
+        {
+            this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().strongAttackDamage);
+        }
+        if (this.gameObject.tag == "mage")
+        {
+            this.gameObject.GetComponent<MageAI>().FireballAttack();
+        }
+        if (this.gameObject.tag == "healer")
+        {
+            this.gameObject.GetComponent<healerAI>().Heal();
+        }
+    }
+
+
+    private void Die()
+    {
+
+        if (Random.Range(0, 100) > 50)
+        {
+         //   GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
+           // Destroy(healthpickup, 10f);
+        }
+
+        //Drop stuff for player? exp/items
+        Destroy(this.gameObject);
+
+    }
+
 }

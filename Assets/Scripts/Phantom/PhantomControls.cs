@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 public class PhantomControls : MonoBehaviour
 {
-    public GameObject healthAndAbilities;
     public bool isShowing;
     public float speed;
     public GameObject phantomTarget = null;
@@ -18,16 +17,26 @@ public class PhantomControls : MonoBehaviour
     public bool isPossessing;
     public GameObject phantom;
 
+    //Simple Leveling System
+    public int currentLevel = 1;
+    public float currentExperience = 0;
+    public float experienceTillNextLevel;
+    private float startingExperienceTillNextLevel;
+    public int MAX_LEVEL = 5;
 
- 
+
+
     private void Start()
     {
+
             reaper = phantom.GetComponent<ReaperCountdown>();
             reaper.outOfBody = true;
+        startingExperienceTillNextLevel = experienceTillNextLevel;
+
 
     }
 
-     private void Update()
+    private void Update()
     {
         // uses the generic movement for movement passing desired speed
         transform.position += GenericFunctions.BasePlayerMovement(speed);
@@ -37,15 +46,16 @@ public class PhantomControls : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                isShowing = !isShowing;
-                healthAndAbilities.SetActive(isShowing);
+                this.gameObject.tag = "Player";
                 isPossessing = true;
+                if (isPossessing)
+                {
+              
+                }
                 reaper.outOfBody = false;
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
                 
-                
 
-                
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe")
                 {
@@ -54,18 +64,40 @@ public class PhantomControls : MonoBehaviour
 
                     //make a new save in the folder for that scene
                     SaveData newSaveTest = new SaveData("Scene01", 1);
-                   
+
                     //save the stuff
-                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");     
+                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");
                 }
             }
         }
+
+        else
+        {
+            isPossessing = false;
+        }
+
+        //Simple Leveling System
+        if (currentLevel == MAX_LEVEL) currentExperience = 0;
+        if(currentExperience >= experienceTillNextLevel)
+        {
+            currentLevel++;
+            currentExperience = 0;
+            experienceTillNextLevel *= currentLevel;
+        }
+
     }
 
 
     private void OnDestroy()
     {
         reaper.outOfBody = false;
+    }
+
+    public void resetLevel()
+    {
+        currentLevel = 0;
+        currentExperience = 0;
+        experienceTillNextLevel = startingExperienceTillNextLevel;
     }
 
 }

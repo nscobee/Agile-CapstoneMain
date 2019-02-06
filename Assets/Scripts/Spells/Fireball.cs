@@ -9,7 +9,10 @@ public class Fireball : BasicSpells
     public Vector3 mousePos;
     //public Vector3 distanceFromPlayer;
     public GameObject fireball;
-    //public float spellSpeed = 3f;
+    public float spellSpeed = 3f;
+
+    public PhantomControls playerMovement;
+    
 
     // Use this for initialization
     void Start()
@@ -23,10 +26,14 @@ public class Fireball : BasicSpells
         playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+        /*
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && playerMovement.isPossessing)
+
         {
             Fire();
-        }
+        }*/
     }
 
     private void OnDrawGizmos()
@@ -39,7 +46,7 @@ public class Fireball : BasicSpells
     public void Fire()
     {
         GameObject.Instantiate(fireball, playerPos, Quaternion.identity);
-        //fireball.GetComponent<Rigidbody2D>().velocity = fireball.transform.position - playerPos * spellSpeed;
+        fireball.transform.position = fireball.transform.position - playerPos * spellSpeed;
 
     }
     

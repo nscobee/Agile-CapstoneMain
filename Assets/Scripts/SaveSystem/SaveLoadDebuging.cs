@@ -9,7 +9,7 @@ using UnityEngine;
  */
 public class SaveLoadDebuging : MonoBehaviour
 {
-  public LocationSaveData loadFile;
+  public SaveData loadFile;
 
   public bool loadButton;
 

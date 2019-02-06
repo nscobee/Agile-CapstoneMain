@@ -20,14 +20,31 @@ GameObject:
   m_Component:
   - component: {fileID: 4749808203141294}
   - component: {fileID: 33983222473315254}
-  - component: {fileID: 65639531993480320}
   - component: {fileID: 23974378053019930}
   - component: {fileID: 114944316649261898}
   - component: {fileID: 114009534445603228}
-  - component: {fileID: 54606570534466932}
+  - component: {fileID: 114078748920949226}
+  - component: {fileID: 61132030468422780}
+  - component: {fileID: 114484462405248300}
+  - component: {fileID: 50571814667741468}
   m_Layer: 10
   m_Name: Mage
   m_TagString: mage
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1987951366745302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4788827789127508}
+  m_Layer: 10
+  m_Name: fireballSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,10 +56,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1541223342523228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.80039495, y: 1.38, z: 0}
+  m_LocalPosition: {x: 2.3523135, y: -1.2464776, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 4788827789127508}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4788827789127508
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987951366745302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4749808203141294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23974378053019930
@@ -60,7 +91,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 531f90ea4e7ec3644968e20a91600e2b, type: 2}
+  - {fileID: 2100000, guid: 3d9cd5b472d8c6c45873b6895a93eb30, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,33 +118,51 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1541223342523228}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54606570534466932
-Rigidbody:
+--- !u!50 &50571814667741468
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1541223342523228}
-  serializedVersion: 2
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
   m_Mass: 1
-  m_Drag: 0
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_Constraints: 120
+  m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!65 &65639531993480320
-BoxCollider:
+  m_Constraints: 0
+--- !u!61 &61132030468422780
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1541223342523228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114009534445603228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,12 +175,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  healthAndAbilities: {fileID: 1889351909957178, guid: b9046df5475c6ee4f8a972eb8a5b21dc,
+    type: 2}
   aiControls: {fileID: 114944316649261898}
+  phantomControls: {fileID: 0}
   phantomPrefab: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
     type: 2}
-  phantom: {fileID: 0}
+  phantom: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3, type: 2}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
+--- !u!114 &114078748920949226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541223342523228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7112bdd557c9f1d43a97fceb25f97049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 7
+  moveSpeed: 2
+  radiusOfSatisfaction: 2
+  playerObjTransform: {fileID: 0}
+  shooterObjTransform: {fileID: 4749808203141294}
+  bulletSpawn: {fileID: 4788827789127508}
+  bullet: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 2}
+  shooterObj: {fileID: 1541223342523228}
+  bulletSplashArea: 3
+  playerInRange: 0
+  isPursuing: 0
+  damageAmount: 10
+  shooterHealth: 5
+  timeTillAttack: 0
+  startTimeTillAttack: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  AILayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  fireball: {fileID: 4120633805918726, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 2}
+  fireballDamageAmount: 10
+  fireDamageAmount: 5
+  fireRange: 2
+  fireballFireRate: 7
+--- !u!114 &114484462405248300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541223342523228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66166d687b24e0144bb3d758989d1d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
 --- !u!114 &114944316649261898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,21 +252,40 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  isPatrolling: 1
+  fireRate: 7
   gatherPoints: 1
   playerMovement: {fileID: 114009534445603228}
+  phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
+  phantomControls: {fileID: 0}
   hpSlider: {fileID: 0}
   apSlider: {fileID: 0}
   abilityImage: {fileID: 0}
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
   commonAbilities: {fileID: 0}
+  healerAbilities: {fileID: 0}
   commonHp: 25
   commonAp: 25
   fighterHp: 90
   fighterAp: 40
   mageHp: 40
   mageAp: 90
-  phantom: {fileID: 0}
+  playerInRange: 0
+  isPosessingMage: 0
+  isPosessingFighter: 0
+  isPosessingCommon: 0
+  phantom: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3, type: 2}
+  healerHp: 45
+  healerAp: 75
+  currentHP: 0
+  currentAP: 0
+  maxHP: 100
+  maxAP: 100
+  levelMultiplierHP: 0
+  levelMultiplierAP: 0
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
+  playerObjTransform: {fileID: 0}
+  healthDrop: {fileID: 1209971147107064, guid: a4796e7c02cb457478ce1901ed7c9169, type: 2}

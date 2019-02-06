@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveLoadManager : MonoBehaviour
-{
-  public static string currentSaveFile = null;
+public class SaveLoadManager : MonoBehaviour {
 
-  public static LocationSaveData currentLocationFile;
-  public LocationSaveData dummyCurrentLocationFile;
-
-  private void Update()
-  {
-    dummyCurrentLocationFile = currentLocationFile;
-
-  }
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }

@@ -152,39 +152,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+    - target: {fileID: 114361774644988710, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 2}
-      propertyPath: phantom
+      propertyPath: playerMovement
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
-        type: 2}
-      propertyPath: phantomBox
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
-        type: 2}
-      propertyPath: phantomMesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
-        type: 2}
-      propertyPath: phantom
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
-        type: 2}
-      propertyPath: phantomBox
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
-        type: 2}
-      propertyPath: phantomMesh
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1872098400}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &615863796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+    type: 2}
+  m_PrefabInternal: {fileID: 512534532}
+  m_Script: {fileID: 11500000, guid: 716ac8bff88333b4a9a378af136bddd6, type: 3}
+--- !u!114 &615863797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+    type: 2}
+  m_PrefabInternal: {fileID: 512534532}
+  m_Script: {fileID: 11500000, guid: 0895f473b314a434297e2f85eb1aadcf, type: 3}
 --- !u!1 &819060295
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +414,114 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1889351909957178, guid: b9046df5475c6ee4f8a972eb8a5b21dc,
     type: 2}
   m_PrefabInternal: {fileID: 1510497708}
+--- !u!1 &1872098394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
+    type: 2}
+  m_PrefabInternal: {fileID: 2035902452}
+--- !u!23 &1872098397 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23397199623101594, guid: f327babb851b2514d833ede69c4652b3,
+    type: 2}
+  m_PrefabInternal: {fileID: 2035902452}
+--- !u!65 &1872098399 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 65642119194338528, guid: f327babb851b2514d833ede69c4652b3,
+    type: 2}
+  m_PrefabInternal: {fileID: 2035902452}
+--- !u!114 &1872098400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114710313824480770, guid: f327babb851b2514d833ede69c4652b3,
+    type: 2}
+  m_PrefabInternal: {fileID: 2035902452}
+  m_Script: {fileID: 11500000, guid: 00744ff570fed8541ac6b9d53f441c96, type: 3}
+--- !u!1001 &1909339966
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054121736001374, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114906818120999216, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1872098400}
+    - target: {fileID: 114267880264679778, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: aiControls
+      value: 
+      objectReference: {fileID: 615863796}
+    - target: {fileID: 114267880264679778, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1872098394}
+    - target: {fileID: 114267880264679778, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1872098399}
+    - target: {fileID: 114267880264679778, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1872098397}
+    - target: {fileID: 114357550751976772, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 615863797}
+    - target: {fileID: 114357550751976772, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1872098394}
+    - target: {fileID: 114357550751976772, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1872098399}
+    - target: {fileID: 114357550751976772, guid: 2ce7e9f4065871147b9eefa450d606bc,
+        type: 2}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1872098397}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ce7e9f4065871147b9eefa450d606bc, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &2035902452
 Prefab:
   m_ObjectHideFlags: 0

@@ -105,7 +105,7 @@ public class EnemyAI : MonoBehaviour
         isFiring = true;
         nextRound = Time.time + fireRate;
         var projectileBullet = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
-        projectileBullet.GetComponent<Rigidbody>().velocity = projectileBullet.transform.forward * 10f;
+        projectileBullet.transform.position += projectileBullet.transform.forward * 10f;
        
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
