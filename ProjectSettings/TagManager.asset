@@ -25,6 +25,7 @@ TagManager:
   - ApSlider
   - healer
   - UI
+  - Phantom
   layers:
   - Default
   - TransparentFX
@@ -61,4 +62,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: notGround
+    uniqueID: 3004508843
     locked: 0
