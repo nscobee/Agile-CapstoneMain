@@ -10,7 +10,6 @@ public class healerAI : MonoBehaviour {
     public GameObject bullet;
     public Transform bulletSpawn;
 
-    
     public float speed = 5f;
 
     public PhantomControls phantomControls;
@@ -27,12 +26,7 @@ public class healerAI : MonoBehaviour {
     public float healMultiplier;
 
     public bool playerInRange;
-
-
     
-
-        
-
     public List<GameObject> inRange = new List<GameObject>();
 
     // Use this for initialization
@@ -58,9 +52,6 @@ public class healerAI : MonoBehaviour {
                 Heal();
             }
         }
-        
-
-
     }
 
 
@@ -72,10 +63,7 @@ public class healerAI : MonoBehaviour {
          projectileBullet.GetComponent<Rigidbody2D>().velocity = projectileBullet.transform.forward * 10f;
 
          //destroys bullet after 4 seconds ish
-         Destroy(projectileBullet, 4f);
-
-
-
+         //Destroy(projectileBullet, 4f);
     }
 
     public void Heal()

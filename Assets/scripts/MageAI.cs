@@ -13,9 +13,9 @@ public class MageAI : BasicAI
     public Transform bulletSpawn;
     public GameObject bullet;
     public float bulletSplashArea = 1f;
-    //bool for chase/attack
-    //public bool isPursuing = false;
-    //bool isFiring;
+
+    public List<GameObject> inRange = new List<GameObject>();
+
     public int fireballDamageAmount = 10;
     public int fireDamageAmount = 5;
     public float fireRange = 2f;
@@ -66,19 +66,9 @@ public class MageAI : BasicAI
 
     public void FireAttack()
     {
-        Collider2D[] thingsToHit = Physics2D.OverlapCircleAll(Input.mousePosition, fireRange);
-        for (int i = 0; i < thingsToHit.Length; i++)
+        foreach(GameObject target in inRange)
         {
-            if (thingsToHit[i].tag == "Player")
-            {
-                thingsToHit[i].GetComponent<playerController>().takeDamage(fireDamageAmount);
-                thingsToHit[i].GetComponent<AIHealth>().LoseMana(fireballManaLoss);
-            }
-            if(thingsToHit[i].tag == "mage")
-            {
-                thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireDamageAmount);
-                
-            }
+            target.GetComponent<BasicAI>().currentHP -= fireDamageAmount;
         }
         Debug.Log("Secondary spell used, " + fireDamageAmount + " dmg.");
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
@@ -89,24 +79,13 @@ public class MageAI : BasicAI
         //isFiring = true;
         fireballNextRound = Time.time + fireballFireRate;
         var projectileBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+        //projectileBullet.GetComponent<Rigidbody2D>().velocity = projectileBullet.transform.forward * 10f;
         projectileBullet.transform.position += projectileBullet.transform.forward * 25f;
-        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
 
+        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
         
-        Collider2D[] thingsToHit = Physics2D.OverlapCircleAll(fireball.transform.position, bulletSplashArea);
-        for (int i = 0; i < thingsToHit.Length; i++)
-        {
-            if(thingsToHit[i].tag == "player")
-            {
-                thingsToHit[i].GetComponent<playerController>().takeDamage(fireballDamageAmount);
-            }
-            if (thingsToHit[i].tag == "mage")
-            {
-                thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireballDamageAmount);
-            }
-        }
         //destroys bullet after 4 seconds ish
-        Destroy(projectileBullet, 4f);
+        //Destroy(projectileBullet, 4f);
     }
 
     public void OnTriggerEnter2D(Collider2D other)

@@ -37,7 +37,6 @@ public class GenericFunctions
         }
 
         return movementDirection.normalized * (moveSpeed * Time.deltaTime);
-
     }
 
     //public static void FaceMouse()
