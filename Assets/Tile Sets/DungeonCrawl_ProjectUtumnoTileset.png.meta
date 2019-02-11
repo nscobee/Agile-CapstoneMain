@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0da1da886c0462646996e40c50e6ba54
+=======
+guid: 05ef302001273ff48904143ac7974f68
+>>>>>>> ab93df4b5ee910b3fef1310b8bf287cd4438a9eb
 TextureImporter:
   fileIDToRecycleName:
     21300000: DungeonCrawl_ProjectUtumnoTileset_0

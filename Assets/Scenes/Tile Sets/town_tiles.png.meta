@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 845801ce9d2f2c74cb2677840626908e
+=======
+guid: b777090488c597d4786d20ae3c60857c
+>>>>>>> ab93df4b5ee910b3fef1310b8bf287cd4438a9eb
 TextureImporter:
   fileIDToRecycleName:
     21300000: town_tiles_0

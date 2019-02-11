@@ -20,8 +20,8 @@ public class PhantomControls : MonoBehaviour
     //Simple Leveling System
     public int currentLevel = 1;
     public float currentExperience = 0;
-    public float experienceTillNextLevel;
-    private float startingExperienceTillNextLevel;
+    public float experienceTillNextLevel = 100;
+    private float startingExperienceTillNextLevel = 100;
     public int MAX_LEVEL = 5;
 
 

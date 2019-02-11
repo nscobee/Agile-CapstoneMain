@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 9598cc07670caa14b8c6941a4496c583
+=======
+guid: 1a1e2eafc882eb34e9e30bd5eece73e3
+>>>>>>> ab93df4b5ee910b3fef1310b8bf287cd4438a9eb
 TextureImporter:
   fileIDToRecycleName:
     21300000: FREE tileset 17 sheet v2_0

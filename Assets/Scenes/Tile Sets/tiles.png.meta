@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 145dff94a646b1e4a94b8f948d16d581
+=======
+guid: 1b1410c7b44e3c54fae3e7ed52490163
+>>>>>>> ab93df4b5ee910b3fef1310b8bf287cd4438a9eb
 TextureImporter:
   fileIDToRecycleName:
     21300000: tiles_0
