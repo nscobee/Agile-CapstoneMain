@@ -424,7 +424,7 @@ public class BasicAI : MonoBehaviour
         }
         if (this.gameObject.tag == "mage")
         {
-            this.gameObject.GetComponent<MageAI>().FireballAttack();
+            //this.gameObject.GetComponent<MageAI>().FireballAttack();
         }
         if (this.gameObject.tag == "healer")
         {

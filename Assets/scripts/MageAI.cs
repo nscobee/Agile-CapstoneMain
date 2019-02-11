@@ -34,7 +34,7 @@ public class MageAI : BasicAI
 
     public bool playerInRange;
 
-
+    public Vector3 target;
 
     // Use this for initialization
     void Start()
@@ -52,10 +52,13 @@ public class MageAI : BasicAI
             if (Input.GetMouseButtonDown(0))
             {
                 print("basic movement script is firing fireball");
-                FireballAttack();
+                target = Input.mousePosition;
+                FireballAttack(target);
+
             }
             if (Input.GetMouseButton(1))
             {
+
                 print("basic movement script is using fire attack");
                 FireAttack();
             }
@@ -74,18 +77,22 @@ public class MageAI : BasicAI
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
     }
 
-    public void FireballAttack()
+    public void FireballAttack(Vector3 targetPoint)
     {
-        //isFiring = true;
+        Debug.Log(targetPoint.ToString());
+ 
         fireballNextRound = Time.time + fireballFireRate;
-        var projectileBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
-        //projectileBullet.GetComponent<Rigidbody2D>().velocity = projectileBullet.transform.forward * 10f;
-        projectileBullet.transform.position += projectileBullet.transform.forward * 25f;
+
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+
+        //Vector3.MoveTowards(projectileBullet.transform.position, targetPoint, speed * Time.deltaTime);
+        projectileBullet.GetComponent<Rigidbody2D>().velocity =
+        Vector2.MoveTowards(bulletSpawn.transform.position, targetPoint , speed * Time.deltaTime);
 
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
         
         //destroys bullet after 4 seconds ish
-        //Destroy(projectileBullet, 4f);
+        Destroy(projectileBullet, 4f);
     }
 
     public void OnTriggerEnter2D(Collider2D other)

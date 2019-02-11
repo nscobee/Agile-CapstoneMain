@@ -11,12 +11,13 @@ public class Projectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);       
+        target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, Camera.main.nearClipPlane));       
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         this.transform.position = Vector2.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
     }
 }
