@@ -112,18 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &139138884 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
-    type: 3}
-  m_PrefabInstance: {fileID: 737276282}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716ac8bff88333b4a9a378af136bddd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &459122982
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -372,30 +360,20 @@ PrefabInstance:
       objectReference: {fileID: 1840061303}
     - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
         type: 3}
-      propertyPath: healthDrop
-      value: 
-      objectReference: {fileID: 1640331636388708, guid: f13a544106c3c764cba361b41ab851fb,
-        type: 3}
-    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
-        type: 3}
-      propertyPath: basicAI
-      value: 
-      objectReference: {fileID: 139138884}
-    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
-        type: 3}
       propertyPath: playerObjTransform
       value: 
       objectReference: {fileID: 1840061307}
     - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
         type: 3}
-      propertyPath: fireRange
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
-        type: 3}
       propertyPath: fireball
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!1 &1258200132 stripped
@@ -457,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190605258874208, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4190605258874208, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -528,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107299161409936, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4107299161409936, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -747,7 +725,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:

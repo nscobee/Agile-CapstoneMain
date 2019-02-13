@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private Vector2 target;
+    private Vector3 target;
     public float speed = 25f;
-    public float maxDistance = 15f;
+    //public float maxDistance = 15f;
 
     // Use this for initialization
     void Start()
     {
-        target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, Camera.main.nearClipPlane));       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        this.transform.position = Vector2.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
+
+        this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
+    }
+
+    public void setTarget(Vector3 targetPoint)
+    {
+        target = targetPoint;
     }
 }

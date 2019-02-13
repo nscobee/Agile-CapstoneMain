@@ -253,7 +253,7 @@ MonoBehaviour:
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
-  healthDrop: {fileID: 0}
+  healthDrop: {fileID: 1640331636388708, guid: f13a544106c3c764cba361b41ab851fb, type: 3}
   timeTillAttack: 0
   startTimeTillAttack: 0
   playerLayer:
@@ -273,10 +273,9 @@ MonoBehaviour:
   fireManaLoss: 2
   mageHp: 40
   mageAp: 90
-  basicAI: {fileID: 0}
+  basicAI: {fileID: 114408053851157008}
   fireballFireRate: 7
   playerInRange: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!114 &114123521471994544
 MonoBehaviour:
   m_ObjectHideFlags: 0

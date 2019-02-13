@@ -32,8 +32,7 @@ public class MageAI : BasicAI
     public float fireballFireRate = 7.0f;
 
     public bool playerInRange;
-
-    public Vector3 target;
+    
 
     // Use this for initialization
     void Start()
@@ -51,12 +50,8 @@ public class MageAI : BasicAI
             if (Input.GetMouseButtonDown(0))
             {
                 print("basic movement script is firing fireball");
-
-                target = Input.mousePosition;
-                Debug.Log("Target point is: " + target.ToString());
-
-
-                FireballAttack(target);
+                
+                FireballAttack();
 
             }
             if (Input.GetMouseButton(1))
@@ -80,17 +75,16 @@ public class MageAI : BasicAI
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
     }
 
-    public void FireballAttack(Vector3 targetPoint)
+    public void FireballAttack()
     {
         fireballNextRound = Time.time + fireballFireRate;
 
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, bulletSpawn.transform);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
 
-
-
-        projectileBullet.GetComponent<Rigidbody2D>().velocity = Vector3.MoveTowards(transform.position, targetPoint.normalized, speed * Time.deltaTime);
-
+        projectileBullet.GetComponent<Projectile>().setTarget(target);
 
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
 
