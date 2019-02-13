@@ -16,7 +16,7 @@ public class CheckForPlayerHit : MonoBehaviour
         {
             playerScript = other.GetComponent<playerHealth>();
             Debug.Log("Player hit, taking damage");
-            playerScript.takeDamage(mageai.fireballDamageAmount);
+            //playerScript.takeDamage(mageai.fireballDamageAmount);
             this.enabled = false;
         }
 
@@ -33,9 +33,9 @@ public class CheckForPlayerHit : MonoBehaviour
     {
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>();
-        basicAI = GameObject.FindGameObjectWithTag("mage").GetComponent<BasicAI>();
+        //basicAI = GameObject.FindGameObjectWithTag("mage").GetComponent<BasicAI>();
         //get if mage info
-        mageai = GameObject.FindGameObjectWithTag("mage").GetComponent<MageAI>();
+        //mageai = GameObject.FindGameObjectWithTag("mage").GetComponent<MageAI>();
     }
 
 }

@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022283891611942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.498133, y: -3.5363712, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 2}
   m_Children:
   - {fileID: 4703959113043760}
@@ -262,7 +262,6 @@ MonoBehaviour:
   AILayer:
     serializedVersion: 2
     m_Bits: 1024
-  fireball: {fileID: 4120633805918726, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 3}
   bulletSpawn: {fileID: 4703959113043760}
   bullet: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 3}
   bulletSplashArea: 3
@@ -277,6 +276,7 @@ MonoBehaviour:
   basicAI: {fileID: 0}
   fireballFireRate: 7
   playerInRange: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!114 &114123521471994544
 MonoBehaviour:
   m_ObjectHideFlags: 0

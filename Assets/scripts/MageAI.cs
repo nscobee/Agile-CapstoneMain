@@ -9,7 +9,6 @@ public class MageAI : BasicAI
     public float startTimeTillAttack;
     public LayerMask playerLayer;
     public LayerMask AILayer;
-    public Transform fireball;
     public Transform bulletSpawn;
     public GameObject bullet;
     public float bulletSplashArea = 1f;
@@ -52,7 +51,11 @@ public class MageAI : BasicAI
             if (Input.GetMouseButtonDown(0))
             {
                 print("basic movement script is firing fireball");
+
                 target = Input.mousePosition;
+                Debug.Log("Target point is: " + target.ToString());
+
+
                 FireballAttack(target);
 
             }
@@ -64,12 +67,12 @@ public class MageAI : BasicAI
             }
         }
 
-        
+
     }
 
     public void FireAttack()
     {
-        foreach(GameObject target in inRange)
+        foreach (GameObject target in inRange)
         {
             target.GetComponent<BasicAI>().currentHP -= fireDamageAmount;
         }
@@ -79,18 +82,18 @@ public class MageAI : BasicAI
 
     public void FireballAttack(Vector3 targetPoint)
     {
-        Debug.Log(targetPoint.ToString());
- 
         fireballNextRound = Time.time + fireballFireRate;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
 
-        //Vector3.MoveTowards(projectileBullet.transform.position, targetPoint, speed * Time.deltaTime);
-        projectileBullet.GetComponent<Rigidbody2D>().velocity =
-        Vector2.MoveTowards(bulletSpawn.transform.position, targetPoint , speed * Time.deltaTime);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, bulletSpawn.transform);
+
+
+
+        projectileBullet.GetComponent<Rigidbody2D>().velocity = Vector3.MoveTowards(transform.position, targetPoint.normalized, speed * Time.deltaTime);
+
 
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
-        
+
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
     }

@@ -391,6 +391,11 @@ PrefabInstance:
       propertyPath: fireRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fireball
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!1 &1258200132 stripped
