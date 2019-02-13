@@ -29,8 +29,8 @@ public class PhantomControls : MonoBehaviour
     private void Start()
     {
 
-            reaper = phantom.GetComponent<ReaperCountdown>();
-            reaper.outOfBody = true;
+        reaper = phantom.GetComponent<ReaperCountdown>();
+        reaper.outOfBody = true;
         startingExperienceTillNextLevel = experienceTillNextLevel;
 
 
@@ -56,10 +56,10 @@ public class PhantomControls : MonoBehaviour
 
                 reaper.outOfBody = false;
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
-                
+
 
                 //if the game object being posessed is a scribe, save the game
-                if (phantomTarget.tag == "Scribe")
+                if (phantomTarget.tag == "Scribe" && isPossessing)
                 {
                     //make a new save file directory
                     SaveLoadSystem.MakeNewPlayerSave("ScribeTests");
@@ -75,7 +75,7 @@ public class PhantomControls : MonoBehaviour
             {
                 speed = 5f;
             }
-            
+
         }
         else
         {
@@ -84,7 +84,7 @@ public class PhantomControls : MonoBehaviour
 
         //Simple Leveling System
         if (currentLevel == MAX_LEVEL) currentExperience = 0;
-        if(currentExperience >= experienceTillNextLevel)
+        if (currentExperience >= experienceTillNextLevel)
         {
             currentLevel++;
             currentExperience = 0;

@@ -365,6 +365,11 @@ public class BasicAI : MonoBehaviour
         apSlider.value = maxAP;
     }
 
+    public void DeleteUI()
+    {
+        Destroy(statUI);
+    }
+
     public void resetTag()
     {
         this.gameObject.tag = startingTag;

@@ -94,7 +94,7 @@ public class BasicMovement : MonoBehaviour
         //aiControls.isPosessingMage = false;
         //aiControls.isPosessingFighter = false;
         removeUI();
-        
+        //aiControls.DeleteUI();
         
         phantomControls.isPossessing = false;
         //if(healthAndAbilities == true)
