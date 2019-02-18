@@ -50,7 +50,7 @@ public class PhantomControls : MonoBehaviour
                 isPossessing = true;
                 if (isPossessing)
                 {
-              
+                    speed = 0f;
                 }
                 reaper.outOfBody = false;
                 phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
@@ -69,8 +69,12 @@ public class PhantomControls : MonoBehaviour
                     SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");
                 }
             }
+            if (!isPossessing)
+            {
+                speed = 5f;
+            }
         }
-
+        
         else
         {
             isPossessing = false;
