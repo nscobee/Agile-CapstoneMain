@@ -8,9 +8,7 @@ public class AIHealth : MonoBehaviour
     public float currentHealth;
 
     public float currentMana;
-
     
-
    // public dealDamage damageScript;
 
     private float incomingDamage;
@@ -34,8 +32,9 @@ public class AIHealth : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        incomingDamage = amount;
-        currentHealth -= incomingDamage;
+        Debug.Log("Ai taking damage");
+        //incomingDamage = amount;
+        currentHealth -= amount;
         if (currentHealth <= 0)
         {
             this.GetComponent<BasicMovement>().WithDraw();

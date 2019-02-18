@@ -23,8 +23,8 @@ public class meleeRange : MonoBehaviour {
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if (other.gameObject.layer == LayerMask.NameToLayer("AI"))
         {
-            print("Melee Hit!");
-            other.gameObject.GetComponent<BasicAI>().ReceiveDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
+            print("Melee Hit on: " + other.gameObject.name);
+            other.gameObject.GetComponent<AIHealth>().TakeDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
 
         }
     }

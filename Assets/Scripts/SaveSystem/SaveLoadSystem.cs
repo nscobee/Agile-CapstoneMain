@@ -10,7 +10,7 @@ public static class SaveLoadSystem
 {
     public static bool MakeNewPlayerSave(string saveName)
     {
-
+        Debug.Log("into making save");
         if (!File.Exists(Application.persistentDataPath + "/" + saveName + "/Position.loc"))
         {
             Debug.Log(Application.persistentDataPath.ToString());
@@ -34,7 +34,9 @@ public static class SaveLoadSystem
         }
         else
         {
+            Debug.Log("no filepath");
             return false;
+            
         }
     }
 
