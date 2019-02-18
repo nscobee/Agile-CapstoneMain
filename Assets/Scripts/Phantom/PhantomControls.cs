@@ -40,6 +40,7 @@ public class PhantomControls : MonoBehaviour
     {
         // uses the generic movement for movement passing desired speed
         transform.position += GenericFunctions.BasePlayerMovement(speed);
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
 
         // if the phantom has a target when the player presses space they could call the possession function on that AI
         if (phantomTarget && phantomTarget.tag != "NoPossess" && phantomTarget.tag != "Reaper")

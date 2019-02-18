@@ -66,3 +66,6 @@ TagManager:
   - name: notGround
     uniqueID: 3004508843
     locked: 0
+  - name: Decor
+    uniqueID: 2158039383
+    locked: 0
