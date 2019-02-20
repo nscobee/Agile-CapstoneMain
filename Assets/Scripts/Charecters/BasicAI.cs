@@ -436,10 +436,8 @@ public class BasicAI : MonoBehaviour
         }
     }
 
-
     private void Die()
     {
-
         if (Random.Range(0, 100) > 50)
         {
             //   GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
@@ -448,7 +446,5 @@ public class BasicAI : MonoBehaviour
 
         //Drop stuff for player? exp/items
         Destroy(this.gameObject);
-
     }
-
 }
