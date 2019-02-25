@@ -42,22 +42,22 @@ public class BasicMovement : MonoBehaviour
         // calls the generic movement passing the speed
         transform.position += GenericFunctions.BasePlayerMovement(movementSpeed);
 
-        if (Input.GetKeyDown(KeyCode.Backslash))
+        if (Input.GetKeyDown(KeyCode.Backslash) && phantomControls.isPossessing)
         {
             DED();
 
             reaper.outOfBody = true;
-            phantom.GetComponent<PhantomControls>().isPossessing = false;
+            phantomControls.isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && phantomControls.isPossessing)
         {
             WithDraw();
 
             reaper.outOfBody = true;
-            phantom.GetComponent<PhantomControls>().isPossessing = false;
+            phantomControls.isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
         }
 
@@ -120,7 +120,8 @@ public class BasicMovement : MonoBehaviour
 
         foreach (GameObject item in UI)
         {
-            Destroy(item);
+            item.SetActive(false);
+            //Destroy(item);
         }
         
     }

@@ -8,10 +8,12 @@ public class BasicAI : MonoBehaviour
     public List<Transform> patrolPoints = new List<Transform>();
     public bool isPatrolling = true;
 
-    public List<Transform> pointsList = new List<Transform>();
 
     [Tooltip("Time for dialogue to show")]
     public float dialogueWait = 7f;
+
+    public List<Transform> pointsList = new List<Transform>();
+
 
     private Transform currentTarget;
     private float nextRound = 0.0f;
@@ -32,11 +34,14 @@ public class BasicAI : MonoBehaviour
     public Slider apSlider;
 
     public GameObject statUI;
-    /*public GameObject abilityImage;
+    
     public GameObject fighterAbilities;
     public GameObject mageAbilities;
-    public GameObject commonAbilities;
-    public GameObject healerAbilities;*/
+    public float meleesHp = 75f;
+    public float meleesAp = 40f;
+    public float magesHp = 40f;
+    public float magesAp = 75f;
+    //public GameObject healerAbilities;
 
     public float commonHp = 25f;
     public float commonAp = 25f;
@@ -99,8 +104,8 @@ public class BasicAI : MonoBehaviour
     {
         if (!phantomControls.isPossessing)
         {
-            levelMultiplierAP = 1;
-            levelMultiplierHP = 1;
+            //levelMultiplierAP = 1;
+            //levelMultiplierHP = 1;
         }
 
         float startTime = Time.time;
@@ -113,7 +118,8 @@ public class BasicAI : MonoBehaviour
 
         if (this.gameObject.tag == "tutorial")
         {
-            FollowPoints(this.gameObject.transform, pointsList);
+            isPatrolling = false;
+            StartCoroutine(FollowPoints(this.gameObject.transform, pointsList));
         }
 
         if (isPatrolling)
@@ -140,7 +146,7 @@ public class BasicAI : MonoBehaviour
         if (phantomControls.isPossessing)
         {
 
-            apSlider.value = currentAP;
+            //apSlider.value = currentAP;
         }
 
         if (currentHP > maxHP) currentHP = maxHP;
@@ -174,7 +180,7 @@ public class BasicAI : MonoBehaviour
     // when the player possess a AI it destories the phantom and enables the player movement on the 
     public void Possess(GameObject phantom)
     {
-        updateLevelMultiplier();
+        //updateLevelMultiplier();
 
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
@@ -223,7 +229,7 @@ public class BasicAI : MonoBehaviour
 
     IEnumerator FollowPoints(Transform tutorialGhost, List<Transform> targets)
     {
-        yield return new WaitForSecondsRealtime(dialogueWait);
+        yield return new WaitForSeconds(dialogueWait);
         foreach (Transform point in targets)
         {
             if(Vector2.Distance(tutorialGhost.position, point.position) > 1f)
@@ -344,6 +350,7 @@ public class BasicAI : MonoBehaviour
         maxHP = hp;
         currentHP = maxHP;
         currentAP = maxAP;
+        
     }
 
     public void healOnPossess()
@@ -354,10 +361,37 @@ public class BasicAI : MonoBehaviour
 
     public void setUI()
     {
-        Instantiate(statUI);
-
+        //Instantiate(statUI);
+        statUI.SetActive(true);
         hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
         apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
+        if(this.gameObject.tag == "mage")
+        {
+            if (fighterAbilities.activeInHierarchy)
+            {
+                fighterAbilities.SetActive(false);
+            }
+            mageAbilities.SetActive(true);
+            setStats(magesHp, magesAp);
+        }
+        else if(this.gameObject.tag == "Melee")
+        {
+            if (mageAbilities.activeInHierarchy)
+            {
+                mageAbilities.SetActive(false);
+            }
+            fighterAbilities.SetActive(true);
+            setStats(meleesHp, meleesAp);
+        }
+        else
+        {
+            if (mageAbilities.activeInHierarchy || fighterAbilities.activeInHierarchy)
+            {
+                mageAbilities.SetActive(false);
+                fighterAbilities.SetActive(false);
+            }
+            setStats(commonHp, commonAp);
+        }
         hpSlider.maxValue = maxHP;
         apSlider.maxValue = maxAP;
         hpSlider.value = maxHP;

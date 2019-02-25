@@ -25,6 +25,8 @@ TagManager:
   - ApSlider
   - healer
   - UI
+  - Phantom
+  - tutorial
   layers:
   - Default
   - TransparentFX
