@@ -37,7 +37,7 @@ public class MeleeAI : MonoBehaviour {
     {
         basicAI = this.gameObject.GetComponent<BasicAI>();
         phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
-        currentPlayerLevel = phantomControls.currentLevel;
+        //currentPlayerLevel = phantomControls.currentLevel;
         damageMultiplier *= currentPlayerLevel;
 
         basicAI.setStats(fighterHp, fighterAp);

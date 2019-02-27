@@ -90,13 +90,13 @@ public class BasicAI : MonoBehaviour
             GenericFunctions.GatherComponetFromSceneByTag<Transform>(ref patrolPoints, "PatrolPoint");
         }
 
-        phantom = GameObject.FindWithTag("Player");
+        phantom = GameObject.Find("Phantom2.0");
         phantomBox = phantom.GetComponent<BoxCollider2D>();
         phantomMesh = phantom.GetComponent<SpriteRenderer>();
         phantomRigid = phantom.GetComponent<Rigidbody2D>();
 
         //needed to assign these i think?
-        phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
+        //phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         //hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
         // apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
         // mageAbilities = GameObject.Find("MageA");
@@ -108,12 +108,12 @@ public class BasicAI : MonoBehaviour
 
     private void Update()
     {
-        if (!phantomControls.isPossessing)
-        {
+       // if (!phantomControls.isPossessing)
+       // {
             
             //levelMultiplierAP = 1;
             //levelMultiplierHP = 1;
-        }
+       // }
 
         float startTime = Time.time;
         isPatrolling = true;
@@ -150,14 +150,14 @@ public class BasicAI : MonoBehaviour
             }
         }
 
-        if (phantomControls.isPossessing)
-        {
+       // if (phantomControls.isPossessing)
+       // {
             /*if(possessingThisObject)
             {
                 phantom.transform.position = Vector3.back; //reset phantom's position to currently possessed NPC
             }*/
             //apSlider.value = currentAP;
-        }
+       // }
 
         if (currentHP > maxHP) currentHP = maxHP;
         if (currentAP > maxAP) currentAP = maxAP;
@@ -191,7 +191,11 @@ public class BasicAI : MonoBehaviour
     public void Possess(GameObject phantom)
     {
         //updateLevelMultiplier();
+        
 
+        Vector3 cameraPos;
+        cameraPos = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10);
+        mainCamera.transform.position = cameraPos;
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
         phantomRigid.Sleep();

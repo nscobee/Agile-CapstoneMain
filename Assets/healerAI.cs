@@ -19,6 +19,16 @@ public class healerAI : MonoBehaviour {
     public float healerHp = 45f;
     public float healerAp = 75f;
 
+    public int fireballDamageAmount = 10;
+    public int fireDamageAmount = 5;
+    public float fireRange = 2f;
+
+    public float fireballManaLoss = 7f;
+    public float fireManaLoss = 2f;
+
+    private float fireballNextRound = 0.0f;
+    public float fireballFireRate = 7.0f;
+
     public float healPlayerAmount;
     public float healAIAmount;
 
@@ -57,13 +67,19 @@ public class healerAI : MonoBehaviour {
 
     public void FireAttack()
     {
-         isFiring = true;
-         nextRound = Time.time + fireRate;
-         var projectileBullet = Instantiate(bullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
-         projectileBullet.GetComponent<Rigidbody2D>().velocity = projectileBullet.transform.forward * 10f;
+        fireballNextRound = Time.time + fireballFireRate;
 
-         //destroys bullet after 4 seconds ish
-         //Destroy(projectileBullet, 4f);
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = transform.position.z;
+
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+
+        projectileBullet.GetComponent<Projectile>().setTarget(target);
+
+        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBullet, 4f);
     }
 
     public void Heal()

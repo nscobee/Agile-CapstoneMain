@@ -35,6 +35,7 @@ Transform:
   m_LocalScale: {x: 0.286005, y: 0.3128, z: 1}
   m_Children:
   - {fileID: 4209731111510798}
+  - {fileID: 3798861126795263888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61,6 +62,7 @@ MonoBehaviour:
   isPatrolling: 1
   dialogueWait: 7
   pointsList: []
+  mainCamera: {fileID: 0}
   fireRate: 7
   gatherPoints: 1
   playerMovement: {fileID: 114680281121275744}
@@ -87,6 +89,7 @@ MonoBehaviour:
   startingTag: 
   playerInRangeR: 0
   isRetaliating: 0
+  possessingThisObject: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -108,6 +111,7 @@ MonoBehaviour:
   movementSpeed: 5
   aiControls: {fileID: 114283175969549936}
   phantomControls: {fileID: 0}
+  mainCamera: {fileID: 0}
   phantomPrefab: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
     type: 3}
   phantom: {fileID: 0}
@@ -149,14 +153,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFiring: 0
   nextRound: 0
-  fireRate: 0
-  bullet: {fileID: 0}
-  bulletSpawn: {fileID: 0}
+  fireRate: 1
+  bullet: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 3}
+  bulletSpawn: {fileID: 3798861126795263888}
   speed: 5
   phantomControls: {fileID: 0}
   basicAI: {fileID: 0}
   healerHp: 45
   healerAp: 75
+  fireballDamageAmount: 10
+  fireDamageAmount: 5
+  fireRange: 2
+  fireballManaLoss: 7
+  fireManaLoss: 2
   healPlayerAmount: 0
   healAIAmount: 0
   healMultiplier: 0
@@ -313,3 +322,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.52
+--- !u!1 &5934289149171557071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3798861126795263888}
+  m_Layer: 10
+  m_Name: FireballSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3798861126795263888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934289149171557071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2, y: 1.1, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4437039682591644}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

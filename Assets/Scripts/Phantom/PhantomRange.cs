@@ -18,6 +18,9 @@ public class PhantomRange : MonoBehaviour
 
     public PhantomControls controller;
 
+    public GameObject phantom;
+    public GameObject parent;
+
     Scene currentScene;
     int buildIndex;
 
@@ -27,6 +30,7 @@ public class PhantomRange : MonoBehaviour
         controller = gameObject.GetComponentInParent<PhantomControls>();
         currentScene = SceneManager.GetActiveScene();
         buildIndex = currentScene.buildIndex;
+        phantom = this.gameObject;
     }
 
     private void Update()
@@ -68,6 +72,9 @@ public class PhantomRange : MonoBehaviour
 
         // sets the target in here to the primary one
         controller.phantomTarget = primaryTarget;
+
+        if (phantom.transform.parent != null)
+            parent = phantom.transform.parent.gameObject;
     }
 
 
@@ -88,7 +95,16 @@ public class PhantomRange : MonoBehaviour
             {
                 buildIndex++;
             }
+            if (parent != null)
+            {
+                DontDestroyOnLoad(parent);
+            }
+            else DontDestroyOnLoad(phantom);
+
             SceneManager.LoadScene(buildIndex + 1);
+            buildIndex++;
+           //parent.transform.position = GameObject.FindGameObjectWithTag("EntryPoints").transform.position;
+            
         }
     }
 
