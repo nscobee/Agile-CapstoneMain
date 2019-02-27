@@ -9,13 +9,12 @@ public class MageAI : BasicAI
     public float startTimeTillAttack;
     public LayerMask playerLayer;
     public LayerMask AILayer;
-    public Transform fireball;
     public Transform bulletSpawn;
     public GameObject bullet;
     public float bulletSplashArea = 1f;
-    //bool for chase/attack
-    //public bool isPursuing = false;
-    //bool isFiring;
+
+    public List<GameObject> inRange = new List<GameObject>();
+
     public int fireballDamageAmount = 10;
     public int fireDamageAmount = 5;
     public float fireRange = 2f;
@@ -33,8 +32,7 @@ public class MageAI : BasicAI
     public float fireballFireRate = 7.0f;
 
     public bool playerInRange;
-
-
+    
 
     // Use this for initialization
     void Start()
@@ -52,33 +50,26 @@ public class MageAI : BasicAI
             if (Input.GetMouseButtonDown(0))
             {
                 print("basic movement script is firing fireball");
+                
                 FireballAttack();
+
             }
             if (Input.GetMouseButton(1))
             {
+
                 print("basic movement script is using fire attack");
                 FireAttack();
             }
         }
 
-        
+
     }
 
     public void FireAttack()
     {
-        Collider2D[] thingsToHit = Physics2D.OverlapCircleAll(Input.mousePosition, fireRange);
-        for (int i = 0; i < thingsToHit.Length; i++)
+        foreach (GameObject target in inRange)
         {
-            if (thingsToHit[i].tag == "Player")
-            {
-                thingsToHit[i].GetComponent<playerController>().takeDamage(fireDamageAmount);
-                thingsToHit[i].GetComponent<AIHealth>().LoseMana(fireballManaLoss);
-            }
-            if(thingsToHit[i].tag == "mage")
-            {
-                thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireDamageAmount);
-                
-            }
+            target.GetComponent<BasicAI>().currentHP -= fireDamageAmount;
         }
         Debug.Log("Secondary spell used, " + fireDamageAmount + " dmg.");
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
@@ -86,25 +77,17 @@ public class MageAI : BasicAI
 
     public void FireballAttack()
     {
-        //isFiring = true;
         fireballNextRound = Time.time + fireballFireRate;
-        var projectileBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
-        projectileBullet.transform.position += projectileBullet.transform.forward * 25f;
+
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = transform.position.z;
+
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+
+        projectileBullet.GetComponent<Projectile>().setTarget(target);
+
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
 
-        
-        Collider2D[] thingsToHit = Physics2D.OverlapCircleAll(fireball.transform.position, bulletSplashArea);
-        for (int i = 0; i < thingsToHit.Length; i++)
-        {
-            if(thingsToHit[i].tag == "player")
-            {
-                thingsToHit[i].GetComponent<playerController>().takeDamage(fireballDamageAmount);
-            }
-            if (thingsToHit[i].tag == "mage")
-            {
-                thingsToHit[i].GetComponent<AIHealth>().TakeDamage(fireballDamageAmount);
-            }
-        }
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
     }

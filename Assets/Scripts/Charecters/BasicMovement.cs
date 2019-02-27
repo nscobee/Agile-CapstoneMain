@@ -9,6 +9,7 @@ public class BasicMovement : MonoBehaviour
 
     public BasicAI aiControls;
     public PhantomControls phantomControls;
+    public Camera mainCamera;
 
     public GameObject phantomPrefab;
     
@@ -23,7 +24,8 @@ public class BasicMovement : MonoBehaviour
 
     private void Start()
     {
-        
+
+        mainCamera = Camera.main;
         phantom = GameObject.FindWithTag("Player");
         phantomBox = phantom.GetComponent<BoxCollider2D>();
         phantomMesh = phantom.GetComponent<SpriteRenderer>();
@@ -42,23 +44,27 @@ public class BasicMovement : MonoBehaviour
         // calls the generic movement passing the speed
         transform.position += GenericFunctions.BasePlayerMovement(movementSpeed);
 
-        if (Input.GetKeyDown(KeyCode.Backslash))
+        if (Input.GetKeyDown(KeyCode.Backslash) && phantomControls.isPossessing)
         {
             DED();
 
             reaper.outOfBody = true;
-            phantom.GetComponent<PhantomControls>().isPossessing = false;
+            phantomControls.enabled = true;
+            phantomControls.isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
+            mainCamera.transform.parent = phantom.gameObject.transform;
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && phantomControls.isPossessing)
         {
             WithDraw();
 
             reaper.outOfBody = true;
-            phantom.GetComponent<PhantomControls>().isPossessing = false;
+            phantomControls.enabled = true;
+            phantomControls.isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
+            mainCamera.transform.parent = phantom.gameObject.transform;
         }
 
 
@@ -94,7 +100,7 @@ public class BasicMovement : MonoBehaviour
         //aiControls.isPosessingMage = false;
         //aiControls.isPosessingFighter = false;
         removeUI();
-        
+        //aiControls.DeleteUI();
         
         phantomControls.isPossessing = false;
         //if(healthAndAbilities == true)
@@ -120,7 +126,8 @@ public class BasicMovement : MonoBehaviour
 
         foreach (GameObject item in UI)
         {
-            Destroy(item);
+            item.SetActive(false);
+            //Destroy(item);
         }
         
     }

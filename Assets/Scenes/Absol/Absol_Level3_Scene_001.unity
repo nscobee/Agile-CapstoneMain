@@ -167,6 +167,141 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!4 &4152775 stripped
@@ -234,6 +369,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &13919407 stripped
@@ -301,6 +521,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &74230785 stripped
@@ -368,6 +673,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &112717108 stripped
@@ -431,6 +821,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &150445639 stripped
@@ -494,6 +969,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &160234840 stripped
@@ -557,6 +1117,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &192518370 stripped
@@ -624,6 +1269,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &208752325 stripped
@@ -645,11 +1375,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.665884
+      value: -27.31
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.438053
+      value: -7.77
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -687,6 +1417,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!4 &235889447 stripped
@@ -750,6 +1580,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &283693912 stripped
@@ -813,6 +1728,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!4 &356859162 stripped
@@ -838,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.73
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -876,6 +1891,131 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!4 &379858439 stripped
@@ -939,6 +2079,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &440817253 stripped
@@ -1049,6 +2274,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &518796468 stripped
@@ -1116,6 +2426,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &539950458 stripped
@@ -1179,6 +2574,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
 --- !u!4 &640647226 stripped
@@ -1242,6 +2722,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
 --- !u!4 &650111542 stripped
@@ -22505,24 +24070,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 54, y: -8, z: 0}
-    second:
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 55, y: -8, z: 0}
-    second:
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 107, y: -8, z: 0}
     second:
       m_TileIndex: 6
@@ -22887,24 +24434,6 @@ Tilemap:
     second:
       m_TileIndex: 5
       m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 54, y: -7, z: 0}
-    second:
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 55, y: -7, z: 0}
-    second:
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -52699,7 +54228,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 10
+  - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 5d551af467e665f4a96aeaca2fa6fa69, type: 2}
   - m_RefCount: 107
     m_Data: {fileID: 11400000, guid: 3d1c4f74a09f55d459d9143afa953225, type: 2}
@@ -52714,7 +54243,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 10
+  - m_RefCount: 6
     m_Data: {fileID: 21300042, guid: aa58c4b32c1172149aaefbba8bd40b58, type: 3}
   - m_RefCount: 107
     m_Data: {fileID: 21300038, guid: aa58c4b32c1172149aaefbba8bd40b58, type: 3}
@@ -52723,7 +54252,7 @@ Tilemap:
   - m_RefCount: 5281
     m_Data: {fileID: 21300040, guid: aa58c4b32c1172149aaefbba8bd40b58, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 5706
+  - m_RefCount: 5702
     m_Data:
       e00: 1
       e01: 0
@@ -52742,7 +54271,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 5706
+  - m_RefCount: 5702
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 4.9177e-41, g: 4.9177e-41, b: 4.9177e-41, a: 4.9177e-41}
@@ -52842,6 +54371,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &728111929 stripped
@@ -52932,6 +54546,149 @@ Transform:
   m_Father: {fileID: 2031610094}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &861974869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1624913745, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_Name
+      value: HealthAndAbilites
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913745, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_TagString
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624913746, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ffcfc5256318c2e48bf6996e4b4a4883, type: 3}
+--- !u!1 &861974870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1624913745, guid: ffcfc5256318c2e48bf6996e4b4a4883,
+    type: 3}
+  m_PrefabInstance: {fileID: 861974869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &861974871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1258200132, guid: ffcfc5256318c2e48bf6996e4b4a4883,
+    type: 3}
+  m_PrefabInstance: {fileID: 861974869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &861974872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 505284205, guid: ffcfc5256318c2e48bf6996e4b4a4883,
+    type: 3}
+  m_PrefabInstance: {fileID: 861974869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &861974873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1264412584, guid: ffcfc5256318c2e48bf6996e4b4a4883,
+    type: 3}
+  m_PrefabInstance: {fileID: 861974869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &861974874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 707558725, guid: ffcfc5256318c2e48bf6996e4b4a4883,
+    type: 3}
+  m_PrefabInstance: {fileID: 861974869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &947407196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52991,6 +54748,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &947407197 stripped
@@ -86448,6 +88290,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1064467488 stripped
@@ -86515,6 +88442,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1099974290 stripped
@@ -86598,8 +88610,48 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 834060439, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
+--- !u!50 &1202551863 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 50069571874462146, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202551862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1202551864 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212715730827867386, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202551862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1202551865 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 61855882832310374, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202551862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1202551866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202551862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202551867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00744ff570fed8541ac6b9d53f441c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1202551867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1660928347398176, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202551862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1234939480
 GameObject:
   m_ObjectHideFlags: 0
@@ -86685,6 +88737,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!4 &1240816866 stripped
@@ -86748,6 +88900,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1244776758 stripped
@@ -86815,6 +89052,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1273855526 stripped
@@ -86878,6 +89200,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1288744034 stripped
@@ -87008,6 +89415,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!4 &1378099753 stripped
@@ -87075,6 +89582,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1530469798 stripped
@@ -87171,8 +89763,17 @@ Tilemap:
   m_Tiles:
   - first: {x: 77, y: -31, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 107, y: -29, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87180,8 +89781,17 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 109, y: -29, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -7, y: -23, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87189,8 +89799,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 109, y: -22, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87199,7 +89809,25 @@ Tilemap:
   - first: {x: 102, y: -20, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 81, y: -19, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 65, y: -17, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87207,8 +89835,17 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 102, y: -17, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 105, y: -16, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87216,7 +89853,34 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 107, y: -15, z: 0}
     second:
-      m_TileIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -7, y: -13, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 87, y: -12, z: 0}
+    second:
+      m_TileIndex: 4
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 105, y: -11, z: 0}
+    second:
+      m_TileIndex: 3
       m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -87226,6 +89890,15 @@ Tilemap:
   - first: {x: 106, y: -11, z: 0}
     second:
       m_TileIndex: 1
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 10, y: -10, z: 0}
+    second:
+      m_TileIndex: 2
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -87234,8 +89907,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 52, y: -10, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87243,8 +89916,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 57, y: -10, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87252,8 +89925,17 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 66, y: -10, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 105, y: -6, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87261,8 +89943,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 107, y: -6, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87270,8 +89952,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 102, y: -5, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87279,8 +89961,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 52, y: -4, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87288,8 +89970,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 57, y: -4, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87297,8 +89979,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 6, y: -2, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87306,8 +89988,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 67, y: -2, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87316,7 +89998,7 @@ Tilemap:
   - first: {x: 82, y: -2, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87324,8 +90006,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 102, y: -1, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87333,8 +90015,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 67, y: 0, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87343,7 +90025,7 @@ Tilemap:
   - first: {x: 80, y: 1, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87351,8 +90033,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 102, y: 1, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87360,8 +90042,26 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 6, y: 3, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 14, y: 16, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 52, y: 16, z: 0}
+    second:
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87369,8 +90069,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 62, y: 16, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87378,8 +90078,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 102, y: 16, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87387,17 +90087,25 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 23
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 3c12b1134a57e32418add260ee9d92c3, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: dd8c4d4a5307b05418dd2aa1c16a6b68, type: 2}
-  m_TileSpriteArray:
-  - m_RefCount: 23
-    m_Data: {fileID: 21302412, guid: 05ef302001273ff48904143ac7974f68, type: 3}
+  - m_RefCount: 30
+    m_Data: {fileID: 11400000, guid: 812030d6f1199fb4495d406dfaea063f, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 21305742, guid: 05ef302001273ff48904143ac7974f68, type: 3}
+    m_Data: {fileID: 11400000, guid: dd714917796e8f6469416fa807587f89, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 18b816d48f183a74199a0a912a218e6c, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 1
+    m_Data: {fileID: 21301352, guid: 94dabc837d9d1554188af848e7227346, type: 3}
+  - m_RefCount: 30
+    m_Data: {fileID: 21302412, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21301532, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 24
+  - m_RefCount: 36
     m_Data:
       e00: 1
       e01: 0
@@ -87416,12 +90124,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 24
+  - m_RefCount: 36
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: -31, z: 0}
-  m_Size: {x: 110, y: 48, z: 1}
+  m_Origin: {x: -7, y: -31, z: 0}
+  m_Size: {x: 117, y: 48, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -87496,6 +90204,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1717735554 stripped
@@ -87559,6 +90352,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1818261306 stripped
@@ -87695,6 +90573,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1838816309 stripped
@@ -87804,10 +90767,19 @@ Tilemap:
   m_GameObject: {fileID: 1858173170}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 58, y: -30, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 85, y: -30, z: 0}
     second:
       m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87816,7 +90788,52 @@ Tilemap:
   - first: {x: 93, y: -30, z: 0}
     second:
       m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 84, y: -28, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 90, y: -28, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 97, y: -28, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 102, y: -28, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 107, y: -28, z: 0}
+    second:
+      m_TileIndex: 19
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87824,8 +90841,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 108, y: -28, z: 0}
     second:
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87833,8 +90850,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 108, y: -27, z: 0}
     second:
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileIndex: 19
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87843,7 +90860,7 @@ Tilemap:
   - first: {x: 108, y: -26, z: 0}
     second:
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87852,7 +90869,43 @@ Tilemap:
   - first: {x: 108, y: -25, z: 0}
     second:
       m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 81, y: -24, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 88, y: -24, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 95, y: -24, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 100, y: -24, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87860,8 +90913,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 108, y: -24, z: 0}
     second:
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileIndex: 19
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87870,7 +90923,7 @@ Tilemap:
   - first: {x: 85, y: -23, z: 0}
     second:
       m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87879,7 +90932,16 @@ Tilemap:
   - first: {x: 93, y: -23, z: 0}
     second:
       m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 107, y: -23, z: 0}
+    second:
+      m_TileIndex: 19
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87887,8 +90949,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 108, y: -23, z: 0}
     second:
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87896,8 +90958,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -6, y: -22, z: 0}
     second:
-      m_TileIndex: 14
-      m_TileSpriteIndex: 14
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87905,8 +90967,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -5, y: -22, z: 0}
     second:
-      m_TileIndex: 16
-      m_TileSpriteIndex: 16
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87915,7 +90977,25 @@ Tilemap:
   - first: {x: -4, y: -22, z: 0}
     second:
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -1, y: -22, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 51, y: -22, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87924,7 +91004,7 @@ Tilemap:
   - first: {x: -6, y: -21, z: 0}
     second:
       m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87932,8 +91012,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -4, y: -21, z: 0}
     second:
-      m_TileIndex: 16
-      m_TileSpriteIndex: 16
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87942,7 +91022,7 @@ Tilemap:
   - first: {x: -3, y: -21, z: 0}
     second:
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87951,7 +91031,16 @@ Tilemap:
   - first: {x: 14, y: -21, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 24, y: -21, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87960,7 +91049,7 @@ Tilemap:
   - first: {x: 34, y: -21, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87969,7 +91058,43 @@ Tilemap:
   - first: {x: -6, y: -20, z: 0}
     second:
       m_TileIndex: 13
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -2, y: -20, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 0, y: -20, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 13, y: -20, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 35, y: -20, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87978,7 +91103,7 @@ Tilemap:
   - first: {x: -6, y: -19, z: 0}
     second:
       m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87986,8 +91111,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -4, y: -19, z: 0}
     second:
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -87996,7 +91121,34 @@ Tilemap:
   - first: {x: -3, y: -19, z: 0}
     second:
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 13, y: -19, z: 0}
+    second:
+      m_TileIndex: 20
+      m_TileSpriteIndex: 14
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 35, y: -19, z: 0}
+    second:
+      m_TileIndex: 21
+      m_TileSpriteIndex: 13
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 66, y: -19, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88004,8 +91156,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -6, y: -18, z: 0}
     second:
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88014,7 +91166,7 @@ Tilemap:
   - first: {x: -5, y: -18, z: 0}
     second:
       m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88023,7 +91175,7 @@ Tilemap:
   - first: {x: -4, y: -18, z: 0}
     second:
       m_TileIndex: 16
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88032,7 +91184,34 @@ Tilemap:
   - first: {x: -3, y: -18, z: 0}
     second:
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -2, y: -18, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 13, y: -18, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 35, y: -18, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88041,7 +91220,16 @@ Tilemap:
   - first: {x: -6, y: -17, z: 0}
     second:
       m_TileIndex: 14
-      m_TileSpriteIndex: 14
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 0, y: -17, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88050,7 +91238,16 @@ Tilemap:
   - first: {x: 14, y: -17, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 24, y: -17, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88059,7 +91256,7 @@ Tilemap:
   - first: {x: 34, y: -17, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88068,6 +91265,15 @@ Tilemap:
   - first: {x: -6, y: -16, z: 0}
     second:
       m_TileIndex: 12
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -4, y: -16, z: 0}
+    second:
+      m_TileIndex: 22
       m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -88077,7 +91283,16 @@ Tilemap:
   - first: {x: -3, y: -16, z: 0}
     second:
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -2, y: -16, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88085,8 +91300,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -6, y: -15, z: 0}
     second:
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88095,7 +91310,7 @@ Tilemap:
   - first: {x: -4, y: -15, z: 0}
     second:
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88104,7 +91319,16 @@ Tilemap:
   - first: {x: -3, y: -15, z: 0}
     second:
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 0, y: -15, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88112,8 +91336,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -6, y: -14, z: 0}
     second:
-      m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88122,7 +91346,7 @@ Tilemap:
   - first: {x: -5, y: -14, z: 0}
     second:
       m_TileIndex: 16
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88131,7 +91355,7 @@ Tilemap:
   - first: {x: -4, y: -14, z: 0}
     second:
       m_TileIndex: 16
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88140,7 +91364,16 @@ Tilemap:
   - first: {x: -3, y: -14, z: 0}
     second:
       m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -2, y: -14, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88149,6 +91382,15 @@ Tilemap:
   - first: {x: 87, y: -12, z: 0}
     second:
       m_TileIndex: 11
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 65, y: -11, z: 0}
+    second:
+      m_TileIndex: 23
       m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -88158,7 +91400,7 @@ Tilemap:
   - first: {x: 41, y: -9, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88167,7 +91409,7 @@ Tilemap:
   - first: {x: 46, y: -9, z: 0}
     second:
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88176,7 +91418,25 @@ Tilemap:
   - first: {x: 52, y: -9, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 53, y: -9, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 56, y: -9, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88185,7 +91445,7 @@ Tilemap:
   - first: {x: 57, y: -9, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88194,7 +91454,25 @@ Tilemap:
   - first: {x: 61, y: -9, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 8, y: -8, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 18, y: -8, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88203,7 +91481,7 @@ Tilemap:
   - first: {x: 41, y: -5, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88212,7 +91490,7 @@ Tilemap:
   - first: {x: 46, y: -5, z: 0}
     second:
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88221,7 +91499,25 @@ Tilemap:
   - first: {x: 52, y: -5, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 53, y: -5, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 56, y: -5, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88230,7 +91526,7 @@ Tilemap:
   - first: {x: 57, y: -5, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88239,7 +91535,7 @@ Tilemap:
   - first: {x: 61, y: -5, z: 0}
     second:
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88248,7 +91544,7 @@ Tilemap:
   - first: {x: 15, y: -2, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88257,7 +91553,25 @@ Tilemap:
   - first: {x: 21, y: -2, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -7, y: -1, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -1, y: -1, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88265,8 +91579,44 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 6, y: -1, z: 0}
     second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 27, y: 0, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 27, y: 1, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -7, y: 2, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -1, y: 2, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88274,8 +91624,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 6, y: 2, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88284,7 +91634,7 @@ Tilemap:
   - first: {x: 15, y: 3, z: 0}
     second:
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88293,7 +91643,7 @@ Tilemap:
   - first: {x: 21, y: 3, z: 0}
     second:
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88302,7 +91652,43 @@ Tilemap:
   - first: {x: 100, y: 3, z: 0}
     second:
       m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 3, z: 0}
+    second:
+      m_TileIndex: 18
+      m_TileSpriteIndex: 17
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 4, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 5, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 6, z: 0}
+    second:
+      m_TileIndex: 18
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88311,7 +91697,16 @@ Tilemap:
   - first: {x: 100, y: 8, z: 0}
     second:
       m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 18, y: 9, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88319,8 +91714,35 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 40, y: 9, z: 0}
     second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 9, z: 0}
+    second:
+      m_TileIndex: 18
+      m_TileSpriteIndex: 17
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 10, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 13, z: 0}
+    second:
+      m_TileIndex: 18
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88329,7 +91751,16 @@ Tilemap:
   - first: {x: 100, y: 14, z: 0}
     second:
       m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 14, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88337,8 +91768,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 14, y: 15, z: 0}
     second:
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88347,7 +91778,7 @@ Tilemap:
   - first: {x: 15, y: 15, z: 0}
     second:
       m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88356,7 +91787,34 @@ Tilemap:
   - first: {x: 16, y: 15, z: 0}
     second:
       m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 4294967295
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 51, y: 15, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 58, y: 15, z: 0}
+    second:
+      m_TileIndex: 23
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 101, y: 15, z: 0}
+    second:
+      m_TileIndex: 18
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -88364,21 +91822,21 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 9
+  - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: da00280e4fae1ba4b83a137636e7bd9e, type: 2}
-  - m_RefCount: 6
-    m_Data: {fileID: 11400000, guid: 8205c549b45ef2c49891f0f15066453b, type: 2}
   - m_RefCount: 5
+    m_Data: {fileID: 11400000, guid: 8205c549b45ef2c49891f0f15066453b, type: 2}
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: daa89ace87b2da247afea27fe6a47a26, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c8e960a6eabb69442915c61cb2e3ba69, type: 2}
-  - m_RefCount: 4
-    m_Data: {fileID: 11400000, guid: bb5d48cc331cdc343adf97788690753d, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 16269693a056af449a36b4ab079b5a23, type: 2}
+    m_Data: {fileID: 11400000, guid: bb5d48cc331cdc343adf97788690753d, type: 2}
+  - m_RefCount: 8
+    m_Data: {fileID: 11400000, guid: 160b98e33f4285c4db77581d6a2a32c5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b62a9c52d965c7e4dbdbac642f72f71d, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b462f7c9099a81b459afd79f0793c3b8, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 203bd2a844330a4469de6ffe3568d21a, type: 2}
@@ -88388,57 +91846,69 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 5339c094fbf32c140a7c2ae611ed411f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 7eebd0e562867b84ca3a6b3cc9c2d0e6, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: ec87e805914105e469dfbece79635ca3, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 1a8c16283fbe7e546a6067a73d8257ea, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4f32c3b3397a21c47ade89c890aeafd4, type: 2}
-  - m_RefCount: 9
+  - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 061480c7843f982418b9f05ee040d31d, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 6f4eb08efa04186478882bf72143a23c, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: c2fb8c7f7c69c8f42aef56c98fee1d32, type: 2}
+  - m_RefCount: 5
+    m_Data: {fileID: 11400000, guid: f7efdc18a30f50140bab31dc83cda0f2, type: 2}
+  - m_RefCount: 4
+    m_Data: {fileID: 11400000, guid: 7ee3ba6a137dfc141abd908a73ea8a56, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 8be7517d9bb8b1e47bbb25fa355bc074, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: a550e81a50a3fb648949e6949f4d5f9e, type: 2}
+  - m_RefCount: 12
+    m_Data: {fileID: 11400000, guid: 111ab2cf6e9ccc947a88de99aad1b9cc, type: 2}
+  - m_RefCount: 39
+    m_Data: {fileID: 11400000, guid: 299ff8e15babd184aa9177db91d2a5e5, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 9
-    m_Data: {fileID: 21302416, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 6
-    m_Data: {fileID: 21302420, guid: 05ef302001273ff48904143ac7974f68, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 39
+    m_Data: {fileID: 21302416, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
+  - m_RefCount: 12
+    m_Data: {fileID: 21301534, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21301512, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21301514, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
+  - m_RefCount: 8
+    m_Data: {fileID: 21301516, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
+  - m_RefCount: 4
+    m_Data: {fileID: 21300952, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
   - m_RefCount: 5
-    m_Data: {fileID: 21302422, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21302418, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 4
-    m_Data: {fileID: 21300958, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300948, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300946, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21300960, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21300964, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21300962, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 4
-    m_Data: {fileID: 21301520, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21301532, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 4
-    m_Data: {fileID: 21301534, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21301544, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21301538, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 9
-    m_Data: {fileID: 21301552, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 5
-    m_Data: {fileID: 21301546, guid: 05ef302001273ff48904143ac7974f68, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21301540, guid: 05ef302001273ff48904143ac7974f68, type: 3}
+    m_Data: {fileID: 21300944, guid: 0da1da886c0462646996e40c50e6ba54, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 62
+  - m_RefCount: 117
     m_Data:
       e00: 1
       e01: 0
@@ -88457,12 +91927,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 62
+  - m_RefCount: 117
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -6, y: -30, z: 0}
-  m_Size: {x: 115, y: 46, z: 1}
+  m_Origin: {x: -7, y: -30, z: 0}
+  m_Size: {x: 116, y: 46, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -88541,6 +92011,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1875286219 stripped
@@ -88604,6 +92159,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114680281121275744, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
 --- !u!4 &1901438100 stripped
@@ -88671,6 +92311,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &1971384846 stripped
@@ -88734,6 +92459,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114442683563566332, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
 --- !u!4 &2003210494 stripped
@@ -88801,6 +92626,91 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.28601
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &2030033113 stripped
@@ -88870,6 +92780,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &2142252891 stripped
@@ -88933,6 +92928,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerObjTransform
+      value: 
+      objectReference: {fileID: 2031610094}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: statUI
+      value: 
+      objectReference: {fileID: 861974870}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: hpSlider
+      value: 
+      objectReference: {fileID: 861974874}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: apSlider
+      value: 
+      objectReference: {fileID: 861974873}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: fighterAbilities
+      value: 
+      objectReference: {fileID: 861974872}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: mageAbilities
+      value: 
+      objectReference: {fileID: 861974871}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomControls
+      value: 
+      objectReference: {fileID: 1202551866}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomPrefab
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantom
+      value: 
+      objectReference: {fileID: 1202551867}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomBox
+      value: 
+      objectReference: {fileID: 1202551865}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomMesh
+      value: 
+      objectReference: {fileID: 1202551864}
+    - target: {fileID: 114443481937730140, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: phantomRigid
+      value: 
+      objectReference: {fileID: 1202551863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!4 &2142678384 stripped

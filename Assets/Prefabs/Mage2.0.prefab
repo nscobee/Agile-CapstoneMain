@@ -31,8 +31,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022283891611942}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.498133, y: -3.5363712, z: -1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.286005, y: 0.3128, z: 2}
   m_Children:
   - {fileID: 4703959113043760}
@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolPoints: []
   isPatrolling: 1
+  dialogueWait: 7
+  pointsList: []
   fireRate: 7
   gatherPoints: 1
   playerMovement: {fileID: 114442683563566332}
@@ -171,7 +173,13 @@ MonoBehaviour:
   homeSpawner: {fileID: 0}
   hpSlider: {fileID: 0}
   apSlider: {fileID: 0}
-  statUI: {fileID: 1622555683942378, guid: 3c6cab3e7701cd241aa8d4c4f02507e3, type: 3}
+  statUI: {fileID: 1648128106678128, guid: b9046df5475c6ee4f8a972eb8a5b21dc, type: 3}
+  fighterAbilities: {fileID: 0}
+  mageAbilities: {fileID: 0}
+  meleesHp: 75
+  meleesAp: 40
+  magesHp: 40
+  magesAp: 75
   commonHp: 25
   commonAp: 25
   InRange: 0
@@ -228,14 +236,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isPatrolling: 1
+  dialogueWait: 7
+  pointsList: []
   fireRate: 7
   gatherPoints: 0
   playerMovement: {fileID: 0}
-  phantomControls: {fileID: 0}
+  phantomControls: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+    type: 3}
   homeSpawner: {fileID: 0}
   hpSlider: {fileID: 0}
   apSlider: {fileID: 0}
   statUI: {fileID: 0}
+  fighterAbilities: {fileID: 0}
+  mageAbilities: {fileID: 0}
+  meleesHp: 75
+  meleesAp: 40
+  magesHp: 40
+  magesAp: 75
   commonHp: 25
   commonAp: 25
   InRange: 0
@@ -253,7 +270,7 @@ MonoBehaviour:
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
-  healthDrop: {fileID: 0}
+  healthDrop: {fileID: 1640331636388708, guid: f13a544106c3c764cba361b41ab851fb, type: 3}
   timeTillAttack: 0
   startTimeTillAttack: 0
   playerLayer:
@@ -262,10 +279,10 @@ MonoBehaviour:
   AILayer:
     serializedVersion: 2
     m_Bits: 1024
-  fireball: {fileID: 4120633805918726, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 3}
   bulletSpawn: {fileID: 4703959113043760}
   bullet: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 3}
   bulletSplashArea: 3
+  inRange: []
   fireballDamageAmount: 10
   fireDamageAmount: 5
   fireRange: 2
@@ -273,7 +290,7 @@ MonoBehaviour:
   fireManaLoss: 2
   mageHp: 40
   mageAp: 90
-  basicAI: {fileID: 0}
+  basicAI: {fileID: 114408053851157008}
   fireballFireRate: 7
   playerInRange: 0
 --- !u!114 &114123521471994544
@@ -288,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66166d687b24e0144bb3d758989d1d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 0
   currentMana: 0
 --- !u!1 &1435604043128570
 GameObject:
@@ -314,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435604043128570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.588, y: 0, z: 0}
+  m_LocalPosition: {x: 1.38, y: 1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4826611559010620}

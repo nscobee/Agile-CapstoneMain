@@ -13,7 +13,6 @@ public class MeleeAI : MonoBehaviour {
 
     public float activeDamage;
   
-
     public PhantomControls phantomControls;
 
     public BasicAI basicAI;

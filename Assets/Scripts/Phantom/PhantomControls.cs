@@ -20,20 +20,15 @@ public class PhantomControls : MonoBehaviour
     //Simple Leveling System
     public int currentLevel = 1;
     public float currentExperience = 0;
-    public float experienceTillNextLevel = 100;
-    private float startingExperienceTillNextLevel = 100;
+    public float experienceTillNextLevel;
+    private float startingExperienceTillNextLevel;
     public int MAX_LEVEL = 5;
-
-
 
     private void Start()
     {
-
-            reaper = phantom.GetComponent<ReaperCountdown>();
-            reaper.outOfBody = true;
+        reaper = phantom.GetComponent<ReaperCountdown>();
+        reaper.outOfBody = true;
         startingExperienceTillNextLevel = experienceTillNextLevel;
-
-
     }
 
     private void Update()
@@ -49,29 +44,34 @@ public class PhantomControls : MonoBehaviour
             {
                 this.gameObject.tag = "Player";
                 isPossessing = true;
-                if (isPossessing)
-                {
-              
-                }
-                reaper.outOfBody = false;
-                phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
-                
 
                 //if the game object being posessed is a scribe, save the game
-                if (phantomTarget.tag == "Scribe")
+                if (phantomTarget.tag == "Scribe" && isPossessing)
                 {
+                    Debug.Log("saving player");
                     //make a new save file directory
                     SaveLoadSystem.MakeNewPlayerSave("ScribeTests");
 
                     //make a new save in the folder for that scene
                     SaveData newSaveTest = new SaveData("Scene01", 1);
-
+                    
                     //save the stuff
                     SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");
                 }
+
+                if (isPossessing)
+                {
+                    speed = 0f;
+                }
+
+                reaper.outOfBody = false;
+                phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
+            }
+            if (!isPossessing)
+            {
+                speed = 5f;
             }
         }
-
         else
         {
             isPossessing = false;
@@ -79,13 +79,12 @@ public class PhantomControls : MonoBehaviour
 
         //Simple Leveling System
         if (currentLevel == MAX_LEVEL) currentExperience = 0;
-        if(currentExperience >= experienceTillNextLevel)
+        if (currentExperience >= experienceTillNextLevel)
         {
             currentLevel++;
             currentExperience = 0;
             experienceTillNextLevel *= currentLevel;
         }
-
     }
 
 
@@ -100,5 +99,4 @@ public class PhantomControls : MonoBehaviour
         currentExperience = 0;
         experienceTillNextLevel = startingExperienceTillNextLevel;
     }
-
 }

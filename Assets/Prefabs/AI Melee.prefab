@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 114343144908863274}
   - component: {fileID: 114443481937730140}
   - component: {fileID: 114024292634913850}
+  - component: {fileID: 6073196817016845502}
   - component: {fileID: 50962217405559534}
   - component: {fileID: 61904092528300818}
   - component: {fileID: 212723535536114482}
@@ -58,6 +59,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isPatrolling: 1
+  dialogueWait: 7
+  pointsList: []
   fireRate: 7
   gatherPoints: 1
   playerMovement: {fileID: 114443481937730140}
@@ -66,6 +69,12 @@ MonoBehaviour:
   hpSlider: {fileID: 0}
   apSlider: {fileID: 0}
   statUI: {fileID: 1314489954474122, guid: 221002b84cd210c4fbbb34a6bce1e942, type: 3}
+  fighterAbilities: {fileID: 0}
+  mageAbilities: {fileID: 0}
+  meleesHp: 75
+  meleesAp: 40
+  magesHp: 40
+  magesAp: 75
   commonHp: 25
   commonAp: 25
   InRange: 0
@@ -96,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0895f473b314a434297e2f85eb1aadcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 5
   aiControls: {fileID: 114343144908863274}
   phantomControls: {fileID: 0}
   phantomPrefab: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
@@ -133,6 +142,20 @@ MonoBehaviour:
   fighterAp: 40
   playerInRange: 0
   inRange: []
+--- !u!114 &6073196817016845502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326686080439248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66166d687b24e0144bb3d758989d1d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  currentMana: 0
 --- !u!50 &50962217405559534
 Rigidbody2D:
   serializedVersion: 4
@@ -178,7 +201,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.1, y: 4.72}
+  m_Size: {x: 5.12, y: 4.83}
   m_EdgeRadius: 0
 --- !u!212 &212723535536114482
 SpriteRenderer:
@@ -252,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434214220861312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 2.93, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4107299161409936}

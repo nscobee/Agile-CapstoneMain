@@ -59,6 +59,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isPatrolling: 1
+  dialogueWait: 7
+  pointsList: []
   fireRate: 7
   gatherPoints: 1
   playerMovement: {fileID: 114680281121275744}
@@ -67,6 +69,12 @@ MonoBehaviour:
   hpSlider: {fileID: 0}
   apSlider: {fileID: 0}
   statUI: {fileID: 1925990525419256, guid: 2c12ea9c579065c4bad43193e5b50614, type: 3}
+  fighterAbilities: {fileID: 0}
+  mageAbilities: {fileID: 0}
+  meleesHp: 75
+  meleesAp: 40
+  magesHp: 40
+  magesAp: 75
   commonHp: 25
   commonAp: 25
   InRange: 0
@@ -97,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0895f473b314a434297e2f85eb1aadcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 5
   aiControls: {fileID: 114283175969549936}
   phantomControls: {fileID: 0}
   phantomPrefab: {fileID: 1084970908256486, guid: f327babb851b2514d833ede69c4652b3,
