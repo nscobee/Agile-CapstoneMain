@@ -32,7 +32,7 @@ public class healerAI : MonoBehaviour {
     // Use this for initialization
     void Start () {
         basicAI = this.gameObject.GetComponent<BasicAI>();
-        currentPlayerLevel = phantomControls.currentLevel;
+       // currentPlayerLevel = phantomControls.currentLevel;
         healMultiplier *= currentPlayerLevel;
         basicAI.setStats(healerHp, healerAp);
 
