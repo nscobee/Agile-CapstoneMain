@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Persistent.unity
+    guid: 004d9ae1a6bd686479dcdeb84f57fc54
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Level.unity
+    guid: e760ea8bc5d60c045b7df73eabe7fb65
+  - enabled: 1
+    path: Assets/Scenes/CastleMap (2).unity
+    guid: 6638c825ed9941c449ca43e2929559d7
+  - enabled: 1
+    path: Assets/Scenes/Absol/Absol_Level3_Scene_001.unity
+    guid: 80bca21cb53eb724bb3293e8a6c62306
+  - enabled: 1
+    path: Assets/Scenes/Absol/Absol_Level3_Scene_002.unity
+    guid: 3c9cc89fdbf8dcc4f84735c65fde44ab
+  - enabled: 1
+    path: Assets/Scenes/Absol/Absol_Level3_Scene_003.unity
+    guid: 1f64e6a6cb896a942b0aa2517e515665
+  - enabled: 1
+    path: Assets/Scenes/Absol/Absol_Level3_Scene_004.unity
+    guid: 139459aead63e4340895707a6861a734
   m_configObjects: {}

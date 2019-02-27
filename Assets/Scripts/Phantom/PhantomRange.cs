@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /**
  * The goal of this is to set target of possession for the phantom
@@ -17,10 +18,15 @@ public class PhantomRange : MonoBehaviour
 
     public PhantomControls controller;
 
+    Scene currentScene;
+    int buildIndex;
+
     // on start set up link between this is and phantom controlls
     private void Start()
     {
         controller = gameObject.GetComponentInParent<PhantomControls>();
+        currentScene = SceneManager.GetActiveScene();
+        buildIndex = currentScene.buildIndex;
     }
 
     private void Update()
@@ -69,9 +75,20 @@ public class PhantomRange : MonoBehaviour
     {
         Debug.Log("something is hitting me (the phantom): " + other.transform.name);
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
-        if (other.gameObject.tag == "mage" || other.gameObject.tag =="Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe")
+        if (other.gameObject.tag == "mage" || other.gameObject.tag == "Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe")
         {
             inRange.Add(other.gameObject);
+        }
+
+        if (other.tag == "Exit")
+        {
+            //load the next scene?
+            Debug.Log("scene #: " + buildIndex);
+            if (buildIndex == 0)
+            {
+                buildIndex++;
+            }
+            SceneManager.LoadScene(buildIndex + 1);
         }
     }
 

@@ -88542,6 +88542,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+        type: 3}
+      propertyPath: currentExperience
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+        type: 3}
+      propertyPath: experienceTillNextLevel
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1660928347398176, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_Name
       value: Phantom2.0
@@ -88589,16 +88599,6 @@ PrefabInstance:
     - target: {fileID: 4190605258874208, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
-        type: 3}
-      propertyPath: currentExperience
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
-        type: 3}
-      propertyPath: experienceTillNextLevel
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 212715730827867386, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
         type: 3}
@@ -89535,7 +89535,7 @@ GameObject:
   - component: {fileID: 1419223196}
   m_Layer: 0
   m_Name: LeavingPoint
-  m_TagString: Untagged
+  m_TagString: Exit
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

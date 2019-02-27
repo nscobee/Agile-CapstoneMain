@@ -26,6 +26,7 @@ TagManager:
   - healer
   - UI
   - Phantom
+  - Exit
   layers:
   - Default
   - TransparentFX

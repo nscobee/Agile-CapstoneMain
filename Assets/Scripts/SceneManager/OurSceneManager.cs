@@ -5,102 +5,102 @@ using UnityEngine.SceneManagement;
 
 public class OurSceneManager : MonoBehaviour
 {
-  public string firstScene;
-  private string oldScene = null;
+    public string firstScene;
+    private string oldScene = null;
 
-  public GameObject phantomPrefab;
+    public GameObject phantomPrefab;
+    
 
-  public GameObject pointsManager;
-
-  private void Start()
-  {
-    if (firstScene != "")
+    private void Start()
     {
-      SceneManager.LoadScene(firstScene, LoadSceneMode.Additive);
+        if (firstScene != "")
+        {
+            DontDestroyOnLoad(this);
+            SceneManager.LoadScene(firstScene, LoadSceneMode.Additive);
 
-      oldScene = firstScene;
+            oldScene = firstScene;
+
+        }
 
     }
 
-  }
-
-  public void LoadNewSceneAdditive(string newScene)
-  {
-    SceneManager.LoadScene(newScene, LoadSceneMode.Additive);
-
-    if (oldScene != null)
+    public void LoadNewSceneAdditive(string newScene)
     {
-      SceneManager.UnloadSceneAsync(oldScene);
+        SceneManager.LoadScene(newScene, LoadSceneMode.Additive);
+
+        if (oldScene != null)
+        {
+            SceneManager.UnloadSceneAsync(oldScene);
+
+        }
+
+        oldScene = newScene;
 
     }
 
-    oldScene = newScene;
-
-  }
-
-  /**
- * What is does is takes in a newScene and a savePoint
- * after taht it loads the new scene then finds the point is supposed to load into
- * after it does that it creates a player and moves them to that location
- * 
- */
-
-  public void LoadFromSaveNew(string newScene, int savePoint)
-  {
-    // loads new scene
-    LoadNewSceneAdditive(newScene);
-
-    StartCoroutine(ImSadThisIsTheOnlyWayICouldGetThisToWork(savePoint));
-
-  }
-
-  /** DONT MEME OPEN INSIDE
-         ##    ###    ##    ## ##    ##       ###     ######     ######## ##     ##  ######  ##    ## 
-         ##   ## ##   ###   ## ##   ##       ## ##   ##    ##    ##       ##     ## ##    ## ##   ##  
-         ##  ##   ##  ####  ## ##  ##       ##   ##  ##          ##       ##     ## ##       ##  ##   
-         ## ##     ## ## ## ## #####       ##     ##  ######     ######   ##     ## ##       #####    
-   ##    ## ######### ##  #### ##  ##      #########       ##    ##       ##     ## ##       ##  ##   
-   ##    ## ##     ## ##   ### ##   ##     ##     ## ##    ##    ##       ##     ## ##    ## ##   ##  
-    ######  ##     ## ##    ## ##    ##    ##     ##  ######     ##        #######   ######  ##    ## 
+    /**
+   * What is does is takes in a newScene and a savePoint
+   * after taht it loads the new scene then finds the point is supposed to load into
+   * after it does that it creates a player and moves them to that location
+   * 
    */
-  // make a co co rutine that waits for a few frames then tries to make a charecter and set them to a location
-  IEnumerator ImSadThisIsTheOnlyWayICouldGetThisToWork(int savePoint)
-  {
-    yield return new WaitForSeconds(.1F);
 
-    GameObject savePointGameObject = GameObject.FindGameObjectWithTag("SavePoints");
-
-    LevelSavePoints savePointComponent = savePointGameObject.GetComponent<LevelSavePoints>();
-
-    Transform savePointTransform = savePointComponent.GetPositonOfPoint(savePoint);
-
-    if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+    public void LoadFromSaveNew(string newScene, int savePoint)
     {
-      foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
-      {
-        Destroy(player);
+        // loads new scene
+        LoadNewSceneAdditive(newScene);
 
-      }
+        StartCoroutine(ImSadThisIsTheOnlyWayICouldGetThisToWork(savePoint));
+
     }
 
-    GameObject phantom = Instantiate(phantomPrefab, savePointTransform.position, new Quaternion(), savePointTransform);
+    /** DONT MEME OPEN INSIDE
+           ##    ###    ##    ## ##    ##       ###     ######     ######## ##     ##  ######  ##    ## 
+           ##   ## ##   ###   ## ##   ##       ## ##   ##    ##    ##       ##     ## ##    ## ##   ##  
+           ##  ##   ##  ####  ## ##  ##       ##   ##  ##          ##       ##     ## ##       ##  ##   
+           ## ##     ## ## ## ## #####       ##     ##  ######     ######   ##     ## ##       #####    
+     ##    ## ######### ##  #### ##  ##      #########       ##    ##       ##     ## ##       ##  ##   
+     ##    ## ##     ## ##   ### ##   ##     ##     ## ##    ##    ##       ##     ## ##    ## ##   ##  
+      ######  ##     ## ##    ## ##    ##    ##     ##  ######     ##        #######   ######  ##    ## 
+     */
+    // make a co co rutine that waits for a few frames then tries to make a charecter and set them to a location
+    IEnumerator ImSadThisIsTheOnlyWayICouldGetThisToWork(int savePoint)
+    {
+        yield return new WaitForSeconds(.1F);
 
-    phantom.transform.parent = null;
+        GameObject savePointGameObject = GameObject.FindGameObjectWithTag("SavePoints");
+
+        LevelSavePoints savePointComponent = savePointGameObject.GetComponent<LevelSavePoints>();
+
+        Transform savePointTransform = savePointComponent.GetPositonOfPoint(savePoint);
+
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+        {
+            foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                Destroy(player);
+
+            }
+        }
+
+        GameObject phantom = Instantiate(phantomPrefab, savePointTransform.position, new Quaternion(), savePointTransform);
+
+        phantom.transform.parent = null;
 
 
-  }
+    }
 
 
-  public void LoadFromTransition(string newScene, int transitionPoint, GameObject player)
-  {
-    LoadNewSceneAdditive(newScene);
+    public void LoadFromTransition(string newScene, int transitionPoint, GameObject player)
+    {
+        LoadNewSceneAdditive(newScene);
 
-    // TODO: get vector2 from transitionPoint
-    Transform transitionPointLocation = GameObject.FindGameObjectWithTag("TransitionPoints").GetComponent<LevelEntryPoints>().GetPositonOfPoint(transitionPoint);
+        // TODO: get vector2 from transitionPoint
+        Transform transitionPointLocation = GameObject.FindGameObjectWithTag("TransitionPoints").GetComponent<LevelEntryPoints>().GetPositonOfPoint(transitionPoint);
 
-    player.transform.position = transitionPointLocation.position;
+        player.transform.position = transitionPointLocation.position;
 
 
-  }
+    }
 
 }
