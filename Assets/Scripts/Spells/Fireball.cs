@@ -23,7 +23,7 @@ public class Fireball : BasicSpells
     // Update is called once per frame
     void Update()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        playerPos = GameObject.Find("Phantom2.0").transform.position;
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 
