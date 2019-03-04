@@ -12,6 +12,8 @@ public class popUpText : MonoBehaviour
     public string triggerPrefabString;
 
     public bool destroyOnLeave = false;
+    private bool hasTriggered = false;
+    public bool triggerOnAnyNPC = false;
    
 
     // Start is called before the first frame update
@@ -28,10 +30,11 @@ public class popUpText : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-       if(other.gameObject == GameObject.Find(triggerPrefabString))
+       if(other.gameObject == GameObject.Find(triggerPrefabString) || triggerOnAnyNPC)
         {
             popUpMessagePanel.SetActive(true);
             popUpMessageText.text = message;
+            hasTriggered = true;
         }
     }
 
@@ -39,7 +42,7 @@ public class popUpText : MonoBehaviour
     {
         if(!destroyOnLeave)
         popUpMessagePanel.SetActive(false);
-        else
-        Destroy(popUpMessagePanel);
+        else if(hasTriggered)
+        Destroy(this.gameObject);
     }
 }
