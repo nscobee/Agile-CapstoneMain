@@ -26,7 +26,7 @@ public class BasicMovement : MonoBehaviour
     {
 
         mainCamera = Camera.main;
-        phantom = GameObject.FindWithTag("Player");
+        phantom = GameObject.Find("Phantom2.0");
         phantomBox = phantom.GetComponent<BoxCollider2D>();
         phantomMesh = phantom.GetComponent<SpriteRenderer>();
         phantomRigid = phantom.GetComponent<Rigidbody2D>();

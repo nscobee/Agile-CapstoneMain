@@ -94,7 +94,7 @@ public class MageAI : BasicAI
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "Phantom2.0")
         {
             playerInRange = true;
         }
@@ -102,7 +102,7 @@ public class MageAI : BasicAI
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "Phantom2.0")
         {
             playerInRange = false;
         }

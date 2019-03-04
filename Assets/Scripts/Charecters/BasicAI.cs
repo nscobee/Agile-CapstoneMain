@@ -83,7 +83,7 @@ public class BasicAI : MonoBehaviour
 
         mainCamera = Camera.main;
         startingTag = this.gameObject.tag;
-        phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
+        phantomControls = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
         // if you want points to be gathered it does that
         if (gatherPoints)
         {
@@ -96,7 +96,6 @@ public class BasicAI : MonoBehaviour
         phantomRigid = phantom.GetComponent<Rigidbody2D>();
 
         //needed to assign these i think?
-        //phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         //hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
         // apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
         // mageAbilities = GameObject.Find("MageA");
@@ -315,7 +314,7 @@ public class BasicAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("something is hitting me (the ai): " + other.name);
-        if (other.tag == "Player" && !phantomControls.isPossessing)
+        if (other.name == "Phantom2.0" && !phantomControls.isPossessing)
         {
             InRange = true;
         }
@@ -328,7 +327,7 @@ public class BasicAI : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.name == "Phantom2.0")
         {
             InRange = false;
         }
