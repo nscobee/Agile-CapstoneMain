@@ -114,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660928347398176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.286083, y: 0.263621, z: 1}
   m_Children:
   - {fileID: 834060439}
@@ -314,3 +314,5 @@ MonoBehaviour:
   inRange: []
   primaryTarget: {fileID: 0}
   controller: {fileID: 114645118731456562}
+  phantom: {fileID: 0}
+  parent: {fileID: 0}

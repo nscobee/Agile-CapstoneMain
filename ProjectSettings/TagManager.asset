@@ -27,6 +27,7 @@ TagManager:
   - UI
   - Phantom
   - Exit
+  - textPopUp
   layers:
   - Default
   - TransparentFX
