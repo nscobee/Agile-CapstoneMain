@@ -7,8 +7,7 @@ public class popUpText : MonoBehaviour
 {
     public Text popUpMessageText;
     public GameObject popUpMessagePanel;
-    public string regularMessage;
-    public string phantomSpecificMessage;
+    public string message;
     [Tooltip("The exact name of the prefab you want to trigger the speech bubble")]
     public string triggerPrefabString;
 
@@ -24,27 +23,22 @@ public class popUpText : MonoBehaviour
         phantom = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
         popUpMessagePanel.SetActive(false);
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-       if(other.gameObject == GameObject.Find(triggerPrefabString) || triggerOnAnyNPC)
+        if (other.gameObject == GameObject.Find(triggerPrefabString) || triggerOnAnyNPC)
         {
             popUpMessagePanel.SetActive(true);
-            //if the phantom isnt possessing, display phantom message
-            //else display character's reaction to another
-            if (!phantom.isPossessing)
-                popUpMessageText.text = phantomSpecificMessage;
-            else
-                popUpMessageText.text = regularMessage;
+            popUpMessageText.text = message;
             hasTriggered = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(!destroyOnLeave)
-        popUpMessagePanel.SetActive(false);
-        else if(hasTriggered)
-        Destroy(this.gameObject);
+        if (!destroyOnLeave)
+            popUpMessagePanel.SetActive(false);
+        else if (hasTriggered)
+            Destroy(this.gameObject);
     }
 }
