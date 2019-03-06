@@ -14,13 +14,10 @@ public class popUpText : MonoBehaviour
     public bool destroyOnLeave = false;
     private bool hasTriggered = false;
     public bool triggerOnAnyNPC = false;
-
-    PhantomControls phantom;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        phantom = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
         popUpMessagePanel.SetActive(false);
     }
 
