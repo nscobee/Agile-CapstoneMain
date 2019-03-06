@@ -7,12 +7,7 @@ public class BasicAI : MonoBehaviour
 {
     public List<Transform> patrolPoints = new List<Transform>();
     public bool isPatrolling = true;
-
-
-    [Tooltip("Time for dialogue to show")]
-    public float dialogueWait = 7f;
-
-    public List<Transform> pointsList = new List<Transform>();
+    
 
     public Camera mainCamera;
 
@@ -120,12 +115,6 @@ public class BasicAI : MonoBehaviour
         {
             isPatrolling = false;
             //ChaseThePlayer();
-        }
-
-        if (this.gameObject.tag == "tutorial")
-        {
-            isPatrolling = false;
-            StartCoroutine(FollowPoints(this.gameObject.transform, pointsList));
         }
 
         if (isPatrolling)
@@ -241,19 +230,6 @@ public class BasicAI : MonoBehaviour
             //move towards spot
             mover.transform.position = Vector2.MoveTowards(mover.position, newTarget, speed * Time.deltaTime);
         }
-    }
-
-    IEnumerator FollowPoints(Transform tutorialGhost, List<Transform> targets)
-    {
-        yield return new WaitForSeconds(dialogueWait);
-        foreach (Transform point in targets)
-        {
-            if(Vector2.Distance(tutorialGhost.position, point.position) > 1f)
-            {
-                tutorialGhost.position = MoveTowardsObject(tutorialGhost.position, point.position, speed);
-            }
-        }
-        
     }
 
     // Checks if two transform points are within a certain distance of each other
