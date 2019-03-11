@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class keyScript : MonoBehaviour
 {
-    public GameObject matchingDoor;
+    public GameObject[] matchingDoor;
 
 
     // Start is called before the first frame update
@@ -23,7 +23,10 @@ public class keyScript : MonoBehaviour
     {
         if(other.gameObject == GameObject.Find("Phantom2.0") || other.gameObject.tag == "Player")
         {
-            Destroy(matchingDoor);
+            for(int i = 0; i < matchingDoor.Length; i++)
+            {
+                Destroy(matchingDoor[i]);
+            }
             Destroy(this.gameObject);
 
         }
