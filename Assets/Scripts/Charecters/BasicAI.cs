@@ -30,7 +30,7 @@ public class BasicAI : MonoBehaviour
     public Slider hpSlider;
     public Slider apSlider;
 
-    public GameObject statUI;
+    //public GameObject statUI;
     
     public GameObject fighterAbilities;
     public GameObject mageAbilities;
@@ -246,24 +246,7 @@ public class BasicAI : MonoBehaviour
 
     }
 
-
-    //public void Idle(Transform mover, Transform currentTarget)
-    //{
-    //    Vector2 idleSpot = new Vector3(currentTarget.position.x + Random.Range(-3f, 3f), currentTarget.position.y + Random.Range(-3f, 3f));
-    //    //Vector2.RotateTowards(mover.transform.position, idleSpot, 2f, 1f);
-    //    mover.position = Vector2.MoveTowards(mover.transform.position, idleSpot, 3f);
-
-
-    //}
-
-    //public IEnumerator Idle(Transform mover)
-    //{
-    //    mover.rotation = new Quaternion(0, 0, Random.Range(-180, 180), 1);
-
-    //    //mover.transform.position += transform.position * 2f;
-
-    //    yield return new WaitForSecondsRealtime(Random.Range(100f, 150f));
-    //}
+    
 
     public Transform FindTarget(List<Transform> transformList)
     {
@@ -351,7 +334,7 @@ public class BasicAI : MonoBehaviour
         currentAP = maxAP;
     }
 
-    public void setUI()
+    /*public void setUI()
     {
         //Instantiate(statUI);
         statUI.SetActive(true);
@@ -393,7 +376,7 @@ public class BasicAI : MonoBehaviour
     public void DeleteUI()
     {
         Destroy(statUI);
-    }
+    }*/
 
     public void resetTag()
     {
@@ -437,7 +420,7 @@ public class BasicAI : MonoBehaviour
 
         if (this.gameObject.tag == "mage")
         {
-            this.gameObject.GetComponent<MageAI>().FireAttack();
+            this.gameObject.GetComponent<MageAI>().FireballAttack(playerObjTransform);
         }
 
         if (this.gameObject.tag == "healer")

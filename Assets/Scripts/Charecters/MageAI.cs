@@ -92,6 +92,23 @@ public class MageAI : BasicAI
         Destroy(projectileBullet, 4f);
     }
 
+    public void FireballAttack(Transform playerTransform)
+    {
+        fireballNextRound = Time.time + fireballFireRate;
+
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = transform.position.z;
+
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+
+        projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
+
+        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBullet, 4f);
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Phantom2.0")
