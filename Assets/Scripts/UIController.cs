@@ -17,12 +17,14 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (phantomControls.isPossessing && this.gameObject.GetComponent<BasicAI>().playerInRangeR)
+        if (phantomControls.isPossessing && this.gameObject.tag == "Player")
         {
+            print("UI IN!");
             theUI.enabled = true;
         }
         else
         {
+            print("UI OUT!");
             uiObj.SetActive(true);
             theUI.enabled = false;
         }
