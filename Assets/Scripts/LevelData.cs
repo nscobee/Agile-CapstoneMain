@@ -13,38 +13,11 @@ using UnityEditor.SceneManagement;
 [Serializable]
 public class LevelData
 {
+    public static LevelData current;
+
     public string levelName;
+    public PlayerData player = new PlayerData();
     public List<EnemyData> enemyList = new List<EnemyData>();
-    private static string saveDirectory = Directory.GetCurrentDirectory() + "\\Levels\\";
-
-    #region get/set for level data itself
-    public string GetLevelName()
-    {
-        return levelName;
-    }
-
-    public void SetLevelName(string levelName)
-    {
-        this.levelName = levelName;
-    }
-    #endregion
-
-    #region save/load funtionality
-    public static LevelData LoadFromFile(string fileName)
-    {
-        string newPath = System.IO.Path.Combine(saveDirectory, fileName);
-
-        return JsonUtility.FromJson<LevelData>(System.IO.File.ReadAllText(newPath));
-    }
-
-    public void SaveToFile(string fileName)
-    {
-        string newPath = System.IO.Path.Combine(saveDirectory, fileName);
-
-        System.IO.File.WriteAllText(newPath, JsonUtility.ToJson(this, true));
-    }
-
-    #endregion
 }
 
 //classes of the stuff in the level
@@ -54,6 +27,14 @@ public class EnemyData
     public Transform position;
     public float currentHealth;
     public bool isBeingPossessed;
+}
+
+[Serializable]
+public class PlayerData
+{
+    public Transform position;
+    public float currentHealth;
+    public bool isPossessing;
 }
 
 
