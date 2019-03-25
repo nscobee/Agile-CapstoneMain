@@ -16,18 +16,13 @@ public static class SaveLoadSystem
             Debug.Log(Application.persistentDataPath.ToString());
 
             SaveData newSave = ScriptableObject.CreateInstance("SaveData") as SaveData;
-
             Directory.CreateDirectory(Application.persistentDataPath + "/" + saveName);
-
-
+            
             BinaryFormatter bf = new BinaryFormatter();
-
             FileStream stream = new FileStream(Application.persistentDataPath + "/" + saveName + "/Position.loc", FileMode.Create);
-
             SerializedSaveData data = new SerializedSaveData(newSave);
 
             bf.Serialize(stream, data);
-
             stream.Close();
 
             return true;
@@ -36,7 +31,6 @@ public static class SaveLoadSystem
         {
             Debug.Log("no filepath");
             return false;
-            
         }
     }
 
@@ -47,15 +41,11 @@ public static class SaveLoadSystem
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream stream = new FileStream(Application.persistentDataPath + "/" + saveName + "/SaveData.sav", FileMode.Create);
-
         Debug.Log(Application.persistentDataPath.ToString());
-
         SerializedSaveData data = new SerializedSaveData(save);
-
         bf.Serialize(stream, data);
 
         stream.Close();
-
     }
 
     /** LoadPlayer Does:
@@ -79,7 +69,6 @@ public static class SaveLoadSystem
 
             return saveInfo;
         }
-
         return null;
     }
 
@@ -96,13 +85,11 @@ public static class SaveLoadSystem
         {
             sceneName = save.sceneName;
             checkpointLocation = save.checkpointNumber;
-
         }
 
         public SerializedSaveData()
         {
             throw new NotImplementedException("We need to set up a defaut save point for making a new save\nThis will probablly be the first save point");
-
         }
     }
 }
