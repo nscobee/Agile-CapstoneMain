@@ -15,6 +15,8 @@ public class popUpText : MonoBehaviour
     private bool hasTriggered = false;
     public bool triggerOnAnyNPC = false;
     
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,10 @@ public class popUpText : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == GameObject.Find(triggerPrefabString) || triggerOnAnyNPC)
+        if (other.gameObject == GameObject.Find(triggerPrefabString) || (triggerOnAnyNPC  && other.gameObject.GetComponent<BasicAI>() ))
         {
+
+            print("I am " + this.gameObject.transform.parent.gameObject + " and I am talking to " + other.gameObject);
             popUpMessagePanel.SetActive(true);
             popUpMessageText.text = message;
             hasTriggered = true;

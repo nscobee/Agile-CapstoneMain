@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public PhantomControls phantomControls;
+    public PhantomControls phantomController;
     public GameObject uiObj;
     Canvas theUI;
 
@@ -12,12 +12,13 @@ public class UIController : MonoBehaviour
     {
         theUI = uiObj.GetComponent<Canvas>();
         theUI.enabled = false;
+        phantomController = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (phantomControls.isPossessing && this.gameObject.tag == "Player")
+        if (phantomController.isPossessing && this.gameObject.tag == "Player")
         {
             print("UI IN!");
             theUI.enabled = true;

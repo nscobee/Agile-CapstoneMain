@@ -360,10 +360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4826611559010620}
     m_Modifications:
-    - target: {fileID: 1622555683942378, guid: 3c6cab3e7701cd241aa8d4c4f02507e3, type: 3}
-      propertyPath: m_Name
-      value: MageHealthAndAbilites
-      objectReference: {fileID: 0}
     - target: {fileID: 224690233085816274, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -469,25 +465,33 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224969735692750104, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 1622555683942378, guid: 3c6cab3e7701cd241aa8d4c4f02507e3, type: 3}
+      propertyPath: m_Name
+      value: MageHealthAndAbilites
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622555683942378, guid: 3c6cab3e7701cd241aa8d4c4f02507e3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224969735692750104, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224969735692750104, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224509169146147334, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224509169146147334, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6cab3e7701cd241aa8d4c4f02507e3, type: 3}

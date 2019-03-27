@@ -7,7 +7,7 @@ using System.Text;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
+//using UnityEditor.SceneManagement;
 
 //the main level data
 [Serializable]
