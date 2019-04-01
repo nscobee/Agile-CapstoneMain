@@ -26,7 +26,7 @@ public class EnemyData
 {
     public Transform position;
     public float currentHealth;
-    public bool isBeingPossessed;
+    //public bool isBeingPossessed;
 }
 
 [Serializable]

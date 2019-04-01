@@ -8,10 +8,8 @@ public class BasicAI : MonoBehaviour
     public List<Transform> patrolPoints = new List<Transform>();
     public bool isPatrolling = true;
     
-
     public Camera mainCamera;
-
-
+    
     private Transform currentTarget;
     private float nextRound = 0.0f;
     public float fireRate = 7.0f;
@@ -72,10 +70,8 @@ public class BasicAI : MonoBehaviour
 
     public GameObject healthDrop;
 
-
     private void Start()
     {
-
         mainCamera = Camera.main;
         startingTag = this.gameObject.tag;
         phantomControls = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
@@ -172,7 +168,6 @@ public class BasicAI : MonoBehaviour
         {
             retaliate();
         }
-
     }
 
     // when the player possess a AI it destories the phantom and enables the player movement on the 
@@ -180,7 +175,6 @@ public class BasicAI : MonoBehaviour
     {
         //updateLevelMultiplier();
         
-
         Vector3 cameraPos;
         cameraPos = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10);
         mainCamera.transform.position = cameraPos;
@@ -197,7 +191,7 @@ public class BasicAI : MonoBehaviour
         phantom.transform.parent = this.gameObject.transform;
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
 
-        this.gameObject.tag = "Player";
+        this.gameObject.tag = "Possessed";
 
         phantom.transform.position = this.gameObject.transform.position;
         phantomControls.isPossessing = true;
@@ -213,7 +207,6 @@ public class BasicAI : MonoBehaviour
         {
             homeSpawner.AI.Remove(this.gameObject);
         }
-
     }
 
     //does the wander thingy
@@ -236,25 +229,25 @@ public class BasicAI : MonoBehaviour
     public bool CheckToStop(Transform currentPosition, Transform targetPosition, float distance)
     {
         return Vector2.Distance(currentPosition.position, targetPosition.position) < distance;
-
     }
 
     // moves one object towards another by set speed
     public Vector2 MoveTowardsObject(Vector2 mover, Vector2 target, float speed)
     {
         return Vector2.MoveTowards(mover, target, speed * Time.deltaTime);
-
     }
-
     
-
     public Transform FindTarget(List<Transform> transformList)
     {
         int randomNumber = Random.Range(0, patrolPoints.Count);
 
         return transformList[randomNumber];
-
     }
+
+    //public Transform FindNextTarget(List<Transform> points, Transform currentPoint)
+    //{
+        
+    //}
 
     //public void ChaseThePlayer()
     //{
@@ -400,7 +393,7 @@ public class BasicAI : MonoBehaviour
         else
         {
             print("Player not in range");
-            GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
+            GameObject[] targets = GameObject.FindGameObjectsWithTag("Possessed");
 
 
             this.transform.LookAt(targets[0].transform);

@@ -31,11 +31,24 @@ public class SaveLoadController : MonoBehaviour
         PlayerData playerDat = new PlayerData();
         
         playerDat.currentHealth = playerHealthScript.currentHealth;
+        playerDat.position = player.gameObject.transform;
+        playerDat.isPossessing = player.isPossessing;
         ld.player = playerDat;
         
-        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Melee"))
+        foreach (GameObject meleeEnemy in GameObject.FindGameObjectsWithTag("Melee"))
         {
-           
+            EnemyData enemyDat = new EnemyData();
+            enemyDat.position = meleeEnemy.transform;
+            enemyDat.currentHealth = meleeEnemy.gameObject.GetComponent<AIHealth>().currentHealth;
+            ld.enemyList.Add(enemyDat);
+        }
+
+        foreach (GameObject mageEnemy in GameObject.FindGameObjectsWithTag("mage"))
+        {
+            EnemyData enemyDat = new EnemyData();
+            enemyDat.position = mageEnemy.transform;
+            enemyDat.currentHealth = mageEnemy.gameObject.GetComponent<AIHealth>().currentHealth;
+            ld.enemyList.Add(enemyDat);
         }
 
     }
