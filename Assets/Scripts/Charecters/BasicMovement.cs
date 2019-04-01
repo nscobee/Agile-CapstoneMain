@@ -46,14 +46,8 @@ public class BasicMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Backslash) && phantomControls.isPossessing)
         {
-            DED();
-
-            reaper.outOfBody = true;
-            phantomControls.enabled = true;
-            phantomControls.isPossessing = false;
-            phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
-            mainCamera.transform.parent = phantom.gameObject.transform;
-
+            DED(); 
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && phantomControls.isPossessing)
@@ -75,14 +69,18 @@ public class BasicMovement : MonoBehaviour
   // makes a new phantom to use and destories the charecter the player was previously possessing
   public void DED()
   {
+
+        WithDraw();
+
         phantomControls.resetLevel();
-        phantomBox.enabled = true; //re-enable phantom
-        phantomMesh.enabled = true; //^^same
-        phantomRigid.WakeUp();
-        Destroy(GameObject.FindGameObjectWithTag("UI"));
-        Destroy(this.gameObject); //kill off the dead Ai
-        phantom.transform.parent = null;
-        
+        reaper.outOfBody = true;
+        phantomControls.enabled = true;
+        phantomControls.isPossessing = false;
+        phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
+        mainCamera.transform.parent = phantom.gameObject.transform;
+        Destroy(this.gameObject);
+        phantomControls.speed = 5;
+
     }
 
     public void ReallyDED()
