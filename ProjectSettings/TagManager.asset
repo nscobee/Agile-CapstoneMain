@@ -11,7 +11,6 @@ TagManager:
   - PatrolPoint
   - SavePoints
   - EntryPoints
-  - Poop
   - healthPotion
   - DamageSource
   - fighter
@@ -28,6 +27,7 @@ TagManager:
   - Phantom
   - Exit
   - textPopUp
+  - Possessed
   layers:
   - Default
   - TransparentFX
