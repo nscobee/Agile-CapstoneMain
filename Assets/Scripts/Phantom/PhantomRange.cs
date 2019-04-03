@@ -85,6 +85,7 @@ public class PhantomRange : MonoBehaviour
         if (other.gameObject.tag == "mage" || other.gameObject.tag == "Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe")
         {
             inRange.Add(other.gameObject);
+
         }
 
         if (other.tag == "Exit")
