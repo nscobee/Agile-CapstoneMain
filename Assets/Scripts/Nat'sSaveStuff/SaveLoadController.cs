@@ -11,15 +11,15 @@ public class SaveLoadController : MonoBehaviour
     private PhantomControls player;
     //note: this is now part of uiControl - use that!
     private playerHealth hpScript;
-    
+
     void Awake()
     {
-        if(control == null)
+        if (control == null)
         {
             DontDestroyOnLoad(this.gameObject);
             control = this;
         }
-        else if(control != this)
+        else if (control != this)
         {
             Destroy(gameObject);
         }
@@ -27,13 +27,16 @@ public class SaveLoadController : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-        hpScript = player.GetComponent<playerHealth>();
+        //player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
+        //hpScript = player.GetComponent<playerHealth>();
     }
 
     public void SaveLevel()
     {
         Debug.Log("Save and load Controller saving.");
+
+        player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
+        hpScript = player.GetComponent<playerHealth>();
 
         PlayerData playerDat = new PlayerData();
 
@@ -51,7 +54,7 @@ public class SaveLoadController : MonoBehaviour
 
         playerDat.isPossessing = player.isPossessing;
         levelData.player = playerDat;
-        
+
         //melee stuff
         foreach (GameObject meleeEnemy in GameObject.FindGameObjectsWithTag("Melee"))
         {
@@ -77,19 +80,25 @@ public class SaveLoadController : MonoBehaviour
             enemyDat.currentHealth = mageEnemy.gameObject.GetComponent<AIHealth>().currentHealth;
             levelData.enemyList.Add(enemyDat);
         }
-        
+
         SaveAndLoad.savedGames.Add(this.levelData);
+        Debug.Log("SavedGames count: " + SaveAndLoad.savedGames.Count);
         SaveAndLoad.Save();
     }
 
     public void LoadLevel()
     {
-        Debug.Log("SavedGames count: " + SaveAndLoad.savedGames.Count);
         LevelData ld = SaveAndLoad.Load();
 
         //load in player data from the data given from the file
+        SetPlayerPos(ld);
         SceneManager.LoadScene(SaveAndLoad.savedGames[0].sceneNum);
-        player.transform.position = new Vector3(ld.player.xPos, ld.player.yPos, ld.player.zPos);
     }
 
+    public void SetPlayerPos(LevelData ld)
+    {
+        Vector3 newPlayerPos = new Vector3(ld.player.xPos, ld.player.yPos, ld.player.zPos);
+        Debug.Log("load level setting player pos to:" + newPlayerPos);
+        Vector3 playerPosFromLoad = newPlayerPos;
+    }
 }

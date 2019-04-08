@@ -55,21 +55,9 @@ public class MainMenuManager : MonoBehaviour
 
   public void _MakeNewSave()
   {
-    if (SaveLoadSystem.MakeNewPlayerSave(newSceneInput.text))
+    if (SaveAndLoad.savedGames.Count >= 0)
     {
-      SaveLoadSystem.LoadPlayer(newSceneInput.text);
-
+      SaveAndLoad.Load();
     }
-
-    else
-    {
-      Debug.LogError("Tried to overwriteSave");
-
-    }
-    //Debug.Log(newSceneInput.text);
-
-
   }
 }
-// F
-// In respects to the other agile groups
