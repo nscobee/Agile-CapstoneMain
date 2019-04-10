@@ -8,6 +8,7 @@ public class SaveLoadController : MonoBehaviour
     public static SaveLoadController control;
 
     private LevelData levelData = new LevelData();
+    private static LevelData ldLoaded = new LevelData();
     private PhantomControls player;
     //note: this is now part of uiControl - use that!
     private playerHealth hpScript;
@@ -88,17 +89,22 @@ public class SaveLoadController : MonoBehaviour
 
     public void LoadLevel()
     {
-        LevelData ld = SaveAndLoad.Load();
+        ldLoaded = SaveAndLoad.Load();
 
         //load in player data from the data given from the file
-        SetPlayerPos(ld);
         SceneManager.LoadScene(SaveAndLoad.savedGames[0].sceneNum);
     }
 
-    public void SetPlayerPos(LevelData ld)
+    public void SetPlayerPos(PhantomControls phantom, LevelData ldLoaded)
     {
-        Vector3 newPlayerPos = new Vector3(ld.player.xPos, ld.player.yPos, ld.player.zPos);
+        Vector3 newPlayerPos = new Vector3(ldLoaded.player.xPos, ldLoaded.player.yPos, ldLoaded.player.zPos);
         Debug.Log("load level setting player pos to:" + newPlayerPos);
-        Vector3 playerPosFromLoad = newPlayerPos;
+        phantom.transform.position = newPlayerPos;
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
+        SetPlayerPos(player, ldLoaded);
     }
 }
