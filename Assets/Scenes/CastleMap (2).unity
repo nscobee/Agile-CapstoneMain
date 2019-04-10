@@ -281,6 +281,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -757,6 +767,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -780,6 +800,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Keep away from the castle dungeon
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -957,6 +985,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -980,6 +1018,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: You know not where you venture.
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -1217,6 +1263,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -1240,6 +1296,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Huzah!
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -1402,6 +1462,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -1425,6 +1495,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: I will be the next Hero!
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -1647,6 +1725,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -1670,6 +1758,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Infinite horrors await!
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -61276,6 +61372,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -61299,6 +61405,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: The commander is not in a good mood.
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -61606,6 +61720,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -61629,6 +61753,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Something dark festers near.
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -91950,6 +92082,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -91973,6 +92115,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Ho there be weary!
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -92200,6 +92350,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -92223,6 +92383,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Don't piss off the sergeant.
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -92440,6 +92608,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -92463,6 +92641,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Oh shoot i forgot my lunch!
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -92660,6 +92846,16 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1290458453
+      objectReference: {fileID: 0}
+    - target: {fileID: 212723535536114482, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434214220861312, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -92683,6 +92879,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878050, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_Text
+      value: Did you hear whats in the basement?
       objectReference: {fileID: 0}
     - target: {fileID: 1226053312000290515, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
