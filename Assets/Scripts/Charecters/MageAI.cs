@@ -69,7 +69,7 @@ public class MageAI : BasicAI
     {
         foreach (GameObject target in inRange)
         {
-            target.GetComponent<BasicAI>().currentHP -= fireDamageAmount;
+            target.GetComponent<UIController>().currentHealth -= fireDamageAmount;
         }
         Debug.Log("Secondary spell used, " + fireDamageAmount + " dmg.");
         this.GetComponent<AIHealth>().LoseMana(fireManaLoss);

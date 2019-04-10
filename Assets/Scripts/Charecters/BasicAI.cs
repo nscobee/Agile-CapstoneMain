@@ -25,29 +25,17 @@ public class BasicAI : MonoBehaviour
 
     public AISpawner homeSpawner;
 
-    public Slider hpSlider;
-    public Slider apSlider;
+    public UIController UIControls;
+    public PossessIcon PossessionIcon;
 
-    //public GameObject statUI;
     
     public GameObject fighterAbilities;
     public GameObject mageAbilities;
-    public float meleesHp = 75f;
-    public float meleesAp = 40f;
-    public float magesHp = 40f;
-    public float magesAp = 75f;
-    //public GameObject healerAbilities;
 
-    public float commonHp = 25f;
-    public float commonAp = 25f;
 
     public bool InRange = false;
 
-    public float currentHP;
-    public float currentAP;
 
-    public float maxHP;
-    public float maxAP;
 
     public float levelMultiplierHP;
     public float levelMultiplierAP;
@@ -57,6 +45,8 @@ public class BasicAI : MonoBehaviour
     public bool isRetaliating;
 
     public bool possessingThisObject = false;
+
+    public bool canPossess = true;
 
     [Header("Object References")]
     public GameObject phantom;  //Obtain info about phantom to have it persist
@@ -68,8 +58,7 @@ public class BasicAI : MonoBehaviour
 
     public static ReaperCountdown reaper;
 
-    public GameObject healthDrop;
-
+    
     private void Start()
     {
         mainCamera = Camera.main;
@@ -85,19 +74,15 @@ public class BasicAI : MonoBehaviour
         phantomBox = phantom.GetComponent<BoxCollider2D>();
         phantomMesh = phantom.GetComponent<SpriteRenderer>();
         phantomRigid = phantom.GetComponent<Rigidbody2D>();
+        UIControls = this.gameObject.GetComponent<UIController>();
+        PossessionIcon = this.gameObject.GetComponent<PossessIcon>();
 
-        //needed to assign these i think?
-        //hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
-        // apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
-        // mageAbilities = GameObject.Find("MageA");
-        //statUI = GameObject.FindGameObjectWithTag("UI");
 
-        currentHP = maxHP;
-        currentAP = maxAP;
     }
 
     private void Update()
     {
+        
        // if (!phantomControls.isPossessing)
        // {
             
@@ -106,7 +91,7 @@ public class BasicAI : MonoBehaviour
        // }
 
         float startTime = Time.time;
-        isPatrolling = true;
+        //isPatrolling = true;
         if (playerInRangeR)
         {
             isPatrolling = false;
@@ -134,21 +119,12 @@ public class BasicAI : MonoBehaviour
             }
         }
 
-       // if (phantomControls.isPossessing)
-       // {
-            /*if(possessingThisObject)
-            {
-                phantom.transform.position = Vector3.back; //reset phantom's position to currently possessed NPC
-            }*/
-            //apSlider.value = currentAP;
-       // }
 
-        if (currentHP > maxHP) currentHP = maxHP;
-        if (currentAP > maxAP) currentAP = maxAP;
 
-        if (currentHP <= 0 && !phantomControls.isPossessing)
+
+        if (UIControls.currentHealth <= 0 && !phantomControls.isPossessing)
         {
-            Die();
+            UIControls.Die();
         }
 
         if (this.gameObject.tag == "Melee")
@@ -196,12 +172,14 @@ public class BasicAI : MonoBehaviour
         phantom.transform.position = this.gameObject.transform.position;
         phantomControls.isPossessing = true;
         possessingThisObject = true;
+
+        healOnPossess();
     }
 
     // this is to let the spawner know that it can send out another AI
     private void OnDestroy()
     {
-        Die();
+       // Die();
 
         if (homeSpawner)
         {
@@ -285,91 +263,31 @@ public class BasicAI : MonoBehaviour
         }
     }
 
-    /* private void setInactive()
-     {
-         abilityImage.SetActive(false);
-         fighterAbilities.SetActive(false);
-         mageAbilities.SetActive(false);
-         commonAbilities.SetActive(false);
-         healerAbilities.SetActive(false);
-     }*/
 
     private void updateLevelMultiplier() //Is called when the player possesses an NPC, will set values to current level
     {
         levelMultiplierAP *= phantomControls.currentLevel;
         levelMultiplierHP *= phantomControls.currentLevel;
 
-        commonAp *= levelMultiplierAP;
-        commonHp *= levelMultiplierHP;
+        UIControls.MAXHP *= levelMultiplierAP;
+        UIControls.MAXMANA *= levelMultiplierHP;
 
     }
 
-    //public void ReceiveDamage(float damage)
-    //{
-    //    print("taking damage");
-    //    currentHP -= damage;
-    //    isRetaliating = true;
-
-    //}
-
-    public void setStats(float hp, float ap)
+    public void setStats(float hp, float mana)
     {
-        maxAP = ap;
-        maxHP = hp;
-        currentHP = maxHP;
-        currentAP = maxAP;
-        
+
     }
+
+
 
     public void healOnPossess()
     {
-        currentHP = maxHP;
-        currentAP = maxAP;
+        UIControls.currentHealth = UIControls.MAXHP;
+        UIControls.currentMana = UIControls.MAXMANA;
     }
 
-    /*public void setUI()
-    {
-        //Instantiate(statUI);
-        statUI.SetActive(true);
-        hpSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
-        apSlider = GameObject.FindGameObjectWithTag("ApSlider").GetComponent<Slider>();
-        if(this.gameObject.tag == "mage")
-        {
-            if (fighterAbilities.activeInHierarchy)
-            {
-                fighterAbilities.SetActive(false);
-            }
-            mageAbilities.SetActive(true);
-            setStats(magesHp, magesAp);
-        }
-        else if(this.gameObject.tag == "Melee")
-        {
-            if (mageAbilities.activeInHierarchy)
-            {
-                mageAbilities.SetActive(false);
-            }
-            fighterAbilities.SetActive(true);
-            setStats(meleesHp, meleesAp);
-        }
-        else
-        {
-            if (mageAbilities.activeInHierarchy || fighterAbilities.activeInHierarchy)
-            {
-                mageAbilities.SetActive(false);
-                fighterAbilities.SetActive(false);
-            }
-            setStats(commonHp, commonAp);
-        }
-        hpSlider.maxValue = maxHP;
-        apSlider.maxValue = maxAP;
-        hpSlider.value = maxHP;
-        apSlider.value = maxAP;
-    }
-
-    public void DeleteUI()
-    {
-        Destroy(statUI);
-    }*/
+   
 
     public void resetTag()
     {
@@ -438,15 +356,5 @@ public class BasicAI : MonoBehaviour
         }
     }
 
-    private void Die()
-    {
-        if (Random.Range(0, 100) > 50)
-        {
-            //   GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
-            // Destroy(healthpickup, 10f);
-        }
 
-        //Drop stuff for player? exp/items
-        Destroy(this.gameObject);
-    }
 }

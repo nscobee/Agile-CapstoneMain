@@ -299,6 +299,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: canPossess
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
 --- !u!1 &315334356
@@ -767,6 +772,32 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: canPossess
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: isRetaliating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: playerInRangeR
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: isPatrolling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658022326712958588, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 62bd8ffaa39c2784b96c0fa8b6dc0f28,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
 --- !u!1 &1023700006
@@ -4812,6 +4843,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4651203285652775488, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 62bd8ffaa39c2784b96c0fa8b6dc0f28,
+        type: 3}
     - target: {fileID: 1022283891611942, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_Name
       value: Mage2.0 (1)
@@ -4910,6 +4947,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: canPossess
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: canPossess
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
