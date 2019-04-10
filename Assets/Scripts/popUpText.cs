@@ -23,6 +23,12 @@ public class popUpText : MonoBehaviour
         popUpMessagePanel.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (this.transform.parent.gameObject.tag == "Possessed")
+            Destroy(this);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == GameObject.Find(triggerPrefabString) || (triggerOnAnyNPC  && other.gameObject.GetComponent<BasicAI>() ))

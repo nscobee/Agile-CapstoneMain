@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour
     public float MAXMANA = 100;
 
     public float rateOfManaRegen = 0.5f;
-
+    public GameObject healthDrop;
 
     private void Start()
     {
@@ -89,8 +89,11 @@ public class UIController : MonoBehaviour
 
     public void Die()
     {
-        if(this.gameObject.tag != "Possessed")
-        Destroy(this.gameObject);
+        if (this.gameObject.tag != "Possessed")
+        {
+            GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
         else
         {
             this.gameObject.GetComponent<BasicMovement>().DED();

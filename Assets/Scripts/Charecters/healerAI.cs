@@ -15,6 +15,7 @@ public class healerAI : MonoBehaviour {
     public PhantomControls phantomControls;
 
     public BasicAI basicAI;
+    public UIController UIControls;
 
     public float healerHp = 45f;
     public float healerAp = 75f;
@@ -42,6 +43,7 @@ public class healerAI : MonoBehaviour {
     // Use this for initialization
     void Start () {
         basicAI = this.gameObject.GetComponent<BasicAI>();
+        UIControls = this.gameObject.GetComponent<UIController>();
        // currentPlayerLevel = phantomControls.currentLevel;
         healMultiplier *= currentPlayerLevel;
         basicAI.setStats(healerHp, healerAp);
@@ -85,12 +87,12 @@ public class healerAI : MonoBehaviour {
     public void Heal()
     {
         if (phantomControls.isPossessing)
-            basicAI.currentHP += healPlayerAmount;
+            UIControls.currentHealth += healPlayerAmount;
         else
         {
             foreach (GameObject target in inRange)
             {
-                target.GetComponent<BasicAI>().currentHP += healAIAmount;
+                target.GetComponent<UIController>().currentHealth += healAIAmount;
             }
         }
     }
