@@ -82,7 +82,7 @@ public class MageAI : BasicAI
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
 
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 

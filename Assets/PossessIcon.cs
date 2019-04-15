@@ -21,11 +21,14 @@ public class PossessIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (AI.canPossess)
+        if (AI.canPossess && this.transform.parent.gameObject.tag != "NoPossess")
         {
             PossessionIcon.sprite = yesPossess;
         }
-        else PossessionIcon.sprite = noPossess;
+        else if (!AI.canPossess || this.transform.parent.gameObject.tag == "NoPossess")
+        { 
+            PossessionIcon.sprite = noPossess;
+        }
     }
 
 

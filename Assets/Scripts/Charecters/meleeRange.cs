@@ -24,10 +24,12 @@ public class meleeRange : MonoBehaviour {
         if (other.gameObject.layer == LayerMask.NameToLayer("AI"))
         {
             print("Melee Hit on: " + other.gameObject.name);
-            other.gameObject.GetComponent<AIHealth>().TakeDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
+            other.gameObject.GetComponent<UIController>().takeDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
 
         }
     }
+
+
 
   
 }

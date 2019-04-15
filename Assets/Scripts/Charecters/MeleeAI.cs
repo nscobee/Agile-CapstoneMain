@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeAI : MonoBehaviour {
+public class MeleeAI : BasicAI {
 
     public bool isAttacking;
     public float nextAttack;
@@ -13,8 +13,6 @@ public class MeleeAI : MonoBehaviour {
 
     public float activeDamage;
   
-    public PhantomControls phantomControls;
-
     public BasicAI basicAI;
     public GameObject meleeHitbox;
     public Transform hitboxOrigin;
@@ -69,7 +67,7 @@ public class MeleeAI : MonoBehaviour {
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
         var swordHitbox = Instantiate(meleeHitbox, hitboxOrigin.position, hitboxOrigin.rotation, this.gameObject.transform);
-
+        
         //destroys bullet after 4 seconds ish
         Destroy(swordHitbox, 0.1f);
     }
@@ -90,16 +88,5 @@ public class MeleeAI : MonoBehaviour {
         }
     }
 
-    /* public void Heal()
-     {
-         if (phantomControls.isPossessing)
-             basicAI.currentHP += healPlayerAmount;
-         else
-         {
-             foreach (GameObject target in inRange)
-             {
-                 target.GetComponent<BasicAI>().currentHP += healAIAmount;
-             }
-         }
-     }*/
+
 }
