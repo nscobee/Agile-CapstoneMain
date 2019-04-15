@@ -193,7 +193,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 563244503}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1578297173}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00744ff570fed8541ac6b9d53f441c96, type: 3}
@@ -551,6 +551,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212715730827867386, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300012, guid: 59b3ce6bf924af14bb39b639a411fb14,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
 --- !u!114 &624285433 stripped
@@ -677,6 +683,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &971926065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1326686080439248, guid: f1fd3e8753780e74aba38c0223bfd364,
+    type: 3}
+  m_PrefabInstance: {fileID: 980141171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &971926075
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971926065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f99c286b9c939094bae1c0213a3b3d9a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &980141171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 1326686080439248, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_Name
       value: AI Melee (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326686080439248, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_TagString
+      value: Melee
       objectReference: {fileID: 0}
     - target: {fileID: 4107299161409936, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3945,6 +3980,31 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1578297173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1660928347398176, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
+    type: 3}
+  m_PrefabInstance: {fileID: 563244503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1578297182
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578297173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea8329d97f5fcd1409248dca499862f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1720033602
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,16 +4903,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1022283891611942, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
+      propertyPath: m_Name
+      value: Mage2.0 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4651203285652775488, guid: bea63065369ee914eb7935f3baf033d8,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 62bd8ffaa39c2784b96c0fa8b6dc0f28,
         type: 3}
-    - target: {fileID: 1022283891611942, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
-      propertyPath: m_Name
-      value: Mage2.0 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.404542
@@ -4913,6 +4973,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 624285433}
+    - target: {fileID: 1199884532, guid: bea63065369ee914eb7935f3baf033d8, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: bea63065369ee914eb7935f3baf033d8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4951,6 +5015,11 @@ PrefabInstance:
     - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
         type: 3}
       propertyPath: canPossess
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: bea63065369ee914eb7935f3baf033d8,
+        type: 3}
+      propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093041448378176, guid: bea63065369ee914eb7935f3baf033d8,
