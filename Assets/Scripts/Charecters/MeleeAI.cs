@@ -11,9 +11,13 @@ public class MeleeAI : BasicAI {
     public float weakAttackDamage;
     public float strongAttackDamage;
 
+    public float weakManaLoss;
+    public float strongManaLoss;
+
     public float activeDamage;
   
     public BasicAI basicAI;
+    private UIController UI;
     public GameObject meleeHitbox;
     public Transform hitboxOrigin;
 
@@ -37,6 +41,7 @@ public class MeleeAI : BasicAI {
         phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         //currentPlayerLevel = phantomControls.currentLevel;
         damageMultiplier *= currentPlayerLevel;
+        UI = gameObject.GetComponent<UIController>();
 
         basicAI.setStats(fighterHp, fighterAp);
 
@@ -46,20 +51,26 @@ public class MeleeAI : BasicAI {
     void Update()
     {
 
-        if (this.gameObject.tag == "Player")
+        if (this.gameObject.tag == "Possessed")
         {
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                meleeAttack(weakAttackDamage);
+                print(UI.currentMana);
+                if (UI.currentMana > 0)
+                {
+                    meleeAttack(weakAttackDamage, weakManaLoss);
+                }
             }
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                meleeAttack(strongAttackDamage);
+                if (UI.currentMana > 0)
+                {
+                    meleeAttack(strongAttackDamage, strongManaLoss);
+                }
             }
         }
     }
-
 
     public void meleeAttack(float damage)
     {
@@ -67,7 +78,19 @@ public class MeleeAI : BasicAI {
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
         var swordHitbox = Instantiate(meleeHitbox, hitboxOrigin.position, hitboxOrigin.rotation, this.gameObject.transform);
-        
+
+        //destroys bullet after 4 seconds ish
+        Destroy(swordHitbox, 0.1f);
+    }
+    public void meleeAttack(float damage, float manaLoss)
+    {
+        isAttacking = true;
+        nextAttack = Time.time + attackRate;
+        activeDamage = damage;
+        var swordHitbox = Instantiate(meleeHitbox, hitboxOrigin.position, hitboxOrigin.rotation, this.gameObject.transform);
+
+        this.GetComponent<UIController>().useMana(manaLoss);
+
         //destroys bullet after 4 seconds ish
         Destroy(swordHitbox, 0.1f);
     }

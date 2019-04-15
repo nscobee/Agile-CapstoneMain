@@ -24,6 +24,8 @@ public class healerAI : MonoBehaviour {
     public int fireDamageAmount = 5;
     public float fireRange = 2f;
 
+    public float healManaLoss = 5f;
+
     public float fireballManaLoss = 7f;
     public float fireManaLoss = 2f;
 
@@ -48,20 +50,23 @@ public class healerAI : MonoBehaviour {
         healMultiplier *= currentPlayerLevel;
         basicAI.setStats(healerHp, healerAp);
 
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (this.gameObject.tag == "Player")
+        if (this.gameObject.tag == "Possessed")
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                FireAttack();
+                if (UIControls.currentMana > 0)
+                    FireAttack();
             }
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                Heal();
+                if (UIControls.currentMana > 0)
+                    Heal();
             }
         }
     }
@@ -78,7 +83,7 @@ public class healerAI : MonoBehaviour {
 
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
-        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
+        this.GetComponent<UIController>().useMana(fireManaLoss);
 
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
@@ -87,7 +92,10 @@ public class healerAI : MonoBehaviour {
     public void Heal()
     {
         if (phantomControls.isPossessing)
+        {
             UIControls.currentHealth += healPlayerAmount;
+            this.GetComponent<UIController>().useMana(healManaLoss);
+        }
         else
         {
             foreach (GameObject target in inRange)

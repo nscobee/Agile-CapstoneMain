@@ -58,6 +58,8 @@ public class UIController : MonoBehaviour
         if (currentHealth >= MAXHP) currentHealth = MAXHP;
         if (currentMana >= MAXMANA) currentMana = MAXMANA;
 
+        if (currentMana <= 0) currentMana = 0;
+
         currentMana += rateOfManaRegen * Time.deltaTime;
 
         if(this.gameObject.tag != "Possessed")

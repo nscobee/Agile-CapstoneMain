@@ -65,7 +65,7 @@ public class SaveLoadController : MonoBehaviour
             enemyDat.yPos = meleeEnemy.transform.position.y;
             enemyDat.zPos = meleeEnemy.transform.position.z;
 
-            enemyDat.currentHealth = meleeEnemy.gameObject.GetComponent<AIHealth>().currentHealth;
+            enemyDat.currentHealth = meleeEnemy.gameObject.GetComponent<UIController>().currentHealth;
             levelData.enemyList.Add(enemyDat);
         }
 
@@ -78,7 +78,7 @@ public class SaveLoadController : MonoBehaviour
             enemyDat.yPos = mageEnemy.transform.position.y;
             enemyDat.zPos = mageEnemy.transform.position.z;
 
-            enemyDat.currentHealth = mageEnemy.gameObject.GetComponent<AIHealth>().currentHealth;
+            enemyDat.currentHealth = mageEnemy.gameObject.GetComponent<UIController>().currentHealth;
             levelData.enemyList.Add(enemyDat);
         }
 

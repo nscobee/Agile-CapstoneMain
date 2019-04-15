@@ -26,6 +26,7 @@ public class MageAI : BasicAI
     public float mageAp = 90f;
 
     public BasicAI basicAI;
+    public UIController UI;
 
 
     private float fireballNextRound = 0.0f;
@@ -39,26 +40,32 @@ public class MageAI : BasicAI
     {
         basicAI = this.gameObject.GetComponent<BasicAI>();
         basicAI.setStats(mageHp, mageAp);
+        UI = gameObject.GetComponent<UIController>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.tag == "Player")
+        if (this.gameObject.tag == "Possessed")
         {
             if (Input.GetMouseButtonDown(0))
             {
-                print("basic movement script is firing fireball");
-                
-                FireballAttack();
+                if (UI.currentMana > 0)
+                {
+                    print("basic movement script is firing fireball");
+
+                    FireballAttack();
+                }
 
             }
             if (Input.GetMouseButton(1))
             {
-
-                print("basic movement script is using fire attack");
-                FireAttack();
+                if (UI.currentMana > 0)
+                {
+                    print("basic movement script is using fire attack");
+                    FireAttack();
+                }
             }
         }
 
@@ -72,7 +79,7 @@ public class MageAI : BasicAI
             target.GetComponent<UIController>().currentHealth -= fireDamageAmount;
         }
         Debug.Log("Secondary spell used, " + fireDamageAmount + " dmg.");
-        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
+        this.GetComponent<UIController>().useMana(fireManaLoss);
     }
 
     public void FireballAttack()
@@ -86,7 +93,7 @@ public class MageAI : BasicAI
 
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
-        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
+        this.GetComponent<UIController>().useMana(fireManaLoss);
 
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
@@ -103,7 +110,7 @@ public class MageAI : BasicAI
 
         projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
 
-        this.GetComponent<AIHealth>().LoseMana(fireManaLoss);
+        this.GetComponent<UIController>().useMana(fireManaLoss);
 
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
