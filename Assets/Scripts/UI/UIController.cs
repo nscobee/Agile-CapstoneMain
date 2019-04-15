@@ -14,15 +14,20 @@ public class UIController : MonoBehaviour
     public float currentMana = 100;
     public float MAXHP = 100;
     public float MAXMANA = 100;
+    [Tooltip("Enter a number between 1 and 100 for percentage")]
+    public float percentOfHealthToPossess = 20;
 
     public float rateOfManaRegen = 0.5f;
     public GameObject healthDrop;
+
+    public BasicAI AI;
 
     private void Start()
     {
         theUI = uiObj.GetComponent<Canvas>();
         theUI.enabled = false;
         phantomController = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
+        AI = gameObject.GetComponent<BasicAI>();
 
         manaSlider.maxValue = MAXMANA;
         healthSlider.maxValue = MAXHP;
@@ -54,6 +59,18 @@ public class UIController : MonoBehaviour
         if (currentMana >= MAXMANA) currentMana = MAXMANA;
 
         currentMana += rateOfManaRegen * Time.deltaTime;
+
+        if(this.gameObject.tag != "Possessed")
+        {
+            if(AI.possessOnLowHealth)
+            {
+                float healthThreshold = MAXHP * (percentOfHealthToPossess / 100f);
+                if(currentHealth <= healthThreshold)
+                {
+                    AI.canPossess = true;
+                }
+            }
+        }
 
     }
 

@@ -94,17 +94,11 @@ public class BasicMovement : MonoBehaviour
     // TODO: Make function for becoming non Possed but not killing the AI
     public void WithDraw()
     {
-        // do something like adding phantom and swaping ai and movement enables
-        //aiControls.isPosessingMage = false;
-        //aiControls.isPosessingFighter = false;
-        removeUI();
-        //aiControls.DeleteUI();
+
+
         
         phantomControls.isPossessing = false;
-        //if(healthAndAbilities == true)
-        //{
-        //    healthAndAbilities.SetActive(false);
-      //  }
+
         phantomBox.enabled = true; //re-enable phantom
         phantomMesh.enabled = true; //^^^what he said
         phantomRigid.WakeUp();
@@ -118,16 +112,6 @@ public class BasicMovement : MonoBehaviour
         
     }
 
-    private void removeUI()
-    {
-        GameObject[] UI = GameObject.FindGameObjectsWithTag("UI");
-
-        foreach (GameObject item in UI)
-        {
-            item.SetActive(false);
-            //Destroy(item);
-        }
-        
-    }
+    
 
 }

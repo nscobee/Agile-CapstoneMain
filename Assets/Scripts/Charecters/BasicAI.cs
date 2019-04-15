@@ -47,6 +47,7 @@ public class BasicAI : MonoBehaviour
     public bool possessingThisObject = false;
 
     public bool canPossess = true;
+    public bool possessOnLowHealth = false;
 
     [Header("Object References")]
     public GameObject phantom;  //Obtain info about phantom to have it persist
@@ -76,6 +77,8 @@ public class BasicAI : MonoBehaviour
         phantomRigid = phantom.GetComponent<Rigidbody2D>();
         UIControls = this.gameObject.GetComponent<UIController>();
         PossessionIcon = this.gameObject.GetComponent<PossessIcon>();
+
+        if (possessOnLowHealth) canPossess = false;
 
 
     }
