@@ -70,33 +70,24 @@ MonoBehaviour:
   playerMovement: {fileID: 114680281121275744}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
-  hpSlider: {fileID: 0}
-  apSlider: {fileID: 0}
+  UIControls: {fileID: 0}
+  PossessionIcon: {fileID: 0}
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
-  meleesHp: 75
-  meleesAp: 40
-  magesHp: 40
-  magesAp: 75
-  commonHp: 25
-  commonAp: 25
   InRange: 0
-  currentHP: 100
-  currentAP: 100
-  maxHP: 100
-  maxAP: 100
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
   playerInRangeR: 0
   isRetaliating: 0
   possessingThisObject: 0
+  canPossess: 1
+  possessOnLowHealth: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
-  healthDrop: {fileID: 0}
 --- !u!114 &114680281121275744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,11 +151,13 @@ MonoBehaviour:
   speed: 5
   phantomControls: {fileID: 0}
   basicAI: {fileID: 0}
+  UIControls: {fileID: 0}
   healerHp: 45
   healerAp: 75
   fireballDamageAmount: 10
   fireDamageAmount: 5
   fireRange: 2
+  healManaLoss: 5
   fireballManaLoss: 7
   fireManaLoss: 2
   fireballFireRate: 7
@@ -283,7 +276,12 @@ MonoBehaviour:
   currentMana: 100
   MAXHP: 100
   MAXMANA: 100
+  percentOfHealthToPossess: 20
   rateOfManaRegen: 0.5
+  healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
+    type: 3}
+  dropChance: 20
+  AI: {fileID: 0}
 --- !u!1 &1589785090301810
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 114343144908863274}
   - component: {fileID: 114443481937730140}
   - component: {fileID: 114024292634913850}
-  - component: {fileID: 6073196817016845502}
   - component: {fileID: 50962217405559534}
   - component: {fileID: 61904092528300818}
   - component: {fileID: 212723535536114482}
@@ -69,33 +68,24 @@ MonoBehaviour:
   playerMovement: {fileID: 114443481937730140}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
-  hpSlider: {fileID: 0}
-  apSlider: {fileID: 0}
+  UIControls: {fileID: 0}
+  PossessionIcon: {fileID: 0}
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
-  meleesHp: 75
-  meleesAp: 40
-  magesHp: 40
-  magesAp: 75
-  commonHp: 25
-  commonAp: 25
   InRange: 0
-  currentHP: 100
-  currentAP: 100
-  maxHP: 100
-  maxAP: 100
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
   playerInRangeR: 0
   isRetaliating: 0
   possessingThisObject: 0
+  canPossess: 1
+  possessOnLowHealth: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
-  healthDrop: {fileID: 0}
 --- !u!114 &114443481937730140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,13 +120,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937bc23180987d743bfb526e1ded2122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPoints: []
+  isPatrolling: 1
+  mainCamera: {fileID: 0}
+  fireRate: 7
+  gatherPoints: 0
+  playerMovement: {fileID: 0}
+  phantomControls: {fileID: 0}
+  homeSpawner: {fileID: 0}
+  UIControls: {fileID: 0}
+  PossessionIcon: {fileID: 0}
+  fighterAbilities: {fileID: 0}
+  mageAbilities: {fileID: 0}
+  InRange: 0
+  levelMultiplierHP: 0
+  levelMultiplierAP: 0
+  startingTag: 
+  playerInRangeR: 0
+  isRetaliating: 0
+  possessingThisObject: 0
+  canPossess: 1
+  possessOnLowHealth: 0
+  phantom: {fileID: 0}
+  phantomBox: {fileID: 0}
+  phantomMesh: {fileID: 0}
+  phantomRigid: {fileID: 0}
+  playerObjTransform: {fileID: 0}
   isAttacking: 0
   nextAttack: 0
   attackRate: 0
   weakAttackDamage: 0
   strongAttackDamage: 0
+  weakManaLoss: 0
+  strongManaLoss: 0
   activeDamage: 0
-  phantomControls: {fileID: 0}
   basicAI: {fileID: 0}
   meleeHitbox: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
     type: 3}
@@ -146,20 +163,6 @@ MonoBehaviour:
   fighterAp: 40
   playerInRange: 0
   inRange: []
---- !u!114 &6073196817016845502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326686080439248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66166d687b24e0144bb3d758989d1d66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  currentMana: 0
 --- !u!50 &50962217405559534
 Rigidbody2D:
   serializedVersion: 4
@@ -275,7 +278,12 @@ MonoBehaviour:
   currentMana: 100
   MAXHP: 100
   MAXMANA: 100
+  percentOfHealthToPossess: 20
   rateOfManaRegen: 0.5
+  healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
+    type: 3}
+  dropChance: 20
+  AI: {fileID: 0}
 --- !u!1 &1434214220861312
 GameObject:
   m_ObjectHideFlags: 0

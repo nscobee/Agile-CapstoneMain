@@ -79,7 +79,7 @@ public class healerAI : MonoBehaviour {
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
 
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
@@ -91,7 +91,7 @@ public class healerAI : MonoBehaviour {
 
     public void Heal()
     {
-        if (phantomControls.isPossessing)
+        if (this.gameObject.tag == "Possessed")
         {
             UIControls.currentHealth += healPlayerAmount;
             this.GetComponent<UIController>().useMana(healManaLoss);

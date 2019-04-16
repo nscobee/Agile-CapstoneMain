@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 114408053851157008}
   - component: {fileID: 114442683563566332}
   - component: {fileID: 114093041448378176}
-  - component: {fileID: 114123521471994544}
   - component: {fileID: 1199884532}
   m_Layer: 10
   m_Name: Mage2.0
@@ -174,33 +173,24 @@ MonoBehaviour:
   playerMovement: {fileID: 114442683563566332}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
-  hpSlider: {fileID: 0}
-  apSlider: {fileID: 0}
+  UIControls: {fileID: 0}
+  PossessionIcon: {fileID: 0}
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
-  meleesHp: 75
-  meleesAp: 40
-  magesHp: 40
-  magesAp: 75
-  commonHp: 25
-  commonAp: 25
   InRange: 0
-  currentHP: 100
-  currentAP: 100
-  maxHP: 100
-  maxAP: 100
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
   playerInRangeR: 0
   isRetaliating: 0
   possessingThisObject: 0
+  canPossess: 1
+  possessOnLowHealth: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
-  healthDrop: {fileID: 1640331636388708, guid: f13a544106c3c764cba361b41ab851fb, type: 3}
 --- !u!114 &114442683563566332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,33 +237,24 @@ MonoBehaviour:
   phantomControls: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
     type: 3}
   homeSpawner: {fileID: 0}
-  hpSlider: {fileID: 0}
-  apSlider: {fileID: 0}
+  UIControls: {fileID: 0}
+  PossessionIcon: {fileID: 0}
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
-  meleesHp: 75
-  meleesAp: 40
-  magesHp: 40
-  magesAp: 75
-  commonHp: 25
-  commonAp: 25
   InRange: 0
-  currentHP: 0
-  currentAP: 0
-  maxHP: 0
-  maxAP: 0
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
   playerInRangeR: 0
   isRetaliating: 0
   possessingThisObject: 0
+  canPossess: 1
+  possessOnLowHealth: 0
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
   playerObjTransform: {fileID: 0}
-  healthDrop: {fileID: 1640331636388708, guid: f13a544106c3c764cba361b41ab851fb, type: 3}
   timeTillAttack: 0
   startTimeTillAttack: 0
   playerLayer:
@@ -294,22 +275,9 @@ MonoBehaviour:
   mageHp: 40
   mageAp: 90
   basicAI: {fileID: 114408053851157008}
+  UI: {fileID: 0}
   fireballFireRate: 7
   playerInRange: 0
---- !u!114 &114123521471994544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022283891611942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66166d687b24e0144bb3d758989d1d66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  currentMana: 0
 --- !u!114 &1199884532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +298,12 @@ MonoBehaviour:
   currentMana: 100
   MAXHP: 100
   MAXMANA: 100
+  percentOfHealthToPossess: 20
   rateOfManaRegen: 0.5
+  healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
+    type: 3}
+  dropChance: 20
+  AI: {fileID: 0}
 --- !u!1 &1435604043128570
 GameObject:
   m_ObjectHideFlags: 0

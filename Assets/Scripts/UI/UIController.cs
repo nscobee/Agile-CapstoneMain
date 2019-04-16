@@ -19,6 +19,8 @@ public class UIController : MonoBehaviour
 
     public float rateOfManaRegen = 0.5f;
     public GameObject healthDrop;
+    [Tooltip("Enter a number between 0 and 100 for percentage")]
+    public float dropChance = 20f;
 
     public BasicAI AI;
 
@@ -110,7 +112,10 @@ public class UIController : MonoBehaviour
     {
         if (this.gameObject.tag != "Possessed")
         {
-            GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
+            if (Random.Range(0, 100) < dropChance)
+            {
+                GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
+            }
             Destroy(this.gameObject);
         }
         else
