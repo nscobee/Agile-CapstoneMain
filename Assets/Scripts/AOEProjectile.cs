@@ -10,6 +10,9 @@ public class AOEProjectile : MonoBehaviour
     public float damage = 15;
     private GameObject ObjectThatSpawnedMe;
 
+    private bool noHit = true;
+    
+
     // Use this for initialization
     void Start()
     {
@@ -24,10 +27,11 @@ public class AOEProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(noHit)
         this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
+        
 
-        if(this.transform.position == target)
+        if (this.transform.position == target)
         {
             this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
             Destroy(this.gameObject, 0.5f);
@@ -45,7 +49,14 @@ public class AOEProjectile : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("AI") && other.gameObject != ObjectThatSpawnedMe)
         {
             print("Fireball Hit on: " + other.gameObject.name);
-            other.gameObject.GetComponent<UIController>().takeDamage(damage);
+            if (other.gameObject.GetComponent<UIController>() && other.gameObject.tag != "Possessed")
+            {
+                noHit = false;
+                
+                this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
+                
+                other.gameObject.GetComponent<UIController>().takeDamage(damage);
+            }
 
         }
     }

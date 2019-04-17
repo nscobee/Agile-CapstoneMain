@@ -10,6 +10,8 @@ public class Projectile : MonoBehaviour
     public float damage;
     private GameObject ObjectThatSpawnedMe;
 
+    private bool noHit = true;
+
     // Use this for initialization
     void Start()
     {
@@ -24,8 +26,8 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
+        if (noHit)
+            this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
 
         if (this.transform.position == target)
         {
@@ -44,7 +46,12 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("AI") && other.gameObject != ObjectThatSpawnedMe)
         {
             print("Fireball Hit on: " + other.gameObject.name);
-            other.gameObject.GetComponent<UIController>().takeDamage(damage);
+
+            if (other.gameObject.GetComponent<UIController>() && other.gameObject.tag != "Possessed")
+            {
+                noHit = false;
+                other.gameObject.GetComponent<UIController>().takeDamage(damage);
+            }
 
         }
     }

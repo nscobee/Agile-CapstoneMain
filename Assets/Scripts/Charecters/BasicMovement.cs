@@ -21,6 +21,8 @@ public class BasicMovement : MonoBehaviour
     public Rigidbody2D phantomRigid;
     public static ReaperCountdown reaper;
 
+    private bool isLookingRight = true;
+
 
     private void Start()
     {
@@ -58,12 +60,35 @@ public class BasicMovement : MonoBehaviour
             phantomControls.enabled = true;
             phantomControls.isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
-            mainCamera.transform.parent = phantom.gameObject.transform;
+            //mainCamera.transform.parent = phantom.gameObject.transform;
         }
 
         if(phantomControls.isPossessing)
         {
             phantom.transform.position = phantom.transform.parent.transform.position;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            isLookingRight = false;
+
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            isLookingRight = true;
+
+        }
+
+        if (isLookingRight)
+        {
+            this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+            //mainCamera.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+           // mainCamera.transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
     }
@@ -81,7 +106,7 @@ public class BasicMovement : MonoBehaviour
         phantomControls.enabled = true;
         phantomControls.isPossessing = false;
         phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
-        mainCamera.transform.parent = phantom.gameObject.transform;
+       // mainCamera.transform.parent = phantom.gameObject.transform;
         Destroy(this.gameObject);
         phantomControls.speed = 5;
 

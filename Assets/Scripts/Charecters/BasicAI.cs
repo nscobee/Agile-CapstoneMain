@@ -156,7 +156,7 @@ public class BasicAI : MonoBehaviour
         
         Vector3 cameraPos;
         cameraPos = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10);
-        mainCamera.transform.position = cameraPos;
+        //mainCamera.transform.position = cameraPos;
         phantomBox.enabled = false; //hide the phantom without nuking him
         phantomMesh.enabled = false; //^^^same
         phantomRigid.Sleep();
@@ -166,7 +166,7 @@ public class BasicAI : MonoBehaviour
         this.enabled = false;
         //setUI();
 
-        mainCamera.transform.parent = this.gameObject.transform;
+        //mainCamera.transform.parent = this.gameObject.transform;
         phantom.transform.parent = this.gameObject.transform;
         phantom.transform.position = this.transform.position; //reset phantom's position to currently possessed NPC
 
