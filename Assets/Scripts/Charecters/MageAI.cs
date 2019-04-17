@@ -11,16 +11,17 @@ public class MageAI : BasicAI
     public LayerMask AILayer;
     public Transform bulletSpawn;
     public GameObject bullet;
+    public GameObject AOEbullet;
     public float bulletSplashArea = 1f;
 
     public List<GameObject> inRange = new List<GameObject>();
 
     public int fireballDamageAmount = 10;
-    public int fireDamageAmount = 5;
+    public int AOEDamageAmount = 5;
     public float fireRange = 2f;
 
-    public float fireballManaLoss = 7f;
-    public float fireManaLoss = 2f;
+    public float fireballManaLoss = 5f;
+    public float AOEManaLoss = 20f;
 
     public float mageHp = 40f;
     public float mageAp = 90f;
@@ -51,7 +52,7 @@ public class MageAI : BasicAI
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (UI.currentMana > 0)
+                if (UI.currentMana > fireballManaLoss)
                 {
                     print("basic movement script is firing fireball");
 
@@ -59,12 +60,12 @@ public class MageAI : BasicAI
                 }
 
             }
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButtonDown(1))
             {
-                if (UI.currentMana > 0)
+                if (UI.currentMana > AOEManaLoss)
                 {
                     print("basic movement script is using fire attack");
-                    FireAttack();
+                    AOEAttack();
                 }
             }
         }
@@ -72,14 +73,21 @@ public class MageAI : BasicAI
 
     }
 
-    public void FireAttack()
+    public void AOEAttack()
     {
-        foreach (GameObject target in inRange)
-        {
-            target.GetComponent<UIController>().currentHealth -= fireDamageAmount;
-        }
-        Debug.Log("Secondary spell used, " + fireDamageAmount + " dmg.");
-        this.GetComponent<UIController>().useMana(fireManaLoss);
+        fireballNextRound = Time.time + fireballFireRate;
+
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = transform.position.z;
+
+        GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
+        projectileBulletAOE.GetComponent<AOEProjectile>().damage = AOEDamageAmount;
+        projectileBulletAOE.GetComponent<AOEProjectile>().setTarget(target);
+
+        this.GetComponent<UIController>().useMana(AOEManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBulletAOE, 4f);
     }
 
     public void FireballAttack()
@@ -90,10 +98,10 @@ public class MageAI : BasicAI
         target.z = transform.position.z;
 
         GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
-
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
-        this.GetComponent<UIController>().useMana(fireManaLoss);
+        this.GetComponent<UIController>().useMana(fireballManaLoss);
 
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
@@ -107,10 +115,10 @@ public class MageAI : BasicAI
         target.z = transform.position.z;
 
         GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
-
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
         projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
 
-        this.GetComponent<UIController>().useMana(fireManaLoss);
+        this.GetComponent<UIController>().useMana(fireballManaLoss);
 
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);

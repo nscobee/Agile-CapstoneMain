@@ -40,10 +40,10 @@ public class PhantomControls : MonoBehaviour
         // if the phantom has a target when the player presses space they could call the possession function on that AI
         if (phantomTarget && phantomTarget.tag != "NoPossess" && phantomTarget.tag != "Reaper" && phantomTarget.GetComponent<BasicAI>().canPossess)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !isPossessing)
             {
                 this.gameObject.tag = "Player";
-                isPossessing = true;
+                //isPossessing = true;
 
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe" && isPossessing)
@@ -72,10 +72,10 @@ public class PhantomControls : MonoBehaviour
                 speed = 5f;
             }
         }
-        else
-        {
-            isPossessing = false;
-        }
+        //else
+       // {
+       //     isPossessing = false;
+       // }
 
         //Simple Leveling System
         if (currentLevel == MAX_LEVEL) currentExperience = 0;
@@ -85,6 +85,10 @@ public class PhantomControls : MonoBehaviour
             currentExperience = 0;
             experienceTillNextLevel *= currentLevel;
         }
+
+        if (GameObject.FindGameObjectWithTag("Possessed"))
+            isPossessing = true;
+        else isPossessing = false;
     }
 
 

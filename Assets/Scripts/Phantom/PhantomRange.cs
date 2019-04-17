@@ -82,6 +82,7 @@ public class PhantomRange : MonoBehaviour
     {
         Debug.Log("something is hitting me (the phantom): " + other.transform.name);
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
+        if(!GameObject.FindGameObjectWithTag("Possessed"))
         if (other.gameObject.tag == "mage" || other.gameObject.tag == "Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe")
         {
             inRange.Add(other.gameObject);
@@ -112,6 +113,7 @@ public class PhantomRange : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // checks if its in the right layer then if it is it removes it from potential list
+
         if (other.gameObject.tag == "mage" || other.gameObject.tag == "Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe")
         {
             inRange.Remove(other.gameObject);

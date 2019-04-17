@@ -61,6 +61,10 @@ public class BasicMovement : MonoBehaviour
             mainCamera.transform.parent = phantom.gameObject.transform;
         }
 
+        if(phantomControls.isPossessing)
+        {
+            phantom.transform.position = phantom.transform.parent.transform.position;
+        }
 
     }
 
