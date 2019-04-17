@@ -28,6 +28,7 @@ TagManager:
   - Exit
   - textPopUp
   - Possessed
+  - Commoner
   layers:
   - Default
   - TransparentFX

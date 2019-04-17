@@ -82,6 +82,19 @@ public class SaveLoadController : MonoBehaviour
             levelData.enemyList.Add(enemyDat);
         }
 
+        /*
+         * To be added:
+         * Data for healer, commoner, doggos, things with 'nopossess' tag
+         * Mana in level data
+         * 
+         * To be fixed:
+         * References to player health, should be referencing UIController
+         * Remove save points and replace with saving via possessing scribe, frameworkish is in phantomcontrols script
+         * 
+         * 
+         * 
+         * 
+         * */
         SaveAndLoad.savedGames.Add(this.levelData);
         Debug.Log("SavedGames count: " + SaveAndLoad.savedGames.Count);
         SaveAndLoad.Save();

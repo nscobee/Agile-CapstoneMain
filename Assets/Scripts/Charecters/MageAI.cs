@@ -90,6 +90,23 @@ public class MageAI : BasicAI
         Destroy(projectileBulletAOE, 4f);
     }
 
+    public void AOEAttack(Transform playerTransform)
+    {
+        fireballNextRound = Time.time + fireballFireRate;
+
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = transform.position.z;
+
+        GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
+        projectileBulletAOE.GetComponent<AOEProjectile>().damage = AOEDamageAmount;
+        projectileBulletAOE.GetComponent<AOEProjectile>().setTarget(playerTransform.position);
+
+        this.GetComponent<UIController>().useMana(AOEManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBulletAOE, 4f);
+    }
+
     public void FireballAttack()
     {
         fireballNextRound = Time.time + fireballFireRate;

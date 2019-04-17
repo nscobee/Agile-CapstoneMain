@@ -89,6 +89,23 @@ public class healerAI : MonoBehaviour {
         Destroy(projectileBullet, 4f);
     }
 
+    public void FireAttack(Transform playerTransform)
+    {
+        fireballNextRound = Time.time + fireballFireRate;
+
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = transform.position.z;
+
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+        projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
+
+        this.GetComponent<UIController>().useMana(fireballManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBullet, 4f);
+    }
+
     public void Heal()
     {
         if (this.gameObject.tag == "Possessed")

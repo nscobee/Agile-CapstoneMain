@@ -41,7 +41,7 @@ public class BasicAI : MonoBehaviour
     public float levelMultiplierAP;
 
     public string startingTag;
-    public bool playerInRangeR;
+
     public bool isRetaliating;
 
     public bool possessingThisObject = false;
@@ -95,7 +95,7 @@ public class BasicAI : MonoBehaviour
 
         float startTime = Time.time;
         //isPatrolling = true;
-        if (playerInRangeR)
+        if (isRetaliating)
         {
             isPatrolling = false;
             //ChaseThePlayer();
@@ -128,19 +128,6 @@ public class BasicAI : MonoBehaviour
         if (UIControls.currentHealth <= 0 && !phantomControls.isPossessing)
         {
             UIControls.Die();
-        }
-
-        if (this.gameObject.tag == "Melee")
-        {
-            playerInRangeR = this.gameObject.GetComponent<MeleeAI>().playerInRange;
-        }
-        if (this.gameObject.tag == "mage")
-        {
-            playerInRangeR = this.gameObject.GetComponent<MageAI>().playerInRange;
-        }
-        if (this.gameObject.tag == "healer")
-        {
-            playerInRangeR = this.gameObject.GetComponent<healerAI>().playerInRange;
         }
 
         if (isRetaliating)
@@ -299,30 +286,7 @@ public class BasicAI : MonoBehaviour
 
     public void retaliate()
     {
-        print("Starting retaliation");
-        if (playerInRangeR)
-        {
-            print("Player in range");
-            float moveSelect = Random.Range(0, 100);
-            if (moveSelect < 70)
-            {
-                primaryAttack();
-            }
-            else secondaryAttack();
-
-        }
-        else
-        {
-            print("Player not in range");
-            GameObject[] targets = GameObject.FindGameObjectsWithTag("Possessed");
-
-
-            this.transform.LookAt(targets[0].transform);
-            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
-
-            transform.position = Vector2.MoveTowards(transform.position, targets[0].transform.position, 5f * Time.deltaTime);
-            //move towards
-        }
+     
     }
 
     public void primaryAttack()
@@ -339,7 +303,7 @@ public class BasicAI : MonoBehaviour
 
         if (this.gameObject.tag == "healer")
         {
-            this.gameObject.GetComponent<healerAI>().FireAttack();
+            this.gameObject.GetComponent<healerAI>().FireAttack(playerObjTransform);
         }
     }
 
@@ -351,7 +315,7 @@ public class BasicAI : MonoBehaviour
         }
         if (this.gameObject.tag == "mage")
         {
-            //this.gameObject.GetComponent<MageAI>().FireballAttack();
+            this.gameObject.GetComponent<MageAI>().AOEAttack(playerObjTransform);
         }
         if (this.gameObject.tag == "healer")
         {
