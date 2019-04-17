@@ -659,7 +659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &325166792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -749,15 +749,15 @@ RectTransform:
   m_GameObject: {fileID: 349857217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 325166792}
   m_Father: {fileID: 316934625}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 4, y: -433}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 187, y: 91}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349857219
@@ -1626,7 +1626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 14, y: -275}
+  m_AnchoredPosition: {x: 14, y: -597}
   m_SizeDelta: {x: 224, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806950305
@@ -1662,28 +1662,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Lead Designer - Nicholas Scobee
-
-    Level Designer/Narrative and Story Design - Benjamin Richer
-
-    Level Designer/Artist - Brandon Mcdonald
-
-    Lead Programmer - Natalie Eidt
-
-    Other Programmers - Chris Eflin, Brandon Laing
-
-    Designer - Daniel Towle
-
-
-    Assets
-
-    2D Hand Painted Grassland Tileset - Daniel Thomas
-
-    Dungeon Crawl 32x32 tiles - Chris Hamons
-
-    Capstone Tileset - Brandon Mcdonald
-
-    Character design and Animation - Brandon Mcdonald'
+  m_Text: "Lead Designer - Nicholas Scobee\nLevel Designer/Narrative and Story Design
+    - Benjamin Richer\nLevel Designer/Artist - Brandon Mcdonald\nLead Programmer -
+    Natalie Eidt\nOther Programmers - Chris Eflin, Brandon Laing\nDesigner - Daniel
+    Towle\n\nAssets\n2D Hand Painted Grassland Tileset - Daniel Thomas\nDungeon Crawl
+    32x32 tiles - Chris Hamons\nCapstone Tileset - Brandon Mcdonald\nCharacter design
+    and Animation - Brandon Mcdonald\n\nMusic\n\"Send for the Horses\" Kevin MacLeod
+    (incompetech.com)\r\nLicensed under Creative Commons: By Attribution 3.0 License\r\nhttp://creativecommons.org/licenses/by/3.0/\r\n\r\n\"Division\"
+    Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons: By Attribution
+    3.0 License\r\nhttp://creativecommons.org/licenses/by/3.0/\r\n\r\n\"Leaving Home\"
+    Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons: By Attribution
+    3.0 License\r\nhttp://creativecommons.org/licenses/by/3.0/\r\n\r\n\"Cottages\"
+    Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons: By Attribution
+    3.0 License\r\nhttp://creativecommons.org/licenses/by/3.0/\r\n\r\n\"Wretched Destroyer\"
+    Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons: By Attribution
+    3.0 License\r\nhttp://creativecommons.org/licenses/by/3.0/\r\n\r\n\"Malicious\"
+    Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons: By Attribution
+    3.0 License\r\nhttp://creativecommons.org/licenses/by/3.0/\r\n\r\n\"Mystery Bazaar\"
+    Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons: By Attribution
+    3.0 License\r\nhttp://creativecommons.org/licenses/by/3.0/\r\n"
 --- !u!222 &806950306
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1888,7 +1885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 4.5, y: -90}
+  m_AnchoredPosition: {x: 4.5, y: -67}
   m_SizeDelta: {x: 167, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078860579
