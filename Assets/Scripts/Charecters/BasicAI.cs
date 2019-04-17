@@ -43,6 +43,7 @@ public class BasicAI : MonoBehaviour
     public string startingTag;
 
     public bool isRetaliating;
+    public bool isPursuing;
 
     public bool possessingThisObject = false;
 
@@ -85,7 +86,8 @@ public class BasicAI : MonoBehaviour
 
     private void Update()
     {
-        
+        if (isPursuing)
+            ChaseThePlayer();
        // if (!phantomControls.isPossessing)
        // {
             
@@ -217,19 +219,19 @@ public class BasicAI : MonoBehaviour
         
     //}
 
-    //public void ChaseThePlayer()
-    //{
-    //    //this.transform.LookAt(playerObjTransform);
-    //    //isPatrolling = false;
-    //    //isPursuing = true;
-    //    playerObjTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-    //    float shooterYPos = transform.position.y;
-    //    Vector3 customPos = playerObjTransform.transform.position;
-    //    customPos.y = shooterYPos;
-    //    this.transform.LookAt(customPos);
-    //    this.transform.position += this.transform.forward * speed * Time.deltaTime;
+    public void ChaseThePlayer()
+    {
+        this.transform.LookAt(playerObjTransform);
+        isPatrolling = false;
+        isPursuing = true;
+        playerObjTransform = GameObject.FindGameObjectWithTag("Possessed").GetComponent<Transform>();
+        float shooterYPos = transform.position.y;
+        Vector3 customPos = playerObjTransform.transform.position;
+        customPos.y = shooterYPos;
+       this.transform.LookAt(customPos);
+       this.transform.position = this.transform.forward * speed * Time.deltaTime;
 
-    //}//end chasePlayer
+    }//end chasePlayer
 
     private void OnTriggerEnter2D(Collider2D other)
     {
