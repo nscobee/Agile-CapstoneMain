@@ -8,7 +8,7 @@ public class SaveLoadController : MonoBehaviour
     public static SaveLoadController control;
 
     private LevelData levelData = new LevelData();
-    private static LevelData ldLoaded = new LevelData();
+    public static LevelData ldLoaded = new LevelData();
     private PhantomControls player;
     //note: this is now part of uiControl - use that!
     private playerHealth hpScript;
@@ -97,9 +97,17 @@ public class SaveLoadController : MonoBehaviour
 
     public void SetPlayerPos(PhantomControls phantom, LevelData ldLoaded)
     {
-        Vector3 newPlayerPos = new Vector3(ldLoaded.player.xPos, ldLoaded.player.yPos, ldLoaded.player.zPos);
-        Debug.Log("load level setting player pos to:" + newPlayerPos);
-        phantom.transform.position = newPlayerPos;
+        if (ldLoaded.player.xPos == 0 && ldLoaded.player.yPos == 0 && ldLoaded.player.zPos == 0)
+        {
+            Vector3 newPlayerPos = GameObject.Find("EntryPoint").transform.position;
+        }
+        else
+        {
+            Vector3 newPlayerPos = new Vector3(ldLoaded.player.xPos, ldLoaded.player.yPos, ldLoaded.player.zPos);
+            Debug.Log("load level setting player pos to:" + newPlayerPos);
+            phantom.transform.position = newPlayerPos;
+        }
+        
     }
 
     private void OnLevelWasLoaded(int level)

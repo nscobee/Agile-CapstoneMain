@@ -6,58 +6,62 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-  public GameObject mainMenuCanvas;
+    public GameObject mainMenuCanvas;
+    public GameObject howToCanvas;
+    public GameObject creditsCanvas;
 
-  [Header("New Save")]
-  public GameObject newGameCanvas;
-  public InputField newSceneInput;
+    public SaveLoadController slControl;
+    
+    private PhantomControls player;
 
-  [Header("Load Save")]
-  public GameObject loadCanvas;
-
-  [Header("Options")]
-  public GameObject optionsCanvas;
-
-  private void Start()
-  {
-    mainMenuCanvas.SetActive(true);
-    newGameCanvas.SetActive(false);
-    optionsCanvas.SetActive(false);
-    loadCanvas.SetActive(false);
-
-    Debug.Log(Application.persistentDataPath);
-
-  }
-
-  // This loads directly to any scene just given its name
-  public void _LoadScene(string name)
-  {
-    SceneManager.LoadScene(name);
-
-  }
-
-  // when ran this swaps the Canvas UI from the main menu to make new Save
-  public void _StartMakingNewSave()
-  {
-    mainMenuCanvas.SetActive(false);
-    newGameCanvas.SetActive(true);
-
-  }
-
-  public void _GoBackToMainMenu()
-  {
-    mainMenuCanvas.SetActive(true);
-    newGameCanvas.SetActive(false);
-    optionsCanvas.SetActive(false);
-    loadCanvas.SetActive(false);
-
-  }
-
-  public void _MakeNewSave()
-  {
-    if (SaveAndLoad.savedGames.Count >= 0)
+    private void Start()
     {
-      SaveAndLoad.Load();
+        mainMenuCanvas.SetActive(true);
+        howToCanvas.SetActive(false);
+        creditsCanvas.SetActive(false);
     }
-  }
+
+    public void _GoBackToMainMenu()
+    {
+        mainMenuCanvas.SetActive(true);
+        howToCanvas.SetActive(false);
+        creditsCanvas.SetActive(false);
+    }
+
+    public void _MakeNewSave()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void _LoadGame()
+    {
+        slControl.LoadLevel();
+    }
+
+    public void _ShowHowTo()
+    {
+        howToCanvas.SetActive(true);
+        mainMenuCanvas.SetActive(false);
+        creditsCanvas.SetActive(false);
+    }
+
+    public void _ShowCredits()
+    {
+        creditsCanvas.SetActive(true);
+        howToCanvas.SetActive(false);
+        mainMenuCanvas.SetActive(false);
+    }
+
+    public void _QuitGame()
+    {
+        Application.Quit();
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
+        GameObject entry = GameObject.Find("EntryPoint");
+        player.transform.position = entry.transform.position;
+    }
+
 }

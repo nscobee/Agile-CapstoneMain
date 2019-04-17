@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: a5da549e44148e946a90868b312f231f
+  - enabled: 0
     path: Assets/Scenes/Persistent.unity
     guid: 004d9ae1a6bd686479dcdeb84f57fc54
   - enabled: 1
@@ -26,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Absol/Absol_Level3_Scene_004.unity
     guid: 139459aead63e4340895707a6861a734
-  - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: a5da549e44148e946a90868b312f231f
   m_configObjects: {}
