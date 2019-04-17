@@ -29,6 +29,9 @@ public class PossessIcon : MonoBehaviour
         { 
             PossessionIcon.sprite = noPossess;
         }
+
+        if (this.transform.parent.gameObject.tag == "Possessed")
+            PossessionIcon.enabled = false;
     }
 
 
