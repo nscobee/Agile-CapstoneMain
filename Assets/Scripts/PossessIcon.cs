@@ -9,6 +9,7 @@ public class PossessIcon : MonoBehaviour
     public Sprite yesPossess;
 
     public BasicAI AI;
+    public UIController UI;
 
 
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class PossessIcon : MonoBehaviour
     {
         PossessionIcon.enabled = false;
         AI = this.transform.parent.gameObject.GetComponent<BasicAI>();
+        UI = this.transform.parent.gameObject.GetComponent<UIController>();
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class PossessIcon : MonoBehaviour
         if(other.tag == "Player" || other.tag == "Possessed")
         {
             PossessionIcon.enabled = true;
+            UI.inRange = true;
         }
     }
 
@@ -48,6 +51,7 @@ public class PossessIcon : MonoBehaviour
         if (other.tag == "Player" || other.tag == "Possessed")
         {
             PossessionIcon.enabled = false;
+            UI.inRange = false;
         }
     }
 

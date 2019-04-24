@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     public Slider healthSlider;
     public Slider primaryCooldown;
     public Slider secondaryCooldown;
+    public Slider AIHealthSlider;
     public float currentHealth = 100;
     public float currentMana = 100;
     public float MAXHP = 100;
@@ -29,6 +30,8 @@ public class UIController : MonoBehaviour
     public float secondaryFireRate = 5f;
     public float nextSecondaryFire = 0;
 
+    public bool inRange = false;
+
     public BasicAI AI;
 
     private void Start()
@@ -40,8 +43,11 @@ public class UIController : MonoBehaviour
 
         manaSlider.maxValue = MAXMANA;
         healthSlider.maxValue = MAXHP;
+        AIHealthSlider.maxValue = MAXHP;
         primaryCooldown.maxValue = primaryFireRate;
         secondaryCooldown.maxValue = secondaryFireRate;
+        AIHealthSlider.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -50,6 +56,7 @@ public class UIController : MonoBehaviour
 
         healthSlider.value = currentHealth;
         manaSlider.value = currentMana;
+        AIHealthSlider.value = currentHealth;
         primaryCooldown.value = Time.time - nextPrimaryFire;
         secondaryCooldown.value = Time.time - nextSecondaryFire;
 
@@ -86,6 +93,15 @@ public class UIController : MonoBehaviour
                 }
             }
         }
+
+        if (this.gameObject.tag != "Possessed"  && ( inRange || AI.isRetaliating ) )
+        {
+            AIHealthSlider.gameObject.SetActive(true);
+        }
+        else
+            AIHealthSlider.gameObject.SetActive(false);
+            
+
 
     }
 
