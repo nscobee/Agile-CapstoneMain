@@ -17,6 +17,10 @@ public class BasicAI : MonoBehaviour
     public static float speed = 5f;
     public static float stopDistance = 1f;
 
+    public float distanceBetweenPlayer;
+    public float distanceToStartAttackingPlayer = 1;
+    public float distanceToForgetPlayer = 5;
+
     public bool gatherPoints = false;
 
     public BasicMovement playerMovement;
@@ -35,6 +39,11 @@ public class BasicAI : MonoBehaviour
 
     public bool InRange = false;
 
+    public bool playerInRangeToAttack = false;
+    public float nextAIAttack = 0f;
+    public float AttackCooldown = 10f;
+    private bool canAttack = false;
+
 
 
     public float levelMultiplierHP;
@@ -43,6 +52,7 @@ public class BasicAI : MonoBehaviour
     public string startingTag;
 
     public bool isRetaliating;
+    public bool movingToPlayer = false;
     public bool isPursuing;
 
     public bool possessingThisObject = false;
@@ -97,11 +107,11 @@ public class BasicAI : MonoBehaviour
 
         float startTime = Time.time;
         //isPatrolling = true;
-        if (isRetaliating)
-        {
-            isPatrolling = false;
+       // if (isRetaliating)
+      //  {
+       //     isPatrolling = false;
             //ChaseThePlayer();
-        }
+      //  }
 
         if (isPatrolling)
         {
@@ -124,6 +134,14 @@ public class BasicAI : MonoBehaviour
             }
         }
 
+        nextAIAttack += Time.deltaTime;
+        if(nextAIAttack >= AttackCooldown)
+        {
+            canAttack = true;
+            nextAIAttack = 0;
+        }
+        
+
 
 
 
@@ -132,9 +150,22 @@ public class BasicAI : MonoBehaviour
             UIControls.Die();
         }
 
+        if(!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
+        {
+            this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime) ;
+            print("I'm moving towards the possessed!");
+        }
+
+        distanceBetweenPlayer = Vector3.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position);
+       
+       
+           
         if (isRetaliating)
         {
-            retaliate();
+                print("I'm retaliating!");
+                isPatrolling = false;
+                retaliate();
+                
         }
     }
 
@@ -288,7 +319,41 @@ public class BasicAI : MonoBehaviour
 
     public void retaliate()
     {
-     
+
+        print("Retalition!!!!");
+      if(distanceBetweenPlayer <= distanceToStartAttackingPlayer)
+        {
+            print("I am in range to attack the player");   
+            movingToPlayer = false;
+            playerInRangeToAttack = true;
+            if(Random.Range(0f,100f) >= 20f && canAttack)
+            {
+                print("Weak attack!");              
+                primaryAttack();
+                canAttack = false;
+                
+            }
+            else
+            {
+                print("strong attack!");         
+                secondaryAttack();
+                canAttack = false;
+            }
+        }
+        else if(distanceBetweenPlayer > distanceToStartAttackingPlayer && distanceBetweenPlayer <= distanceToForgetPlayer)
+        {
+            print("I am not in range to attack the player but I can see him");
+            movingToPlayer = true;
+            playerInRangeToAttack = false;        
+            
+        }
+      else if(distanceBetweenPlayer > distanceToForgetPlayer || GameObject.FindGameObjectWithTag("Possessed") == null)
+        {
+            print("Player who?");
+            playerInRangeToAttack = false;
+            isRetaliating = false;
+            movingToPlayer = false;
+        }
     }
 
     public void primaryAttack()

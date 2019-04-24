@@ -19,7 +19,7 @@ public class MeleeAI : BasicAI {
     public BasicAI basicAI;
     private UIController UI;
     public GameObject meleeHitbox;
-    public Transform hitboxOrigin;
+   // public Transform hitboxOrigin;
 
 
     private int currentPlayerLevel;
@@ -44,6 +44,7 @@ public class MeleeAI : BasicAI {
         UI = gameObject.GetComponent<UIController>();
 
         basicAI.setStats(fighterHp, fighterAp);
+        meleeHitbox.GetComponent<BoxCollider2D>().enabled = false;
 
     }
 
@@ -56,7 +57,7 @@ public class MeleeAI : BasicAI {
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                print(UI.currentMana);
+                //print(UI.currentMana);
                 if (UI.currentMana > 0)
                 {
                     meleeAttack(weakAttackDamage, weakManaLoss);
@@ -77,22 +78,22 @@ public class MeleeAI : BasicAI {
         isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
-        var swordHitbox = Instantiate(meleeHitbox, hitboxOrigin.position, hitboxOrigin.rotation, this.gameObject.transform);
+        meleeHitbox.SetActive(true);
 
         //destroys bullet after 4 seconds ish
-        Destroy(swordHitbox, 0.1f);
+       // Destroy(swordHitbox);
     }
     public void meleeAttack(float damage, float manaLoss)
     {
         isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
-        var swordHitbox = Instantiate(meleeHitbox, hitboxOrigin.position, hitboxOrigin.rotation, this.gameObject.transform);
+        meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
 
         this.GetComponent<UIController>().useMana(manaLoss);
 
         //destroys bullet after 4 seconds ish
-        Destroy(swordHitbox, 0.1f);
+        //Destroy(swordHitbox);
     }
 
     public void OnTriggerEnter2D(Collider2D other)
