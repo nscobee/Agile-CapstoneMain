@@ -34,7 +34,7 @@ Transform:
   m_LocalPosition: {x: -10.514704, y: -9.600852, z: -1}
   m_LocalScale: {x: 0.286005, y: 0.3128, z: 1}
   m_Children:
-  - {fileID: 2127492857788309861}
+  - {fileID: 2128374236949951785}
   - {fileID: 1963128892}
   - {fileID: 7164005125417727918}
   - {fileID: 4633278516587438060}
@@ -65,8 +65,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   fireRate: 7
   distanceBetweenPlayer: 0
-  distanceToStartAttackingPlayer: 6
-  distanceToForgetPlayer: 10
+  distanceToStartAttackingPlayer: 3
+  distanceToForgetPlayer: 9
   gatherPoints: 1
   playerMovement: {fileID: 114443481937730140}
   phantomControls: {fileID: 0}
@@ -171,8 +171,7 @@ MonoBehaviour:
   strongManaLoss: 30
   activeDamage: 0
   basicAI: {fileID: 0}
-  meleeHitbox: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
-    type: 3}
+  meleeHitbox: {fileID: 2128374236949951749}
   damageMultiplier: 0
   fighterHp: 90
   fighterAp: 40
@@ -372,6 +371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: speechBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 865363642900494205, guid: 87855cf3fcf23f244ad848fb601b8790,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87855cf3fcf23f244ad848fb601b8790, type: 3}
 --- !u!4 &1963128892 stripped
@@ -455,7 +459,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
---- !u!4 &2127492857788309861 stripped
+--- !u!1 &2128374236949951749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
+    type: 3}
+  m_PrefabInstance: {fileID: 2128374236949951509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2128374236949951785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
     type: 3}
@@ -617,6 +627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520132072939333583, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.5300274
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49206466ebf0294dabb9cfe4474474f, type: 3}

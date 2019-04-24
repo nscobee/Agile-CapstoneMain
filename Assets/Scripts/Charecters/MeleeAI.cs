@@ -44,6 +44,7 @@ public class MeleeAI : BasicAI {
         UI = gameObject.GetComponent<UIController>();
 
         basicAI.setStats(fighterHp, fighterAp);
+        meleeHitbox = this.gameObject.transform.GetChild(0).gameObject;
         meleeHitbox.GetComponent<BoxCollider2D>().enabled = false;
 
     }
