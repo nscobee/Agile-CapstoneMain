@@ -52,22 +52,24 @@ public class MageAI : BasicAI
     {
         if (this.gameObject.tag == "Possessed")
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && Time.time > UI.nextPrimaryFire)
             {
                 if (UI.currentMana > fireballManaLoss)
                 {
                     print("basic movement script is firing fireball");
 
                     FireballAttack();
+                    UI.nextPrimaryFire = Time.time + UI.primaryFireRate;
                 }
 
             }
             if (Input.GetMouseButtonDown(1))
             {
-                if (UI.currentMana > AOEManaLoss)
+                if (UI.currentMana > AOEManaLoss && Time.time > UI.nextSecondaryFire)
                 {
                     print("basic movement script is using fire attack");
                     AOEAttack();
+                    UI.nextSecondaryFire = Time.time + UI.secondaryFireRate;
                 }
             }
         }

@@ -79,6 +79,7 @@ MonoBehaviour:
   playerInRangeToAttack: 0
   nextAIAttack: 0
   AttackCooldown: 10
+  canSpawn: 1
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
@@ -146,6 +147,7 @@ MonoBehaviour:
   playerInRangeToAttack: 0
   nextAIAttack: 0
   AttackCooldown: 10
+  canSpawn: 1
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
@@ -287,6 +289,8 @@ MonoBehaviour:
   uiObj: {fileID: 6950094662062329936}
   manaSlider: {fileID: 8464856827193934207}
   healthSlider: {fileID: 1249802190968362784}
+  primaryCooldown: {fileID: 6825974044105495546}
+  secondaryCooldown: {fileID: 3941446768546790227}
   currentHealth: 100
   currentMana: 100
   MAXHP: 100
@@ -296,6 +300,10 @@ MonoBehaviour:
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20
+  primaryFireRate: 2
+  nextPrimaryFire: 0
+  secondaryFireRate: 5
+  nextSecondaryFire: 0
   AI: {fileID: 0}
 --- !u!1 &1434214220861312
 GameObject:
@@ -549,6 +557,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2323146473310487443, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3355663675918538802, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -578,6 +591,30 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2513580548159041037}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3941446768546790227 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1463912617210697054, guid: a49206466ebf0294dabb9cfe4474474f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2513580548159041037}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6825974044105495546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8960108316997467639, guid: a49206466ebf0294dabb9cfe4474474f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2513580548159041037}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1249802190968362784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3727353525495494957, guid: a49206466ebf0294dabb9cfe4474474f,

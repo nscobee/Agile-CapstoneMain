@@ -57,15 +57,17 @@ public class healerAI : BasicAI {
 
         if (this.gameObject.tag == "Possessed")
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > UIControls.nextPrimaryFire)
             {
                 if (UIControls.currentMana > 0)
                     FireAttack();
+                UIControls.nextPrimaryFire = Time.time + UIControls.primaryFireRate;
             }
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time > UIControls.nextSecondaryFire)
             {
                 if (UIControls.currentMana > 0)
                     Heal();
+                UIControls.nextSecondaryFire = Time.time + UIControls.secondaryFireRate;
             }
         }
     }

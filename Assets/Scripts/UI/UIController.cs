@@ -10,6 +10,8 @@ public class UIController : MonoBehaviour
     Canvas theUI;
     public Slider manaSlider;
     public Slider healthSlider;
+    public Slider primaryCooldown;
+    public Slider secondaryCooldown;
     public float currentHealth = 100;
     public float currentMana = 100;
     public float MAXHP = 100;
@@ -22,6 +24,11 @@ public class UIController : MonoBehaviour
     [Tooltip("Enter a number between 0 and 100 for percentage")]
     public float dropChance = 20f;
 
+    public float primaryFireRate = 2f;
+    public float nextPrimaryFire = 0;
+    public float secondaryFireRate = 5f;
+    public float nextSecondaryFire = 0;
+
     public BasicAI AI;
 
     private void Start()
@@ -33,6 +40,8 @@ public class UIController : MonoBehaviour
 
         manaSlider.maxValue = MAXMANA;
         healthSlider.maxValue = MAXHP;
+        primaryCooldown.maxValue = primaryFireRate;
+        secondaryCooldown.maxValue = secondaryFireRate;
     }
 
     // Update is called once per frame
@@ -41,6 +50,8 @@ public class UIController : MonoBehaviour
 
         healthSlider.value = currentHealth;
         manaSlider.value = currentMana;
+        primaryCooldown.value = Time.time - nextPrimaryFire;
+        secondaryCooldown.value = Time.time - nextSecondaryFire;
 
 
         if (this.gameObject.tag == "Possessed")

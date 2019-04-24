@@ -55,19 +55,21 @@ public class MeleeAI : BasicAI {
         if (this.gameObject.tag == "Possessed")
         {
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > UI.nextPrimaryFire)
             {
                 //print(UI.currentMana);
                 if (UI.currentMana > 0)
                 {
                     meleeAttack(weakAttackDamage, weakManaLoss);
+                    UI.nextPrimaryFire = Time.time + UI.primaryFireRate;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time > UI.nextSecondaryFire)
             {
                 if (UI.currentMana > 0)
                 {
                     meleeAttack(strongAttackDamage, strongManaLoss);
+                    UI.nextSecondaryFire = Time.time + UI.secondaryFireRate;
                 }
             }
         }

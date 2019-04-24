@@ -308,6 +308,8 @@ MonoBehaviour:
   uiObj: {fileID: 1096270702851226952}
   manaSlider: {fileID: 3058083701429063532}
   healthSlider: {fileID: 942874743974769523}
+  primaryCooldown: {fileID: 2056085056253715836}
+  secondaryCooldown: {fileID: 2612168443802885491}
   currentHealth: 100
   currentMana: 100
   MAXHP: 100
@@ -317,6 +319,10 @@ MonoBehaviour:
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20
+  primaryFireRate: 2
+  nextPrimaryFire: 0
+  secondaryFireRate: 5
+  nextSecondaryFire: 0
   AI: {fileID: 0}
 --- !u!1 &1589785090301810
 GameObject:
@@ -787,6 +793,30 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1094493219410330544}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2612168443802885491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3130039763736583875, guid: 2c12ea9c579065c4bad43193e5b50614,
+    type: 3}
+  m_PrefabInstance: {fileID: 1094493219410330544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2056085056253715836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1421103110020605644, guid: 2c12ea9c579065c4bad43193e5b50614,
+    type: 3}
+  m_PrefabInstance: {fileID: 1094493219410330544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3058083701429063532 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2684168623568817372, guid: 2c12ea9c579065c4bad43193e5b50614,

@@ -154,7 +154,12 @@ public class BasicAI : MonoBehaviour
 
         if(!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
         {
-            this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime) ;
+            this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime);
+            if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
+            {
+                this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
             print("I'm moving towards the possessed!");
         }
         if(GameObject.FindGameObjectWithTag("Possessed"))
@@ -330,14 +335,14 @@ public class BasicAI : MonoBehaviour
             playerInRangeToAttack = true;
             //float randomNum = Random.Range(0.0f, 100.0f);
            // print(randomNum);
-            if(canAttack && Random.Range(0.0f, 100.0f) <= 90f )
+            if(canAttack && Random.Range(0.0f, 100.0f) <= 80f )
             {
                 print("Weak attack!");              
                 primaryAttack();
                 canAttack = false;
                 
             }
-            else
+            else if(canAttack)
             {
                 print("strong attack!");         
                 secondaryAttack();

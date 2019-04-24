@@ -184,6 +184,7 @@ MonoBehaviour:
   playerInRangeToAttack: 0
   nextAIAttack: 0
   AttackCooldown: 10
+  canSpawn: 1
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
@@ -255,6 +256,7 @@ MonoBehaviour:
   playerInRangeToAttack: 0
   nextAIAttack: 0
   AttackCooldown: 10
+  canSpawn: 1
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
@@ -309,6 +311,8 @@ MonoBehaviour:
   uiObj: {fileID: 1874191628459853526}
   manaSlider: {fileID: 5477650833847652673}
   healthSlider: {fileID: 7245244159612167655}
+  primaryCooldown: {fileID: 9128034445119957088}
+  secondaryCooldown: {fileID: 7327960829500058193}
   currentHealth: 100
   currentMana: 100
   MAXHP: 100
@@ -318,6 +322,10 @@ MonoBehaviour:
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20
+  primaryFireRate: 2
+  nextPrimaryFire: 0
+  secondaryFireRate: 5
+  nextSecondaryFire: 0
   AI: {fileID: 0}
 --- !u!1 &1435604043128570
 GameObject:
@@ -553,6 +561,30 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1875666710568577340}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7327960829500058193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9202421268427883373, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875666710568577340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9128034445119957088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7253889531660763484, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875666710568577340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5477650833847652673 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6197853066980210813, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
