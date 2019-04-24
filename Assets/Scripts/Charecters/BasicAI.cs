@@ -180,7 +180,7 @@ public class BasicAI : MonoBehaviour
     public void Possess(GameObject phantom)
     {
         //updateLevelMultiplier();
-        
+        isPatrolling = false;
         Vector3 cameraPos;
         cameraPos = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10);
         //mainCamera.transform.position = cameraPos;
