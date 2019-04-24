@@ -34,7 +34,10 @@ public class AOEProjectile : MonoBehaviour
         if (this.transform.position == target)
         {
             this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
-            Destroy(this.gameObject, 0.5f);
+
+            if (ObjectThatSpawnedMe.tag == "Possessed")
+                Destroy(this.gameObject, 0.5f);
+            else Destroy(this.gameObject, 4f);
         }
     }
 
@@ -48,7 +51,7 @@ public class AOEProjectile : MonoBehaviour
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if (other.gameObject.layer == LayerMask.NameToLayer("AI") && other.gameObject != ObjectThatSpawnedMe)
         {
-            print("Fireball Hit on: " + other.gameObject.name);
+            print("Fireball Hit on: " + other.gameObject.name + " and dealt " + damage + " damage");
             if (other.gameObject.GetComponent<UIController>() && other.gameObject.tag != "Possessed")
             {
                 noHit = false;
@@ -56,8 +59,21 @@ public class AOEProjectile : MonoBehaviour
                 this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
                 
                 other.gameObject.GetComponent<UIController>().takeDamage(damage);
+                damage = 0;
+            }
+            else if (other.gameObject.tag == "Possessed")
+            {
+                this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
+
+                other.gameObject.GetComponent<UIController>().takeDamage(damage);
+                damage = 0;
             }
 
         }
+    }
+
+    private void OnDestroy()
+    {
+       ObjectThatSpawnedMe.GetComponent<BasicAI>().canSpawn = true;
     }
 }

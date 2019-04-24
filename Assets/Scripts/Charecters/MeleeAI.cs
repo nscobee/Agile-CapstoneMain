@@ -78,10 +78,10 @@ public class MeleeAI : BasicAI {
         isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
-        meleeHitbox.SetActive(true);
+        meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
 
         //destroys bullet after 4 seconds ish
-       // Destroy(swordHitbox);
+        // Destroy(swordHitbox);
     }
     public void meleeAttack(float damage, float manaLoss)
     {

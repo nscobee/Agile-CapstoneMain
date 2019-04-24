@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class healerAI : MonoBehaviour {
+public class healerAI : BasicAI {
 
-    public bool isFiring;
-    public float nextRound;
-    public float fireRate;
+   // public bool isFiring;
+    //public float nextRound;
     public GameObject bullet;
     public Transform bulletSpawn;
 
-    public float speed = 5f;
 
-    public PhantomControls phantomControls;
+
+
 
     public BasicAI basicAI;
-    public UIController UIControls;
+   
 
     public float healerHp = 45f;
     public float healerAp = 75f;
@@ -35,7 +34,7 @@ public class healerAI : MonoBehaviour {
     public float healPlayerAmount;
     public float healAIAmount;
 
-    private int currentPlayerLevel;
+    //private int currentPlayerLevel;
     public float healMultiplier;
 
     public bool playerInRange;
@@ -47,7 +46,7 @@ public class healerAI : MonoBehaviour {
         basicAI = this.gameObject.GetComponent<BasicAI>();
         UIControls = this.gameObject.GetComponent<UIController>();
        // currentPlayerLevel = phantomControls.currentLevel;
-        healMultiplier *= currentPlayerLevel;
+        //healMultiplier *= currentPlayerLevel;
         basicAI.setStats(healerHp, healerAp);
 
 
@@ -79,7 +78,7 @@ public class healerAI : MonoBehaviour {
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
 
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
@@ -91,19 +90,23 @@ public class healerAI : MonoBehaviour {
 
     public void FireAttack(Transform playerTransform)
     {
-        fireballNextRound = Time.time + fireballFireRate;
+        if (this.gameObject.GetComponent<BasicAI>().canSpawn)
+        {
+            this.gameObject.GetComponent<BasicAI>().canSpawn = false;
+            fireballNextRound = Time.time + fireballFireRate;
 
-        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        target.z = transform.position.z;
+            Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
-        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
-        projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
+            GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+            projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+            projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
 
-        this.GetComponent<UIController>().useMana(fireballManaLoss);
+            this.GetComponent<UIController>().useMana(fireballManaLoss);
 
-        //destroys bullet after 4 seconds ish
-        Destroy(projectileBullet, 4f);
+            //destroys bullet after 4 seconds ish
+            Destroy(projectileBullet, 4f);
+        }
     }
 
     public void Heal()

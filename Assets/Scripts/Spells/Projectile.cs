@@ -15,24 +15,30 @@ public class Projectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if(this.transform.parent.gameObject.GetComponent<MageAI>())
+        print(this.gameObject.transform.parent.gameObject);
+        ObjectThatSpawnedMe = this.gameObject.transform.parent.gameObject;
+        if (ObjectThatSpawnedMe.GetComponent<BasicAI>().startingTag == "mage" )
         damage = this.transform.parent.gameObject.GetComponent<MageAI>().fireballDamageAmount;
-        if (this.transform.parent.gameObject.GetComponent<healerAI>())
+        if (ObjectThatSpawnedMe.GetComponent<BasicAI>().startingTag == "healer" )
             damage = this.transform.parent.gameObject.GetComponent<healerAI>().fireDamageAmount;
-        ObjectThatSpawnedMe = this.transform.parent.gameObject;
+        
         this.transform.parent = null;
     }
 
     // Update is called once per frame
     void Update()
     {
+ 
         if (noHit)
             this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
 
-        if (this.transform.position == target)
+        if (this.transform.position == target && ObjectThatSpawnedMe.tag == "Possessed")
         {
            Destroy(this.gameObject, 0.5f);
         }
+
+        if (this.transform.position == target && ObjectThatSpawnedMe.tag != "Possessed")
+            Destroy(this.gameObject, 4f);
     }
 
     public void setTarget(Vector3 targetPoint)
@@ -45,14 +51,26 @@ public class Projectile : MonoBehaviour
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if (other.gameObject.layer == LayerMask.NameToLayer("AI") && other.gameObject != ObjectThatSpawnedMe)
         {
-            print("Fireball Hit on: " + other.gameObject.name);
+            
 
             if (other.gameObject.GetComponent<UIController>() && other.gameObject.tag != "Possessed")
             {
                 noHit = false;
                 other.gameObject.GetComponent<UIController>().takeDamage(damage);
+                damage = 0;
+            }
+            else if(other.gameObject.tag == "Possessed")
+            {
+                print("Fireball Hit on: " + other.gameObject.name + " and dealt " + damage + " damage");
+                other.gameObject.GetComponent<UIController>().takeDamage(damage);
+                damage = 0;
             }
 
         }
+    }
+
+    private void OnDestroy()
+    {
+        ObjectThatSpawnedMe.GetComponent<BasicAI>().canSpawn = true;
     }
 }

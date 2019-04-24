@@ -64,6 +64,9 @@ MonoBehaviour:
   isPatrolling: 1
   mainCamera: {fileID: 0}
   fireRate: 7
+  distanceBetweenPlayer: 0
+  distanceToStartAttackingPlayer: 2.5
+  distanceToForgetPlayer: 8
   gatherPoints: 1
   playerMovement: {fileID: 114443481937730140}
   phantomControls: {fileID: 0}
@@ -73,10 +76,14 @@ MonoBehaviour:
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
   InRange: 0
+  playerInRangeToAttack: 0
+  nextAIAttack: 0
+  AttackCooldown: 10
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
   isRetaliating: 0
+  movingToPlayer: 0
   isPursuing: 0
   possessingThisObject: 0
   canPossess: 1
@@ -124,6 +131,9 @@ MonoBehaviour:
   isPatrolling: 1
   mainCamera: {fileID: 0}
   fireRate: 7
+  distanceBetweenPlayer: 0
+  distanceToStartAttackingPlayer: 1
+  distanceToForgetPlayer: 5
   gatherPoints: 0
   playerMovement: {fileID: 0}
   phantomControls: {fileID: 0}
@@ -133,10 +143,14 @@ MonoBehaviour:
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
   InRange: 0
+  playerInRangeToAttack: 0
+  nextAIAttack: 0
+  AttackCooldown: 10
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
   isRetaliating: 0
+  movingToPlayer: 0
   isPursuing: 0
   possessingThisObject: 0
   canPossess: 1
@@ -157,7 +171,6 @@ MonoBehaviour:
   basicAI: {fileID: 0}
   meleeHitbox: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
     type: 3}
-  hitboxOrigin: {fileID: 4219350398192022}
   damageMultiplier: 0
   fighterHp: 90
   fighterAp: 40
@@ -519,7 +532,7 @@ PrefabInstance:
     - target: {fileID: 7348228075240386091, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0950129
+      value: 0.095012665
       objectReference: {fileID: 0}
     - target: {fileID: 6629359699074027383, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}
@@ -545,6 +558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520132072939333583, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.5300274
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49206466ebf0294dabb9cfe4474474f, type: 3}

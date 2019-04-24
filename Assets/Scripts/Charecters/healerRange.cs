@@ -21,7 +21,7 @@ public class healerRange : MonoBehaviour {
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if (other.gameObject.layer == LayerMask.NameToLayer("AI"))
         {
-            healer.inRange.Add(other.gameObject);
+
 
         }
     }

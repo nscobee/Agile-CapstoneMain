@@ -90,6 +90,7 @@ public class UIController : MonoBehaviour
 
     public void takeDamage(float damage)
     {
+        print("I am " + this.gameObject.name + " and I am taking " + damage + " damage");
         currentHealth -= damage;
         if (this.gameObject.tag != "Possessed")
             AI.isRetaliating = true;

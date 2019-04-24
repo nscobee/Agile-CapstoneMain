@@ -29,6 +29,8 @@ public class MageAI : BasicAI
     public BasicAI basicAI;
     public UIController UI;
 
+    
+
 
     private float fireballNextRound = 0.0f;
     public float fireballFireRate = 7.0f;
@@ -80,7 +82,7 @@ public class MageAI : BasicAI
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
 
-        GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
+        GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
         projectileBulletAOE.GetComponent<AOEProjectile>().damage = AOEDamageAmount;
         projectileBulletAOE.GetComponent<AOEProjectile>().setTarget(target);
 
@@ -92,29 +94,35 @@ public class MageAI : BasicAI
 
     public void AOEAttack(Transform playerTransform)
     {
-        fireballNextRound = Time.time + fireballFireRate;
+        if (this.gameObject.GetComponent<BasicAI>().canSpawn)
+        {
+            this.gameObject.GetComponent<BasicAI>().canSpawn = false;
 
-        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        target.z = transform.position.z;
+            fireballNextRound = Time.time + fireballFireRate;
 
-        GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
-        projectileBulletAOE.GetComponent<AOEProjectile>().damage = AOEDamageAmount;
-        projectileBulletAOE.GetComponent<AOEProjectile>().setTarget(playerTransform.position);
+            Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            target.z = transform.position.z;
 
-        this.GetComponent<UIController>().useMana(AOEManaLoss);
+            GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+            projectileBulletAOE.GetComponent<AOEProjectile>().damage = AOEDamageAmount;
+            projectileBulletAOE.GetComponent<AOEProjectile>().setTarget(playerTransform.position);
 
-        //destroys bullet after 4 seconds ish
-        Destroy(projectileBulletAOE, 4f);
+            this.GetComponent<UIController>().useMana(AOEManaLoss);
+
+            //destroys bullet after 4 seconds ish
+            Destroy(projectileBulletAOE, 4f);
+        }
     }
 
     public void FireballAttack()
-    {
+    { 
+        
         fireballNextRound = Time.time + fireballFireRate;
 
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.transform);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
         projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
@@ -122,23 +130,28 @@ public class MageAI : BasicAI
 
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
+         
     }
 
     public void FireballAttack(Transform playerTransform)
     {
-        fireballNextRound = Time.time + fireballFireRate;
+        if (this.gameObject.GetComponent<BasicAI>().canSpawn)
+        {
+            this.gameObject.GetComponent<BasicAI>().canSpawn = false;
+            fireballNextRound = Time.time + fireballFireRate;
 
-        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        target.z = transform.position.z;
+            Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
-        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
-        projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
+            GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+            projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+            projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
 
-        this.GetComponent<UIController>().useMana(fireballManaLoss);
+            this.GetComponent<UIController>().useMana(fireballManaLoss);
 
-        //destroys bullet after 4 seconds ish
-        Destroy(projectileBullet, 4f);
+            //destroys bullet after 4 seconds ish
+            Destroy(projectileBullet, 4f);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)

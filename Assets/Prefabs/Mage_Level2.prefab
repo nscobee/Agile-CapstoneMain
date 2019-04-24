@@ -169,6 +169,9 @@ MonoBehaviour:
   isPatrolling: 1
   mainCamera: {fileID: 0}
   fireRate: 7
+  distanceBetweenPlayer: 0
+  distanceToStartAttackingPlayer: 8
+  distanceToForgetPlayer: 18
   gatherPoints: 1
   playerMovement: {fileID: 114442683563566332}
   phantomControls: {fileID: 0}
@@ -178,11 +181,15 @@ MonoBehaviour:
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
   InRange: 0
+  playerInRangeToAttack: 0
+  nextAIAttack: 0
+  AttackCooldown: 10
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
-  playerInRangeR: 0
   isRetaliating: 0
+  movingToPlayer: 0
+  isPursuing: 0
   possessingThisObject: 0
   canPossess: 1
   possessOnLowHealth: 0
@@ -232,6 +239,9 @@ MonoBehaviour:
   isPatrolling: 1
   mainCamera: {fileID: 0}
   fireRate: 7
+  distanceBetweenPlayer: 0
+  distanceToStartAttackingPlayer: 1
+  distanceToForgetPlayer: 5
   gatherPoints: 0
   playerMovement: {fileID: 0}
   phantomControls: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
@@ -242,11 +252,15 @@ MonoBehaviour:
   fighterAbilities: {fileID: 0}
   mageAbilities: {fileID: 0}
   InRange: 0
+  playerInRangeToAttack: 0
+  nextAIAttack: 0
+  AttackCooldown: 10
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
-  playerInRangeR: 0
   isRetaliating: 0
+  movingToPlayer: 0
+  isPursuing: 0
   possessingThisObject: 0
   canPossess: 1
   possessOnLowHealth: 0
@@ -565,11 +579,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4826611559010620}
     m_Modifications:
-    - target: {fileID: 865363642900494205, guid: 87855cf3fcf23f244ad848fb601b8790,
-        type: 3}
-      propertyPath: m_Name
-      value: speechBubble
-      objectReference: {fileID: 0}
     - target: {fileID: 865363642900494082, guid: 87855cf3fcf23f244ad848fb601b8790,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -625,6 +634,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 865363642900494205, guid: 87855cf3fcf23f244ad848fb601b8790,
+        type: 3}
+      propertyPath: m_Name
+      value: speechBubble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87855cf3fcf23f244ad848fb601b8790, type: 3}
 --- !u!4 &7388250157337719919 stripped
@@ -640,11 +654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4826611559010620}
     m_Modifications:
-    - target: {fileID: 2627347895890846608, guid: eacad4362b5f63f49a351d07940cf2fa,
-        type: 3}
-      propertyPath: m_Name
-      value: PossessionIconRadius
-      objectReference: {fileID: 0}
     - target: {fileID: 2627347895890846639, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -699,6 +708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627347895890846608, guid: eacad4362b5f63f49a351d07940cf2fa,
+        type: 3}
+      propertyPath: m_Name
+      value: PossessionIconRadius
       objectReference: {fileID: 0}
     - target: {fileID: 8444330389631847927, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}

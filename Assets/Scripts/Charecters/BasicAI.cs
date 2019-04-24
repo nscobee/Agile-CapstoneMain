@@ -43,6 +43,7 @@ public class BasicAI : MonoBehaviour
     public float nextAIAttack = 0f;
     public float AttackCooldown = 10f;
     private bool canAttack = false;
+    public bool canSpawn = true;
 
 
 
@@ -88,6 +89,7 @@ public class BasicAI : MonoBehaviour
         phantomRigid = phantom.GetComponent<Rigidbody2D>();
         UIControls = this.gameObject.GetComponent<UIController>();
         PossessionIcon = this.gameObject.GetComponent<PossessIcon>();
+        playerObjTransform = phantom.transform;
 
         if (possessOnLowHealth) canPossess = false;
 
@@ -155,7 +157,7 @@ public class BasicAI : MonoBehaviour
             this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime) ;
             print("I'm moving towards the possessed!");
         }
-
+        if(GameObject.FindGameObjectWithTag("Possessed"))
         distanceBetweenPlayer = Vector3.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position);
        
        
@@ -326,7 +328,9 @@ public class BasicAI : MonoBehaviour
             print("I am in range to attack the player");   
             movingToPlayer = false;
             playerInRangeToAttack = true;
-            if(Random.Range(0f,100f) >= 20f && canAttack)
+            //float randomNum = Random.Range(0.0f, 100.0f);
+           // print(randomNum);
+            if(canAttack && Random.Range(0.0f, 100.0f) <= 90f )
             {
                 print("Weak attack!");              
                 primaryAttack();

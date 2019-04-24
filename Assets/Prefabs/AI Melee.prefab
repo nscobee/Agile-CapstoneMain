@@ -65,8 +65,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   fireRate: 7
   distanceBetweenPlayer: 0
-  distanceToStartAttackingPlayer: 1.5
-  distanceToForgetPlayer: 5
+  distanceToStartAttackingPlayer: 6
+  distanceToForgetPlayer: 10
   gatherPoints: 1
   playerMovement: {fileID: 114443481937730140}
   phantomControls: {fileID: 0}
@@ -171,7 +171,6 @@ MonoBehaviour:
   basicAI: {fileID: 0}
   meleeHitbox: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
     type: 3}
-  hitboxOrigin: {fileID: 0}
   damageMultiplier: 0
   fighterHp: 90
   fighterAp: 40
