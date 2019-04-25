@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+
     public PhantomControls phantomController;
     public GameObject uiObj;
     Canvas theUI;
@@ -29,6 +30,8 @@ public class UIController : MonoBehaviour
     public float nextPrimaryFire = 0;
     public float secondaryFireRate = 5f;
     public float nextSecondaryFire = 0;
+
+    public float maxXPGained = 50;
 
     public bool inRange = false;
 
@@ -138,6 +141,7 @@ public class UIController : MonoBehaviour
         currentMana += value;
     }
 
+
     public void Die()
     {
         if (this.gameObject.tag != "Possessed")
@@ -146,11 +150,16 @@ public class UIController : MonoBehaviour
             {
                 GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
             }
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().gainXP(Random.Range(1, maxXPGained));
+            GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
             Destroy(this.gameObject);
         }
         else
+
         {
-            this.gameObject.GetComponent<BasicMovement>().DED();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
+            this.gameObject.GetComponent<BasicMovement>().DED();            
         }
     }
 }

@@ -9,6 +9,9 @@ public class BasicAI : MonoBehaviour
     public bool isPatrolling = true;
     
     public Camera mainCamera;
+
+    public int NPC_ID;
+    public int currentLevel = 1; 
     
     private Transform currentTarget;
     private float nextRound = 0.0f;
@@ -74,6 +77,9 @@ public class BasicAI : MonoBehaviour
     
     private void Start()
     {
+
+        NPC_ID = ((int)(Random.Range(0, 100000) * 100));
+
         mainCamera = Camera.main;
         startingTag = this.gameObject.tag;
         phantomControls = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();

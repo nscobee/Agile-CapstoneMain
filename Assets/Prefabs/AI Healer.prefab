@@ -198,8 +198,8 @@ MonoBehaviour:
   fireballManaLoss: 7
   fireManaLoss: 2
   fireballFireRate: 7
-  healPlayerAmount: 0
-  healAIAmount: 0
+  healPlayerAmount: 10
+  healAIAmount: 15
   healMultiplier: 0
   playerInRange: 0
   inRange: []

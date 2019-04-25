@@ -350,6 +350,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.3430004
       objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: isPursuing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: movingToPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5691219287094480772, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -607,7 +617,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114917351955899386, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
 --- !u!114 &624285433 stripped
 MonoBehaviour:
