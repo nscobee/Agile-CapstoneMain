@@ -60,6 +60,7 @@ public class levelingScript : MonoBehaviour
         if (currentXP >= xpTillNextLevel)
         {
             currentLevel++;
+            UIControls.increaseStats();
             currentXP = 0;
             xpTillNextLevel = STARTINGXPNEEDEDTOLEVELUP * (2^(currentLevel - 1));
         }

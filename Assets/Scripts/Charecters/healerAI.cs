@@ -19,8 +19,8 @@ public class healerAI : BasicAI {
     public float healerHp = 45f;
     public float healerAp = 75f;
 
-    public int fireballDamageAmount = 10;
-    public int fireDamageAmount = 5;
+    public float fireballDamageAmount = 10;
+    public float fireDamageAmount = 5;
     public float fireRange = 2f;
 
     public float healManaLoss = 5f;
@@ -47,7 +47,7 @@ public class healerAI : BasicAI {
         UIControls = this.gameObject.GetComponent<UIController>();
        // currentPlayerLevel = phantomControls.currentLevel;
         //healMultiplier *= currentPlayerLevel;
-        basicAI.setStats(healerHp, healerAp);
+        //basicAI.setStats(healerHp, healerAp);
 
 
     }
@@ -81,6 +81,8 @@ public class healerAI : BasicAI {
         target.z = transform.position.z;
 
         GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+        
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
 
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 

@@ -17,10 +17,16 @@ public class Projectile : MonoBehaviour
     {
         print(this.gameObject.transform.parent.gameObject);
         ObjectThatSpawnedMe = this.gameObject.transform.parent.gameObject;
-        if (ObjectThatSpawnedMe.GetComponent<BasicAI>().startingTag == "mage" )
-        damage = this.transform.parent.gameObject.GetComponent<MageAI>().fireballDamageAmount;
-        if (ObjectThatSpawnedMe.GetComponent<BasicAI>().startingTag == "healer" )
+        if (ObjectThatSpawnedMe.GetComponent<BasicAI>().startingTag == "mage")
+        {
+            damage = this.transform.parent.gameObject.GetComponent<MageAI>().fireballDamageAmount;
+            damage = damage * Mathf.Pow(2.78f, 0.114f * this.transform.parent.gameObject.GetComponent<BasicAI>().currentLevel);
+        }
+        if (ObjectThatSpawnedMe.GetComponent<BasicAI>().startingTag == "healer")
+        {
             damage = this.transform.parent.gameObject.GetComponent<healerAI>().fireDamageAmount;
+            damage = damage * Mathf.Pow(2.78f, 0.114f * this.transform.parent.gameObject.GetComponent<BasicAI>().currentLevel);
+        }
         
         this.transform.parent = null;
     }

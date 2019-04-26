@@ -22,8 +22,8 @@ public class MeleeAI : BasicAI {
    // public Transform hitboxOrigin;
 
 
-    private int currentPlayerLevel;
-    public float damageMultiplier;
+    //private int currentPlayerLevel;
+    //public float damageMultiplier;
 
     public float fighterHp = 90f;
     public float fighterAp = 40f;
@@ -40,10 +40,10 @@ public class MeleeAI : BasicAI {
         basicAI = this.gameObject.GetComponent<BasicAI>();
         phantomControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PhantomControls>();
         //currentPlayerLevel = phantomControls.currentLevel;
-        damageMultiplier *= currentPlayerLevel;
+        //damageMultiplier *= currentPlayerLevel;
         UI = gameObject.GetComponent<UIController>();
 
-        basicAI.setStats(fighterHp, fighterAp);
+        //basicAI.setStats(fighterHp, fighterAp);
         meleeHitbox = this.gameObject.transform.GetChild(0).gameObject;
         meleeHitbox.GetComponent<BoxCollider2D>().enabled = false;
 
@@ -52,6 +52,7 @@ public class MeleeAI : BasicAI {
     // Update is called once per frame
     void Update()
     {
+        
 
         if (this.gameObject.tag == "Possessed")
         {
@@ -78,6 +79,7 @@ public class MeleeAI : BasicAI {
 
     public void meleeAttack(float damage)
     {
+        
         isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
@@ -88,9 +90,10 @@ public class MeleeAI : BasicAI {
     }
     public void meleeAttack(float damage, float manaLoss)
     {
+        
         isAttacking = true;
         nextAttack = Time.time + attackRate;
-        activeDamage = damage;
+        activeDamage = damage * Mathf.Pow(2.78f, 0.114f * basicAI.currentLevel);
         meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
 
         this.GetComponent<UIController>().useMana(manaLoss);

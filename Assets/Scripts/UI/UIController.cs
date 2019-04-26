@@ -39,16 +39,16 @@ public class UIController : MonoBehaviour
 
     private void Start()
     {
-        theUI = uiObj.GetComponent<Canvas>();
-        theUI.enabled = false;
+        if (this.gameObject.tag != "Necromancer") theUI = uiObj.GetComponent<Canvas>();
+        if (this.gameObject.tag != "Necromancer") theUI.enabled = false;
         phantomController = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-        AI = gameObject.GetComponent<BasicAI>();
+       if(this.gameObject.tag != "Necromancer") AI = gameObject.GetComponent<BasicAI>();
 
-        manaSlider.maxValue = MAXMANA;
-        healthSlider.maxValue = MAXHP;
-        AIHealthSlider.maxValue = MAXHP;
-        primaryCooldown.maxValue = primaryFireRate;
-        secondaryCooldown.maxValue = secondaryFireRate;
+        if (this.gameObject.tag != "Necromancer") manaSlider.maxValue = MAXMANA;
+        if (this.gameObject.tag != "Necromancer") healthSlider.maxValue = MAXHP;
+        if (this.gameObject.tag != "Necromancer") AIHealthSlider.maxValue = MAXHP;
+        if (this.gameObject.tag != "Necromancer") primaryCooldown.maxValue = primaryFireRate;
+        if (this.gameObject.tag != "Necromancer") secondaryCooldown.maxValue = secondaryFireRate;
         AIHealthSlider.gameObject.SetActive(false);
 
     }
@@ -56,54 +56,56 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        healthSlider.value = currentHealth;
-        manaSlider.value = currentMana;
-        AIHealthSlider.value = currentHealth;
-        primaryCooldown.value = Time.time - nextPrimaryFire;
-        secondaryCooldown.value = Time.time - nextSecondaryFire;
-
-
-        if (this.gameObject.tag == "Possessed")
+        if (this.gameObject.tag != "Necromancer")
         {
-            print("UI IN!");
-            theUI.enabled = true;
-        }
-        else
-        {
-            print("UI OUT!");
-            uiObj.SetActive(true);
-            theUI.enabled = false;
-        }
+            healthSlider.value = currentHealth;
+            manaSlider.value = currentMana;
+            AIHealthSlider.value = currentHealth;
+            primaryCooldown.value = Time.time - nextPrimaryFire;
+            secondaryCooldown.value = Time.time - nextSecondaryFire;
 
-        if (currentHealth <= 0)
-            Die();
-        if (currentHealth >= MAXHP) currentHealth = MAXHP;
-        if (currentMana >= MAXMANA) currentMana = MAXMANA;
 
-        if (currentMana <= 0) currentMana = 0;
-
-        currentMana += rateOfManaRegen * Time.deltaTime;
-
-        if(this.gameObject.tag != "Possessed")
-        {
-            if(AI.possessOnLowHealth)
+            if (this.gameObject.tag == "Possessed")
             {
-                float healthThreshold = MAXHP * (percentOfHealthToPossess / 100f);
-                if(currentHealth <= healthThreshold)
+                print("UI IN!");
+                theUI.enabled = true;
+            }
+            else
+            {
+                print("UI OUT!");
+                uiObj.SetActive(true);
+                theUI.enabled = false;
+            }
+
+            if (currentHealth <= 0)
+                Die();
+            if (currentHealth >= MAXHP) currentHealth = MAXHP;
+            if (currentMana >= MAXMANA) currentMana = MAXMANA;
+
+            if (currentMana <= 0) currentMana = 0;
+
+            currentMana += rateOfManaRegen * Time.deltaTime;
+
+            if (this.gameObject.tag != "Possessed")
+            {
+                if (AI.possessOnLowHealth)
                 {
-                    AI.canPossess = true;
+                    float healthThreshold = MAXHP * (percentOfHealthToPossess / 100f);
+                    if (currentHealth <= healthThreshold)
+                    {
+                        AI.canPossess = true;
+                    }
                 }
             }
-        }
 
-        if (this.gameObject.tag != "Possessed"  && ( inRange || AI.isRetaliating ) )
-        {
-            AIHealthSlider.gameObject.SetActive(true);
+            if (this.gameObject.tag != "Possessed" && (inRange || AI.isRetaliating))
+            {
+                AIHealthSlider.gameObject.SetActive(true);
+            }
+            else
+                AIHealthSlider.gameObject.SetActive(false);
         }
-        else
-            AIHealthSlider.gameObject.SetActive(false);
-            
+                   
 
 
     }
@@ -139,6 +141,15 @@ public class UIController : MonoBehaviour
     public void increaseMana(float value)
     {
         currentMana += value;
+    }
+
+    public void increaseStats()
+    {
+        MAXHP += 10;
+        MAXMANA += 10;
+        rateOfManaRegen++;
+        primaryFireRate *= .95f;
+        secondaryFireRate *= .95f;
     }
 
 

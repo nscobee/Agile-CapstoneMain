@@ -101,7 +101,7 @@ public class BasicMovement : MonoBehaviour
 
         WithDraw();
 
-        phantomControls.resetLevel();
+      //  phantomControls.resetLevel();
         reaper.outOfBody = true;
         phantomControls.enabled = true;
         phantomControls.isPossessing = false;

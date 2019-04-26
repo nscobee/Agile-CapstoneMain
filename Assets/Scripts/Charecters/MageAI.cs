@@ -16,8 +16,8 @@ public class MageAI : BasicAI
 
     public List<GameObject> inRange = new List<GameObject>();
 
-    public int fireballDamageAmount = 10;
-    public int AOEDamageAmount = 5;
+    public float fireballDamageAmount = 10;
+    public float AOEDamageAmount = 5;
     public float fireRange = 2f;
 
     public float fireballManaLoss = 5f;
@@ -42,7 +42,7 @@ public class MageAI : BasicAI
     void Start()
     {
         basicAI = this.gameObject.GetComponent<BasicAI>();
-        basicAI.setStats(mageHp, mageAp);
+       // basicAI.setStats(mageHp, mageAp);
         UI = gameObject.GetComponent<UIController>();
 
     }
@@ -85,6 +85,7 @@ public class MageAI : BasicAI
         target.z = transform.position.z;
 
         GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+        
         projectileBulletAOE.GetComponent<AOEProjectile>().damage = AOEDamageAmount;
         projectileBulletAOE.GetComponent<AOEProjectile>().setTarget(target);
 
@@ -106,6 +107,7 @@ public class MageAI : BasicAI
             target.z = transform.position.z;
 
             GameObject projectileBulletAOE = Instantiate(AOEbullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+
             projectileBulletAOE.GetComponent<AOEProjectile>().damage = AOEDamageAmount;
             projectileBulletAOE.GetComponent<AOEProjectile>().setTarget(playerTransform.position);
 
@@ -125,6 +127,7 @@ public class MageAI : BasicAI
         target.z = transform.position.z;
 
         GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+        
         projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
@@ -146,6 +149,7 @@ public class MageAI : BasicAI
             target.z = transform.position.z;
 
             GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+            
             projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
             projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
 

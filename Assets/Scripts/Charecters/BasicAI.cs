@@ -300,27 +300,13 @@ public class BasicAI : MonoBehaviour
     }
 
 
-    private void updateLevelMultiplier() //Is called when the player possesses an NPC, will set values to current level
-    {
-        levelMultiplierAP *= phantomControls.currentLevel;
-        levelMultiplierHP *= phantomControls.currentLevel;
-
-        UIControls.MAXHP *= levelMultiplierAP;
-        UIControls.MAXMANA *= levelMultiplierHP;
-
-    }
-
-    public void setStats(float hp, float mana)
-    {
-
-    }
-
-
-
     public void healOnPossess()
     {
-        UIControls.currentHealth = UIControls.MAXHP;
-        UIControls.currentMana = UIControls.MAXMANA;
+        if (!phantom.GetComponent<levelingScript>().NPC_Levels.Contains(NPC_ID))
+        {
+            UIControls.currentHealth = UIControls.MAXHP;
+            UIControls.currentMana = UIControls.MAXMANA;
+        }
     }
 
    

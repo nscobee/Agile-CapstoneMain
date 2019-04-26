@@ -29,6 +29,7 @@ TagManager:
   - textPopUp
   - Possessed
   - Commoner
+  - Necromancer
   layers:
   - Default
   - TransparentFX
