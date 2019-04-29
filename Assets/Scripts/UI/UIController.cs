@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
 
     public PhantomControls phantomController;
     public GameObject uiObj;
+    private necromancerAI necroAI;
     Canvas theUI;
     public Slider manaSlider;
     public Slider healthSlider;
@@ -39,24 +40,31 @@ public class UIController : MonoBehaviour
 
     private void Start()
     {
-        if (this.gameObject.tag != "Necromancer") theUI = uiObj.GetComponent<Canvas>();
-        if (this.gameObject.tag != "Necromancer") theUI.enabled = false;
         phantomController = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-       if(this.gameObject.tag != "Necromancer") AI = gameObject.GetComponent<BasicAI>();
 
-        if (this.gameObject.tag != "Necromancer") manaSlider.maxValue = MAXMANA;
-        if (this.gameObject.tag != "Necromancer") healthSlider.maxValue = MAXHP;
+        if (this.gameObject.tag == "Necromancer") necroAI = this.gameObject.GetComponent<necromancerAI>();
+        if (this.gameObject.tag == "Necromancer") MAXHP = necroAI.MAXHEALTH;        
+        if (this.gameObject.tag == "Necromancer") uiObj.SetActive(false);
+
+        if (this.gameObject.tag != "Necromancer") theUI = uiObj.GetComponent<Canvas>();
+        if (this.gameObject.tag != "Necromancer") theUI.enabled = false;        
+        if(this.gameObject.tag != "Necromancer") AI = gameObject.GetComponent<BasicAI>();
+        if (this.gameObject.tag != "Necromancer") manaSlider.maxValue = MAXMANA;        
         if (this.gameObject.tag != "Necromancer") AIHealthSlider.maxValue = MAXHP;
         if (this.gameObject.tag != "Necromancer") primaryCooldown.maxValue = primaryFireRate;
         if (this.gameObject.tag != "Necromancer") secondaryCooldown.maxValue = secondaryFireRate;
-        AIHealthSlider.gameObject.SetActive(false);
+        if (this.gameObject.tag != "Necromancer") AIHealthSlider.gameObject.SetActive(false);
+
+        healthSlider.maxValue = MAXHP;
+        currentHealth = MAXHP;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.tag != "Necromancer")
+        if (this.gameObject.tag != "Necromancer") //stuff for generic AI's
         {
             healthSlider.value = currentHealth;
             manaSlider.value = currentMana;
@@ -104,6 +112,10 @@ public class UIController : MonoBehaviour
             }
             else
                 AIHealthSlider.gameObject.SetActive(false);
+        }
+        else //stuff for necromancer
+        {
+            healthSlider.value = currentHealth;
         }
                    
 
@@ -155,7 +167,7 @@ public class UIController : MonoBehaviour
 
     public void Die()
     {
-        if (this.gameObject.tag != "Possessed")
+        if (this.gameObject.tag != "Possessed" && this.gameObject.tag != "Necromancer")
         {
             if (Random.Range(0, 100) < dropChance)
             {
@@ -166,11 +178,15 @@ public class UIController : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
             Destroy(this.gameObject);
         }
-        else
+        else if(this.gameObject.tag == "Possessed")
 
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
             this.gameObject.GetComponent<BasicMovement>().DED();            
+        }
+        else
+        {
+            //necromancer die
         }
     }
 }
