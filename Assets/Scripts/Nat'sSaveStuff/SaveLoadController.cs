@@ -32,33 +32,81 @@ public class SaveLoadController : MonoBehaviour
 
     private void Start()
     {
-       // LoadAllScenes();
+        //LoadAllScenes(SceneManager.sceneCountInBuildSettings);
+        PrintAllSceneInfo();
     }
 
-    //todo: make load all scenes funciton;
+    public void PrintAllSceneInfo()
+    { 
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            Debug.Log("Scene at buildIndex of " + i + " is scene " + SceneManager.GetSceneByBuildIndex(i).name + ".");
+        }
+    }
 
-    IEnumerator loadScene(int buildIndex)
+
+    //todo: make load all scenes funciton;
+    public void LoadAllScenes(int numScenesInBuild)
     {
-        AsyncOperation scene = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Additive);
+        Debug.Log("loading all scenes; number of scenes in build is: " + numScenesInBuild);
+        for (int i = 0; i < numScenesInBuild; i++)
+        {
+            if (!SceneManager.GetSceneByBuildIndex(i).isLoaded)
+            {
+                StartCoroutine(loadSceneAsyncly(i));
+                //loadScene(i);
+            }
+            else
+            {
+                StopCoroutine(loadSceneAsyncly(i));
+            }
+
+        }
+        //StopAllCoroutines();
+    }
+
+    public void loadScene(int buildIndex)
+    {
+        Debug.Log("loading scene at index: " + buildIndex);
+        SceneManager.LoadScene(buildIndex, LoadSceneMode.Additive);
+    }
+
+    public void disableScene(int buildIndex)
+    {
+        Debug.Log("unloading scene at index: " + buildIndex);
+        SceneManager.UnloadSceneAsync(buildIndex);
+    }
+
+    IEnumerator loadSceneAsyncly(int buildIndex)
+    {
+        Debug.Log("loading scene at index: " + buildIndex);
+
+        AsyncOperation scene = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Single);
         scene.allowSceneActivation = false;
         sceneAsync = scene;
 
-        while(scene.progress < .9f)
+        while (!scene.isDone)
         {
-            Debug.Log("Loading scene " + " [][] Progress: " + scene.progress);
+            Debug.Log("Loading scene " + scene.ToString() + " Progress: " + scene.progress);
             yield return null;
         }
+
+        //enableScene(buildIndex);
     }
 
     void enableScene(int buildIndex)
     {
+        Debug.Log("enabling scene at: " + buildIndex);
         //Activate the Scene
         sceneAsync.allowSceneActivation = true;
-        
+
         Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(buildIndex);
         if (sceneToLoad.IsValid())
         {
-            Debug.Log("Scene is Valid");
+            Debug.Log("Scene is Valid; moving player");
+
+            StartCoroutine(loadSceneAsyncly(buildIndex));
+
             SceneManager.MoveGameObjectToScene(player.gameObject, sceneToLoad);
             SceneManager.SetActiveScene(sceneToLoad);
         }
@@ -66,11 +114,16 @@ public class SaveLoadController : MonoBehaviour
 
     void disableOtherScenes()
     {
-        for (int count = 0; count< (SceneManager.sceneCountInBuildSettings - 1); count++)
+        Debug.Log("Disabling scenes");
+        for (int count = 0; count < (SceneManager.sceneCountInBuildSettings); count++)
         {
-            if(SceneManager.GetSceneAt(count) != SceneManager.GetActiveScene())
+            if (SceneManager.GetSceneAt(count).isLoaded)
             {
-                SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(count));
+                if (SceneManager.GetSceneAt(count) != SceneManager.GetActiveScene())
+                {
+                    SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(count));
+                }
+
             }
         }
     }
@@ -78,31 +131,19 @@ public class SaveLoadController : MonoBehaviour
 
     private void Update()
     {
+        //LoadAllScenes();
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (SceneManager.GetSceneAt(1).isLoaded)
-            {
-                enableScene(1);
-            }
-            else
-            {
-                
-                StartCoroutine(loadScene(1));
-                disableOtherScenes();
-            }
+            StartCoroutine(loadSceneAsyncly(1));
+            enableScene(1);
 
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if (SceneManager.GetSceneAt(2).isLoaded)
-            {
-                enableScene(2);
-            }
-            else
-            { 
-                StartCoroutine(loadScene(2));
-                disableOtherScenes();
-            }
+            StartCoroutine(loadSceneAsyncly(2));
+            enableScene(2);
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -236,7 +277,7 @@ public class SaveLoadController : MonoBehaviour
 
     public void SetPlayerPos(PhantomControls phantom, LevelData ldLoaded)
     {
-        Vector3 levelEntry = new Vector3(0,0,0);
+        Vector3 levelEntry = new Vector3(0, 0, 0);
         if (ldLoaded.player.xPos == 0 && ldLoaded.player.yPos == 0 && ldLoaded.player.zPos == 0)
         {
             Transform[] transformsFromScene = FindObjectsOfType<Transform>();
@@ -261,10 +302,12 @@ public class SaveLoadController : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
+        //LoadAllScenes(SceneManager.sceneCountInBuildSettings);
+
         player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
         SceneManager.MoveGameObjectToScene(player.gameObject, SceneManager.GetActiveScene());
-        Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(level);
-        loadScene(level);
+        //Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(level);
+        //loadScene(level);
         SetPlayerPos(player, ldLoaded);
     }
 }

@@ -75,12 +75,12 @@ public class UIController : MonoBehaviour
 
             if (this.gameObject.tag == "Possessed")
             {
-                print("UI IN!");
+                //print("UI IN!");
                 theUI.enabled = true;
             }
             else
             {
-                print("UI OUT!");
+                //print("UI OUT!");
                 uiObj.SetActive(true);
                 theUI.enabled = false;
             }
