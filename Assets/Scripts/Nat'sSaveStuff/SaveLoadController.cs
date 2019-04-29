@@ -11,7 +11,11 @@ public class SaveLoadController : MonoBehaviour
     public static LevelData ldLoaded = new LevelData();
     private PhantomControls player;
     //note: this is now part of uiControl - use that!
-    private playerHealth hpScript;
+    private UIController uiControl;
+
+    private List<Transform> entryPoints = new List<Transform>();
+
+    private AsyncOperation sceneAsync;
 
     void Awake()
     {
@@ -28,8 +32,90 @@ public class SaveLoadController : MonoBehaviour
 
     private void Start()
     {
-        //player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-        //hpScript = player.GetComponent<playerHealth>();
+       // LoadAllScenes();
+    }
+
+    //todo: make load all scenes funciton;
+
+    IEnumerator loadScene(int buildIndex)
+    {
+        AsyncOperation scene = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Additive);
+        scene.allowSceneActivation = false;
+        sceneAsync = scene;
+
+        while(scene.progress < .9f)
+        {
+            Debug.Log("Loading scene " + " [][] Progress: " + scene.progress);
+            yield return null;
+        }
+    }
+
+    void enableScene(int buildIndex)
+    {
+        //Activate the Scene
+        sceneAsync.allowSceneActivation = true;
+        
+        Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(buildIndex);
+        if (sceneToLoad.IsValid())
+        {
+            Debug.Log("Scene is Valid");
+            SceneManager.MoveGameObjectToScene(player.gameObject, sceneToLoad);
+            SceneManager.SetActiveScene(sceneToLoad);
+        }
+    }
+
+    void disableOtherScenes()
+    {
+        for (int count = 0; count< (SceneManager.sceneCountInBuildSettings - 1); count++)
+        {
+            if(SceneManager.GetSceneAt(count) != SceneManager.GetActiveScene())
+            {
+                SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(count));
+            }
+        }
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (SceneManager.GetSceneAt(1).isLoaded)
+            {
+                enableScene(1);
+            }
+            else
+            {
+                
+                StartCoroutine(loadScene(1));
+                disableOtherScenes();
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (SceneManager.GetSceneAt(2).isLoaded)
+            {
+                enableScene(2);
+            }
+            else
+            { 
+                StartCoroutine(loadScene(2));
+                disableOtherScenes();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+        }
     }
 
     public void SaveLevel()
@@ -37,7 +123,7 @@ public class SaveLoadController : MonoBehaviour
         Debug.Log("Save and load Controller saving.");
 
         player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-        hpScript = player.GetComponent<playerHealth>();
+        uiControl = GameObject.Find("Phantom2.0").GetComponent<UIController>();
 
         PlayerData playerDat = new PlayerData();
 
@@ -47,7 +133,7 @@ public class SaveLoadController : MonoBehaviour
         Debug.Log("levelData.scenenum?: " + levelData.sceneNum);
 
         //player stuff
-        playerDat.currentHealth = hpScript.currentHealth;
+        playerDat.currentHealth = uiControl.currentHealth;
 
         playerDat.xPos = player.gameObject.transform.position.x;
         playerDat.yPos = player.gameObject.transform.position.y;
@@ -66,6 +152,7 @@ public class SaveLoadController : MonoBehaviour
             enemyDat.zPos = meleeEnemy.transform.position.z;
 
             enemyDat.currentHealth = meleeEnemy.gameObject.GetComponent<UIController>().currentHealth;
+            enemyDat.currentMana = meleeEnemy.gameObject.GetComponent<UIController>().currentMana;
             levelData.enemyList.Add(enemyDat);
         }
 
@@ -79,16 +166,55 @@ public class SaveLoadController : MonoBehaviour
             enemyDat.zPos = mageEnemy.transform.position.z;
 
             enemyDat.currentHealth = mageEnemy.gameObject.GetComponent<UIController>().currentHealth;
+            enemyDat.currentMana = mageEnemy.gameObject.GetComponent<UIController>().currentMana;
             levelData.enemyList.Add(enemyDat);
         }
 
+        //healerStuff
+        foreach (GameObject healerEnemy in GameObject.FindGameObjectsWithTag("healer"))
+        {
+            EnemyData healerDat = new EnemyData();
+            healerDat.xPos = healerEnemy.transform.position.x;
+            healerDat.yPos = healerEnemy.transform.position.y;
+            healerDat.zPos = healerEnemy.transform.position.z;
+
+            healerDat.currentHealth = healerEnemy.gameObject.GetComponent<UIController>().currentHealth;
+            healerDat.currentMana = healerEnemy.gameObject.GetComponent<UIController>().currentMana;
+            levelData.enemyList.Add(healerDat);
+        }
+
+        //commmoner stuff
+        foreach (GameObject commonEnemy in GameObject.FindGameObjectsWithTag("Commoner"))
+        {
+            EnemyData commonerDat = new EnemyData();
+            commonerDat.xPos = commonEnemy.transform.position.x;
+            commonerDat.yPos = commonEnemy.transform.position.y;
+            commonerDat.zPos = commonEnemy.transform.position.z;
+
+            commonerDat.currentHealth = commonEnemy.gameObject.GetComponent<UIController>().currentHealth;
+            commonerDat.currentMana = commonEnemy.gameObject.GetComponent<UIController>().currentMana;
+            levelData.enemyList.Add(commonerDat);
+        }
+
+        //nopossess stuff
+        foreach (GameObject noPossess in GameObject.FindGameObjectsWithTag("NoPossess"))
+        {
+            EnemyData noPossessDat = new EnemyData();
+            noPossessDat.xPos = noPossess.transform.position.x;
+            noPossessDat.yPos = noPossess.transform.position.y;
+            noPossessDat.zPos = noPossess.transform.position.z;
+
+            noPossessDat.currentHealth = noPossess.gameObject.GetComponent<UIController>().currentHealth;
+            noPossessDat.currentMana = noPossess.gameObject.GetComponent<UIController>().currentMana;
+            levelData.enemyList.Add(noPossessDat);
+        }
         /*
          * To be added:
-         * Data for healer, commoner, doggos, things with 'nopossess' tag
-         * Mana in level data
+         * Data for healer, commoner, doggos, things with 'nopossess' tag-done
+         * Mana in level data-done
          * 
          * To be fixed:
-         * References to player health, should be referencing UIController
+         * References to player health, should be referencing UIController-done
          * Remove save points and replace with saving via possessing scribe, frameworkish is in phantomcontrols script
          * 
          * 
@@ -110,22 +236,35 @@ public class SaveLoadController : MonoBehaviour
 
     public void SetPlayerPos(PhantomControls phantom, LevelData ldLoaded)
     {
+        Vector3 levelEntry = new Vector3(0,0,0);
         if (ldLoaded.player.xPos == 0 && ldLoaded.player.yPos == 0 && ldLoaded.player.zPos == 0)
         {
-            Vector3 newPlayerPos = GameObject.Find("EntryPoint").transform.position;
+            Transform[] transformsFromScene = FindObjectsOfType<Transform>();
+            foreach (Transform objectInScene in transformsFromScene)
+            {
+                if (objectInScene.tag == "EntryPoints")
+                {
+                    entryPoints.Add(objectInScene);
+                }
+            }
+            levelEntry = entryPoints[0].transform.position;
+            phantom.transform.position = levelEntry;
+            //Vector3 newPlayerPos = GameObject.Find("EntryPoint").transform.position;
         }
         else
         {
             Vector3 newPlayerPos = new Vector3(ldLoaded.player.xPos, ldLoaded.player.yPos, ldLoaded.player.zPos);
             Debug.Log("load level setting player pos to:" + newPlayerPos);
-            phantom.transform.position = newPlayerPos;
+            phantom.transform.position = levelEntry;
         }
-        
     }
 
     private void OnLevelWasLoaded(int level)
     {
         player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
+        SceneManager.MoveGameObjectToScene(player.gameObject, SceneManager.GetActiveScene());
+        Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(level);
+        loadScene(level);
         SetPlayerPos(player, ldLoaded);
     }
 }

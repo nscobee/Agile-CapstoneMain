@@ -26,6 +26,7 @@ public class EnemyData
 {
     public float xPos, yPos, zPos;
     public float currentHealth;
+    public float currentMana;
 }
 
 [Serializable]
