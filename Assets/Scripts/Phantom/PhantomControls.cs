@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 /**
@@ -16,6 +17,8 @@ public class PhantomControls : MonoBehaviour
     public static ReaperCountdown reaper;
     public bool isPossessing;
     public GameObject phantom;
+    SaveLoadController slControl;
+    
 
     //Simple Leveling System
     //public int currentLevel = 1;
@@ -27,12 +30,16 @@ public class PhantomControls : MonoBehaviour
     private void Start()
     {
         reaper = phantom.GetComponent<ReaperCountdown>();
+        slControl = FindObjectOfType<SaveLoadController>();
         reaper.outOfBody = true;
         //startingExperienceTillNextLevel = experienceTillNextLevel;
     }
 
     private void Update()
     {
+        
+        DontDestroyOnLoad(this.gameObject);
+
         // uses the generic movement for movement passing desired speed
         transform.position += GenericFunctions.BasePlayerMovement(speed);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
@@ -48,15 +55,8 @@ public class PhantomControls : MonoBehaviour
                 //if the game object being posessed is a scribe, save the game
                 if (phantomTarget.tag == "Scribe" && isPossessing)
                 {
-                    Debug.Log("saving player");
-                    //make a new save file directory
-                    SaveLoadSystem.MakeNewPlayerSave("ScribeTests");
-
-                    //make a new save in the folder for that scene
-                    SaveData newSaveTest = new SaveData("Scene01", 1);
-                    
-                    //save the stuff
-                    SaveLoadSystem.SavePlayer(newSaveTest, "ScribeTests");
+                    Debug.Log("POSSESSING SCRIBE; SAVING");
+                    SaveLoadController.control.SaveLevel();
                 }
 
                 if (isPossessing)
@@ -72,35 +72,15 @@ public class PhantomControls : MonoBehaviour
                 speed = 5f;
             }
         }
-        //else
-       // {
-       //     isPossessing = false;
-       // }
-
-        //Simple Leveling System
-       // if (currentLevel == MAX_LEVEL) currentExperience = 0;
-       // if (currentExperience >= experienceTillNextLevel)
-       // {
-       //     currentLevel++;
-       //    currentExperience = 0;
-       //     experienceTillNextLevel *= currentLevel;
-      //  }
-
-      //  if (GameObject.FindGameObjectWithTag("Possessed"))
-     //       isPossessing = true;
-     //   else isPossessing = false;
     }
 
-
+    public void Die()
+    {
+        slControl.SwitchScene(7);
+        reaper.timeTillDespawn = 0f;
+    }
     private void OnDestroy()
     {
         reaper.outOfBody = false;
     }
-
-   // public void resetLevel()
-   // {
-   //     currentLevel = 0;
-   //     currentExperience = 0;
-   //     experienceTillNextLevel = startingExperienceTillNextLevel;
-   // }
 }

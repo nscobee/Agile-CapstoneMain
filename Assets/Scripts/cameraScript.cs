@@ -7,12 +7,14 @@ public class cameraScript : MonoBehaviour {
     public GameObject player;
 
 	// Use this for initialization
-	void Start () {
-        player = GameObject.FindGameObjectWithTag("Player");
+	void Start ()
+    {
+        player = GameObject.Find("Phantom2.0");
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         transform.rotation = Quaternion.Euler(0, 0, 0);
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
     }

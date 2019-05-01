@@ -10,13 +10,14 @@ public class SaveLoadController : MonoBehaviour
     private LevelData levelData = new LevelData();
     public static LevelData ldLoaded = new LevelData();
     private PhantomControls player;
+
+    private bool phantomExistsInScene = false;
+
     //note: this is now part of uiControl - use that!
     private UIController uiControl;
 
     private List<Transform> entryPoints = new List<Transform>();
-
-    private AsyncOperation sceneAsync;
-
+    
     void Awake()
     {
         if (control == null)
@@ -30,136 +31,168 @@ public class SaveLoadController : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        //LoadAllScenes(SceneManager.sceneCountInBuildSettings);
-        PrintAllSceneInfo();
-    }
-
-    public void PrintAllSceneInfo()
-    { 
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
-        {
-            Debug.Log("Scene at buildIndex of " + i + " is scene " + SceneManager.GetSceneByBuildIndex(i).name + ".");
-        }
-    }
-
-
-    //todo: make load all scenes funciton;
-    public void LoadAllScenes(int numScenesInBuild)
-    {
-        Debug.Log("loading all scenes; number of scenes in build is: " + numScenesInBuild);
-        for (int i = 0; i < numScenesInBuild; i++)
-        {
-            if (!SceneManager.GetSceneByBuildIndex(i).isLoaded)
-            {
-                StartCoroutine(loadSceneAsyncly(i));
-                //loadScene(i);
-            }
-            else
-            {
-                StopCoroutine(loadSceneAsyncly(i));
-            }
-
-        }
-        //StopAllCoroutines();
-    }
-
-    public void loadScene(int buildIndex)
-    {
-        Debug.Log("loading scene at index: " + buildIndex);
-        SceneManager.LoadScene(buildIndex, LoadSceneMode.Additive);
-    }
-
-    public void disableScene(int buildIndex)
-    {
-        Debug.Log("unloading scene at index: " + buildIndex);
-        SceneManager.UnloadSceneAsync(buildIndex);
-    }
-
-    IEnumerator loadSceneAsyncly(int buildIndex)
-    {
-        Debug.Log("loading scene at index: " + buildIndex);
-
-        AsyncOperation scene = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Single);
-        scene.allowSceneActivation = false;
-        sceneAsync = scene;
-
-        while (!scene.isDone)
-        {
-            Debug.Log("Loading scene " + scene.ToString() + " Progress: " + scene.progress);
-            yield return null;
-        }
-
-        //enableScene(buildIndex);
-    }
-
-    void enableScene(int buildIndex)
-    {
-        Debug.Log("enabling scene at: " + buildIndex);
-        //Activate the Scene
-        sceneAsync.allowSceneActivation = true;
-
-        Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(buildIndex);
-        if (sceneToLoad.IsValid())
-        {
-            Debug.Log("Scene is Valid; moving player");
-
-            StartCoroutine(loadSceneAsyncly(buildIndex));
-
-            SceneManager.MoveGameObjectToScene(player.gameObject, sceneToLoad);
-            SceneManager.SetActiveScene(sceneToLoad);
-        }
-    }
-
-    void disableOtherScenes()
-    {
-        Debug.Log("Disabling scenes");
-        for (int count = 0; count < (SceneManager.sceneCountInBuildSettings); count++)
-        {
-            if (SceneManager.GetSceneAt(count).isLoaded)
-            {
-                if (SceneManager.GetSceneAt(count) != SceneManager.GetActiveScene())
-                {
-                    SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(count));
-                }
-
-            }
-        }
-    }
-
 
     private void Update()
     {
-        //LoadAllScenes();
-
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            StartCoroutine(loadSceneAsyncly(1));
-            enableScene(1);
+            Scene newScene = SwitchScene(1);
 
+            CheckForPlayer(newScene);
+            
+
+            if (!phantomExistsInScene)
+            {
+                SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+                phantomExistsInScene = true;
+            }
+            else
+            {
+                Destroy(player.gameObject);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            StartCoroutine(loadSceneAsyncly(2));
-            enableScene(2);
+            Scene newScene = SwitchScene(2);
 
+            CheckForPlayer(newScene);
+
+            if (!phantomExistsInScene)
+            {
+                SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+                phantomExistsInScene = true;
+            }
+            else
+            {
+                Destroy(player.gameObject);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            Scene newScene = SwitchScene(3);
+            CheckForPlayer(newScene);
+
+            if (!phantomExistsInScene)
+            {
+                SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+                phantomExistsInScene = true;
+            }
+            else
+            {
+                Destroy(player.gameObject);
+            }
+            SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            Scene newScene = SwitchScene(4);
+            CheckForPlayer(newScene);
+
+            if (!phantomExistsInScene)
+            {
+                SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+                phantomExistsInScene = true;
+            }
+            else
+            {
+                Destroy(player.gameObject);
+            }
+            SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
+            Scene newScene = SwitchScene(5);
+            CheckForPlayer(newScene);
+
+            if (!phantomExistsInScene)
+            {
+                SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+                phantomExistsInScene = true;
+            }
+            else
+            {
+                Destroy(player.gameObject);
+            }
+            SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
+            Scene newScene = SwitchScene(6);
+            CheckForPlayer(newScene);
+
+            if (!phantomExistsInScene)
+            {
+                SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+                phantomExistsInScene = true;
+            }
+            else
+            {
+                Destroy(player.gameObject);
+            }
+            SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            Scene newScene = SwitchScene(7);
+            CheckForPlayer(newScene);
+
+            if (!phantomExistsInScene)
+            {
+                SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+                phantomExistsInScene = true;
+            }
+            else
+            {
+                Destroy(player.gameObject);
+            }
+            SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
+        }
+    }
+    public Scene SwitchScene(int sceneNum)
+    {
+        int currentScene = player.gameObject.scene.buildIndex;
+        Scene sceneLoaded = SceneManager.GetSceneByBuildIndex(0);
+        if (currentScene != sceneNum)
+        { 
+            SceneManager.LoadScene(sceneNum);
+            sceneLoaded = SceneManager.GetSceneByBuildIndex(sceneNum);
+        }
+        return sceneLoaded;
+    }
+
+    public void CheckForPlayer(Scene sceneToCheckIn)
+    {
+        GameObject[] rootObjs = sceneToCheckIn.GetRootGameObjects();
+        foreach (GameObject obj in rootObjs)
+        {
+            if (obj.name == "Phantom2.0")
+            {
+                phantomExistsInScene = true;
+                player = obj.gameObject.GetComponent<PhantomControls>();
+            }
+            else
+            {
+                phantomExistsInScene = false;
+            }
+        }
+
+        GameObject[] rootInDontDestroy = this.gameObject.scene.GetRootGameObjects();
+        foreach(GameObject obj in rootInDontDestroy)
+        {
+            if (obj.name == "Phantom2.0")
+            {
+                phantomExistsInScene = true;
+                player = obj.gameObject.GetComponent<PhantomControls>();
+            }
+            else
+            {
+                phantomExistsInScene = false;
+            }
         }
     }
 
-    public void SaveLevel()
+#region Save and Load functions original
+public void SaveLevel()
     {
         Debug.Log("Save and load Controller saving.");
 
@@ -274,6 +307,7 @@ public class SaveLoadController : MonoBehaviour
         //load in player data from the data given from the file
         SceneManager.LoadScene(SaveAndLoad.savedGames[0].sceneNum);
     }
+    #endregion
 
     public void SetPlayerPos(PhantomControls phantom, LevelData ldLoaded)
     {
@@ -305,7 +339,7 @@ public class SaveLoadController : MonoBehaviour
         //LoadAllScenes(SceneManager.sceneCountInBuildSettings);
 
         player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-        SceneManager.MoveGameObjectToScene(player.gameObject, SceneManager.GetActiveScene());
+        //SceneManager.MoveGameObjectToScene(player.gameObject, SceneManager.GetActiveScene());
         //Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(level);
         //loadScene(level);
         SetPlayerPos(player, ldLoaded);
