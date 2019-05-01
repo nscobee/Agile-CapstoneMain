@@ -50,7 +50,11 @@ public class ReaperCountdown : MonoBehaviour
 
         if (countDownTime >= timeTillReaperSpawn)
         {
-            SpawnReaper();
+            if (!reaperHasSpawned)
+            {
+                SpawnReaper();
+            }
+            
             reaperHasSpawned = true;
             countDownTime = 0;
         }

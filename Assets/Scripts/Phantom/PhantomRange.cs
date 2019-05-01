@@ -81,12 +81,17 @@ public class PhantomRange : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("something is hitting me (the phantom): " + other.transform.name);
+
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if(!GameObject.FindGameObjectWithTag("Possessed"))
         if (other.gameObject.tag == "mage" || other.gameObject.tag == "Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe")
         {
             inRange.Add(other.gameObject);
+        }
 
+        if(other.gameObject.name == "Reaper2.0" || other.gameObject.tag == "Reaper")
+        {
+            controller.Die();
         }
 
         if (other.tag == "Exit")
@@ -106,7 +111,6 @@ public class PhantomRange : MonoBehaviour
             SceneManager.LoadScene(buildIndex + 1);
             buildIndex++;
            //parent.transform.position = GameObject.FindGameObjectWithTag("EntryPoints").transform.position;
-            
         }
     }
 
