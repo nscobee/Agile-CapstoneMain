@@ -2,16 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class necromancerAI : MonoBehaviour
 {
     public GameObject player;
     public GameObject playerVassal;
+    public Camera mainCamera;
     public UIController UI;
 
     [Header("Health and Damage Stat Stuffs")]
     public float currentHealth;
     public float MAXHEALTH;
+    private float nextAttack = 0;
+    [Tooltip("How frequently attacks are fired off in seconds")]
+    public float rateOfAttack = 8;
+    [Header("Percentage chance of attacks firing off: 0 - lower bound is fireball attack, lower - upper is pillars of fire, upper - 100 is minion summon")]
+    public float lowerBound = 20;
+    public float upperBound = 60;
     //damage related stuffs goes here
 
     [Header("First Round of Summons")]
@@ -43,6 +51,18 @@ public class necromancerAI : MonoBehaviour
     [Header("Text Stuffs")]
     public GameObject TextPanel;
     public Text speechText;
+    [Tooltip("How long it takes for the text string to 'type' itself in seconds")]
+    public float timeLapse = 2;
+    private bool typing = false;
+    [Tooltip("Text that the necro says in his speech bubbles, set to whatever you want his first words to be:")]
+    public string text = "";
+    private float nextRead;
+    [Tooltip("how long (in seconds) we are forcing the player to read the dialogue")]
+    public float checkForNextRead = 4;
+    bool readPart1 = false;
+    bool readPart2 = false;
+    bool readPart3 = false;
+    bool readPart4 = false;
 
     [Header("Fireball attack vars")]
     public GameObject bullet;
@@ -60,6 +80,7 @@ public class necromancerAI : MonoBehaviour
     public float durationPillarsLastInSeconds;
 
     [Header("Various Summonable Minions")]
+    public Transform summonLocation;
     public GameObject undeadKnight;
     public GameObject deathMage;
     public GameObject darkHealer;
@@ -73,6 +94,7 @@ public class necromancerAI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         UI = this.gameObject.GetComponent<UIController>();
+        mainCamera = Camera.main;
 
     }
 
@@ -81,6 +103,37 @@ public class necromancerAI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F)) SingleFireballAttack(); //test only comment out when done testing: tests single fireball attack
         if (Input.GetKeyDown(KeyCode.P)) PillarsOfFireAttack(); //test only comment out when done testing: tests fire pillar Attack
+        
+        if(Input.anyKeyDown) //only way i could get the monologuing to work without breaking lots of other stuffs
+        {
+            if (!readPart1)
+            {
+                readPart1 = true;
+                nextRead = Time.time + checkForNextRead;
+                text = "You're.... pitifull new form cannot fool me, for I can see all...";
+                typing = false;
+            }
+            else if (!readPart2 && readPart1 && Time.time > nextRead)
+            {
+                readPart2 = true;
+                nextRead = Time.time + checkForNextRead;
+                text = "You seek vengeance.... Or are you fullfilling your duty as hero?...";
+                typing = false;
+            }
+            else if (!readPart3 && readPart2 && Time.time > nextRead)
+            {
+                readPart3 = true;
+                nextRead = Time.time + checkForNextRead;
+                text = "It matters not.... in the end.... we are destined to fight...";
+                typing = false;
+            }
+            else if (!readPart4 && readPart3 && Time.time > nextRead)
+            {
+                readPart4 = true;
+                nextRead = Time.time + checkForNextRead;
+                typing = false;
+            }
+        }
 
 
         if (player.transform.parent != null)
@@ -89,9 +142,24 @@ public class necromancerAI : MonoBehaviour
 
         currentHealth = UI.currentHealth;
 
-        if (canAttack)
+        if (canAttack && Time.time > nextAttack)
         {
-            //enter code for auto-Attacks here
+            float randNumber = Random.Range(0, 100); //attacks fire off randomly based on lower and upper bounds
+            if(randNumber < lowerBound)
+            {
+                SingleFireballAttack();
+                nextAttack = Time.time + rateOfAttack;
+            }
+            if(randNumber >=lowerBound && randNumber < upperBound)
+            {
+                PillarsOfFireAttack();
+                nextAttack = Time.time + rateOfAttack;
+            }
+            if(randNumber >= upperBound)
+            {
+                summonMinion();
+                nextAttack = Time.time + rateOfAttack;
+            }
         }
 
         if (!canTakeDamage) //is immortal until said otherwise
@@ -100,7 +168,7 @@ public class necromancerAI : MonoBehaviour
         }
 
 
-        if(!isDoneMonologuing && !isMonologuing) //if text isn't done cycling, and the monologue hasn't started, start monologuing
+        if(!isDoneMonologuing) //if text isn't done cycling, and the monologue hasn't started, start monologuing
         {
             Monologuing();
         }
@@ -125,14 +193,52 @@ public class necromancerAI : MonoBehaviour
             Instantiate(demonTwo, demonTwoLocation.position, Quaternion.identity, null);
             Instantiate(demonThree, demonThreeLocation.position, Quaternion.identity, null);
         }
+
+        if (currentHealth <= 0) Die();
+
     }
 
     private void Monologuing()
     {
+
+        mainCamera.GetComponent<cameraScript>().target = this.gameObject;
         isMonologuing = true;
         player.GetComponent<PhantomControls>().enabled = false;
         if (playerVassal) playerVassal.GetComponent<BasicMovement>().enabled = false;
         //insert code for the boss monologuing here
+        TextPanel.SetActive(true);
+        if(!typing)
+        StartCoroutine(BuildText());
+      
+        if (readPart1)
+        {
+            
+            if(!typing)
+            StartCoroutine(BuildText());
+
+        }
+        if (readPart2)
+        {
+            
+            if(!typing)
+            StartCoroutine(BuildText());
+
+        }
+        if (readPart3)
+        {
+            
+            if(!typing)
+            StartCoroutine(BuildText());
+
+        }
+        if (readPart4)
+        {
+            isMonologuing = false;
+            isDoneMonologuing = true;
+            mainCamera.GetComponent<cameraScript>().target = player; //set camera back to player, probably should make it pan over time but thats for later
+        }
+
+
     }
 
     private void SingleFireballAttack() //throws a single fireball at the player
@@ -208,11 +314,49 @@ public class necromancerAI : MonoBehaviour
 
     private void summonMinion() //Summons random minion
     {
+        int randNum = Random.Range(0, 4);
+        switch (randNum)
+        {
+            case 0:
+                Instantiate(undeadKnight, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            case 1:
+                Instantiate(deathMage, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            case 2:
+                Instantiate(darkHealer, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            case 3:
+                Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            default:
+                Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
 
+        }
     }
-    
+
+    private IEnumerator BuildText()
+    {
+        speechText.text = "";
+        typing = true;
+        for (int i = 0; i < text.Length; i++)
+        {
+            speechText.text = string.Concat(speechText.text, text[i]);
+            //Wait a certain amount of time, then continue with the for loop
+            yield return new WaitForSeconds(timeLapse);
+        }
+        
+        
+    }
+
     private void Die()
     {
         //do the die
+        Destroy(this.gameObject);
+        //if time permits, input closing dialogue here before transitioning to victory scene
+
+        //input scene move to victory scene
+        
     }
 }
