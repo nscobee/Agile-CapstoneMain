@@ -64,7 +64,7 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-                Destroy(player.gameObject);
+               // Destroy(player.gameObject);
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -79,7 +79,7 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-                Destroy(player.gameObject);
+               // Destroy(player.gameObject);
             }
             SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
@@ -95,7 +95,7 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-                Destroy(player.gameObject);
+                //Destroy(player.gameObject);
             }
             SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
@@ -111,7 +111,7 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-                Destroy(player.gameObject);
+                //Destroy(player.gameObject);
             }
             SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
@@ -127,7 +127,7 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-                Destroy(player.gameObject);
+               // Destroy(player.gameObject);
             }
             SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
