@@ -8,11 +8,13 @@ public class pauseScript : MonoBehaviour
 {
     private bool paused = false;
     public Canvas pauseMenu;
+    public GameObject EventSystem; 
 
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(EventSystem);
         paused = false;
         pauseMenu.enabled = paused; 
     }
@@ -52,10 +54,16 @@ public class pauseScript : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Possessed") != null)
         {
             Destroy(GameObject.FindGameObjectWithTag("Possessed"));
+            Destroy(this.gameObject);
+            Destroy(EventSystem);
 
         }
         else if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
             Destroy(GameObject.FindGameObjectWithTag("Player"));
+            Destroy(this.gameObject);
+            Destroy(EventSystem);
+        }
     }
     
     public void OnButtonPressQuit()
