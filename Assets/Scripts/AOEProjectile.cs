@@ -26,6 +26,10 @@ public class AOEProjectile : MonoBehaviour
             damage = this.transform.parent.gameObject.GetComponent<healerAI>().fireDamageAmount;
             damage = damage * Mathf.Pow(2.78f, 0.114f * this.transform.parent.gameObject.GetComponent<BasicAI>().currentLevel);
         }
+        if (this.transform.parent.gameObject.GetComponent<demonAI>())
+        {
+            damage = this.transform.parent.gameObject.GetComponent<demonAI>().AOEDamageAmount;
+        }
         ObjectThatSpawnedMe = this.transform.parent.gameObject;
         this.transform.parent = null;
     }

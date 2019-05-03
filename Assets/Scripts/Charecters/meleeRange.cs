@@ -28,7 +28,10 @@ public class meleeRange : MonoBehaviour {
            // if (isColliding) return;
             //isColliding = true;
             print("Melee Hit on: " + other.gameObject.name);
-            other.gameObject.GetComponent<UIController>().takeDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
+            if(meleeChar.GetComponent<MeleeAI>() != null)
+                other.gameObject.GetComponent<UIController>().takeDamage(meleeChar.GetComponent<MeleeAI>().activeDamage);
+            else if(meleeChar.GetComponent<demonAI>() != null)
+                other.gameObject.GetComponent<UIController>().takeDamage(meleeChar.GetComponent<demonAI>().activeDamage);
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             
 

@@ -14,8 +14,8 @@ public class BasicAI : MonoBehaviour
     public int currentLevel = 1; 
     
     private Transform currentTarget;
-    private float nextRound = 0.0f;
-    public float fireRate = 7.0f;
+  //  private float nextRound = 0.0f;
+  //  public float fireRate = 7.0f;
 
     public static float speed = 5f;
     public static float stopDistance = 1f;
@@ -36,8 +36,8 @@ public class BasicAI : MonoBehaviour
     public PossessIcon PossessionIcon;
 
     
-    public GameObject fighterAbilities;
-    public GameObject mageAbilities;
+   // public GameObject fighterAbilities;
+  //  public GameObject mageAbilities;
 
 
     public bool InRange = false;
@@ -47,13 +47,17 @@ public class BasicAI : MonoBehaviour
     public float AttackCooldown = 10f;
     private bool canAttack = false;
     public bool canSpawn = true;
-
+    public float randNum;
+    [Tooltip("Percentage of how often the primary is used, out of 100")]
+    public float frequencyOfPrimary = 80f;
 
 
     public float levelMultiplierHP;
     public float levelMultiplierAP;
 
     public string startingTag;
+    [Tooltip("If starting tag is noPossess, input the correct tag from one of the following: Melee, healer, mage, dog, demon")]
+    public string tagOverride;
 
     public bool isRetaliating;
     public bool movingToPlayer = false;
@@ -82,6 +86,7 @@ public class BasicAI : MonoBehaviour
 
         mainCamera = Camera.main;
         startingTag = this.gameObject.tag;
+        if (startingTag == "NoPossess") startingTag = tagOverride;
         phantomControls = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
         // if you want points to be gathered it does that
         if (gatherPoints)
@@ -104,6 +109,8 @@ public class BasicAI : MonoBehaviour
 
     private void Update()
     {
+        randNum = Random.Range(0f, 100f);
+
         if (isPursuing)
             ChaseThePlayer();
        // if (!phantomControls.isPossessing)
@@ -326,8 +333,9 @@ public class BasicAI : MonoBehaviour
             movingToPlayer = false;
             playerInRangeToAttack = true;
             //float randomNum = Random.Range(0.0f, 100.0f);
-           // print(randomNum);
-            if(canAttack && Random.Range(0.0f, 100.0f) <= 80f )
+            // print(randomNum);
+           
+            if(canAttack && randNum <= frequencyOfPrimary )
             {
                 print("Weak attack!");              
                 primaryAttack();
@@ -343,6 +351,16 @@ public class BasicAI : MonoBehaviour
         }
         else if(distanceBetweenPlayer > distanceToStartAttackingPlayer && distanceBetweenPlayer <= distanceToForgetPlayer)
         {
+            if(startingTag == "demon")
+            {
+                if(canAttack && randNum > frequencyOfPrimary)
+                {
+                    print("strong attack!");
+                    secondaryAttack();
+                    canAttack = false;
+                }
+            }
+
             print("I am not in range to attack the player but I can see him");
             movingToPlayer = true;
             playerInRangeToAttack = false;        
@@ -359,35 +377,55 @@ public class BasicAI : MonoBehaviour
 
     public void primaryAttack()
     {
-        if (this.gameObject.tag == "Melee")
+        if (startingTag == "Melee")
         {
             this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().weakAttackDamage);
         }
 
-        if (this.gameObject.tag == "mage")
+        if (startingTag == "mage")
         {
             this.gameObject.GetComponent<MageAI>().FireballAttack(playerObjTransform);
         }
 
-        if (this.gameObject.tag == "healer")
+        if (startingTag == "healer")
         {
             this.gameObject.GetComponent<healerAI>().FireAttack(playerObjTransform);
+        }
+
+        if (startingTag == "dog")
+        {
+            this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().weakAttackDamage);
+        }
+
+        if (startingTag == "demon")
+        {
+            print("demon using primary!");
+            this.gameObject.GetComponent<demonAI>().meleeAttack(this.gameObject.GetComponent<demonAI>().weakAttackDamage);
         }
     }
 
     public void secondaryAttack()
     {
-        if (this.gameObject.tag == "Melee")
+        if (startingTag == "Melee")
         {
             this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().strongAttackDamage);
         }
-        if (this.gameObject.tag == "mage")
+        if (startingTag == "mage")
         {
             this.gameObject.GetComponent<MageAI>().AOEAttack(playerObjTransform);
         }
-        if (this.gameObject.tag == "healer")
+        if (startingTag == "healer")
         {
             this.gameObject.GetComponent<healerAI>().Heal();
+        }
+        if (startingTag == "dog")
+        {
+            this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().weakAttackDamage);
+        }
+        if (startingTag == "demon")
+        {
+            print("demon using secondary!");
+            this.gameObject.GetComponent<demonAI>().AOEAttack(playerObjTransform);
         }
     }
 

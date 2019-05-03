@@ -172,7 +172,7 @@ public class necromancerAI : MonoBehaviour
         {
             Monologuing();
         }
-        else if(isDoneMonologuing) //if hes done talking, do stuff (like summon the first wave of monsters)
+        else if(isDoneMonologuing && !firstWaveSummoned) //if hes done talking, do stuff (like summon the first wave of monsters)
         {
             player.GetComponent<PhantomControls>().enabled = true;
             if(playerVassal) playerVassal.GetComponent<BasicMovement>().enabled = true;
@@ -186,7 +186,7 @@ public class necromancerAI : MonoBehaviour
             
         }
 
-        if(firstWaveSummoned && firstWaveSummonsKilled == 3) //if the first wave minions are murdered in not so cold blood, summon wave 2
+        if(firstWaveSummoned && firstWaveSummonsKilled == 3 && !secondWaveSummoned) //if the first wave minions are murdered in not so cold blood, summon wave 2
         {
             secondWaveSummoned = true;
             Instantiate(demonOne, demonOneLocation.position, Quaternion.identity, null);

@@ -169,6 +169,13 @@ public class UIController : MonoBehaviour
     {
         if (this.gameObject.tag != "Possessed" && this.gameObject.tag != "Necromancer")
         {
+            if(GameObject.FindGameObjectWithTag("Necromancer"))
+            {
+                if (!GameObject.FindGameObjectWithTag("Necromancer").GetComponent<necromancerAI>().secondWaveSummoned)
+                    GameObject.FindGameObjectWithTag("Necromancer").GetComponent<necromancerAI>().firstWaveSummonsKilled++;
+                else GameObject.FindGameObjectWithTag("Necromancer").GetComponent<necromancerAI>().secondWaveSummonsKilled++;
+            }
+
             if (Random.Range(0, 100) < dropChance)
             {
                 GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);

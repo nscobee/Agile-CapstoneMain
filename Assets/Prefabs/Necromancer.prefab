@@ -1,0 +1,225 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8912490813019747190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8912490813019747193}
+  m_Layer: 0
+  m_Name: fireBallSpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8912490813019747193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490813019747190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.58, y: 1.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8912490814479371870}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8912490814479371869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8912490814479371870}
+  - component: {fileID: 8912490814479371871}
+  - component: {fileID: 8912490814479371868}
+  - component: {fileID: 8912490814479371809}
+  m_Layer: 0
+  m_Name: Necromancer
+  m_TagString: Necromancer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8912490814479371870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.59, y: -1.45, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8912490813019747193}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8912490814479371871
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b410400a5201b72439159339334a4871, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 8.6, y: 7.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &8912490814479371868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea040f3743174074f85ab1e4bf150316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerVassal: {fileID: 0}
+  mainCamera: {fileID: 0}
+  UI: {fileID: 0}
+  currentHealth: 0
+  MAXHEALTH: 500
+  rateOfAttack: 8
+  lowerBound: 20
+  upperBound: 60
+  summonsMage: {fileID: 0}
+  summonsMageLocation: {fileID: 0}
+  summonsMelee: {fileID: 0}
+  summonsMeleeLocation: {fileID: 0}
+  summonsHealer: {fileID: 0}
+  summonsHealerLocation: {fileID: 0}
+  demonOne: {fileID: 0}
+  demonOneLocation: {fileID: 0}
+  demonTwo: {fileID: 0}
+  demonTwoLocation: {fileID: 0}
+  demonThree: {fileID: 0}
+  demonThreeLocation: {fileID: 0}
+  canTakeDamage: 0
+  canAttack: 0
+  firstWaveSummoned: 0
+  firstWaveSummonsKilled: 0
+  secondWaveSummoned: 0
+  secondWaveSummonsKilled: 0
+  isDoneMonologuing: 0
+  isMonologuing: 0
+  TextPanel: {fileID: 0}
+  speechText: {fileID: 0}
+  timeLapse: 0.04
+  text: Welcome back.... it has been a while, Hero....
+  checkForNextRead: 3
+  bullet: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc, type: 3}
+  bulletSpawn: {fileID: 8912490813019747193}
+  fireballDamageAmount: 20
+  pillarLocationGroup1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pillarLocationGroup2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pillarLocationGroup3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pillarLocationGroup4:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pillarOfFire: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc,
+    type: 3}
+  durationPillarsLastInSeconds: 5
+  summonLocation: {fileID: 0}
+  undeadKnight: {fileID: 0}
+  deathMage: {fileID: 0}
+  darkHealer: {fileID: 0}
+  demonSummon: {fileID: 0}
+--- !u!114 &8912490814479371809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee4789853cc1e74db76f089d01ed360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phantomController: {fileID: 0}
+  uiObj: {fileID: 0}
+  manaSlider: {fileID: 0}
+  healthSlider: {fileID: 0}
+  primaryCooldown: {fileID: 0}
+  secondaryCooldown: {fileID: 0}
+  AIHealthSlider: {fileID: 0}
+  currentHealth: 100
+  currentMana: 100
+  MAXHP: 100
+  MAXMANA: 100
+  percentOfHealthToPossess: 20
+  rateOfManaRegen: 0.5
+  healthDrop: {fileID: 0}
+  dropChance: 20
+  primaryFireRate: 2
+  nextPrimaryFire: 0
+  secondaryFireRate: 5
+  nextSecondaryFire: 0
+  maxXPGained: 50
+  inRange: 0
+  AI: {fileID: 0}
