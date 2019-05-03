@@ -84,15 +84,11 @@ public class PhantomControls : MonoBehaviour
         reaper.outOfBody = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Reaper")
-            Die();
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.gameObject.tag == "Reaper")
+            Die();
     }
 
 }

@@ -73,3 +73,6 @@ TagManager:
   - name: Decor
     uniqueID: 2158039383
     locked: 0
+  - name: Reaper
+    uniqueID: 2874890103
+    locked: 0

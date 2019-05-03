@@ -18,6 +18,8 @@ public class meleeRange : MonoBehaviour {
     void Update()
     {
         //isColliding = false;
+        if (Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.Mouse1))
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

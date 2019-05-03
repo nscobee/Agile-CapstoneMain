@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ReaperCountdown : MonoBehaviour
 {
     public bool outOfBody;
     public bool reaperHasSpawned = false;
+    public bool allowedToSpawn = false;
 
     public GameObject phantom;
     public GameObject reaperPrefab;
@@ -15,6 +17,7 @@ public class ReaperCountdown : MonoBehaviour
 
     public float countDownTime = 0;
     public float timeTillReaperSpawn;
+    private float reaperSpawnsAfterInSecs;
     public float reaperSpawnMultiplier = 1;
 
     public float despawnTime = 0;
@@ -32,7 +35,7 @@ public class ReaperCountdown : MonoBehaviour
     {
         if (phantom.GetComponent<PhantomControls>().isPossessing) outOfBody = false;
         else outOfBody = true;
-
+        reaperSpawnsAfterInSecs = timeTillReaperSpawn;
     }
 
 
@@ -77,6 +80,12 @@ public class ReaperCountdown : MonoBehaviour
             countdownTimerReset = 0;
         }
 
+        if ((SceneManager.GetSceneByBuildIndex(1) == SceneManager.GetActiveScene()) && !allowedToSpawn)
+        {
+            timeTillReaperSpawn = 90000;
+        }
+        else timeTillReaperSpawn = reaperSpawnsAfterInSecs;
+
     }
 
 
@@ -87,6 +96,6 @@ public class ReaperCountdown : MonoBehaviour
 
     private void SpawnReaper()
     {
-        Instantiate(currentReaper, reaperSpawnPoint);
+        Instantiate(currentReaper, reaperSpawnPoint.position, Quaternion.identity, null);
     }
 }

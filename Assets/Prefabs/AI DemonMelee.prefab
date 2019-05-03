@@ -64,7 +64,8 @@ MonoBehaviour:
   - {fileID: 0}
   isPatrolling: 1
   mainCamera: {fileID: 0}
-  fireRate: 7
+  NPC_ID: 0
+  currentLevel: 1
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 3
   distanceToForgetPlayer: 10
@@ -74,16 +75,17 @@ MonoBehaviour:
   homeSpawner: {fileID: 0}
   UIControls: {fileID: 0}
   PossessionIcon: {fileID: 0}
-  fighterAbilities: {fileID: 0}
-  mageAbilities: {fileID: 0}
   InRange: 0
   playerInRangeToAttack: 0
   nextAIAttack: 0
   AttackCooldown: 10
   canSpawn: 1
+  randNum: 0
+  frequencyOfPrimary: 80
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
+  tagOverride: 
   isRetaliating: 0
   movingToPlayer: 0
   isPursuing: 0
@@ -132,7 +134,8 @@ MonoBehaviour:
   patrolPoints: []
   isPatrolling: 1
   mainCamera: {fileID: 0}
-  fireRate: 7
+  NPC_ID: 0
+  currentLevel: 1
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
@@ -142,16 +145,17 @@ MonoBehaviour:
   homeSpawner: {fileID: 0}
   UIControls: {fileID: 0}
   PossessionIcon: {fileID: 0}
-  fighterAbilities: {fileID: 0}
-  mageAbilities: {fileID: 0}
   InRange: 0
   playerInRangeToAttack: 0
   nextAIAttack: 0
   AttackCooldown: 10
   canSpawn: 1
+  randNum: 0
+  frequencyOfPrimary: 80
   levelMultiplierHP: 0
   levelMultiplierAP: 0
   startingTag: 
+  tagOverride: 
   isRetaliating: 0
   movingToPlayer: 0
   isPursuing: 0
@@ -174,7 +178,6 @@ MonoBehaviour:
   basicAI: {fileID: 0}
   meleeHitbox: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
     type: 3}
-  damageMultiplier: 0
   fighterHp: 90
   fighterAp: 40
   playerInRange: 0
@@ -260,8 +263,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1420077193
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fb27ef93fd00aa249a9af8fa4e1c4201, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -306,6 +309,7 @@ MonoBehaviour:
   nextPrimaryFire: 0
   secondaryFireRate: 5
   nextSecondaryFire: 0
+  maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
 --- !u!1 &1434214220861312
@@ -530,12 +534,42 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2323146473310487443, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323146473310487443, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355663675918538802, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355663675918538802, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 588030887536636060, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 588030887536636060, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6629359699074027383, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6629359699074027383, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -544,36 +578,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.095012665
-      objectReference: {fileID: 0}
-    - target: {fileID: 6629359699074027383, guid: a49206466ebf0294dabb9cfe4474474f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6629359699074027383, guid: a49206466ebf0294dabb9cfe4474474f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2323146473310487443, guid: a49206466ebf0294dabb9cfe4474474f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2323146473310487443, guid: a49206466ebf0294dabb9cfe4474474f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3355663675918538802, guid: a49206466ebf0294dabb9cfe4474474f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3355663675918538802, guid: a49206466ebf0294dabb9cfe4474474f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7520132072939333583, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}
@@ -689,11 +693,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
-    - target: {fileID: 2200036986903543887, guid: 158130e608fe10d4e94ad3d181598691,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBarAI
-      objectReference: {fileID: 0}
     - target: {fileID: 3370041311495078621, guid: 158130e608fe10d4e94ad3d181598691,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -749,6 +748,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2200036986903543887, guid: 158130e608fe10d4e94ad3d181598691,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBarAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 169375560544527535, guid: 158130e608fe10d4e94ad3d181598691,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 169375560544527535, guid: 158130e608fe10d4e94ad3d181598691,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4857935741288818637, guid: 158130e608fe10d4e94ad3d181598691,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -763,16 +777,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.000038146973
-      objectReference: {fileID: 0}
-    - target: {fileID: 169375560544527535, guid: 158130e608fe10d4e94ad3d181598691,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 169375560544527535, guid: 158130e608fe10d4e94ad3d181598691,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158130e608fe10d4e94ad3d181598691, type: 3}
@@ -861,6 +865,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PossessionIconRadius
       objectReference: {fileID: 0}
+    - target: {fileID: 367999558400107911, guid: eacad4362b5f63f49a351d07940cf2fa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 367999558400107911, guid: eacad4362b5f63f49a351d07940cf2fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 8444330389631847927, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}
       propertyPath: yesPossess
@@ -882,16 +896,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 367999558400107911, guid: eacad4362b5f63f49a351d07940cf2fa,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 367999558400107911, guid: eacad4362b5f63f49a351d07940cf2fa,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacad4362b5f63f49a351d07940cf2fa, type: 3}
