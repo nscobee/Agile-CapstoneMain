@@ -13,6 +13,6 @@ public class DeathScreenController : MonoBehaviour
 
     public void _GoToMainMenu()
     {
-        SaveLoadController.control.SwitchScene(0);
+        SceneManager.LoadScene(0);
     }
 }

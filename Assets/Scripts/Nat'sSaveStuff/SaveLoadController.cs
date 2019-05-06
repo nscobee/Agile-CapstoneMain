@@ -39,7 +39,6 @@ public class SaveLoadController : MonoBehaviour
             Scene newScene = SwitchScene(1);
 
             CheckForPlayer(newScene);
-            
             if (!phantomExistsInScene)
             {
                 SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
