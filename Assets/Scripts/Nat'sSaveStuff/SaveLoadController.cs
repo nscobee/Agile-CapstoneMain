@@ -9,9 +9,9 @@ public class SaveLoadController : MonoBehaviour
 
     private LevelData levelData = new LevelData();
     public static LevelData ldLoaded = new LevelData();
-    private PhantomControls player;
+    public PhantomControls player;
 
-    private bool phantomExistsInScene = false;
+    public bool phantomExistsInScene = false;
 
     //note: this is now part of uiControl - use that!
     private UIController uiControl;
@@ -40,7 +40,6 @@ public class SaveLoadController : MonoBehaviour
 
             CheckForPlayer(newScene);
             
-
             if (!phantomExistsInScene)
             {
                 SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
@@ -64,7 +63,7 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-               // Destroy(player.gameObject);
+              // Destroy(player.gameObject);
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -79,7 +78,7 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-               // Destroy(player.gameObject);
+               //Destroy(player.gameObject);
             }
             SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
@@ -143,15 +142,17 @@ public class SaveLoadController : MonoBehaviour
             }
             else
             {
-                Destroy(player.gameObject);
+                //Destroy(player.gameObject);
             }
             SceneManager.MoveGameObjectToScene(player.gameObject, newScene);
         }
     }
     public Scene SwitchScene(int sceneNum)
     {
+        SceneManager.MoveGameObjectToScene(player.gameObject, SceneManager.GetActiveScene());
+
         int currentScene = player.gameObject.scene.buildIndex;
-        Scene sceneLoaded = SceneManager.GetSceneByBuildIndex(0);
+        Scene sceneLoaded = SceneManager.GetSceneByBuildIndex(currentScene);
         if (currentScene != sceneNum)
         { 
             SceneManager.LoadScene(sceneNum);
@@ -306,6 +307,16 @@ public void SaveLevel()
 
         //load in player data from the data given from the file
         SceneManager.LoadScene(SaveAndLoad.savedGames[0].sceneNum);
+        Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(SaveAndLoad.savedGames[0].sceneNum);
+        CheckForPlayer(sceneToLoad);
+        if (!phantomExistsInScene)
+        {
+            SceneManager.MoveGameObjectToScene(player.gameObject, sceneToLoad);
+        }
+        else
+        {
+            //Destroy(player.gameObject);
+        }
     }
     #endregion
 
@@ -324,7 +335,6 @@ public void SaveLevel()
             }
             levelEntry = entryPoints[0].transform.position;
             phantom.transform.position = levelEntry;
-            //Vector3 newPlayerPos = GameObject.Find("EntryPoint").transform.position;
         }
         else
         {
@@ -336,12 +346,9 @@ public void SaveLevel()
 
     private void OnLevelWasLoaded(int level)
     {
-        //LoadAllScenes(SceneManager.sceneCountInBuildSettings);
-
         player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-        //SceneManager.MoveGameObjectToScene(player.gameObject, SceneManager.GetActiveScene());
-        //Scene sceneToLoad = SceneManager.GetSceneByBuildIndex(level);
-        //loadScene(level);
+
+        
         SetPlayerPos(player, ldLoaded);
     }
 }
