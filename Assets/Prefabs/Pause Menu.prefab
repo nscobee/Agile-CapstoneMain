@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 7813833632512895480}
+  EventSystem: {fileID: 0}
 --- !u!1 &7813833632676090161
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +393,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7e15c7c9e1dc3e845a74fdf391ba2db6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c3192f9631d9ce4b8b464e8f312767b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

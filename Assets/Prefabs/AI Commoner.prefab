@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 61904092528300818}
   - component: {fileID: 212723535536114482}
   - component: {fileID: 1275089142}
+  - component: {fileID: 8872486976257498616}
   m_Layer: 10
   m_Name: AI Commoner
   m_TagString: Commoner
@@ -312,6 +313,25 @@ MonoBehaviour:
   maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
+--- !u!95 &8872486976257498616
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326686080439248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81e0deee55b46bc4684ebea96fe75287, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1434214220861312
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.095012665
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348228075240386091, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.40999985
       objectReference: {fileID: 0}
     - target: {fileID: 7520132072939333583, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}

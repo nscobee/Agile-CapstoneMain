@@ -1,7 +1,12 @@
 fileFormatVersion: 2
-guid: 98c11181cb3262043b54254f0f769d17
+guid: 202a5513f430ad540b259aed5912988e
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BasicMageLightAttackAnim_0
+    21300002: BasicMageLightAttackAnim_1
+    21300004: BasicMageLightAttackAnim_2
+    21300006: BasicMageLightAttackAnim_3
+    21300008: BasicMageLightAttackAnim_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +45,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -137,11 +142,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BasicMageLightAttackAnim_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 360
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f98324717d8e140b60ca7796b200d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicMageLightAttackAnim_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 410
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f777e24c52b4ea641b6952cba63dc302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicMageLightAttackAnim_3
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 499
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c431684f9bab9141abf4ac7ca0a7f40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicMageLightAttackAnim_4
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 0
+        width: 410
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8044465ffe6f89341b24990cb7f4d007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e10a519ec1beb9744beb383acede8b9e
+    spriteID: d2327a29cd8b3d54c8c6c856e0d9588b
     vertices: []
     indices: 
     edges: []

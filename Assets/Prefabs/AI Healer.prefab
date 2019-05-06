@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 212653420388250118}
   - component: {fileID: 58396031352806268}
   - component: {fileID: 5483139234320685754}
+  - component: {fileID: 4328672844842575621}
   m_Layer: 10
   m_Name: AI Healer
   m_TagString: healer
@@ -332,6 +333,25 @@ MonoBehaviour:
   maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
+--- !u!95 &4328672844842575621
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357274984528016}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 211b533460d783c4db30750c10a1e3f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1589785090301810
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,10 +643,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4437039682591644}
     m_Modifications:
-    - target: {fileID: 1925990525419256, guid: 2c12ea9c579065c4bad43193e5b50614, type: 3}
-      propertyPath: m_Name
-      value: HealerHealthAndAbilites
-      objectReference: {fileID: 0}
     - target: {fileID: 224445908275703820, guid: 2c12ea9c579065c4bad43193e5b50614,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -731,6 +747,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925990525419256, guid: 2c12ea9c579065c4bad43193e5b50614, type: 3}
+      propertyPath: m_Name
+      value: HealerHealthAndAbilites
       objectReference: {fileID: 0}
     - target: {fileID: 223492111526654574, guid: 2c12ea9c579065c4bad43193e5b50614,
         type: 3}

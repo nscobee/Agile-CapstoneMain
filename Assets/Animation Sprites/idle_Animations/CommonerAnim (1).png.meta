@@ -1,7 +1,12 @@
 fileFormatVersion: 2
-guid: 98c11181cb3262043b54254f0f769d17
+guid: ce8dc09a07160cc4499338f580fd1d11
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CommonerAnim (1)_0
+    21300002: CommonerAnim (1)_1
+    21300004: CommonerAnim (1)_2
+    21300006: CommonerAnim (1)_3
+    21300008: CommonerAnim (1)_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +45,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -137,11 +142,111 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CommonerAnim (1)_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 180
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3996f18f5916275438e05753a6fba1a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommonerAnim (1)_1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 180
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc485aad1e3f2246a407663fff09b54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommonerAnim (1)_2
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 180
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cbc23e5cbef3a8428069f80eb6aa1e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommonerAnim (1)_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 180
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fc84507d6026940a297730ffc78909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommonerAnim (1)_4
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 0
+        width: 180
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb84fc2495350c41bfbca28977017cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e10a519ec1beb9744beb383acede8b9e
+    spriteID: fc55d77eef274474986dfe9fe8259805
     vertices: []
     indices: 
     edges: []

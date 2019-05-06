@@ -28,6 +28,7 @@ public class MageAI : BasicAI
 
     public BasicAI basicAI;
     public UIController UI;
+    public Animator anim;
 
     
 
@@ -44,6 +45,7 @@ public class MageAI : BasicAI
         basicAI = this.gameObject.GetComponent<BasicAI>();
        // basicAI.setStats(mageHp, mageAp);
         UI = gameObject.GetComponent<UIController>();
+        anim = this.gameObject.GetComponent<Animator>();
 
     }
 
@@ -119,8 +121,8 @@ public class MageAI : BasicAI
     }
 
     public void FireballAttack()
-    { 
-        
+    {
+        anim.SetTrigger("IsPrimaryAttacking");
         fireballNextRound = Time.time + fireballFireRate;
 
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -140,8 +142,10 @@ public class MageAI : BasicAI
 
     public void FireballAttack(Transform playerTransform)
     {
+        
         if (this.gameObject.GetComponent<BasicAI>().canSpawn)
         {
+            anim.SetTrigger("IsPrimaryAttacking");
             this.gameObject.GetComponent<BasicAI>().canSpawn = false;
             fireballNextRound = Time.time + fireballFireRate;
 

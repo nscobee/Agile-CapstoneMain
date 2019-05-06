@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 61904092528300818}
   - component: {fileID: 212723535536114482}
   - component: {fileID: 1275089142}
+  - component: {fileID: 4568833679801571678}
   m_Layer: 10
   m_Name: AI Gilded Melee
   m_TagString: Melee
@@ -311,6 +312,25 @@ MonoBehaviour:
   maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
+--- !u!95 &4568833679801571678
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326686080439248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d4b84d0d3420a04ba3437eb1ce64b93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &865363641105239870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,6 +413,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
+    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
+      propertyPath: m_Name
+      value: SwordHitbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9299998
@@ -441,23 +469,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
-      propertyPath: m_Name
-      value: SwordHitbox
-      objectReference: {fileID: 0}
-    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 61200210235404254, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114037220401910388, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61200210235404254, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}

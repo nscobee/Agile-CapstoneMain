@@ -1,7 +1,12 @@
 fileFormatVersion: 2
-guid: 98c11181cb3262043b54254f0f769d17
+guid: 29dfe37e258401a4a9a9a7f3d3069607
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: AgileKnightLightAttack_0
+    21300002: AgileKnightLightAttack_1
+    21300004: AgileKnightLightAttack_2
+    21300006: AgileKnightLightAttack_3
+    21300008: AgileKnightLightAttack_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +45,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -137,11 +142,111 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AgileKnightLightAttack_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 489
+        width: 482
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3154731a6944f488560efbb0df3e6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgileKnightLightAttack_1
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 479
+        width: 482
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fefd56f14b562641b6a7567a5de55f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgileKnightLightAttack_2
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 479
+        width: 472
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795d4375205b5f8449cf563c34ffd06e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgileKnightLightAttack_3
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 479
+        width: 422
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5ecafe87e0d7b4aab6eccf1ae1f723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgileKnightLightAttack_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 19
+        width: 592
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bea3dcb55c911446a7815f2b32387ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e10a519ec1beb9744beb383acede8b9e
+    spriteID: 5132ecc9919d0ad49bdc04c4084d1f2b
     vertices: []
     indices: 
     edges: []

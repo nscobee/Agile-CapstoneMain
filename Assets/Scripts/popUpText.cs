@@ -27,6 +27,8 @@ public class popUpText : MonoBehaviour
     {
         if (this.transform.parent.gameObject.tag == "Possessed")
             Destroy(this);
+        if (this.transform.parent.gameObject.GetComponent<BasicAI>().isRetaliating)
+            popUpMessagePanel.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

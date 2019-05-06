@@ -19,6 +19,7 @@ public class MeleeAI : BasicAI {
     public BasicAI basicAI;
     private UIController UI;
     public GameObject meleeHitbox;
+    public Animator anim;
    // public Transform hitboxOrigin;
 
 
@@ -46,6 +47,7 @@ public class MeleeAI : BasicAI {
         //basicAI.setStats(fighterHp, fighterAp);
         meleeHitbox = this.gameObject.transform.GetChild(0).gameObject;
         meleeHitbox.GetComponent<BoxCollider2D>().enabled = false;
+        anim = this.gameObject.GetComponent<Animator>();
 
     }
 
@@ -79,7 +81,7 @@ public class MeleeAI : BasicAI {
 
     public void meleeAttack(float damage)
     {
-        
+        anim.SetTrigger("IsAttacking");
         isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
@@ -90,7 +92,8 @@ public class MeleeAI : BasicAI {
     }
     public void meleeAttack(float damage, float manaLoss)
     {
-        
+
+        anim.SetTrigger("IsAttacking"); //replace with diff trigger for strong melee attk
         isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage * Mathf.Pow(2.78f, 0.114f * basicAI.currentLevel);
