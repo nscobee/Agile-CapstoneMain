@@ -29,6 +29,7 @@ public class MageAI : BasicAI
     public BasicAI basicAI;
     public UIController UI;
     public Animator anim;
+    
 
     
 
@@ -76,6 +77,7 @@ public class MageAI : BasicAI
             }
         }
 
+         
 
     }
 

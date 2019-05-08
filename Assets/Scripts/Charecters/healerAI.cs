@@ -14,7 +14,7 @@ public class healerAI : BasicAI {
 
 
     public BasicAI basicAI;
-   
+    public Animator anim;
 
     public float healerHp = 45f;
     public float healerAp = 75f;
@@ -45,6 +45,7 @@ public class healerAI : BasicAI {
     void Start () {
         basicAI = this.gameObject.GetComponent<BasicAI>();
         UIControls = this.gameObject.GetComponent<UIController>();
+        anim = this.gameObject.GetComponent<Animator>();
        // currentPlayerLevel = phantomControls.currentLevel;
         //healMultiplier *= currentPlayerLevel;
         //basicAI.setStats(healerHp, healerAp);

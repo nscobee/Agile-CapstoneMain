@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour
         {
             damage = this.transform.parent.gameObject.GetComponent<MageAI>().fireballDamageAmount;
             damage = damage * Mathf.Pow(2.78f, 0.114f * this.transform.parent.gameObject.GetComponent<BasicAI>().currentLevel);
+
         }
         if (ObjectThatSpawnedMe.GetComponent<BasicAI>().startingTag == "healer")
         {
@@ -29,6 +30,7 @@ public class Projectile : MonoBehaviour
         }
         
         this.transform.parent = null;
+        
     }
 
     // Update is called once per frame

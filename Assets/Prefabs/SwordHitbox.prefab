@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4466684196394352}
   - component: {fileID: 61200210235404254}
   - component: {fileID: 114037220401910388}
+  - component: {fileID: 2392376518069685892}
   m_Layer: 10
   m_Name: SwordHitbox
   m_TagString: Untagged
@@ -71,3 +72,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeChar: {fileID: 1326686080439248, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+--- !u!95 &2392376518069685892
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272127003117332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e06caa3cce88a848a72ccc8bbe8dd75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -661,6 +661,26 @@ PrefabInstance:
       propertyPath: tagOverride
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: weakAttackDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: strongAttackDamage
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544280013057679028, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127492857788309861, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.23
+      objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -676,6 +696,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2112448069973580747, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4451487359934759695, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -715,6 +740,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878049, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.17242432
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622878049, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.012413025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376070379311544977, guid: f1fd3e8753780e74aba38c0223bfd364,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}

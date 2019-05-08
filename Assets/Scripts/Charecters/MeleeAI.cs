@@ -20,6 +20,7 @@ public class MeleeAI : BasicAI {
     private UIController UI;
     public GameObject meleeHitbox;
     public Animator anim;
+    public Animator hitboxAnim;
    // public Transform hitboxOrigin;
 
 
@@ -46,8 +47,9 @@ public class MeleeAI : BasicAI {
 
         //basicAI.setStats(fighterHp, fighterAp);
         meleeHitbox = this.gameObject.transform.GetChild(0).gameObject;
-        meleeHitbox.GetComponent<BoxCollider2D>().enabled = false;
+        meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
         anim = this.gameObject.GetComponent<Animator>();
+        hitboxAnim = meleeHitbox.GetComponent<Animator>();
 
     }
 
@@ -82,10 +84,11 @@ public class MeleeAI : BasicAI {
     public void meleeAttack(float damage)
     {
         anim.SetTrigger("IsAttacking");
-        isAttacking = true;
+        hitboxAnim.SetTrigger("Attack");
+        meleeHitbox.GetComponent<meleeRange>().isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage;
-        meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
+        //meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
 
         //destroys bullet after 4 seconds ish
         // Destroy(swordHitbox);
@@ -94,10 +97,11 @@ public class MeleeAI : BasicAI {
     {
 
         anim.SetTrigger("IsAttacking"); //replace with diff trigger for strong melee attk
-        isAttacking = true;
+        hitboxAnim.SetTrigger("Attack");
+        meleeHitbox.GetComponent<meleeRange>().isAttacking = true;
         nextAttack = Time.time + attackRate;
         activeDamage = damage * Mathf.Pow(2.78f, 0.114f * basicAI.currentLevel);
-        meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
+        //meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
 
         this.GetComponent<UIController>().useMana(manaLoss);
 

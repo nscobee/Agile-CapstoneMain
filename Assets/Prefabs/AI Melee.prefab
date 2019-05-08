@@ -178,6 +178,8 @@ MonoBehaviour:
   activeDamage: 0
   basicAI: {fileID: 0}
   meleeHitbox: {fileID: 2129364699792274177}
+  anim: {fileID: 0}
+  hitboxAnim: {fileID: 0}
   fighterHp: 90
   fighterAp: 40
   playerInRange: 0
@@ -433,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9299998
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalPosition.y
@@ -482,7 +484,7 @@ PrefabInstance:
     - target: {fileID: 61200210235404254, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114037220401910388, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
         type: 3}
