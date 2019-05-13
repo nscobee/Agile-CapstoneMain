@@ -68,6 +68,16 @@ public class BasicAI : MonoBehaviour
     public bool canPossess = true;
     public bool possessOnLowHealth = false;
 
+    [Header("Audio Stuffs")]   
+    public AudioClip possessSound;
+    public AudioClip punchSound;
+    public AudioClip swordAttackSound;
+    public AudioClip MagicAttackSound;
+    public AudioClip BigMagicAttackSound;
+    public AudioClip HealSound;
+    public AudioClip dogAttackSound;
+    private AudioSource source;
+
     [Header("Object References")]
     public GameObject phantom;  //Obtain info about phantom to have it persist
     public BoxCollider2D phantomBox; //to be hidden while phantom is possessing
@@ -78,7 +88,13 @@ public class BasicAI : MonoBehaviour
 
     public static ReaperCountdown reaper;
 
-    
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
+
+
     private void Start()
     {
 
@@ -192,6 +208,7 @@ public class BasicAI : MonoBehaviour
     // when the player possess a AI it destories the phantom and enables the player movement on the 
     public void Possess(GameObject phantom)
     {
+        source.PlayOneShot(possessSound);
         //updateLevelMultiplier();
         isPatrolling = false;
         Vector3 cameraPos;
@@ -385,6 +402,7 @@ public class BasicAI : MonoBehaviour
         if (startingTag == "mage")
         {
             this.gameObject.GetComponent<MageAI>().FireballAttack(playerObjTransform);
+            source.PlayOneShot(MagicAttackSound);
         }
 
         if (startingTag == "healer")
@@ -413,6 +431,7 @@ public class BasicAI : MonoBehaviour
         if (startingTag == "mage")
         {
             this.gameObject.GetComponent<MageAI>().AOEAttack(playerObjTransform);
+            source.PlayOneShot(BigMagicAttackSound);
         }
         if (startingTag == "healer")
         {
