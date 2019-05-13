@@ -144,15 +144,16 @@ public class MageAI : BasicAI
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
-        
-        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
-        projectileBullet.GetComponent<Projectile>().setTarget(target);
+        /* GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
 
-        this.GetComponent<UIController>().useMana(fireballManaLoss);
+         projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
-        //destroys bullet after 4 seconds ish
-        Destroy(projectileBullet, 4f);
+         this.GetComponent<UIController>().useMana(fireballManaLoss);
+
+         //destroys bullet after 4 seconds ish
+         Destroy(projectileBullet, 4f);*/
+        StartCoroutine(AttackAtAnimationTime(.1f, target));
          
     }
 
@@ -168,7 +169,7 @@ public class MageAI : BasicAI
             Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
 
-            GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+            /*GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
             
             projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
             projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
@@ -176,7 +177,8 @@ public class MageAI : BasicAI
             this.GetComponent<UIController>().useMana(fireballManaLoss);
 
             //destroys bullet after 4 seconds ish
-            Destroy(projectileBullet, 4f);
+            Destroy(projectileBullet, 4f); */
+            StartCoroutine(AttackAtAnimationTime(.1f, playerTransform));
         }
     }
 
@@ -194,6 +196,36 @@ public class MageAI : BasicAI
         {
             playerInRange = false;
         }
+    }
+
+    private IEnumerator AttackAtAnimationTime(float animTime, Vector3 target)
+    {
+
+        yield return new WaitForSeconds(animTime);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+        projectileBullet.GetComponent<Projectile>().setTarget(target);
+
+        this.GetComponent<UIController>().useMana(fireballManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBullet, 4f);
+    }
+
+    private IEnumerator AttackAtAnimationTime(float animTime, Transform playerTransform)
+    {
+
+        yield return new WaitForSeconds(animTime);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+        projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
+
+        this.GetComponent<UIController>().useMana(fireballManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBullet, 4f);
     }
 
 }

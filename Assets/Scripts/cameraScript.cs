@@ -11,6 +11,7 @@ public class cameraScript : MonoBehaviour {
     // Use this for initialization
     private void Awake()
     {
+        if(GameObject.FindGameObjectWithTag("AudioSource"))
         source = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
     }
 

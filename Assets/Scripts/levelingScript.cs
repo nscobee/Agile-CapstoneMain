@@ -64,6 +64,8 @@ public class levelingScript : MonoBehaviour
             currentXP = 0;
             xpTillNextLevel = STARTINGXPNEEDEDTOLEVELUP * (2^(currentLevel - 1));
         }
+
+        if (!GetComponent<PhantomControls>().isPossessing) currentXP = 0;
     }
 
 
