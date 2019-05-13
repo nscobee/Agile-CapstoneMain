@@ -84,7 +84,7 @@ public class PhantomRange : MonoBehaviour
 
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
         if(!GameObject.FindGameObjectWithTag("Possessed"))
-        if (other.gameObject.tag == "mage" || other.gameObject.tag == "Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe")
+        if (other.gameObject.tag == "mage" || other.gameObject.tag == "Melee" || other.gameObject.tag == "healer" || other.gameObject.tag == "Scribe" )
         {
             inRange.Add(other.gameObject);
         }

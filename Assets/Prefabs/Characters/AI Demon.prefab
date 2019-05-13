@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 3247733856553915135}
   - component: {fileID: 3450314018598242619}
   - component: {fileID: 3451249131234036252}
+  - component: {fileID: 3945632525833348558}
   m_Layer: 10
   m_Name: AI Demon
   m_TagString: NoPossess
@@ -1038,6 +1039,9 @@ MonoBehaviour:
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
+  depossessSound: {fileID: 8300000, guid: dc6470e481eb8f24f9b444dd823b583d, type: 3}
+  walking: {fileID: 8300000, guid: ae3c20a456554354cb1c3e35b727e771, type: 3}
+  walkingVolume: 10
 --- !u!50 &3410623000363772707
 Rigidbody2D:
   serializedVersion: 4
@@ -1233,6 +1237,102 @@ MonoBehaviour:
   AOEDamageAmount: 30
   playerInRange: 0
   inRange: []
+--- !u!82 &3945632525833348558
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451249131234036253}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3484845238738595212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeChar: {fileID: 0}
+  isAttacking: 0
 --- !u!1 &4003488415357527642
 GameObject:
   m_ObjectHideFlags: 0

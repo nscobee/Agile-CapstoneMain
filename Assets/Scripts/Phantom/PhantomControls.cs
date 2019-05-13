@@ -18,6 +18,9 @@ public class PhantomControls : MonoBehaviour
     public bool isPossessing;
     public GameObject phantom;
     SaveLoadController slControl;
+
+    private AudioSource source;
+    public AudioClip floating;
     
 
     //Simple Leveling System
@@ -71,6 +74,11 @@ public class PhantomControls : MonoBehaviour
             {
                 speed = 5f;
             }
+        }
+
+        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ) && !isPossessing) //if moving and in spirit form, play float sounds
+        {
+          //  source.PlayOneShot(floating); //commented out while looking for floating noises
         }
     }
 

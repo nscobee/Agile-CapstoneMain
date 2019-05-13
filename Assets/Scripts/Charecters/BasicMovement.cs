@@ -23,7 +23,15 @@ public class BasicMovement : MonoBehaviour
 
     private bool isLookingRight = true;
 
+    private AudioSource source;
+    public AudioClip depossessSound;
+    public AudioClip walking;
+    public float walkingVolume;
 
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
     private void Start()
     {
 
@@ -71,12 +79,30 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             isLookingRight = false;
+            if(!source.isPlaying)
+                source.PlayOneShot(walking, walkingVolume);
 
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             isLookingRight = true;
+            if (!source.isPlaying)
+                source.PlayOneShot(walking, walkingVolume);
+
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (!source.isPlaying)
+                source.PlayOneShot(walking, walkingVolume);
+
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (!source.isPlaying)
+                source.PlayOneShot(walking, walkingVolume);
 
         }
 
@@ -123,7 +149,7 @@ public class BasicMovement : MonoBehaviour
     // TODO: Make function for becoming non Possed but not killing the AI
     public void WithDraw()
     {
-
+        source.PlayOneShot(depossessSound);
 
         
         phantomControls.isPossessing = false;
