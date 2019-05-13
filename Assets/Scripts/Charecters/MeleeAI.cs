@@ -32,9 +32,19 @@ public class MeleeAI : BasicAI {
 
     public bool playerInRange;
 
+    [Header("Audio Stuff")]
+    public AudioClip primaryAttackSound;
+    public AudioClip secondaryAttackSound;
+    private AudioSource source;
+
 
 
     public List<GameObject> inRange = new List<GameObject>();
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     // Use this for initialization
     void Start()
@@ -50,6 +60,8 @@ public class MeleeAI : BasicAI {
         meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
         anim = this.gameObject.GetComponent<Animator>();
         hitboxAnim = meleeHitbox.GetComponent<Animator>();
+        primaryAttackSound = basicAI.swordAttackSound;
+        secondaryAttackSound = basicAI.heavySwordAttackSound;
 
     }
 
@@ -68,6 +80,7 @@ public class MeleeAI : BasicAI {
                 {
                     meleeAttack(weakAttackDamage, weakManaLoss);
                     UI.nextPrimaryFire = Time.time + UI.primaryFireRate;
+                    source.PlayOneShot(primaryAttackSound);
                 }
             }
             if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time > UI.nextSecondaryFire)
@@ -76,6 +89,7 @@ public class MeleeAI : BasicAI {
                 {
                     meleeAttack(strongAttackDamage, strongManaLoss);
                     UI.nextSecondaryFire = Time.time + UI.secondaryFireRate;
+                    source.PlayOneShot(secondaryAttackSound);
                 }
             }
         }
@@ -92,6 +106,7 @@ public class MeleeAI : BasicAI {
 
         //destroys bullet after 4 seconds ish
         // Destroy(swordHitbox);
+        StartCoroutine(FinishedAnim());
     }
     public void meleeAttack(float damage, float manaLoss)
     {
@@ -107,6 +122,7 @@ public class MeleeAI : BasicAI {
 
         //destroys bullet after 4 seconds ish
         //Destroy(swordHitbox);
+        StartCoroutine(FinishedAnim());
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -123,6 +139,12 @@ public class MeleeAI : BasicAI {
         {
             playerInRange = false;
         }
+    }
+
+    private IEnumerator FinishedAnim()
+    {
+        yield return new WaitForSeconds(.5f);
+        meleeHitbox.GetComponent<meleeRange>().isAttacking = false;
     }
 
 

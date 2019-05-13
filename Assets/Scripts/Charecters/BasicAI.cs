@@ -68,14 +68,17 @@ public class BasicAI : MonoBehaviour
     public bool canPossess = true;
     public bool possessOnLowHealth = false;
 
+    public float dirNum;
+
     [Header("Audio Stuffs")]   
     public AudioClip possessSound;
-    public AudioClip punchSound;
     public AudioClip swordAttackSound;
+    public AudioClip heavySwordAttackSound;
     public AudioClip MagicAttackSound;
     public AudioClip BigMagicAttackSound;
     public AudioClip HealSound;
     public AudioClip dogAttackSound;
+    public AudioClip demonSlashSound;
     private AudioSource source;
 
     [Header("Object References")]
@@ -171,10 +174,9 @@ public class BasicAI : MonoBehaviour
             canAttack = true;
             nextAIAttack = 0;
         }
+
+
         
-
-
-
 
         if (UIControls.currentHealth <= 0 && !phantomControls.isPossessing)
         {
@@ -183,12 +185,13 @@ public class BasicAI : MonoBehaviour
 
         if(!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
         {
+            if(GameObject.FindGameObjectWithTag("Possessed"))
             this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime);
-            if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
-            {
-                this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
-            }
-            else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+           // if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
+           // {
+          //      this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+          //  }
+          //  else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
             print("I'm moving towards the possessed!");
         }
         if(GameObject.FindGameObjectWithTag("Possessed"))
@@ -198,11 +201,24 @@ public class BasicAI : MonoBehaviour
            
         if (isRetaliating)
         {
-                print("I'm retaliating!");
+
+            Vector3 heading = phantom.transform.position - transform.position;
+            dirNum = AngleDir(transform.forward, heading, transform.up);
+            print("I'm retaliating!");
                 isPatrolling = false;
                 retaliate();
-                
+
+            if (dirNum < 0)
+                {
+        
+                    this.gameObject.transform.eulerAngles = new Vector3(0, this.gameObject.transform.eulerAngles.y + 180, 0);
+     
+                }
+         
         }
+
+        if (!GameObject.FindGameObjectWithTag("Possessed")) isRetaliating = false;
+
     }
 
     // when the player possess a AI it destories the phantom and enables the player movement on the 
@@ -342,6 +358,8 @@ public class BasicAI : MonoBehaviour
 
     public void retaliate()
     {
+        //in theory these 3 lines of code will make the AI look at player
+        
 
         print("Retalition!!!!");
       if(distanceBetweenPlayer <= distanceToStartAttackingPlayer)
@@ -397,6 +415,7 @@ public class BasicAI : MonoBehaviour
         if (startingTag == "Melee")
         {
             this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().weakAttackDamage);
+            source.PlayOneShot(swordAttackSound);
         }
 
         if (startingTag == "mage")
@@ -408,17 +427,20 @@ public class BasicAI : MonoBehaviour
         if (startingTag == "healer")
         {
             this.gameObject.GetComponent<healerAI>().FireAttack(playerObjTransform);
+            source.PlayOneShot(MagicAttackSound);
         }
 
         if (startingTag == "dog")
         {
             this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().weakAttackDamage);
+            source.PlayOneShot(dogAttackSound);
         }
 
         if (startingTag == "demon")
         {
             print("demon using primary!");
             this.gameObject.GetComponent<demonAI>().meleeAttack(this.gameObject.GetComponent<demonAI>().weakAttackDamage);
+            source.PlayOneShot(demonSlashSound);
         }
     }
 
@@ -427,6 +449,7 @@ public class BasicAI : MonoBehaviour
         if (startingTag == "Melee")
         {
             this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().strongAttackDamage);
+            source.PlayOneShot(heavySwordAttackSound);
         }
         if (startingTag == "mage")
         {
@@ -436,17 +459,37 @@ public class BasicAI : MonoBehaviour
         if (startingTag == "healer")
         {
             this.gameObject.GetComponent<healerAI>().Heal();
+            source.PlayOneShot(HealSound);
         }
         if (startingTag == "dog")
         {
             this.gameObject.GetComponent<MeleeAI>().meleeAttack(this.gameObject.GetComponent<MeleeAI>().weakAttackDamage);
+            source.PlayOneShot(dogAttackSound);
         }
         if (startingTag == "demon")
         {
             print("demon using secondary!");
             this.gameObject.GetComponent<demonAI>().AOEAttack(playerObjTransform);
+            source.PlayOneShot(BigMagicAttackSound);
         }
     }
 
+    float AngleDir(Vector3 fwd, Vector3 targetDir, Vector3 up)
+    {
+        Vector3 perp = Vector3.Cross(fwd, targetDir);
+        float dir = Vector3.Dot(perp, up);
 
+        if (dir > 0f)
+        {
+            return 1f;
+        }
+        else if (dir < 0f)
+        {
+            return -1f;
+        }
+        else
+        {
+            return 0f;
+        }
+    }
 }

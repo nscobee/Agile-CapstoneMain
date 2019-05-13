@@ -21,7 +21,7 @@ public class BasicMovement : MonoBehaviour
     public Rigidbody2D phantomRigid;
     public static ReaperCountdown reaper;
 
-    private bool isLookingRight = true;
+    public bool isLookingRight = true;
 
     private AudioSource source;
     public AudioClip depossessSound;

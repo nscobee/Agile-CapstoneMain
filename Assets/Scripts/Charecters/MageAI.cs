@@ -38,7 +38,17 @@ public class MageAI : BasicAI
     public float fireballFireRate = 7.0f;
 
     public bool playerInRange;
-    
+
+    [Header("Audio Stuff")]
+    public AudioClip primaryAttackSound;
+    public AudioClip secondaryAttackSound;
+    private AudioSource source;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
 
     // Use this for initialization
     void Start()
@@ -47,6 +57,8 @@ public class MageAI : BasicAI
        // basicAI.setStats(mageHp, mageAp);
         UI = gameObject.GetComponent<UIController>();
         anim = this.gameObject.GetComponent<Animator>();
+        primaryAttackSound = basicAI.MagicAttackSound;
+        secondaryAttackSound = basicAI.BigMagicAttackSound;
 
     }
 
@@ -63,6 +75,7 @@ public class MageAI : BasicAI
 
                     FireballAttack();
                     UI.nextPrimaryFire = Time.time + UI.primaryFireRate;
+                    source.PlayOneShot(primaryAttackSound);
                 }
 
             }
@@ -73,6 +86,7 @@ public class MageAI : BasicAI
                     print("basic movement script is using fire attack");
                     AOEAttack();
                     UI.nextSecondaryFire = Time.time + UI.secondaryFireRate;
+                    source.PlayOneShot(secondaryAttackSound);
                 }
             }
         }

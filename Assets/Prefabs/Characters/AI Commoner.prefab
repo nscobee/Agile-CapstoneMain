@@ -95,12 +95,14 @@ MonoBehaviour:
   canPossess: 1
   possessOnLowHealth: 0
   possessSound: {fileID: 8300000, guid: 6c6eb9e9300e7384a93ecd6a20b7f046, type: 3}
-  punch: {fileID: 0}
-  swordAttack: {fileID: 0}
-  MagicAttack: {fileID: 0}
-  BigMagicAttack: {fileID: 0}
-  Heal: {fileID: 0}
-  dogAttack: {fileID: 0}
+  swordAttackSound: {fileID: 8300000, guid: 6d395c389e52e0746905d492132ba0f8, type: 3}
+  heavySwordAttackSound: {fileID: 8300000, guid: 6d395c389e52e0746905d492132ba0f8,
+    type: 3}
+  MagicAttackSound: {fileID: 0}
+  BigMagicAttackSound: {fileID: 0}
+  HealSound: {fileID: 0}
+  dogAttackSound: {fileID: 0}
+  demonSlashSound: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -175,12 +177,13 @@ MonoBehaviour:
   canPossess: 1
   possessOnLowHealth: 0
   possessSound: {fileID: 0}
-  punch: {fileID: 0}
-  swordAttack: {fileID: 0}
-  MagicAttack: {fileID: 0}
-  BigMagicAttack: {fileID: 0}
-  Heal: {fileID: 0}
-  dogAttack: {fileID: 0}
+  swordAttackSound: {fileID: 0}
+  heavySwordAttackSound: {fileID: 0}
+  MagicAttackSound: {fileID: 0}
+  BigMagicAttackSound: {fileID: 0}
+  HealSound: {fileID: 0}
+  dogAttackSound: {fileID: 0}
+  demonSlashSound: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -202,6 +205,8 @@ MonoBehaviour:
   fighterHp: 90
   fighterAp: 40
   playerInRange: 0
+  primaryAttackSound: {fileID: 0}
+  secondaryAttackSound: {fileID: 0}
   inRange: []
 --- !u!50 &50962217405559534
 Rigidbody2D:
@@ -333,6 +338,8 @@ MonoBehaviour:
   maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
+  takeDamageSound: {fileID: 8300000, guid: e26418cb0dadaa948a1edd50494a61f8, type: 3}
+  dieSound: {fileID: 8300000, guid: 0d11aeefd47c688408cbc4b31443c908, type: 3}
 --- !u!95 &8872486976257498616
 Animator:
   serializedVersion: 3
@@ -989,10 +996,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
-    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
-      propertyPath: m_Name
-      value: SwordHitbox
-      objectReference: {fileID: 0}
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1036,6 +1039,10 @@ PrefabInstance:
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
+      propertyPath: m_Name
+      value: SwordHitbox
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}

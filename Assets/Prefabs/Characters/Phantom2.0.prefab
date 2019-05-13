@@ -169,6 +169,7 @@ MonoBehaviour:
   phantomTarget: {fileID: 0}
   isPossessing: 0
   phantom: {fileID: 1660928347398176}
+  floating: {fileID: 8300000, guid: 639d4db248bd43044bc08d1a3ac42926, type: 3}
 --- !u!114 &114693017029926454
 MonoBehaviour:
   m_ObjectHideFlags: 0

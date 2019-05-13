@@ -21,14 +21,20 @@ public class PhantomControls : MonoBehaviour
 
     private AudioSource source;
     public AudioClip floating;
-    
+    public float floatVolume = 1;
+
 
     //Simple Leveling System
     //public int currentLevel = 1;
-   // public float currentExperience = 0;
+    // public float currentExperience = 0;
     //public float experienceTillNextLevel;
-   // private float startingExperienceTillNextLevel;
+    // private float startingExperienceTillNextLevel;
     //public int MAX_LEVEL = 5;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -78,7 +84,12 @@ public class PhantomControls : MonoBehaviour
 
         if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ) && !isPossessing) //if moving and in spirit form, play float sounds
         {
-          //  source.PlayOneShot(floating); //commented out while looking for floating noises
+            if(!source.isPlaying)
+            source.PlayOneShot(floating, floatVolume); 
+        }
+        if(isPossessing)
+        {
+            source.Stop();
         }
     }
 

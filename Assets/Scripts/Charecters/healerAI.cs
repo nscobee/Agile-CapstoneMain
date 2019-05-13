@@ -41,14 +41,27 @@ public class healerAI : BasicAI {
     
     public List<GameObject> inRange = new List<GameObject>();
 
+    [Header("Audio Stuff")]
+    public AudioClip primaryAttackSound;
+    public AudioClip secondaryAttackSound;
+    private AudioSource source;
+
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     // Use this for initialization
     void Start () {
         basicAI = this.gameObject.GetComponent<BasicAI>();
         UIControls = this.gameObject.GetComponent<UIController>();
         anim = this.gameObject.GetComponent<Animator>();
-       // currentPlayerLevel = phantomControls.currentLevel;
+        // currentPlayerLevel = phantomControls.currentLevel;
         //healMultiplier *= currentPlayerLevel;
         //basicAI.setStats(healerHp, healerAp);
+        primaryAttackSound = basicAI.MagicAttackSound;
+        secondaryAttackSound = basicAI.HealSound;
 
 
     }
@@ -61,13 +74,20 @@ public class healerAI : BasicAI {
             if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > UIControls.nextPrimaryFire)
             {
                 if (UIControls.currentMana > 0)
+                {
                     FireAttack();
+                    source.PlayOneShot(primaryAttackSound);
+                }
                 UIControls.nextPrimaryFire = Time.time + UIControls.primaryFireRate;
+
             }
             if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time > UIControls.nextSecondaryFire)
             {
                 if (UIControls.currentMana > 0)
+                {
                     Heal();
+                    source.PlayOneShot(secondaryAttackSound);
+                }
                 UIControls.nextSecondaryFire = Time.time + UIControls.secondaryFireRate;
             }
         }

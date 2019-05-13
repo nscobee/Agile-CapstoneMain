@@ -36,7 +36,19 @@ public class UIController : MonoBehaviour
 
     public bool inRange = false;
 
+    private bool isDying = false;
+
     public BasicAI AI;
+
+    [Header("Audio Stuffs")]
+    public AudioClip takeDamageSound;
+    public AudioClip dieSound;
+    private AudioSource source;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -85,7 +97,7 @@ public class UIController : MonoBehaviour
                 theUI.enabled = false;
             }
 
-            if (currentHealth <= 0)
+            if (currentHealth <= 0 && !isDying)
                 Die();
             if (currentHealth >= MAXHP) currentHealth = MAXHP;
             if (currentMana >= MAXMANA) currentMana = MAXMANA;
@@ -134,6 +146,8 @@ public class UIController : MonoBehaviour
 
     public void takeDamage(float damage)
     {
+        source.PlayOneShot(takeDamageSound);
+
         print("I am " + this.gameObject.name + " and I am taking " + damage + " damage");
         currentHealth -= damage;
         if (this.gameObject.tag != "Possessed")
@@ -167,6 +181,7 @@ public class UIController : MonoBehaviour
 
     public void Die()
     {
+        isDying = true;
         if (this.gameObject.tag != "Possessed" && this.gameObject.tag != "Necromancer")
         {
             if(GameObject.FindGameObjectWithTag("Necromancer"))
@@ -180,20 +195,60 @@ public class UIController : MonoBehaviour
             {
                 GameObject healthpickup = Instantiate(healthDrop, this.transform.position, Quaternion.identity);
             }
-
+            source.PlayOneShot(dieSound);
             GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().gainXP(Random.Range(1, maxXPGained));
             GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 2f));
         }
         else if(this.gameObject.tag == "Possessed")
 
         {
+            source.PlayOneShot(dieSound);
             GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
-            this.gameObject.GetComponent<BasicMovement>().DED();            
+            // this.gameObject.GetComponent<BasicMovement>().DED();
+            StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 1f));
         }
         else
         {
             //necromancer die
         }
+    }
+
+
+    IEnumerator fadeOut(SpriteRenderer MyRenderer, float duration) //death animation, prevents player from moving while dying as well
+    {
+        float oldSpeed = 0;
+        float counter = 0;
+        //Get current color
+        Color spriteColor = MyRenderer.material.color;
+        this.gameObject.GetComponent<BasicMovement>().enabled = false;
+        this.gameObject.GetComponent<BasicAI>().enabled = false;
+
+        if(this.gameObject.tag == "Possessed")
+        {
+            oldSpeed = phantomController.speed;
+            phantomController.speed = 0;
+        }
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(1, 0, counter / duration);
+            Debug.Log(alpha);
+
+            //Change alpha only
+            MyRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+        if (gameObject.tag != "Possessed") Destroy(this.gameObject);
+        else
+        {
+            phantomController.speed = oldSpeed;
+            this.gameObject.GetComponent<BasicMovement>().DED();
+        }
+        
     }
 }

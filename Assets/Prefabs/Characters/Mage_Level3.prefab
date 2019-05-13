@@ -199,12 +199,13 @@ MonoBehaviour:
   canPossess: 1
   possessOnLowHealth: 0
   possessSound: {fileID: 8300000, guid: 6c6eb9e9300e7384a93ecd6a20b7f046, type: 3}
-  punchSound: {fileID: 0}
   swordAttackSound: {fileID: 0}
+  heavySwordAttackSound: {fileID: 0}
   MagicAttackSound: {fileID: 8300000, guid: 8a5ad49b2b588d4458b7e817e488dff0, type: 3}
   BigMagicAttackSound: {fileID: 8300000, guid: a8083e37b6b3744438f3c3e70afa18b1, type: 3}
   HealSound: {fileID: 0}
   dogAttackSound: {fileID: 0}
+  demonSlashSound: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -283,12 +284,13 @@ MonoBehaviour:
   canPossess: 1
   possessOnLowHealth: 0
   possessSound: {fileID: 0}
-  punchSound: {fileID: 0}
   swordAttackSound: {fileID: 0}
+  heavySwordAttackSound: {fileID: 0}
   MagicAttackSound: {fileID: 0}
   BigMagicAttackSound: {fileID: 0}
   HealSound: {fileID: 0}
   dogAttackSound: {fileID: 0}
+  demonSlashSound: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -319,6 +321,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   fireballFireRate: 7
   playerInRange: 0
+  primaryAttackSound: {fileID: 0}
+  secondaryAttackSound: {fileID: 0}
 --- !u!114 &1199884532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +358,8 @@ MonoBehaviour:
   maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
+  takeDamageSound: {fileID: 8300000, guid: e26418cb0dadaa948a1edd50494a61f8, type: 3}
+  dieSound: {fileID: 8300000, guid: 0d11aeefd47c688408cbc4b31443c908, type: 3}
 --- !u!82 &8012194394840805055
 AudioSource:
   m_ObjectHideFlags: 0

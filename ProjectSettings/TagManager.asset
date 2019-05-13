@@ -30,6 +30,7 @@ TagManager:
   - Possessed
   - Commoner
   - Necromancer
+  - AudioSource
   layers:
   - Default
   - TransparentFX

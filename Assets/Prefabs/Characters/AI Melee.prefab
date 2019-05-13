@@ -95,12 +95,14 @@ MonoBehaviour:
   canPossess: 1
   possessOnLowHealth: 0
   possessSound: {fileID: 8300000, guid: 6c6eb9e9300e7384a93ecd6a20b7f046, type: 3}
-  punch: {fileID: 0}
-  swordAttack: {fileID: 0}
-  MagicAttack: {fileID: 0}
-  BigMagicAttack: {fileID: 0}
-  Heal: {fileID: 0}
-  dogAttack: {fileID: 0}
+  swordAttackSound: {fileID: 8300000, guid: 588b67d2af2130445babaf728baff7e0, type: 3}
+  heavySwordAttackSound: {fileID: 8300000, guid: ba15382d81b7824409605e55b2325452,
+    type: 3}
+  MagicAttackSound: {fileID: 0}
+  BigMagicAttackSound: {fileID: 0}
+  HealSound: {fileID: 0}
+  dogAttackSound: {fileID: 0}
+  demonSlashSound: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -175,12 +177,13 @@ MonoBehaviour:
   canPossess: 1
   possessOnLowHealth: 0
   possessSound: {fileID: 0}
-  punch: {fileID: 0}
-  swordAttack: {fileID: 0}
-  MagicAttack: {fileID: 0}
-  BigMagicAttack: {fileID: 0}
-  Heal: {fileID: 0}
-  dogAttack: {fileID: 0}
+  swordAttackSound: {fileID: 0}
+  heavySwordAttackSound: {fileID: 0}
+  MagicAttackSound: {fileID: 0}
+  BigMagicAttackSound: {fileID: 0}
+  HealSound: {fileID: 0}
+  dogAttackSound: {fileID: 0}
+  demonSlashSound: {fileID: 0}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
@@ -201,6 +204,8 @@ MonoBehaviour:
   fighterHp: 90
   fighterAp: 40
   playerInRange: 0
+  primaryAttackSound: {fileID: 0}
+  secondaryAttackSound: {fileID: 0}
   inRange: []
 --- !u!50 &50962217405559534
 Rigidbody2D:
@@ -332,6 +337,8 @@ MonoBehaviour:
   maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
+  takeDamageSound: {fileID: 8300000, guid: e26418cb0dadaa948a1edd50494a61f8, type: 3}
+  dieSound: {fileID: 8300000, guid: 0d11aeefd47c688408cbc4b31443c908, type: 3}
 --- !u!95 &6544280013057679028
 Animator:
   serializedVersion: 3
@@ -509,6 +516,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 865363641856271883, guid: 87855cf3fcf23f244ad848fb601b8790,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.96
+      objectReference: {fileID: 0}
     - target: {fileID: 865363642900494205, guid: 87855cf3fcf23f244ad848fb601b8790,
         type: 3}
       propertyPath: m_Name
@@ -518,11 +530,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 865363641856271883, guid: 87855cf3fcf23f244ad848fb601b8790,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 5.96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87855cf3fcf23f244ad848fb601b8790, type: 3}
@@ -539,14 +546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
-    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
-      propertyPath: m_Name
-      value: SwordHitbox
-      objectReference: {fileID: 0}
-    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
@@ -595,12 +594,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 61200210235404254, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
+    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
+      propertyPath: m_Name
+      value: SwordHitbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114037220401910388, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114037220401910388, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
+    - target: {fileID: 61200210235404254, guid: 7bc4fac31c8fd794fa877ddd2eb6e202,
         type: 3}
       propertyPath: m_Enabled
       value: 1
