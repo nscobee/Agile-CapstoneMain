@@ -321,6 +321,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_Health_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3659769481184886663, guid: 03b369f86ddf2d542bf60a8617d53f66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3659769481184886659, guid: 03b369f86ddf2d542bf60a8617d53f66,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -429,12 +434,12 @@ PrefabInstance:
     - target: {fileID: 3659769479776183635, guid: 03b369f86ddf2d542bf60a8617d53f66,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3659769479776183635, guid: 03b369f86ddf2d542bf60a8617d53f66,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3659769480539917566, guid: 03b369f86ddf2d542bf60a8617d53f66,
         type: 3}
@@ -6977,11 +6982,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1660928347398176, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_Name
-      value: Phantom2.0 (delete me too, im just here to test stuffs)
+      value: Phantom2.0
       objectReference: {fileID: 0}
     - target: {fileID: 1660928347398176, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4190605258874208, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7078,7 +7083,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ec5528a9e7d643e43b93f008e4cf1e7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18688,7 +18693,7 @@ PrefabInstance:
     - target: {fileID: 6561351837950264834, guid: 5d05f5e254262e94cbfb613d0cc44d3d,
         type: 3}
       propertyPath: m_Name
-      value: Audio Source
+      value: Music Audio Source
       objectReference: {fileID: 0}
     - target: {fileID: 1493858384380099638, guid: 5d05f5e254262e94cbfb613d0cc44d3d,
         type: 3}
@@ -18750,6 +18755,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 8c0b189757727af47bf9eea57c3c7d35, type: 3}
+    - target: {fileID: 451029538000267237, guid: 5d05f5e254262e94cbfb613d0cc44d3d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d05f5e254262e94cbfb613d0cc44d3d, type: 3}
 --- !u!1001 &1904420087
@@ -18871,19 +18881,19 @@ PrefabInstance:
         type: 3}
       propertyPath: demonOne
       value: 
-      objectReference: {fileID: 8496592780937096331, guid: 99a387c307129b24abaa23a03520a3fe,
+      objectReference: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
         type: 3}
     - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
       propertyPath: demonTwo
       value: 
-      objectReference: {fileID: 8496592780937096331, guid: 99a387c307129b24abaa23a03520a3fe,
+      objectReference: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
         type: 3}
     - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
       propertyPath: demonThree
       value: 
-      objectReference: {fileID: 8496592780937096331, guid: 99a387c307129b24abaa23a03520a3fe,
+      objectReference: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
         type: 3}
     - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
@@ -18895,6 +18905,32 @@ PrefabInstance:
       propertyPath: speechText
       value: 
       objectReference: {fileID: 616626011}
+    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
+        type: 3}
+      propertyPath: dialogueAmbience
+      value: 
+      objectReference: {fileID: 8300000, guid: c1bb5927de75f2d429f58e047d6e913f, type: 3}
+    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
+        type: 3}
+      propertyPath: evilLaugh
+      value: 
+      objectReference: {fileID: 8300000, guid: 6fbc8776821173c4f9a1495380bc509f, type: 3}
+    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
+        type: 3}
+      propertyPath: FireBallSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e7317363076aba4dbd2d315a763c82d, type: 3}
+    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
+        type: 3}
+      propertyPath: summonMinionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: eb5f6c573991e424f9d73e21e662f14f, type: 3}
+    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
+        type: 3}
+      propertyPath: pillarOfFire
+      value: 
+      objectReference: {fileID: 7656256878436638396, guid: ca0ef996d1031414c895a00087dad58e,
+        type: 3}
     - target: {fileID: 8912490814479371809, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
       propertyPath: uiObj

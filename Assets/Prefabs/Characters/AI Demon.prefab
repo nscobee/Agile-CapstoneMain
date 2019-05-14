@@ -1050,8 +1050,8 @@ MonoBehaviour:
   phantomRigid: {fileID: 0}
   isLookingRight: 1
   depossessSound: {fileID: 8300000, guid: dc6470e481eb8f24f9b444dd823b583d, type: 3}
-  walking: {fileID: 8300000, guid: ae3c20a456554354cb1c3e35b727e771, type: 3}
-  walkingVolume: 10
+  walking: {fileID: 8300000, guid: 671af22ee7e561f4f9a6eddc595aaa28, type: 3}
+  walkingVolume: 1
 --- !u!50 &3410623000363772707
 Rigidbody2D:
   serializedVersion: 4
@@ -1181,6 +1181,8 @@ MonoBehaviour:
   nextSecondaryFire: 0
   maxXPGained: 50
   inRange: 0
+  isFirstPrimaryAttack: 1
+  isFirstSecondaryAttack: 1
   AI: {fileID: 0}
   takeDamageSound: {fileID: 8300000, guid: 4836fafbd6d266a428ddf5d888f0490c, type: 3}
   dieSound: {fileID: 8300000, guid: 3f54ae20b28de5e48a7a24d6e3c63c4f, type: 3}

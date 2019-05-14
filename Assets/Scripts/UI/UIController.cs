@@ -155,7 +155,7 @@ public class UIController : MonoBehaviour
 
         print("I am " + this.gameObject.name + " and I am taking " + damage + " damage");
         currentHealth -= damage;
-        if (this.gameObject.tag != "Possessed")
+        if (this.gameObject.tag != "Possessed" && this.gameObject.tag != "Necromancer")
             AI.isRetaliating = true;
     }
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8912490813019747193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fireBallSpawnLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8912490814479371868}
   - component: {fileID: 8912490814479371809}
   - component: {fileID: 2875933404240998840}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Necromancer
   m_TagString: Necromancer
   m_Icon: {fileID: 0}
@@ -190,6 +190,10 @@ MonoBehaviour:
   deathMage: {fileID: 0}
   darkHealer: {fileID: 0}
   demonSummon: {fileID: 0}
+  musicSource: {fileID: 0}
+  dialogueAmbience: {fileID: 0}
+  FireBallSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!114 &8912490814479371809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +227,11 @@ MonoBehaviour:
   nextSecondaryFire: 0
   maxXPGained: 50
   inRange: 0
+  isFirstPrimaryAttack: 1
+  isFirstSecondaryAttack: 1
   AI: {fileID: 0}
+  takeDamageSound: {fileID: 0}
+  dieSound: {fileID: 0}
 --- !u!82 &2875933404240998840
 AudioSource:
   m_ObjectHideFlags: 0

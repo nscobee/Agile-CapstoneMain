@@ -85,8 +85,21 @@ public class necromancerAI : MonoBehaviour
     public GameObject deathMage;
     public GameObject darkHealer;
     public GameObject demonSummon;
-    
 
+    [Header("Audio Stuffs")]
+    public AudioSource musicSource;
+    public AudioClip dialogueAmbience;
+    public AudioClip FireBallSound;
+    public AudioClip evilLaugh;
+    public AudioClip summonMinionSound;
+    private AudioSource source;
+
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+        source.PlayOneShot(dialogueAmbience);
+    }
 
 
     // Start is called before the first frame update
@@ -95,6 +108,7 @@ public class necromancerAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         UI = this.gameObject.GetComponent<UIController>();
         mainCamera = Camera.main;
+        musicSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
 
     }
 
@@ -176,7 +190,8 @@ public class necromancerAI : MonoBehaviour
         {
             player.GetComponent<PhantomControls>().enabled = true;
             if(playerVassal) playerVassal.GetComponent<BasicMovement>().enabled = true;
-
+            source.Stop();
+            musicSource.Play();
             UI.uiObj.SetActive(true);
             TextPanel.SetActive(false);
             firstWaveSummoned = true; //summons the first wave of minions to their set locations
@@ -248,6 +263,7 @@ public class necromancerAI : MonoBehaviour
 
         projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
         projectileBullet.GetComponent<Projectile>().setTarget(player.transform.position);
+        source.PlayOneShot(FireBallSound);
 
         //destroys bullet after 4 seconds ish
         Destroy(projectileBullet, 4f);
@@ -256,6 +272,52 @@ public class necromancerAI : MonoBehaviour
 
     private void PillarsOfFireAttack() //Summons pillars of fire at one of 4 set groups of locations
     {
+        source.PlayOneShot(evilLaugh);
+        StartCoroutine(DelaySpawnOfPillars());
+    }
+
+    private void summonMinion() //Summons random minion
+    {
+        int randNum = Random.Range(0, 4);
+        switch (randNum)
+        {
+            case 0:
+                Instantiate(undeadKnight, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            case 1:
+                Instantiate(deathMage, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            case 2:
+                Instantiate(darkHealer, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            case 3:
+                Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+            default:
+                Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                break;
+
+        }
+        source.PlayOneShot(summonMinionSound);
+    }
+
+    private IEnumerator BuildText()
+    {
+        speechText.text = "";
+        typing = true;
+        for (int i = 0; i < text.Length; i++)
+        {
+            speechText.text = string.Concat(speechText.text, text[i]);
+            //Wait a certain amount of time, then continue with the for loop
+            yield return new WaitForSeconds(timeLapse);
+        }
+        
+        
+    }
+
+    private IEnumerator DelaySpawnOfPillars()
+    {
+        yield return new WaitForSeconds(4f);
         int rand = Random.Range(0, 4);
         switch (rand)
         {
@@ -312,44 +374,7 @@ public class necromancerAI : MonoBehaviour
         }
     }
 
-    private void summonMinion() //Summons random minion
-    {
-        int randNum = Random.Range(0, 4);
-        switch (randNum)
-        {
-            case 0:
-                Instantiate(undeadKnight, summonLocation.position, Quaternion.identity, this.gameObject.transform);
-                break;
-            case 1:
-                Instantiate(deathMage, summonLocation.position, Quaternion.identity, this.gameObject.transform);
-                break;
-            case 2:
-                Instantiate(darkHealer, summonLocation.position, Quaternion.identity, this.gameObject.transform);
-                break;
-            case 3:
-                Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
-                break;
-            default:
-                Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
-                break;
-
-        }
-    }
-
-    private IEnumerator BuildText()
-    {
-        speechText.text = "";
-        typing = true;
-        for (int i = 0; i < text.Length; i++)
-        {
-            speechText.text = string.Concat(speechText.text, text[i]);
-            //Wait a certain amount of time, then continue with the for loop
-            yield return new WaitForSeconds(timeLapse);
-        }
-        
-        
-    }
-
+ 
     private void Die()
     {
         //do the die
