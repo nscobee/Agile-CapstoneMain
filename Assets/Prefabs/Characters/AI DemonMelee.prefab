@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 212723535536114482}
   - component: {fileID: 1275089142}
   - component: {fileID: 1013877415443523689}
+  - component: {fileID: 720005937063755866}
   m_Layer: 10
   m_Name: AI DemonMelee
   m_TagString: Melee
@@ -71,6 +72,7 @@ MonoBehaviour:
   distanceToStartAttackingPlayer: 3
   distanceToForgetPlayer: 10
   gatherPoints: 1
+  isAggressive: 0
   playerMovement: {fileID: 114443481937730140}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
@@ -155,6 +157,7 @@ MonoBehaviour:
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
   gatherPoints: 0
+  isAggressive: 0
   playerMovement: {fileID: 0}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
@@ -440,6 +443,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &720005937063755866
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326686080439248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5be43a27b02ed64883d2fa4f6461ec4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &865363641105239870
 PrefabInstance:
   m_ObjectHideFlags: 0

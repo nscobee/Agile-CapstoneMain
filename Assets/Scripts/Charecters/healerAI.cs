@@ -104,6 +104,8 @@ public class healerAI : BasicAI {
 
     public void FireAttack()
     {
+        anim.SetTrigger("attack");
+
         fireballNextRound = Time.time + fireballFireRate;
 
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -125,6 +127,8 @@ public class healerAI : BasicAI {
     {
         if (this.gameObject.GetComponent<BasicAI>().canSpawn)
         {
+            anim.SetTrigger("attack");
+
             this.gameObject.GetComponent<BasicAI>().canSpawn = false;
             fireballNextRound = Time.time + fireballFireRate;
 
@@ -146,11 +150,13 @@ public class healerAI : BasicAI {
     {
         if (this.gameObject.tag == "Possessed")
         {
+            anim.SetTrigger("selfHeal");
             UIControls.currentHealth += healPlayerAmount;
             this.GetComponent<UIController>().useMana(healManaLoss);
         }
         else
         {
+            anim.SetTrigger("AIHeal");
             foreach (GameObject target in inRange)
             {
                 target.GetComponent<UIController>().currentHealth += healAIAmount;

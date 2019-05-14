@@ -252,7 +252,9 @@ public class UIController : MonoBehaviour
         else
         {
             phantomController.speed = oldSpeed;
-            this.gameObject.GetComponent<BasicMovement>().DED();
+            if (!GameObject.FindGameObjectWithTag("Necromancer"))
+                this.gameObject.GetComponent<BasicMovement>().DED();
+            else phantomController.Die();
         }
         
     }
