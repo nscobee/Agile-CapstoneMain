@@ -23,6 +23,7 @@ public class BasicAI : MonoBehaviour
     public float distanceBetweenPlayer = 9999999999999;
     public float distanceToStartAttackingPlayer = 1;
     public float distanceToForgetPlayer = 5;
+    public float aggroDistance = 3f;
 
     public bool gatherPoints = false;
     public bool isAggressive = false;
@@ -202,8 +203,7 @@ public class BasicAI : MonoBehaviour
            
         if (isRetaliating)
         {
-
-            Vector3 heading = phantom.transform.position - transform.position;
+            Vector3 heading = GameObject.FindGameObjectWithTag("Possessed").transform.position - transform.position;
             dirNum = AngleDir(transform.forward, heading, transform.up);
             print("I'm retaliating!");
                 isPatrolling = false;
@@ -222,7 +222,7 @@ public class BasicAI : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Possessed"))
             if (tagOverride != null && GameObject.FindGameObjectWithTag("Possessed").GetComponent<BasicAI>().tagOverride == tagOverride)
                 isAggressive = false;
-        if (isAggressive)
+        if (isAggressive && distanceBetweenPlayer <= aggroDistance)
             isRetaliating = true;
 
 
