@@ -1945,6 +1945,7 @@ GameObject:
   - component: {fileID: 8583577690673788009}
   - component: {fileID: 8497519005121818541}
   - component: {fileID: 3484266752941257348}
+  - component: {fileID: 3236307803276052020}
   m_Layer: 10
   m_Name: Dog
   m_TagString: NoPossess
@@ -2234,7 +2235,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eec7a7c987487fd4d8e5f3e7501800fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.56, y: 3}
@@ -2280,8 +2281,8 @@ MonoBehaviour:
   isFirstPrimaryAttack: 1
   isFirstSecondaryAttack: 1
   AI: {fileID: 0}
-  takeDamageSound: {fileID: 0}
-  dieSound: {fileID: 0}
+  takeDamageSound: {fileID: 8300000, guid: ad476545dd05a5e4ebecac6d8fdeecc2, type: 3}
+  dieSound: {fileID: 8300000, guid: 3b9d4c7d050e47d419b69ef512dd65e7, type: 3}
 --- !u!82 &3484266752941257348
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2378,6 +2379,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &3236307803276052020
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496592780937096331}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50ffcd479e5c1ea4ca993206fac1baf6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4326120218583108381
 PrefabInstance:
   m_ObjectHideFlags: 0

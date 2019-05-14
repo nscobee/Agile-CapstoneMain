@@ -43,11 +43,12 @@ public class AOEProjectile : MonoBehaviour
 
         if (this.transform.position == target)
         {
-            this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
+           // this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
+            this.gameObject.transform.localScale = new Vector3(20, 20, 1);
 
             if (ObjectThatSpawnedMe.tag == "Possessed")
-                Destroy(this.gameObject, 0.5f);
-            else Destroy(this.gameObject, 4f);
+                Destroy(this.gameObject, 0.45f);
+            else Destroy(this.gameObject, 0.45f);
         }
     }
 
@@ -62,21 +63,25 @@ public class AOEProjectile : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("AI") && other.gameObject != ObjectThatSpawnedMe)
         {
             print("Fireball Hit on: " + other.gameObject.name + " and dealt " + damage + " damage");
-            if (other.gameObject.GetComponent<UIController>() && other.gameObject.tag != "Possessed")
+            if (other.gameObject.GetComponent<UIController>() && other.gameObject.tag != "Possessed" && ObjectThatSpawnedMe.tag == "Possessed")
             {
                 noHit = false;
                 
-                this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
-                
+               // this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
+                this.gameObject.transform.localScale = new Vector3(20, 20, 1);
+
                 other.gameObject.GetComponent<UIController>().takeDamage(damage);
+                Destroy(this.gameObject, 0.45f);
                 damage = 0;
             }
             else if (other.gameObject.tag == "Possessed")
             {
-                this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
+                //this.gameObject.GetComponent<CircleCollider2D>().radius = 0.5f;
+                this.gameObject.transform.localScale = new Vector3(20, 20, 1);
 
                 other.gameObject.GetComponent<UIController>().takeDamage(damage);
                 damage = 0;
+                Destroy(this.gameObject, 0.45f);
             }
 
         }

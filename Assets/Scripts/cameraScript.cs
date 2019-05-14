@@ -28,6 +28,6 @@ public class cameraScript : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0, 0, 0);
         transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10);
 
-        source = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
+
     }
 }

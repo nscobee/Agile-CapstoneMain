@@ -20,11 +20,12 @@ public class BasicAI : MonoBehaviour
     public static float speed = 5f;
     public static float stopDistance = 1f;
 
-    public float distanceBetweenPlayer;
+    public float distanceBetweenPlayer = 9999999999999;
     public float distanceToStartAttackingPlayer = 1;
     public float distanceToForgetPlayer = 5;
 
     public bool gatherPoints = false;
+    public bool isAggressive = false;
 
     public BasicMovement playerMovement;
 
@@ -218,6 +219,12 @@ public class BasicAI : MonoBehaviour
         }
 
         if (!GameObject.FindGameObjectWithTag("Possessed")) isRetaliating = false;
+        if (GameObject.FindGameObjectWithTag("Possessed"))
+            if (tagOverride != null && GameObject.FindGameObjectWithTag("Possessed").GetComponent<BasicAI>().tagOverride == tagOverride)
+                isAggressive = false;
+        if (isAggressive)
+            isRetaliating = true;
+
 
     }
 
