@@ -76,6 +76,9 @@ public class MageAI : BasicAI
                     FireballAttack();
                     UI.nextPrimaryFire = Time.time + UI.primaryFireRate;
                     source.PlayOneShot(primaryAttackSound);
+                    UI.primaryCooldown.maxValue = UI.nextPrimaryFire;
+                    UI.primaryCooldown.minValue = UI.primaryCooldown.maxValue - UI.primaryFireRate;
+                    if (UI.isFirstPrimaryAttack) UI.isFirstPrimaryAttack = false;
                 }
 
             }
@@ -87,6 +90,9 @@ public class MageAI : BasicAI
                     AOEAttack();
                     UI.nextSecondaryFire = Time.time + UI.secondaryFireRate;
                     source.PlayOneShot(secondaryAttackSound);
+                    UI.secondaryCooldown.maxValue = UI.nextSecondaryFire;
+                    UI.secondaryCooldown.minValue = UI.secondaryCooldown.maxValue - UI.secondaryFireRate;
+                    if (UI.isFirstSecondaryAttack) UI.isFirstSecondaryAttack = false;
                 }
             }
         }

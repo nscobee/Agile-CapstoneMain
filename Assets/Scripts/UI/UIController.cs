@@ -37,6 +37,8 @@ public class UIController : MonoBehaviour
     public bool inRange = false;
 
     private bool isDying = false;
+    public bool isFirstPrimaryAttack = true;
+    public bool isFirstSecondaryAttack = true;
 
     public BasicAI AI;
 
@@ -69,6 +71,8 @@ public class UIController : MonoBehaviour
 
         healthSlider.maxValue = MAXHP;
         currentHealth = MAXHP;
+        primaryCooldown.value = primaryCooldown.maxValue;
+        secondaryCooldown.value = secondaryCooldown.maxValue;
 
 
     }
@@ -81,8 +85,9 @@ public class UIController : MonoBehaviour
             healthSlider.value = currentHealth;
             manaSlider.value = currentMana;
             AIHealthSlider.value = currentHealth;
-            primaryCooldown.value = Time.time - nextPrimaryFire;
-            secondaryCooldown.value = Time.time - nextSecondaryFire;
+            if(!isFirstPrimaryAttack) primaryCooldown.value = Time.time;
+            if(!isFirstSecondaryAttack) secondaryCooldown.value = Time.time;
+            
 
 
             if (this.gameObject.tag == "Possessed")
@@ -236,7 +241,7 @@ public class UIController : MonoBehaviour
             counter += Time.deltaTime;
             //Fade from 1 to 0
             float alpha = Mathf.Lerp(1, 0, counter / duration);
-            Debug.Log(alpha);
+            //Debug.Log(alpha);
 
             //Change alpha only
             MyRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);

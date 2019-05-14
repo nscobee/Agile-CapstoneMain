@@ -1012,6 +1012,7 @@ MonoBehaviour:
   possessingThisObject: 0
   canPossess: 1
   possessOnLowHealth: 0
+  dirNum: 0
   possessSound: {fileID: 0}
   swordAttackSound: {fileID: 0}
   heavySwordAttackSound: {fileID: 0}
@@ -1047,6 +1048,7 @@ MonoBehaviour:
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
+  isLookingRight: 1
   depossessSound: {fileID: 8300000, guid: dc6470e481eb8f24f9b444dd823b583d, type: 3}
   walking: {fileID: 8300000, guid: ae3c20a456554354cb1c3e35b727e771, type: 3}
   walkingVolume: 10
@@ -1180,8 +1182,8 @@ MonoBehaviour:
   maxXPGained: 50
   inRange: 0
   AI: {fileID: 0}
-  takeDamageSound: {fileID: 8300000, guid: e26418cb0dadaa948a1edd50494a61f8, type: 3}
-  dieSound: {fileID: 8300000, guid: eba68d0fd3ba96144b7f48c5a0dcea53, type: 3}
+  takeDamageSound: {fileID: 8300000, guid: 4836fafbd6d266a428ddf5d888f0490c, type: 3}
+  dieSound: {fileID: 8300000, guid: 3f54ae20b28de5e48a7a24d6e3c63c4f, type: 3}
 --- !u!114 &3451249131234036252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1225,6 +1227,7 @@ MonoBehaviour:
   possessingThisObject: 0
   canPossess: 1
   possessOnLowHealth: 0
+  dirNum: 0
   possessSound: {fileID: 0}
   swordAttackSound: {fileID: 0}
   heavySwordAttackSound: {fileID: 0}

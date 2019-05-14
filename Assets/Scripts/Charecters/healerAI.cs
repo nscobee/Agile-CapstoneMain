@@ -75,20 +75,28 @@ public class healerAI : BasicAI {
             {
                 if (UIControls.currentMana > 0)
                 {
+                    UIControls.nextPrimaryFire = Time.time + UIControls.primaryFireRate;
                     FireAttack();
                     source.PlayOneShot(primaryAttackSound);
+                    UIControls.primaryCooldown.maxValue = UIControls.nextPrimaryFire;
+                    UIControls.primaryCooldown.minValue = UIControls.primaryCooldown.maxValue - UIControls.primaryFireRate;
+                    if (UIControls.isFirstPrimaryAttack) UIControls.isFirstPrimaryAttack = false;
                 }
-                UIControls.nextPrimaryFire = Time.time + UIControls.primaryFireRate;
+               
 
             }
             if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time > UIControls.nextSecondaryFire)
             {
                 if (UIControls.currentMana > 0)
                 {
+                    UIControls.nextSecondaryFire = Time.time + UIControls.secondaryFireRate;
                     Heal();
                     source.PlayOneShot(secondaryAttackSound);
+                    UIControls.secondaryCooldown.maxValue = UIControls.nextSecondaryFire;
+                    UIControls.secondaryCooldown.minValue = UIControls.secondaryCooldown.maxValue - UIControls.secondaryFireRate;
+                    if (UIControls.isFirstSecondaryAttack) UIControls.isFirstSecondaryAttack = false;
                 }
-                UIControls.nextSecondaryFire = Time.time + UIControls.secondaryFireRate;
+                
             }
         }
     }
