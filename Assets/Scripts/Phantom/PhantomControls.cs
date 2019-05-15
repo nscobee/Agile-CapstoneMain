@@ -47,7 +47,7 @@ public class PhantomControls : MonoBehaviour
     private void Update()
     {
         
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
 
         // uses the generic movement for movement passing desired speed
         transform.position += GenericFunctions.BasePlayerMovement(speed);
@@ -62,10 +62,11 @@ public class PhantomControls : MonoBehaviour
                 //isPossessing = true;
 
                 //if the game object being posessed is a scribe, save the game
-                if (phantomTarget.tag == "Scribe" && isPossessing)
+                if (phantomTarget.name == "Scribe"/* && isPossessing*/)
                 {
                     Debug.Log("POSSESSING SCRIBE; SAVING");
-                    SaveLoadController.control.SaveLevel();
+                    slControl.SaveLevel();
+                    phantomTarget.GetComponent<BasicAI>().Possess(this.gameObject);
                 }
 
                 if (isPossessing)

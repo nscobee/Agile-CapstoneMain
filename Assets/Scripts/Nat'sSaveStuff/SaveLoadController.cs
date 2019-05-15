@@ -290,10 +290,6 @@ public void SaveLevel()
          * To be fixed:
          * References to player health, should be referencing UIController-done
          * Remove save points and replace with saving via possessing scribe, frameworkish is in phantomcontrols script
-         * 
-         * 
-         * 
-         * 
          * */
         SaveAndLoad.savedGames.Add(this.levelData);
         Debug.Log("SavedGames count: " + SaveAndLoad.savedGames.Count);
@@ -312,10 +308,10 @@ public void SaveLevel()
         {
             SceneManager.MoveGameObjectToScene(player.gameObject, sceneToLoad);
         }
-        else
-        {
-            //Destroy(player.gameObject);
-        }
+        //else
+        //{
+        //    //Destroy(player.gameObject);
+        //}
     }
     #endregion
 
@@ -346,8 +342,7 @@ public void SaveLevel()
     private void OnLevelWasLoaded(int level)
     {
         player = GameObject.Find("Phantom2.0").GetComponent<PhantomControls>();
-
-        
+                
         SetPlayerPos(player, ldLoaded);
     }
 }

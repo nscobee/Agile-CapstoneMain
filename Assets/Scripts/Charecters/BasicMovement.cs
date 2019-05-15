@@ -135,7 +135,6 @@ public class BasicMovement : MonoBehaviour
        // mainCamera.transform.parent = phantom.gameObject.transform;
         Destroy(this.gameObject);
         phantomControls.speed = 5;
-
     }
 
     public void ReallyDED()
