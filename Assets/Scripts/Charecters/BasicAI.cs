@@ -177,9 +177,6 @@ public class BasicAI : MonoBehaviour
             nextAIAttack = 0;
         }
 
-
-        
-
         if (UIControls.currentHealth <= 0 && !phantomControls.isPossessing)
         {
             UIControls.Die();
@@ -241,7 +238,7 @@ public class BasicAI : MonoBehaviour
         phantomMesh.enabled = false; //^^^same
         phantomRigid.Sleep();
         playerMovement.enabled = true;
-        //phantomControls.enabled = false;
+        phantomControls.enabled = false;
 
         this.enabled = false;
         //setUI();
