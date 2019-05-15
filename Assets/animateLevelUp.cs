@@ -19,7 +19,7 @@ public class animateLevelUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (levelScript.currentLevel >= levelScript.xpTillNextLevel)
+        if (levelScript.currentXP >= levelScript.xpTillNextLevel)
             anim.SetTrigger("levelUp");
     }
 }
