@@ -73,7 +73,9 @@ MonoBehaviour:
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 7
   distanceToForgetPlayer: 15
+  aggroDistance: 3
   gatherPoints: 1
+  isAggressive: 0
   playerMovement: {fileID: 114680281121275744}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
@@ -177,7 +179,9 @@ MonoBehaviour:
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
+  aggroDistance: 3
   gatherPoints: 0
+  isAggressive: 0
   playerMovement: {fileID: 0}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
@@ -232,8 +236,9 @@ MonoBehaviour:
   healMultiplier: 0
   playerInRange: 0
   inRange: []
-  primaryAttackSound: {fileID: 0}
-  secondaryAttackSound: {fileID: 0}
+  primaryAttackSound: {fileID: 8300000, guid: 8a5ad49b2b588d4458b7e817e488dff0, type: 3}
+  secondaryAttackSound: {fileID: 8300000, guid: 4aaf234218c95464e81ceafc504e84fa,
+    type: 3}
 --- !u!61 &61507297374715484
 BoxCollider2D:
   m_ObjectHideFlags: 0

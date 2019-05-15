@@ -175,7 +175,9 @@ MonoBehaviour:
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 9
   distanceToForgetPlayer: 22
+  aggroDistance: 3
   gatherPoints: 1
+  isAggressive: 0
   playerMovement: {fileID: 114442683563566332}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
@@ -261,7 +263,9 @@ MonoBehaviour:
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
+  aggroDistance: 3
   gatherPoints: 0
+  isAggressive: 0
   playerMovement: {fileID: 0}
   phantomControls: {fileID: 114645118731456562, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17,
     type: 3}
@@ -324,8 +328,9 @@ MonoBehaviour:
   anim: {fileID: 0}
   fireballFireRate: 7
   playerInRange: 0
-  primaryAttackSound: {fileID: 0}
-  secondaryAttackSound: {fileID: 0}
+  primaryAttackSound: {fileID: 8300000, guid: 8a5ad49b2b588d4458b7e817e488dff0, type: 3}
+  secondaryAttackSound: {fileID: 8300000, guid: a8083e37b6b3744438f3c3e70afa18b1,
+    type: 3}
 --- !u!114 &1199884532
 MonoBehaviour:
   m_ObjectHideFlags: 0

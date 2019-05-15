@@ -71,6 +71,7 @@ MonoBehaviour:
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 3
   distanceToForgetPlayer: 10
+  aggroDistance: 3
   gatherPoints: 1
   isAggressive: 0
   playerMovement: {fileID: 114443481937730140}
@@ -156,6 +157,7 @@ MonoBehaviour:
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
+  aggroDistance: 3
   gatherPoints: 0
   isAggressive: 0
   playerMovement: {fileID: 0}
@@ -210,8 +212,9 @@ MonoBehaviour:
   fighterHp: 90
   fighterAp: 40
   playerInRange: 0
-  primaryAttackSound: {fileID: 0}
-  secondaryAttackSound: {fileID: 0}
+  primaryAttackSound: {fileID: 8300000, guid: 588b67d2af2130445babaf728baff7e0, type: 3}
+  secondaryAttackSound: {fileID: 8300000, guid: ba15382d81b7824409605e55b2325452,
+    type: 3}
   inRange: []
 --- !u!50 &50962217405559534
 Rigidbody2D:
@@ -930,6 +933,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
+    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
+      propertyPath: m_Name
+      value: SwordHitbox
+      objectReference: {fileID: 0}
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.33
@@ -973,10 +980,6 @@ PrefabInstance:
     - target: {fileID: 4466684196394352, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1272127003117332, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
-      propertyPath: m_Name
-      value: SwordHitbox
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bc4fac31c8fd794fa877ddd2eb6e202, type: 3}
