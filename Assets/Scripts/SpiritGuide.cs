@@ -39,6 +39,8 @@ public class SpiritGuide : MonoBehaviour
     bool readPart4 = false;
     bool readPart5 = false;
     bool readPart6 = false;
+    bool readPart7 = false;
+    bool readPart8 = false;
 
     private AudioSource source;
     public AudioClip possessSound;
@@ -84,7 +86,7 @@ public class SpiritGuide : MonoBehaviour
             {
                 readPart4 = true;
                 nextRead = Time.time + checkForNextRead;
-                text = "But if we both leave at the same time we might have a fighting chance!";
+                text = "But if we both leave at the same time...";
                 typing = false;
             }
 
@@ -92,13 +94,29 @@ public class SpiritGuide : MonoBehaviour
             {
                 readPart5 = true;
                 nextRead = Time.time + checkForNextRead;
-                text = "When you leave the graveyard press space when near an easy target to possess him.";
+                text = "...we might have a fighting chance!";
                 typing = false;
             }
 
             if (!readPart6 && readPart5 && Time.time > nextRead)
             {
                 readPart6 = true;
+                nextRead = Time.time + checkForNextRead;
+                text = "When you leave the graveyard press space...";
+                typing = false;
+            }
+
+            if (!readPart7 && readPart6 && Time.time > nextRead)
+            {
+                readPart7 = true;
+                nextRead = Time.time + checkForNextRead;
+                text = "...when near an easy target to possess him.";
+                typing = false;
+            }
+
+            if (!readPart8 && readPart7 && Time.time > nextRead)
+            {
+                readPart8 = true;
                 nextRead = Time.time + checkForNextRead;
                 text = "Try for someone who is sleeping or weak.";
                 typing = false;
@@ -166,6 +184,16 @@ public class SpiritGuide : MonoBehaviour
                 StartCoroutine(BuildText());
         }
         if (readPart6)
+        {
+            if (!typing)
+                StartCoroutine(BuildText());
+        }
+        if (readPart7)
+        {
+            if (!typing)
+                StartCoroutine(BuildText());
+        }
+        if (readPart8)
         {
             isTalking = false;
             isDoneTalking = true;

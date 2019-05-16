@@ -72,7 +72,7 @@ public class AOEProjectile : MonoBehaviour
 
                 other.gameObject.GetComponent<UIController>().takeDamage(damage);
                 Destroy(this.gameObject, 0.45f);
-                damage = 0;
+                
             }
             else if (other.gameObject.tag == "Possessed")
             {
@@ -80,7 +80,7 @@ public class AOEProjectile : MonoBehaviour
                 this.gameObject.transform.localScale = new Vector3(20, 20, 1);
 
                 other.gameObject.GetComponent<UIController>().takeDamage(damage);
-                damage = 0;
+                
                 Destroy(this.gameObject, 0.45f);
             }
 
