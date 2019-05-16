@@ -8,9 +8,11 @@ public class SpiritGuide : MonoBehaviour
 {
     public List<Transform> pointsList = new List<Transform>();
     public float dialogueWait = 7f;
-    public float speed = 1.5f;
+    public float speed = 1.3f;
     private int count = 0;
     private bool playerIsInRange = false;
+
+    public GameObject sleepingNPC;
 
     [Header("Text Stuffs")]
     public GameObject TextPanel;
@@ -35,9 +37,17 @@ public class SpiritGuide : MonoBehaviour
     bool readPart2 = false;
     bool readPart3 = false;
     bool readPart4 = false;
+    bool readPart5 = false;
+    bool readPart6 = false;
 
+    private AudioSource source;
+    public AudioClip possessSound;
+    public AudioClip heyListen;
 
-
+    private void Awake()
+    {
+        source = this.GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -53,35 +63,53 @@ public class SpiritGuide : MonoBehaviour
             {
                 readPart1 = true;
                 nextRead = Time.time + checkForNextRead;
-                text = "If we leave the graveyard the reaper will get us.";
+                text = "...";
                 typing = false;
             }
             if (!readPart2 && readPart1 && Time.time > nextRead)
             {
                 readPart2 = true;
                 nextRead = Time.time + checkForNextRead;
-                text = "But if we both leave at the same time we might have a fighting chance!";
+                text = "Hey you! Help me out! I'm trying to escape!";
                 typing = false;
             }
             if (!readPart3 && readPart2 && Time.time > nextRead)
             {
                 readPart3 = true;
                 nextRead = Time.time + checkForNextRead;
-                text = "When you leave the graveyard press space when near an easy target to possess him.";
+                text = "If we leave the graveyard the reaper will get us.";
                 typing = false;
             }
             if (!readPart4 && readPart3 && Time.time > nextRead)
             {
                 readPart4 = true;
                 nextRead = Time.time + checkForNextRead;
+                text = "But if we both leave at the same time we might have a fighting chance!";
+                typing = false;
+            }
+
+            if (!readPart5 && readPart4 && Time.time > nextRead)
+            {
+                readPart5 = true;
+                nextRead = Time.time + checkForNextRead;
+                text = "When you leave the graveyard press space when near an easy target to possess him.";
+                typing = false;
+            }
+
+            if (!readPart6 && readPart5 && Time.time > nextRead)
+            {
+                readPart6 = true;
+                nextRead = Time.time + checkForNextRead;
                 text = "Try for someone who is sleeping or weak.";
                 typing = false;
             }
+
+            
         }
         //moves the player after all the dialogue is done
-        if (isDoneTalking && playerIsInRange)
+        if (playerIsInRange && readPart4)
         {
-            TextPanel.SetActive(false);
+            //TextPanel.SetActive(false);
             if (Vector3.Distance(this.transform.position, pointsList[count].transform.position) > .3f)
             {
                 this.transform.position = Vector3.MoveTowards(this.transform.position, pointsList[count].transform.position, speed * Time.deltaTime);
@@ -95,7 +123,9 @@ public class SpiritGuide : MonoBehaviour
 
         if (count >= 5)
         {
-            Destroy(this.gameObject);
+            source.PlayOneShot(possessSound);
+            StartCoroutine(fadeOut(this.GetComponent<SpriteRenderer>(), sleepingNPC.GetComponent<SpriteRenderer>(), 2f));
+            
         }
 
     }
@@ -103,6 +133,8 @@ public class SpiritGuide : MonoBehaviour
 
     private void Talking()
     {
+        if (!isTalking)
+            source.PlayOneShot(heyListen);
         isTalking = true;
         TextPanel.SetActive(true);
         if (!typing)
@@ -125,6 +157,16 @@ public class SpiritGuide : MonoBehaviour
         }
         if (readPart4)
         {
+            if (!typing)
+                StartCoroutine(BuildText());
+        }
+        if (readPart5)
+        {
+            if (!typing)
+                StartCoroutine(BuildText());
+        }
+        if (readPart6)
+        {
             isTalking = false;
             isDoneTalking = true;
         }
@@ -141,6 +183,13 @@ public class SpiritGuide : MonoBehaviour
             //Wait a certain amount of time, then continue with the for loop
             yield return new WaitForSeconds(timeLapse);
         }
+
+        if (readPart6)
+        {
+            yield return new WaitForSeconds(1f);
+            TextPanel.SetActive(false);
+        }
+            
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -156,4 +205,31 @@ public class SpiritGuide : MonoBehaviour
     {
         playerIsInRange = false;
     }
-}
+
+    IEnumerator fadeOut(SpriteRenderer MyRenderer, SpriteRenderer sleepRenderer, float duration) //death animation, prevents player from moving while dying as well
+    {
+        
+        float counter = 0;
+        //Get current color
+        Color spriteColor = MyRenderer.material.color;
+        Color spriteColor2 = sleepRenderer.material.color;
+        
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(1, 0, counter / duration);
+            //Debug.Log(alpha);
+
+            //Change alpha only
+            MyRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            sleepRenderer.color = new Color(spriteColor2.r, spriteColor2.g, spriteColor2.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+        Destroy(sleepingNPC);
+        Destroy(this.gameObject);
+    }
+
+    }
+

@@ -216,7 +216,8 @@ public class UIController : MonoBehaviour
         }
         else
         {
-            //necromancer die
+            source.PlayOneShot(dieSound);
+            StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 2f));
         }
     }
 

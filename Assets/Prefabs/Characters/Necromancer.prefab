@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 8912490814479371868}
   - component: {fileID: 8912490814479371809}
   - component: {fileID: 2875933404240998840}
+  - component: {fileID: 7668049904200043645}
+  - component: {fileID: 9106848267865482334}
   m_Layer: 10
   m_Name: Necromancer
   m_TagString: Necromancer
@@ -102,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: -1420077193
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b410400a5201b72439159339334a4871, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 316a64ba7685b4e4aa504ecde0957591, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,17 +136,23 @@ MonoBehaviour:
   rateOfAttack: 8
   lowerBound: 20
   upperBound: 60
-  summonsMage: {fileID: 0}
+  summonsMage: {fileID: 1022283891611942, guid: 701387a6f7f81c944b99b34920ab3fc7,
+    type: 3}
   summonsMageLocation: {fileID: 0}
-  summonsMelee: {fileID: 0}
+  summonsMelee: {fileID: 1326686080439248, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+    type: 3}
   summonsMeleeLocation: {fileID: 0}
-  summonsHealer: {fileID: 0}
+  summonsHealer: {fileID: 1357274984528016, guid: b8173002b43063f43b59e88abfd90ad9,
+    type: 3}
   summonsHealerLocation: {fileID: 0}
-  demonOne: {fileID: 0}
+  demonOne: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
+    type: 3}
   demonOneLocation: {fileID: 0}
-  demonTwo: {fileID: 0}
+  demonTwo: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
+    type: 3}
   demonTwoLocation: {fileID: 0}
-  demonThree: {fileID: 0}
+  demonThree: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
+    type: 3}
   demonThreeLocation: {fileID: 0}
   canTakeDamage: 0
   canAttack: 0
@@ -186,14 +194,17 @@ MonoBehaviour:
     type: 3}
   durationPillarsLastInSeconds: 5
   summonLocation: {fileID: 0}
-  undeadKnight: {fileID: 0}
-  deathMage: {fileID: 0}
-  darkHealer: {fileID: 0}
-  demonSummon: {fileID: 0}
+  undeadKnight: {fileID: 1326686080439248, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+    type: 3}
+  deathMage: {fileID: 1022283891611942, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
+  darkHealer: {fileID: 1357274984528016, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
+  demonSummon: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
+    type: 3}
   musicSource: {fileID: 0}
-  dialogueAmbience: {fileID: 0}
-  FireBallSound: {fileID: 0}
-  evilLaugh: {fileID: 0}
+  dialogueAmbience: {fileID: 8300000, guid: c1bb5927de75f2d429f58e047d6e913f, type: 3}
+  FireBallSound: {fileID: 8300000, guid: a8083e37b6b3744438f3c3e70afa18b1, type: 3}
+  evilLaugh: {fileID: 8300000, guid: 6fbc8776821173c4f9a1495380bc509f, type: 3}
+  summonMinionSound: {fileID: 8300000, guid: eb5f6c573991e424f9d73e21e662f14f, type: 3}
 --- !u!114 &8912490814479371809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,8 +241,8 @@ MonoBehaviour:
   isFirstPrimaryAttack: 1
   isFirstSecondaryAttack: 1
   AI: {fileID: 0}
-  takeDamageSound: {fileID: 0}
-  dieSound: {fileID: 0}
+  takeDamageSound: {fileID: 8300000, guid: 14a7715825fb41740bdd2682858cf05a, type: 3}
+  dieSound: {fileID: 8300000, guid: 3f54ae20b28de5e48a7a24d6e3c63c4f, type: 3}
 --- !u!82 &2875933404240998840
 AudioSource:
   m_ObjectHideFlags: 0
@@ -328,3 +339,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!70 &7668049904200043645
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 6, y: 8.1}
+  m_Direction: 0
+--- !u!50 &9106848267865482334
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

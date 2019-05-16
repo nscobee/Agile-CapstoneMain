@@ -265,6 +265,8 @@ public class BasicAI : MonoBehaviour
         {
             homeSpawner.AI.Remove(this.gameObject);
         }
+
+
     }
 
     //does the wander thingy
@@ -496,4 +498,6 @@ public class BasicAI : MonoBehaviour
             return 0f;
         }
     }
+
+    
 }

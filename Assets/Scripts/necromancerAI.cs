@@ -86,6 +86,7 @@ public class necromancerAI : MonoBehaviour
     public GameObject darkHealer;
     public GameObject demonSummon;
 
+
     [Header("Audio Stuffs")]
     public AudioSource musicSource;
     public AudioClip dialogueAmbience;
@@ -109,6 +110,35 @@ public class necromancerAI : MonoBehaviour
         UI = this.gameObject.GetComponent<UIController>();
         mainCamera = Camera.main;
         musicSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
+
+        summonsHealer.GetComponent<BasicAI>().isAggressive = true;
+        summonsHealer.GetComponent<BasicAI>().aggroDistance = 10;
+        summonsMage.GetComponent<BasicAI>().isAggressive = true;
+        summonsMage.GetComponent<BasicAI>().aggroDistance = 10;
+        summonsMelee.GetComponent<BasicAI>().isAggressive = true;
+        summonsMelee.GetComponent<BasicAI>().aggroDistance = 10;
+
+        demonOne.GetComponent<BasicAI>().isAggressive = true;
+        demonOne.GetComponent<BasicAI>().aggroDistance = 10;
+        demonTwo.GetComponent<BasicAI>().isAggressive = true;
+        demonTwo.GetComponent<BasicAI>().aggroDistance = 10;
+        demonThree.GetComponent<BasicAI>().isAggressive = true;
+        demonThree.GetComponent<BasicAI>().aggroDistance = 10;
+
+        undeadKnight.GetComponent<BasicAI>().isAggressive = true;
+        undeadKnight.GetComponent<BasicAI>().aggroDistance = 10;
+
+        deathMage.GetComponent<BasicAI>().isAggressive = true;
+        deathMage.GetComponent<BasicAI>().aggroDistance = 10;
+
+        darkHealer.GetComponent<BasicAI>().isAggressive = true;
+        darkHealer.GetComponent<BasicAI>().aggroDistance = 10;
+
+        demonSummon.GetComponent<BasicAI>().isAggressive = true;
+        demonSummon.GetComponent<BasicAI>().aggroDistance = 10;
+
+        demonSummon.GetComponent<BasicAI>().isAggressive = true;
+        demonSummon.GetComponent<BasicAI>().aggroDistance = 10;
 
     }
 
@@ -178,8 +208,9 @@ public class necromancerAI : MonoBehaviour
 
         if (!canTakeDamage) //is immortal until said otherwise
         {
-            currentHealth = MAXHEALTH;
+            GetComponent<CapsuleCollider2D>().enabled = false;
         }
+        else GetComponent<CapsuleCollider2D>().enabled = true;
 
 
         if(!isDoneMonologuing) //if text isn't done cycling, and the monologue hasn't started, start monologuing
@@ -199,6 +230,7 @@ public class necromancerAI : MonoBehaviour
             Instantiate(summonsMage, summonsMageLocation.position, Quaternion.identity, null);
             Instantiate(summonsMelee, summonsMeleeLocation.position, Quaternion.identity, null);
             
+
         }
 
         if(firstWaveSummoned && firstWaveSummonsKilled == 3 && !secondWaveSummoned) //if the first wave minions are murdered in not so cold blood, summon wave 2
@@ -207,9 +239,18 @@ public class necromancerAI : MonoBehaviour
             Instantiate(demonOne, demonOneLocation.position, Quaternion.identity, null);
             Instantiate(demonTwo, demonTwoLocation.position, Quaternion.identity, null);
             Instantiate(demonThree, demonThreeLocation.position, Quaternion.identity, null);
+           
         }
 
-        if (currentHealth <= 0) Die();
+      
+        if (secondWaveSummonsKilled == 3)
+        {
+            canAttack = true;
+            canTakeDamage = true;
+          
+        }
+
+        //if (currentHealth <= 0) Die();
 
     }
 
@@ -283,18 +324,23 @@ public class necromancerAI : MonoBehaviour
         {
             case 0:
                 Instantiate(undeadKnight, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+               
                 break;
             case 1:
                 Instantiate(deathMage, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                
                 break;
             case 2:
                 Instantiate(darkHealer, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                
                 break;
             case 3:
                 Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                
                 break;
             default:
                 Instantiate(demonSummon, summonLocation.position, Quaternion.identity, this.gameObject.transform);
+                
                 break;
 
         }
