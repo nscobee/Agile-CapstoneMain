@@ -17,7 +17,7 @@ public class BasicAI : MonoBehaviour
   //  private float nextRound = 0.0f;
   //  public float fireRate = 7.0f;
 
-    public static float speed = 5f;
+    public float speed = 5f;
     public static float stopDistance = 1f;
 
     public float distanceBetweenPlayer = 9999999999999;

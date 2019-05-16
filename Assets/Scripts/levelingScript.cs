@@ -14,6 +14,7 @@ public class levelingScript : MonoBehaviour
     public bool hasPossessed = false;
 
     public Animator anim;
+    public AudioSource source;
 
     //Make a List containing all NPC ID's and potential levels
     public List<int> NPC_Levels = new List<int>();
@@ -63,6 +64,7 @@ public class levelingScript : MonoBehaviour
         if (currentXP >= xpTillNextLevel)
         {
             anim.SetTrigger("levelUp");
+            source.Play();
             currentLevel++;
             UIControls.increaseStats();
             currentXP = 0;

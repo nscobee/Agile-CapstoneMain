@@ -6,6 +6,7 @@ public class animateLevelUp : MonoBehaviour
 {
     
     public Animator anim;
+
     
 
     // Start is called before the first frame update
@@ -18,6 +19,6 @@ public class animateLevelUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);       
     }
 }

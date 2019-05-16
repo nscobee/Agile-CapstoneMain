@@ -31,6 +31,7 @@ public class demonAI : BasicAI
     //public float damageMultiplier;
 
     public bool playerInRange;
+    public Animator hitboxAnim;
 
 
 
@@ -48,6 +49,7 @@ public class demonAI : BasicAI
         //basicAI.setStats(fighterHp, fighterAp);
         meleeHitbox = this.gameObject.transform.GetChild(0).gameObject;
         meleeHitbox.GetComponent<BoxCollider2D>().enabled = false;
+        hitboxAnim = meleeHitbox.GetComponent<Animator>();
 
     }
 
@@ -69,6 +71,15 @@ public class demonAI : BasicAI
 
         //destroys bullet after 4 seconds ish
         // Destroy(swordHitbox);
+        hitboxAnim.SetTrigger("Attack");
+        meleeHitbox.GetComponent<meleeRange>().isAttacking = true;
+        nextAttack = Time.time + attackRate;
+        activeDamage = damage;
+        //meleeHitbox.GetComponent<BoxCollider2D>().enabled = true;
+
+        //destroys bullet after 4 seconds ish
+        // Destroy(swordHitbox);
+        StartCoroutine(FinishedAnim());
     }
 
     public void AOEAttack(Transform playerTransform)
@@ -110,5 +121,11 @@ public class demonAI : BasicAI
         {
             playerInRange = false;
         }
+    }
+
+    private IEnumerator FinishedAnim()
+    {
+        yield return new WaitForSeconds(.5f);
+        meleeHitbox.GetComponent<meleeRange>().isAttacking = false;
     }
 }
