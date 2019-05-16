@@ -255,6 +255,7 @@ MonoBehaviour:
   STARTINGXPNEEDEDTOLEVELUP: 100
   currentLevel: 1
   hasPossessed: 0
+  anim: {fileID: 9153530957946389279}
   NPC_Levels: 
 --- !u!82 &3368500034418216335
 AudioSource:
@@ -464,6 +465,12 @@ PrefabInstance:
 --- !u!4 &8705300610081588737 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8115213988642183961, guid: a5624461e555aaa42a6bab00adb7b287,
+    type: 3}
+  m_PrefabInstance: {fileID: 599111689940229400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &9153530957946389279 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8599525635272236551, guid: a5624461e555aaa42a6bab00adb7b287,
     type: 3}
   m_PrefabInstance: {fileID: 599111689940229400}
   m_PrefabAsset: {fileID: 0}

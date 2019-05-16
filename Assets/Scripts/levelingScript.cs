@@ -13,6 +13,8 @@ public class levelingScript : MonoBehaviour
     public int currentLevel = 1;
     public bool hasPossessed = false;
 
+    public Animator anim;
+
     //Make a List containing all NPC ID's and potential levels
     public List<int> NPC_Levels = new List<int>();
 
@@ -21,6 +23,7 @@ public class levelingScript : MonoBehaviour
     void Start()
     {
         NPC_Levels.Add(-1); //make sure the list isn't empty on load
+        
     }
 
     // Update is called once per frame
@@ -44,7 +47,7 @@ public class levelingScript : MonoBehaviour
                 NPC_Levels.Add(AI.NPC_ID); //adds a new entry to the list
                 currentLevel = AI.currentLevel; //probably not needed but makes sure its consistantly setting current level based off of the newly possessed NPC, which if its new, its always 1
                 hasPossessed = true; //same as above
-                xpTillNextLevel = STARTINGXPNEEDEDTOLEVELUP * (2 ^ (currentLevel - 1));
+                xpTillNextLevel = STARTINGXPNEEDEDTOLEVELUP * Mathf.Pow(2, (currentLevel - 1));
             }
 
             AI.currentLevel = currentLevel; //sets AI level to current level if being possessed
@@ -59,10 +62,12 @@ public class levelingScript : MonoBehaviour
 
         if (currentXP >= xpTillNextLevel)
         {
+            anim.SetTrigger("levelUp");
             currentLevel++;
             UIControls.increaseStats();
             currentXP = 0;
-            xpTillNextLevel = STARTINGXPNEEDEDTOLEVELUP * (2^(currentLevel - 1));
+            xpTillNextLevel = STARTINGXPNEEDEDTOLEVELUP * Mathf.Pow(2, (currentLevel - 1));
+            
         }
 
         if (!GetComponent<PhantomControls>().isPossessing) currentXP = 0;
