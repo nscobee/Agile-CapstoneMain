@@ -93,6 +93,7 @@ public class necromancerAI : MonoBehaviour
     public AudioClip FireBallSound;
     public AudioClip evilLaugh;
     public AudioClip summonMinionSound;
+    public AudioClip dieSound;
     private AudioSource source;
 
 
@@ -206,11 +207,13 @@ public class necromancerAI : MonoBehaviour
             }
         }
 
+        if (currentHealth <= 0) Die();
+
         if (!canTakeDamage) //is immortal until said otherwise
         {
-            GetComponent<CapsuleCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
-        else GetComponent<CapsuleCollider2D>().enabled = true;
+        else GetComponent<BoxCollider2D>().enabled = true;
 
 
         if(!isDoneMonologuing) //if text isn't done cycling, and the monologue hasn't started, start monologuing
@@ -423,11 +426,35 @@ public class necromancerAI : MonoBehaviour
  
     private void Die()
     {
-        //do the die
-        Destroy(this.gameObject);
-        //if time permits, input closing dialogue here before transitioning to victory scene
-
-        //input scene move to victory scene
+        source.PlayOneShot(dieSound);
+        StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 2f));
         
+
+    }
+
+    IEnumerator fadeOut(SpriteRenderer MyRenderer, float duration) //death animation, prevents player from moving while dying as well
+    {
+        canAttack = false;
+        float counter = 0;
+        //Get current color
+        Color spriteColor = MyRenderer.material.color;
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(1, 0, counter / duration);
+            //Debug.Log(alpha);
+
+            //Change alpha only
+            MyRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+        //UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(GameObject.FindGameObjectWithTag("Possessed"), UnityEngine.SceneManagement.SceneManager.GetSceneByBuildIndex(8));
+        
+
+
     }
 }

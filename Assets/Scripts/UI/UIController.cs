@@ -71,8 +71,8 @@ public class UIController : MonoBehaviour
 
         healthSlider.maxValue = MAXHP;
         currentHealth = MAXHP;
-        primaryCooldown.value = primaryCooldown.maxValue;
-        secondaryCooldown.value = secondaryCooldown.maxValue;
+        if (this.gameObject.tag != "Necromancer") primaryCooldown.value = primaryCooldown.maxValue;
+        if (this.gameObject.tag != "Necromancer") secondaryCooldown.value = secondaryCooldown.maxValue;
 
 
     }
@@ -102,7 +102,7 @@ public class UIController : MonoBehaviour
                 theUI.enabled = false;
             }
 
-            if (currentHealth <= 0 && !isDying)
+            if (currentHealth <= 0 && (!isDying || this.gameObject.tag == "Necromancer"))
                 Die();
             if (currentHealth >= MAXHP) currentHealth = MAXHP;
             if (currentMana >= MAXMANA) currentMana = MAXMANA;
@@ -214,11 +214,7 @@ public class UIController : MonoBehaviour
             // this.gameObject.GetComponent<BasicMovement>().DED();
             StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 1f));
         }
-        else
-        {
-            source.PlayOneShot(dieSound);
-            StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 2f));
-        }
+
     }
 
 
