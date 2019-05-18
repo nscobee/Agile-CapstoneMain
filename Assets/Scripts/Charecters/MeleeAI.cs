@@ -70,7 +70,7 @@ public class MeleeAI : BasicAI {
     {
         
 
-        if (this.gameObject.tag == "Possessed")
+        if (this.gameObject.tag == "Possessed" && Time.timeScale > 0)
         {
 
             if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > UI.nextPrimaryFire)

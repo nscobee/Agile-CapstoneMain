@@ -69,7 +69,7 @@ public class healerAI : BasicAI {
 	// Update is called once per frame
 	void Update () {
 
-        if (this.gameObject.tag == "Possessed")
+        if (this.gameObject.tag == "Possessed" && Time.timeScale > 0)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > UIControls.nextPrimaryFire)
             {

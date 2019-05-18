@@ -65,7 +65,7 @@ public class MageAI : BasicAI
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.tag == "Possessed")
+        if (this.gameObject.tag == "Possessed" && Time.timeScale > 0)
         {
             if (Input.GetMouseButtonDown(0) && Time.time > UI.nextPrimaryFire)
             {
