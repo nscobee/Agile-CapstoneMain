@@ -2022,7 +2022,7 @@ MonoBehaviour:
   InRange: 0
   playerInRangeToAttack: 0
   nextAIAttack: 0
-  AttackCooldown: 10
+  AttackCooldown: 5
   canSpawn: 1
   randNum: 0
   frequencyOfPrimary: 80

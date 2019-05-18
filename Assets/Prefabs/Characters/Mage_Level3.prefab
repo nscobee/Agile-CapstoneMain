@@ -187,7 +187,7 @@ MonoBehaviour:
   InRange: 0
   playerInRangeToAttack: 0
   nextAIAttack: 0
-  AttackCooldown: 10
+  AttackCooldown: 5
   canSpawn: 1
   randNum: 0
   frequencyOfPrimary: 80
@@ -318,11 +318,11 @@ MonoBehaviour:
   AOEbullet: {fileID: 1691395373167110, guid: da3d88e31a3bce54790a9ac1bf7c695e, type: 3}
   bulletSplashArea: 3
   inRange: []
-  fireballDamageAmount: 10
-  AOEDamageAmount: 15
+  fireballDamageAmount: 20
+  AOEDamageAmount: 35
   fireRange: 2
-  fireballManaLoss: 5
-  AOEManaLoss: 20
+  fireballManaLoss: 15
+  AOEManaLoss: 35
   mageHp: 40
   mageAp: 90
   basicAI: {fileID: 114408053851157008}
@@ -352,12 +352,12 @@ MonoBehaviour:
   primaryCooldown: {fileID: 9128034445119957088}
   secondaryCooldown: {fileID: 7327960829500058193}
   AIHealthSlider: {fileID: 6635002119325556768}
-  currentHealth: 100
-  currentMana: 100
-  MAXHP: 100
-  MAXMANA: 100
+  currentHealth: 150
+  currentMana: 150
+  MAXHP: 150
+  MAXMANA: 150
   percentOfHealthToPossess: 50
-  rateOfManaRegen: 2.5
+  rateOfManaRegen: 5
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20

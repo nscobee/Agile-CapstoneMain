@@ -288,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -901,7 +901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -1183,7 +1183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -1525,7 +1525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -1857,7 +1857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -2184,7 +2184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -61900,7 +61900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -62312,7 +62312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -92738,7 +92738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -93070,7 +93070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -93392,7 +93392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}
@@ -93694,7 +93694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: f1fd3e8753780e74aba38c0223bfd364, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7164005125417727918, guid: f1fd3e8753780e74aba38c0223bfd364,
         type: 3}

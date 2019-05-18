@@ -478,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -877,7 +877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -1245,7 +1245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -1339,7 +1339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -1631,7 +1631,7 @@ PrefabInstance:
     - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -1838,7 +1838,7 @@ PrefabInstance:
     - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -53540,7 +53540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -53668,7 +53668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -53863,7 +53863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -54008,7 +54008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -54198,7 +54198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -54481,7 +54481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -87999,7 +87999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -88176,7 +88176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -88366,7 +88366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -88649,7 +88649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -88777,7 +88777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -88972,7 +88972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -89112,7 +89112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -89214,7 +89214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -89635,7 +89635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -89837,7 +89837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -89977,7 +89977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -90219,7 +90219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -90492,7 +90492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -90725,7 +90725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -90807,12 +90807,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3194249185034743456, guid: 8ea202624dbd95b419bf1e449db5f292,
         type: 3}
@@ -91116,7 +91112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -91266,7 +91262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -91960,7 +91956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -92117,7 +92113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -93611,7 +93607,7 @@ PrefabInstance:
     - target: {fileID: 3450314018598242619, guid: 17eed916db7bacd47ad9714757d82269,
         type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17eed916db7bacd47ad9714757d82269, type: 3}
@@ -93801,7 +93797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -94020,7 +94016,7 @@ PrefabInstance:
     - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -94211,7 +94207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3194249185034743456, guid: 8ea202624dbd95b419bf1e449db5f292,
         type: 3}
@@ -94471,7 +94467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -94622,7 +94618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3194249185034743456, guid: 8ea202624dbd95b419bf1e449db5f292,
         type: 3}
@@ -94985,7 +94981,7 @@ MonoBehaviour:
   isPursuing: 0
   possessingThisObject: 0
   canPossess: 0
-  possessOnLowHealth: 1
+  possessOnLowHealth: 0
   dirNum: 0
   possessSound: {fileID: 8300000, guid: 6c6eb9e9300e7384a93ecd6a20b7f046, type: 3}
   swordAttackSound: {fileID: 0}
@@ -95498,6 +95494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865363641856271883, guid: 87855cf3fcf23f244ad848fb601b8790,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 865363642708060255, guid: 87855cf3fcf23f244ad848fb601b8790,
         type: 3}

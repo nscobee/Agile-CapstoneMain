@@ -350,12 +350,12 @@ MonoBehaviour:
   primaryCooldown: {fileID: 2056085056253715836}
   secondaryCooldown: {fileID: 2612168443802885491}
   AIHealthSlider: {fileID: 6527731627787484203}
-  currentHealth: 100
+  currentHealth: 75
   currentMana: 100
-  MAXHP: 100
+  MAXHP: 75
   MAXMANA: 100
   percentOfHealthToPossess: 50
-  rateOfManaRegen: 2.5
+  rateOfManaRegen: 5
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20

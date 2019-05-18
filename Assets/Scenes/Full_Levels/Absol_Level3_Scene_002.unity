@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -476,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -599,7 +599,7 @@ PrefabInstance:
     - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -826,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -1015,7 +1015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -1139,7 +1139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -1310,7 +1310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -1562,7 +1562,7 @@ PrefabInstance:
     - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -26742,7 +26742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -26972,7 +26972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -27063,7 +27063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -41607,7 +41607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -41668,7 +41668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -42739,7 +42739,7 @@ PrefabInstance:
     - target: {fileID: 3450314018598242619, guid: 17eed916db7bacd47ad9714757d82269,
         type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17eed916db7bacd47ad9714757d82269, type: 3}
@@ -42882,7 +42882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -43369,7 +43369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -43460,7 +43460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -44228,7 +44228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -44417,7 +44417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
@@ -44478,7 +44478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}

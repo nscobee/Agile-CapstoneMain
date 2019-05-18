@@ -188,7 +188,7 @@ MonoBehaviour:
   InRange: 0
   playerInRangeToAttack: 0
   nextAIAttack: 0
-  AttackCooldown: 10
+  AttackCooldown: 5
   canSpawn: 1
   randNum: 0
   frequencyOfPrimary: 80
@@ -353,12 +353,12 @@ MonoBehaviour:
   primaryCooldown: {fileID: 9128034445119957088}
   secondaryCooldown: {fileID: 7327960829500058193}
   AIHealthSlider: {fileID: 3435323452339894507}
-  currentHealth: 100
-  currentMana: 100
-  MAXHP: 100
-  MAXMANA: 100
-  percentOfHealthToPossess: 20
-  rateOfManaRegen: 2.5
+  currentHealth: 50
+  currentMana: 50
+  MAXHP: 50
+  MAXMANA: 50
+  percentOfHealthToPossess: 75
+  rateOfManaRegen: 5
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20
