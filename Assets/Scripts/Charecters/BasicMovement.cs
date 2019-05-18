@@ -49,10 +49,15 @@ public class BasicMovement : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        transform.position += GenericFunctions.BasePlayerMovement(movementSpeed);
+    }
+
     private void Update()
     {
         // calls the generic movement passing the speed
-        transform.position += GenericFunctions.BasePlayerMovement(movementSpeed);
+       // transform.position += GenericFunctions.BasePlayerMovement(movementSpeed);
 
         if (Input.GetKeyDown(KeyCode.Backslash) && phantomControls.isPossessing)
         {

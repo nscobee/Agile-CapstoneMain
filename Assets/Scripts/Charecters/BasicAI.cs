@@ -128,6 +128,40 @@ public class BasicAI : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        if (!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
+        {
+            if (GameObject.FindGameObjectWithTag("Possessed"))
+                this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime);
+            // if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
+            // {
+            //      this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+            //  }
+            //  else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+            print("I'm moving towards the possessed!");
+        }
+        if (GameObject.FindGameObjectWithTag("Possessed"))
+            distanceBetweenPlayer = Vector3.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position);
+
+        if (isRetaliating)
+        {
+            Vector3 heading = GameObject.FindGameObjectWithTag("Possessed").transform.position - transform.position;
+            dirNum = AngleDir(transform.forward, heading, transform.up);
+            print("I'm retaliating!");
+            isPatrolling = false;
+            retaliate();
+
+            if (dirNum < 0)
+            {
+
+                this.gameObject.transform.eulerAngles = new Vector3(0, this.gameObject.transform.eulerAngles.y + 180, 0);
+
+            }
+
+        }
+    }
+
     private void Update()
     {
         randNum = Random.Range(0f, 100f);
@@ -181,7 +215,7 @@ public class BasicAI : MonoBehaviour
         {
             UIControls.Die();
         }
-
+/*
         if(!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
         {
             if(GameObject.FindGameObjectWithTag("Possessed"))
@@ -213,7 +247,7 @@ public class BasicAI : MonoBehaviour
      
                 }
          
-        }
+        }*/
 
         if (!GameObject.FindGameObjectWithTag("Possessed")) isRetaliating = false;
         if (GameObject.FindGameObjectWithTag("Possessed"))

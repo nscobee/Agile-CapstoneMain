@@ -207,7 +207,10 @@ public class UIController : MonoBehaviour
             StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 2f));
         }
         else if(this.gameObject.tag == "Possessed")
-
+        if(GameObject.FindGameObjectWithTag("Necromancer"))
+            {
+                phantomController.Die();
+            }
         {
             source.PlayOneShot(dieSound);
             GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
