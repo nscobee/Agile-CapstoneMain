@@ -68,6 +68,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   NPC_ID: 0
   currentLevel: 1
+  speed: 5
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 2.5
   distanceToForgetPlayer: 8
@@ -154,6 +155,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   NPC_ID: 0
   currentLevel: 1
+  speed: 5
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
@@ -335,7 +337,7 @@ MonoBehaviour:
   MAXHP: 100
   MAXMANA: 100
   percentOfHealthToPossess: 20
-  rateOfManaRegen: 0.5
+  rateOfManaRegen: 2.5
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20
@@ -472,6 +474,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
+    - target: {fileID: 865363642900494205, guid: 87855cf3fcf23f244ad848fb601b8790,
+        type: 3}
+      propertyPath: m_Name
+      value: speechBubble
+      objectReference: {fileID: 0}
     - target: {fileID: 865363642900494082, guid: 87855cf3fcf23f244ad848fb601b8790,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -526,11 +533,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 865363642900494205, guid: 87855cf3fcf23f244ad848fb601b8790,
-        type: 3}
-      propertyPath: m_Name
-      value: speechBubble
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87855cf3fcf23f244ad848fb601b8790, type: 3}
@@ -781,6 +783,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
+    - target: {fileID: 2200036986903543887, guid: 158130e608fe10d4e94ad3d181598691,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBarAI
+      objectReference: {fileID: 0}
     - target: {fileID: 3370041311495078621, guid: 158130e608fe10d4e94ad3d181598691,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,11 +843,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2200036986903543887, guid: 158130e608fe10d4e94ad3d181598691,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBarAI
-      objectReference: {fileID: 0}
     - target: {fileID: 169375560544527535, guid: 158130e608fe10d4e94ad3d181598691,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -893,6 +895,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107299161409936}
     m_Modifications:
+    - target: {fileID: 2627347895890846608, guid: eacad4362b5f63f49a351d07940cf2fa,
+        type: 3}
+      propertyPath: m_Name
+      value: PossessionIconRadius
+      objectReference: {fileID: 0}
     - target: {fileID: 2627347895890846639, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -906,7 +913,7 @@ PrefabInstance:
     - target: {fileID: 2627347895890846639, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2627347895890846639, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}
@@ -947,11 +954,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627347895890846608, guid: eacad4362b5f63f49a351d07940cf2fa,
-        type: 3}
-      propertyPath: m_Name
-      value: PossessionIconRadius
       objectReference: {fileID: 0}
     - target: {fileID: 367999558400107911, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}

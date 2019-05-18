@@ -478,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -875,6 +875,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
       propertyPath: isAggressive
@@ -1231,7 +1235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -1322,6 +1326,10 @@ PrefabInstance:
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -1600,6 +1608,11 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
 --- !u!1001 &650111541
@@ -1801,6 +1814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -53490,6 +53508,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
 --- !u!1001 &807518044
@@ -53613,6 +53635,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -53807,7 +53833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -53949,6 +53975,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -54138,7 +54168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -54408,6 +54438,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -87923,6 +87957,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
       propertyPath: possessOnLowHealth
@@ -88056,6 +88094,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -88245,7 +88287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -88516,6 +88558,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
 --- !u!1001 &1087152418
@@ -88639,6 +88685,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -88833,7 +88883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -88971,6 +89021,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
       propertyPath: possessOnLowHealth
@@ -89068,6 +89122,10 @@ PrefabInstance:
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
@@ -89488,7 +89546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -89690,7 +89748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -89827,6 +89885,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -90068,7 +90130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -90339,6 +90401,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -90568,6 +90634,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
       propertyPath: possessOnLowHealth
@@ -90650,6 +90720,10 @@ PrefabInstance:
     - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3194249185034743456, guid: 8ea202624dbd95b419bf1e449db5f292,
         type: 3}
@@ -90951,6 +91025,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
       propertyPath: possessOnLowHealth
@@ -91096,6 +91174,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -91789,7 +91871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -91943,6 +92025,10 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
@@ -93433,6 +93519,11 @@ PrefabInstance:
       propertyPath: aggroDistance
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3450314018598242619, guid: 17eed916db7bacd47ad9714757d82269,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17eed916db7bacd47ad9714757d82269, type: 3}
 --- !u!1001 &1894211767
@@ -93621,7 +93712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -93837,6 +93928,11 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
 --- !u!1 &1912916158
@@ -94023,6 +94119,10 @@ PrefabInstance:
     - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3194249185034743456, guid: 8ea202624dbd95b419bf1e449db5f292,
         type: 3}
@@ -94282,7 +94382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: rateOfManaRegen
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: dropChance
@@ -94431,6 +94531,10 @@ PrefabInstance:
       propertyPath: percentOfHealthToPossess
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8980758728288893198, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -94466,11 +94570,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7388250157337719824, guid: 701387a6f7f81c944b99b34920ab3fc7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 623365516925101514, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -94491,16 +94590,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.034999847
       objectReference: {fileID: 0}
-    - target: {fileID: 7388250157337719917, guid: 701387a6f7f81c944b99b34920ab3fc7,
-        type: 3}
-      propertyPath: triggerOnAnyNPC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7388250157337719917, guid: 701387a6f7f81c944b99b34920ab3fc7,
-        type: 3}
-      propertyPath: message
-      value: Protect me and I shall pay you well my men!
-      objectReference: {fileID: 0}
     - target: {fileID: 7388250157112847154, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -94510,6 +94599,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388250157337719824, guid: 701387a6f7f81c944b99b34920ab3fc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388250157337719917, guid: 701387a6f7f81c944b99b34920ab3fc7,
+        type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388250157337719917, guid: 701387a6f7f81c944b99b34920ab3fc7,
+        type: 3}
+      propertyPath: message
+      value: Protect me and I shall pay you well my men!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
@@ -94576,6 +94680,10 @@ PrefabInstance:
     - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199884532, guid: 8ea202624dbd95b419bf1e449db5f292, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3194249185034743456, guid: 8ea202624dbd95b419bf1e449db5f292,
         type: 3}

@@ -113,33 +113,33 @@ public class necromancerAI : MonoBehaviour
         musicSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
 
         summonsHealer.GetComponent<BasicAI>().isAggressive = true;
-        summonsHealer.GetComponent<BasicAI>().aggroDistance = 10;
+        summonsHealer.GetComponent<BasicAI>().aggroDistance = 9;
         summonsMage.GetComponent<BasicAI>().isAggressive = true;
-        summonsMage.GetComponent<BasicAI>().aggroDistance = 10;
+        summonsMage.GetComponent<BasicAI>().aggroDistance = 9;
         summonsMelee.GetComponent<BasicAI>().isAggressive = true;
-        summonsMelee.GetComponent<BasicAI>().aggroDistance = 10;
+        summonsMelee.GetComponent<BasicAI>().aggroDistance = 9;
 
         demonOne.GetComponent<BasicAI>().isAggressive = true;
-        demonOne.GetComponent<BasicAI>().aggroDistance = 10;
+        demonOne.GetComponent<BasicAI>().aggroDistance = 9;
         demonTwo.GetComponent<BasicAI>().isAggressive = true;
-        demonTwo.GetComponent<BasicAI>().aggroDistance = 10;
+        demonTwo.GetComponent<BasicAI>().aggroDistance = 9;
         demonThree.GetComponent<BasicAI>().isAggressive = true;
-        demonThree.GetComponent<BasicAI>().aggroDistance = 10;
+        demonThree.GetComponent<BasicAI>().aggroDistance = 9;
 
         undeadKnight.GetComponent<BasicAI>().isAggressive = true;
-        undeadKnight.GetComponent<BasicAI>().aggroDistance = 10;
+        undeadKnight.GetComponent<BasicAI>().aggroDistance = 9;
 
         deathMage.GetComponent<BasicAI>().isAggressive = true;
-        deathMage.GetComponent<BasicAI>().aggroDistance = 10;
+        deathMage.GetComponent<BasicAI>().aggroDistance = 9;
 
         darkHealer.GetComponent<BasicAI>().isAggressive = true;
-        darkHealer.GetComponent<BasicAI>().aggroDistance = 10;
+        darkHealer.GetComponent<BasicAI>().aggroDistance = 9;
 
         demonSummon.GetComponent<BasicAI>().isAggressive = true;
-        demonSummon.GetComponent<BasicAI>().aggroDistance = 10;
+        demonSummon.GetComponent<BasicAI>().aggroDistance = 9;
 
         demonSummon.GetComponent<BasicAI>().isAggressive = true;
-        demonSummon.GetComponent<BasicAI>().aggroDistance = 10;
+        demonSummon.GetComponent<BasicAI>().aggroDistance = 9;
 
     }
 

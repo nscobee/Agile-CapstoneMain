@@ -68,6 +68,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   NPC_ID: 0
   currentLevel: 1
+  speed: 5
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 3
   distanceToForgetPlayer: 9
@@ -154,6 +155,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   NPC_ID: 0
   currentLevel: 1
+  speed: 5
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
@@ -334,7 +336,7 @@ MonoBehaviour:
   MAXHP: 100
   MAXMANA: 100
   percentOfHealthToPossess: 20
-  rateOfManaRegen: 0.5
+  rateOfManaRegen: 2.5
   healthDrop: {fileID: 5575578526846446487, guid: 874abeba7d922e7499832d36e70303fb,
     type: 3}
   dropChance: 20
@@ -1002,7 +1004,7 @@ PrefabInstance:
     - target: {fileID: 2627347895890846639, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2627347895890846639, guid: eacad4362b5f63f49a351d07940cf2fa,
         type: 3}

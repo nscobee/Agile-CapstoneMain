@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Full_Levels/DeathScene.unity
     guid: ec5b20cb59decc5439d27bbe54b7147d
   - enabled: 1
-    path: Assets/Scenes/Absol/SuperSecretScene.unity
+    path: Assets/Scenes/Full_Levels/SuperSecretScene.unity
     guid: f657842b3b396ca4c9c93030a6b2df84
   m_configObjects: {}
