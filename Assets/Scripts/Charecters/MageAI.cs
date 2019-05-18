@@ -144,6 +144,7 @@ public class MageAI : BasicAI
 
     public void FireballAttack()
     {
+        if(anim)
         anim.SetTrigger("IsPrimaryAttacking");
         fireballNextRound = Time.time + fireballFireRate;
 
@@ -168,6 +169,7 @@ public class MageAI : BasicAI
         
         if (this.gameObject.GetComponent<BasicAI>().canSpawn)
         {
+            if(anim)
             anim.SetTrigger("IsPrimaryAttacking");
             this.gameObject.GetComponent<BasicAI>().canSpawn = false;
             fireballNextRound = Time.time + fireballFireRate;
