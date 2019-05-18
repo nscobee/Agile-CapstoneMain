@@ -430,6 +430,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -459,6 +464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -1197,6 +1207,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -1226,6 +1241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -53815,6 +53835,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -53844,6 +53869,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -54150,6 +54180,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -54179,6 +54214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -88318,6 +88358,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -88347,6 +88392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -88924,6 +88974,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -88953,6 +89008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -89587,6 +89647,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -89616,6 +89681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -89789,6 +89859,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -89818,6 +89893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -90171,6 +90251,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -90200,6 +90285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -91908,6 +91998,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -91937,6 +92032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -93749,6 +93849,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -93778,6 +93883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
@@ -94419,6 +94529,11 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: weakAttackDamage
@@ -94448,6 +94563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fighterAp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: 3bcd002248040594983df6c6854e343d,
+        type: 3}
+      propertyPath: AttackCooldown
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
       propertyPath: MAXHP
