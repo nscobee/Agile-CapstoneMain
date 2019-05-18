@@ -889,6 +889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: speechBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 865363642900494205, guid: 87855cf3fcf23f244ad848fb601b8790,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 865363642900494082, guid: 87855cf3fcf23f244ad848fb601b8790,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -943,6 +948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865363641856271883, guid: 87855cf3fcf23f244ad848fb601b8790,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.98
       objectReference: {fileID: 0}
     - target: {fileID: 865363642708060255, guid: 87855cf3fcf23f244ad848fb601b8790,
         type: 3}
