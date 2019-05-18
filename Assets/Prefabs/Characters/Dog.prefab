@@ -2007,10 +2007,13 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   NPC_ID: 0
   currentLevel: 1
+  speed: 5
   distanceBetweenPlayer: 0
-  distanceToStartAttackingPlayer: 6
+  distanceToStartAttackingPlayer: 2.5
   distanceToForgetPlayer: 10
+  aggroDistance: 5
   gatherPoints: 1
+  isAggressive: 0
   playerMovement: {fileID: 8393536795746968839}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
@@ -2090,10 +2093,13 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   NPC_ID: 0
   currentLevel: 1
+  speed: 5
   distanceBetweenPlayer: 0
   distanceToStartAttackingPlayer: 1
   distanceToForgetPlayer: 5
+  aggroDistance: 3
   gatherPoints: 0
+  isAggressive: 0
   playerMovement: {fileID: 0}
   phantomControls: {fileID: 0}
   homeSpawner: {fileID: 0}
@@ -2405,6 +2411,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8494869795465492171}
     m_Modifications:
+    - target: {fileID: 2200036986903543887, guid: 158130e608fe10d4e94ad3d181598691,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBarAI
+      objectReference: {fileID: 0}
     - target: {fileID: 3370041311495078621, guid: 158130e608fe10d4e94ad3d181598691,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2459,11 +2470,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2200036986903543887, guid: 158130e608fe10d4e94ad3d181598691,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBarAI
       objectReference: {fileID: 0}
     - target: {fileID: 169375560544527535, guid: 158130e608fe10d4e94ad3d181598691,
         type: 3}

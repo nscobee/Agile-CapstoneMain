@@ -25,18 +25,22 @@ public class popUpText : MonoBehaviour
 
     private void Update()
     {
+        this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+
+        if(this.gameObject.transform.parent != null)
         if (this.transform.parent.gameObject.tag == "Possessed")
             Destroy(this);
-        if (this.transform.parent.gameObject.GetComponent<BasicAI>().isRetaliating)
+        if (this.gameObject.transform.parent != null)
+            if (this.transform.parent.gameObject.GetComponent<BasicAI>().isRetaliating)
             popUpMessagePanel.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == GameObject.Find(triggerPrefabString) || (triggerOnAnyNPC  && other.gameObject.GetComponent<BasicAI>() ))
+        if (other.gameObject == GameObject.Find(triggerPrefabString) || (triggerOnAnyNPC  && (other.gameObject.GetComponent<BasicAI>() ||triggerPrefabString == other.gameObject.tag )))
         {
-
-            print("I am " + this.gameObject.transform.parent.gameObject + " and I am talking to " + other.gameObject);
+            if (this.gameObject.transform.parent != null)
+                print("I am " + this.gameObject.transform.parent.gameObject + " and I am talking to " + other.gameObject);
             popUpMessagePanel.SetActive(true);
             popUpMessageText.text = message;
             hasTriggered = true;

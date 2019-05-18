@@ -23,6 +23,8 @@ public class PossessIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+
         if (AI.canPossess && this.transform.parent.gameObject.tag != "NoPossess")
         {
             PossessionIcon.sprite = yesPossess;
