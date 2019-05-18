@@ -79,7 +79,7 @@ public class SpiritGuide : MonoBehaviour
             {
                 readPart3 = true;
                 nextRead = Time.time + checkForNextRead;
-                text = "If we leave the graveyard the reaper will get us.";
+                text = "The Reaper!! He is coming for us!!!";
                 typing = false;
             }
             if (!readPart4 && readPart3 && Time.time > nextRead)
