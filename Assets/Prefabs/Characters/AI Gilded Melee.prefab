@@ -70,7 +70,7 @@ MonoBehaviour:
   currentLevel: 1
   speed: 5
   distanceBetweenPlayer: 0
-  distanceToStartAttackingPlayer: 3
+  distanceToStartAttackingPlayer: 2.5
   distanceToForgetPlayer: 11
   aggroDistance: 3
   gatherPoints: 1

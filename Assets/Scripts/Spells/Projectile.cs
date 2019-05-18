@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     public float speed = 25f;
     //public float maxDistance = 15f;
     public float damage;
-    private GameObject ObjectThatSpawnedMe;
+    public GameObject ObjectThatSpawnedMe;
 
     private bool noHit = true;
 
@@ -57,13 +57,14 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // checks if the triggerd object is in the right layer if it is it adds it to potential list
-        if (other.gameObject.layer == LayerMask.NameToLayer("AI") && other.gameObject != ObjectThatSpawnedMe)
+        //if (other.gameObject.layer == LayerMask.NameToLayer("AI") && other.gameObject != ObjectThatSpawnedMe)
+        if (other.gameObject.layer == LayerMask.NameToLayer("AI") && (ObjectThatSpawnedMe.gameObject.tag == "Possessed" ^ other.gameObject.tag == "Possessed"))
         {
             
 
             if (other.gameObject.GetComponent<UIController>() && other.gameObject.tag != "Possessed")
             {
-                noHit = false;
+               // noHit = false;
                 other.gameObject.GetComponent<UIController>().takeDamage(damage);
                 damage = 0;
             }

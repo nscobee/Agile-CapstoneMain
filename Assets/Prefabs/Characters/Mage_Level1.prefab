@@ -320,7 +320,7 @@ MonoBehaviour:
   bulletSplashArea: 3
   inRange: []
   fireballDamageAmount: 10
-  AOEDamageAmount: 15
+  AOEDamageAmount: 7.5
   fireRange: 2
   fireballManaLoss: 5
   AOEManaLoss: 20
@@ -533,6 +533,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224690233085816274, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -638,21 +648,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223313086536063620, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3463878578139097102, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -682,6 +677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.25012112
+      objectReference: {fileID: 0}
+    - target: {fileID: 223313086536063620, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224969735692750104, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}

@@ -94,7 +94,7 @@ public class ReaperCountdown : MonoBehaviour
         Destroy(GameObject.FindWithTag("Reaper"));
     }
 
-    private void SpawnReaper()
+    public void SpawnReaper()
     {
         Instantiate(currentReaper, reaperSpawnPoint.position, Quaternion.identity, null);
     }

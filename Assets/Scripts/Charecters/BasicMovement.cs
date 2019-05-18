@@ -129,7 +129,8 @@ public class BasicMovement : MonoBehaviour
   // makes a new phantom to use and destories the charecter the player was previously possessing
   public void DED()
   {
-
+        if(GameObject.FindGameObjectWithTag("Necromancer"))
+            phantomControls.playerHasDied = true;
         WithDraw();
 
       //  phantomControls.resetLevel();

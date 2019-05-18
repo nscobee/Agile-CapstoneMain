@@ -120,11 +120,11 @@ public class necromancerAI : MonoBehaviour
         summonsMelee.GetComponent<BasicAI>().aggroDistance = 9;
 
         demonOne.GetComponent<BasicAI>().isAggressive = true;
-        demonOne.GetComponent<BasicAI>().aggroDistance = 9;
+        demonOne.GetComponent<BasicAI>().aggroDistance = 5;
         demonTwo.GetComponent<BasicAI>().isAggressive = true;
-        demonTwo.GetComponent<BasicAI>().aggroDistance = 9;
+        demonTwo.GetComponent<BasicAI>().aggroDistance = 5;
         demonThree.GetComponent<BasicAI>().isAggressive = true;
-        demonThree.GetComponent<BasicAI>().aggroDistance = 9;
+        demonThree.GetComponent<BasicAI>().aggroDistance = 5;
 
         undeadKnight.GetComponent<BasicAI>().isAggressive = true;
         undeadKnight.GetComponent<BasicAI>().aggroDistance = 9;

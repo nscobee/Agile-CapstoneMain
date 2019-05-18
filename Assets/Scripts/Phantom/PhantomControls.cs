@@ -23,6 +23,8 @@ public class PhantomControls : MonoBehaviour
     public AudioClip floating;
     public float floatVolume = 1;
 
+    public bool playerHasDied = false;
+
 
     //Simple Leveling System
     //public int currentLevel = 1;
@@ -46,7 +48,8 @@ public class PhantomControls : MonoBehaviour
 
     private void Update()
     {
-        
+        if (playerHasDied)
+            Die();
         //DontDestroyOnLoad(this.gameObject);
 
         // uses the generic movement for movement passing desired speed
@@ -92,6 +95,8 @@ public class PhantomControls : MonoBehaviour
         {
             source.Stop();
         }
+
+
     }
 
     public void Die()

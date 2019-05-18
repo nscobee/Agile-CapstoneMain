@@ -209,7 +209,11 @@ public class UIController : MonoBehaviour
         else if(this.gameObject.tag == "Possessed")
         if(GameObject.FindGameObjectWithTag("Necromancer"))
             {
-                phantomController.Die();
+                source.PlayOneShot(dieSound);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<levelingScript>().removeID(AI.NPC_ID);
+                // this.gameObject.GetComponent<BasicMovement>().DED();
+                StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 1f));
+
             }
         {
             source.PlayOneShot(dieSound);
@@ -252,10 +256,11 @@ public class UIController : MonoBehaviour
         else
         {
             phantomController.speed = oldSpeed;
-            if (!GameObject.FindGameObjectWithTag("Necromancer"))
+            //if (!GameObject.FindGameObjectWithTag("Necromancer"))
                 this.gameObject.GetComponent<BasicMovement>().DED();
-            else phantomController.Die();
+            //else phantomController.Die();
         }
         
     }
+
 }

@@ -251,7 +251,7 @@ public class BasicAI : MonoBehaviour
 
         if (!GameObject.FindGameObjectWithTag("Possessed")) isRetaliating = false;
         if (GameObject.FindGameObjectWithTag("Possessed"))
-            if (tagOverride != null && GameObject.FindGameObjectWithTag("Possessed").GetComponent<BasicAI>().tagOverride == tagOverride)
+            if (tagOverride != "" && GameObject.FindGameObjectWithTag("Possessed").GetComponent<BasicAI>().tagOverride == tagOverride)
                 isAggressive = false;
         if (isAggressive && distanceBetweenPlayer <= aggroDistance)
             isRetaliating = true;

@@ -70,7 +70,7 @@ MonoBehaviour:
   currentLevel: 1
   speed: 5
   distanceBetweenPlayer: 0
-  distanceToStartAttackingPlayer: 3
+  distanceToStartAttackingPlayer: 2.5
   distanceToForgetPlayer: 10
   aggroDistance: 3
   gatherPoints: 1
@@ -719,6 +719,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7520132072939333583, guid: a49206466ebf0294dabb9cfe4474474f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.5300274
+      objectReference: {fileID: 0}
     - target: {fileID: 7348228075240386091, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -728,11 +733,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.40999985
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520132072939333583, guid: a49206466ebf0294dabb9cfe4474474f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.5300274
       objectReference: {fileID: 0}
     - target: {fileID: 4723013594994559321, guid: a49206466ebf0294dabb9cfe4474474f,
         type: 3}

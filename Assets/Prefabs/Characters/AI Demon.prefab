@@ -1263,7 +1263,7 @@ MonoBehaviour:
   fireballFireRate: 5
   AOEbullet: {fileID: 1691395373167110, guid: da3d88e31a3bce54790a9ac1bf7c695e, type: 3}
   bulletSpawn: {fileID: 3317805910089841722}
-  AOEDamageAmount: 20
+  AOEDamageAmount: 10
   playerInRange: 0
   hitboxAnim: {fileID: 0}
   inRange: []
