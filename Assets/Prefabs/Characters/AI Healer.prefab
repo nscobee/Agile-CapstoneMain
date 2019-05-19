@@ -224,14 +224,10 @@ MonoBehaviour:
   bulletSpawn: {fileID: 3798861126795263888}
   basicAI: {fileID: 114283175969549936}
   anim: {fileID: 0}
-  healerHp: 45
-  healerAp: 75
   fireballDamageAmount: 10
-  fireDamageAmount: 5
-  fireRange: 2
-  healManaLoss: 5
-  fireballManaLoss: 7
-  fireManaLoss: 2
+  fireDamageAmount: 10
+  healManaLoss: 15
+  fireManaLoss: 5
   fireballFireRate: 7
   healPlayerAmount: 10
   healAIAmount: 15

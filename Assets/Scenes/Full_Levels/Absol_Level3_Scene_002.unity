@@ -555,6 +555,31 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentMana
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXMANA
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -596,10 +621,35 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1554224506}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
+      propertyPath: fireManaLoss
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healManaLoss
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireballDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healPlayerAmount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healAIAmount
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -1533,6 +1583,31 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentMana
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXMANA
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: statUI
@@ -1559,10 +1634,35 @@ PrefabInstance:
       propertyPath: apSlider
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
+      propertyPath: fireManaLoss
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healManaLoss
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireballDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healPlayerAmount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healAIAmount
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}

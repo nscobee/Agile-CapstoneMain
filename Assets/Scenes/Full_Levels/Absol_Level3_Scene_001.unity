@@ -410,6 +410,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: message
+      value: Existence is pain...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -469,50 +513,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: triggerOnAnyNPC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: message
-      value: Existence is pain...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -1187,6 +1187,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: message
+      value: Please buy these seeds before he eats me!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -1246,50 +1290,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: triggerOnAnyNPC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: message
-      value: Please buy these seeds before he eats me!!!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -1533,6 +1533,56 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentMana
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXMANA
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793970527823656664, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.22749996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793970527823656664, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.2630005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234374146885341017, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.10999966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191857853323881015, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.15699959
+      objectReference: {fileID: 0}
     - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: phantomControls
@@ -1643,15 +1693,35 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
+      propertyPath: healPlayerAmount
+      value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
+      propertyPath: healAIAmount
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireballDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healManaLoss
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireManaLoss
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -1760,6 +1830,56 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentMana
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXMANA
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793970527823656664, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.22749996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793970527823656664, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.2630005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234374146885341017, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.10999966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191857853323881015, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.15699959
+      objectReference: {fileID: 0}
     - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: phantomControls
@@ -1850,15 +1970,35 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
+      propertyPath: healPlayerAmount
+      value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
+      propertyPath: healAIAmount
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireballDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healManaLoss
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireManaLoss
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -53815,6 +53955,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -53874,38 +54046,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -54160,6 +54300,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: message
+      value: Please kill us before he devours us all!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -54219,50 +54403,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: triggerOnAnyNPC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: message
-      value: Please kill us before he devours us all!!!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -88338,6 +88478,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: message
+      value: Would you like a fresh Human Heart?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -88397,50 +88581,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: triggerOnAnyNPC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: message
-      value: Would you like a fresh Human Heart?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -88954,6 +89094,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -89013,38 +89185,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -89627,6 +89767,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -89686,38 +89858,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -89839,6 +89979,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -89898,38 +90070,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -90231,6 +90371,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -90290,38 +90462,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -91978,6 +92118,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: triggerOnAnyNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: message
+      value: Please save us!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -92037,50 +92221,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128899, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: triggerOnAnyNPC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963128894, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: message
-      value: Please save us!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -93829,6 +93969,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -93888,38 +94060,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -94028,6 +94168,56 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: currentMana
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: MAXMANA
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793970527823656664, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.22749996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793970527823656664, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.2630005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234374146885341017, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.10999966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191857853323881015, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.15699959
+      objectReference: {fileID: 0}
     - target: {fileID: 114283175969549936, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
       propertyPath: phantomControls
@@ -94118,15 +94308,35 @@ PrefabInstance:
       propertyPath: phantomRigid
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
+      propertyPath: healPlayerAmount
+      value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 5483139234320685754, guid: b8173002b43063f43b59e88abfd90ad9,
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
         type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
+      propertyPath: healAIAmount
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireballDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireDamageAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: healManaLoss
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799603694332666, guid: b8173002b43063f43b59e88abfd90ad9,
+        type: 3}
+      propertyPath: fireManaLoss
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8173002b43063f43b59e88abfd90ad9, type: 3}
@@ -94509,6 +94719,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
       objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: MAXMANA
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: currentMana
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: rateOfManaRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: dropChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: maxXPGained
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
+      propertyPath: percentOfHealthToPossess
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 114343144908863274, guid: 3bcd002248040594983df6c6854e343d,
         type: 3}
       propertyPath: patrolPoints.Array.size
@@ -94568,38 +94810,6 @@ PrefabInstance:
         type: 3}
       propertyPath: AttackCooldown
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXHP
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: MAXMANA
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: currentMana
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: rateOfManaRegen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: dropChance
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: maxXPGained
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1275089142, guid: 3bcd002248040594983df6c6854e343d, type: 3}
-      propertyPath: percentOfHealthToPossess
-      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcd002248040594983df6c6854e343d, type: 3}
@@ -95204,6 +95414,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2036786763606716862, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.08600044
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036786763606716862, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.034999847
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340847626532629101, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.29999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224690233085816274, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95309,21 +95544,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342379783580503286, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223313086536063620, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3463878578139097102, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -95354,20 +95574,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.25012112
       objectReference: {fileID: 0}
-    - target: {fileID: 2036786763606716862, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
+    - target: {fileID: 223313086536063620, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.08600044
-      objectReference: {fileID: 0}
-    - target: {fileID: 2036786763606716862, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.034999847
-      objectReference: {fileID: 0}
-    - target: {fileID: 1340847626532629101, guid: 3c6cab3e7701cd241aa8d4c4f02507e3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.29999924
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6cab3e7701cd241aa8d4c4f02507e3, type: 3}

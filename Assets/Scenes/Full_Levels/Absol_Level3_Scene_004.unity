@@ -19474,6 +19474,11 @@ PrefabInstance:
       propertyPath: pillarLocationGroup4.Array.data[3]
       value: 
       objectReference: {fileID: 1120046788}
+    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
+        type: 3}
+      propertyPath: nextRead
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8912490814479371809, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
       propertyPath: uiObj

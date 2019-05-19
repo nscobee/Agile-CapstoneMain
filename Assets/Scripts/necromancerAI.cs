@@ -59,6 +59,7 @@ public class necromancerAI : MonoBehaviour
     private float nextRead;
     [Tooltip("how long (in seconds) we are forcing the player to read the dialogue")]
     public float checkForNextRead = 4;
+    bool readPart0 = false;
     bool readPart1 = false;
     bool readPart2 = false;
     bool readPart3 = false;
@@ -119,6 +120,15 @@ public class necromancerAI : MonoBehaviour
         summonsMelee.GetComponent<BasicAI>().isAggressive = true;
         summonsMelee.GetComponent<BasicAI>().aggroDistance = 9;
 
+        summonsHealer.GetComponent<healerAI>().fireballDamageAmount = 25;
+        summonsHealer.GetComponent<healerAI>().fireDamageAmount = 25;
+        summonsHealer.GetComponent<healerAI>().healManaLoss = 30;
+        summonsHealer.GetComponent<healerAI>().fireManaLoss = 15;
+        summonsHealer.GetComponent<healerAI>().healPlayerAmount = 35;
+        summonsHealer.GetComponent<healerAI>().healAIAmount = 45;
+        summonsHealer.GetComponent<UIController>().MAXHP = 125;
+        summonsHealer.GetComponent<UIController>().MAXMANA = 150;
+
         demonOne.GetComponent<BasicAI>().isAggressive = true;
         demonOne.GetComponent<BasicAI>().aggroDistance = 5;
         demonTwo.GetComponent<BasicAI>().isAggressive = true;
@@ -134,6 +144,14 @@ public class necromancerAI : MonoBehaviour
 
         darkHealer.GetComponent<BasicAI>().isAggressive = true;
         darkHealer.GetComponent<BasicAI>().aggroDistance = 9;
+        darkHealer.GetComponent<healerAI>().fireballDamageAmount = 25;
+        darkHealer.GetComponent<healerAI>().fireDamageAmount = 25;
+        darkHealer.GetComponent<healerAI>().healManaLoss = 30;
+        darkHealer.GetComponent<healerAI>().fireManaLoss = 15;
+        darkHealer.GetComponent<healerAI>().healPlayerAmount = 35;
+        darkHealer.GetComponent<healerAI>().healAIAmount = 45;
+        darkHealer.GetComponent<UIController>().MAXHP = 125;
+        darkHealer.GetComponent<UIController>().MAXMANA = 150;
 
         demonSummon.GetComponent<BasicAI>().isAggressive = true;
         demonSummon.GetComponent<BasicAI>().aggroDistance = 9;
@@ -151,7 +169,13 @@ public class necromancerAI : MonoBehaviour
         
         if(Input.anyKeyDown) //only way i could get the monologuing to work without breaking lots of other stuffs
         {
-            if (!readPart1)
+            if(!readPart0)
+            {
+                readPart0 = true;
+                nextRead = Time.time + checkForNextRead;
+            }
+
+            if (!readPart1 && Time.time > nextRead)
             {
                 readPart1 = true;
                 nextRead = Time.time + checkForNextRead;

@@ -16,16 +16,16 @@ public class healerAI : BasicAI {
     public BasicAI basicAI;
     public Animator anim;
 
-    public float healerHp = 45f;
-    public float healerAp = 75f;
+   // public float healerHp = 45f;
+   // public float healerAp = 75f;
 
     public float fireballDamageAmount = 10;
     public float fireDamageAmount = 5;
-    public float fireRange = 2f;
+   // public float fireRange = 2f;
 
     public float healManaLoss = 5f;
 
-    public float fireballManaLoss = 7f;
+    //public float fireballManaLoss = 7f;
     public float fireManaLoss = 2f;
 
     private float fireballNextRound = 0.0f;
@@ -139,7 +139,7 @@ public class healerAI : BasicAI {
             projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
             projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
 
-            this.GetComponent<UIController>().useMana(fireballManaLoss);
+            this.GetComponent<UIController>().useMana(fireManaLoss);
 
             //destroys bullet after 4 seconds ish
             Destroy(projectileBullet, 4f);
