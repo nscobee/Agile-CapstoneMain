@@ -34,7 +34,30 @@ public class guardDuty : MonoBehaviour
             {
                 speechBubble[i].GetComponent<popUpText>().message = messageForGuildedKnight;
             }
-            Destroy(this.gameObject, 5f);
+            StartCoroutine(fadeOut(this.gameObject.GetComponent<SpriteRenderer>(), 2f));
+            //Destroy(this.gameObject, 5f);
+           // this.gameObject.GetComponent<UIController>().Die();
         }
+    }
+
+    IEnumerator fadeOut(SpriteRenderer MyRenderer, float duration) //death animation, prevents player from moving while dying as well
+    {
+        float counter = 0;
+        //Get current color
+        Color spriteColor = MyRenderer.material.color;
+
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+            //Fade from 1 to 0
+            float alpha = Mathf.Lerp(1, 0, counter / duration);
+            //Debug.Log(alpha);
+
+            //Change alpha only
+            MyRenderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, alpha);
+            //Wait for a frame
+            yield return null;
+        }
+        Destroy(this.gameObject);
     }
 }

@@ -181,6 +181,8 @@ public class UIController : MonoBehaviour
         rateOfManaRegen++;
         primaryFireRate *= .95f;
         secondaryFireRate *= .95f;
+        currentHealth = MAXHP; //full heal on level up
+        currentMana = MAXMANA; //^^what he said
     }
 
 

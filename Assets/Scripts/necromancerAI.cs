@@ -10,6 +10,7 @@ public class necromancerAI : MonoBehaviour
     public GameObject playerVassal;
     public Camera mainCamera;
     public UIController UI;
+    private Transform startingPos;
 
     [Header("Health and Damage Stat Stuffs")]
     public float currentHealth;
@@ -108,6 +109,8 @@ public class necromancerAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startingPos = this.gameObject.transform;
+
         player = GameObject.FindGameObjectWithTag("Player");
         UI = this.gameObject.GetComponent<UIController>();
         mainCamera = Camera.main;
@@ -164,6 +167,8 @@ public class necromancerAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.gameObject.transform.position = startingPos.position; //Keep Necro fixed on a position and don't move an inch
+
         if (Input.GetKeyDown(KeyCode.F)) SingleFireballAttack(); //test only comment out when done testing: tests single fireball attack
         if (Input.GetKeyDown(KeyCode.P)) PillarsOfFireAttack(); //test only comment out when done testing: tests fire pillar Attack
         
