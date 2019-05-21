@@ -11,6 +11,7 @@ public class necromancerAI : MonoBehaviour
     public Camera mainCamera;
     public UIController UI;
     private Transform startingPos;
+    private Animator anim;
 
     [Header("Health and Damage Stat Stuffs")]
     public float currentHealth;
@@ -110,6 +111,7 @@ public class necromancerAI : MonoBehaviour
     void Start()
     {
         startingPos = this.gameObject.transform;
+        anim = GetComponent<Animator>();
 
         player = GameObject.FindGameObjectWithTag("Player");
         UI = this.gameObject.GetComponent<UIController>();
@@ -330,8 +332,8 @@ public class necromancerAI : MonoBehaviour
     }
 
     private void SingleFireballAttack() //throws a single fireball at the player
-    {            
-            
+    {
+        anim.SetTrigger("Attack");  
         GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
 
         projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
@@ -351,6 +353,7 @@ public class necromancerAI : MonoBehaviour
 
     private void summonMinion() //Summons random minion
     {
+        anim.SetTrigger("Attack");
         int randNum = Random.Range(0, 4);
         switch (randNum)
         {
@@ -396,6 +399,7 @@ public class necromancerAI : MonoBehaviour
     private IEnumerator DelaySpawnOfPillars()
     {
         yield return new WaitForSeconds(4f);
+        anim.SetTrigger("Attack");
         int rand = Random.Range(0, 4);
         switch (rand)
         {

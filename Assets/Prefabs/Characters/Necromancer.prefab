@@ -43,8 +43,9 @@ GameObject:
   - component: {fileID: 8912490814479371868}
   - component: {fileID: 8912490814479371809}
   - component: {fileID: 2875933404240998840}
-  - component: {fileID: 7668049904200043645}
   - component: {fileID: 9106848267865482334}
+  - component: {fileID: 4173921289284857485}
+  - component: {fileID: 6599151196491192861}
   m_Layer: 10
   m_Name: Necromancer
   m_TagString: Necromancer
@@ -133,7 +134,7 @@ MonoBehaviour:
   UI: {fileID: 0}
   currentHealth: 0
   MAXHEALTH: 500
-  rateOfAttack: 8
+  rateOfAttack: 5
   lowerBound: 20
   upperBound: 60
   summonsMage: {fileID: 1022283891611942, guid: 701387a6f7f81c944b99b34920ab3fc7,
@@ -190,7 +191,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  pillarOfFire: {fileID: 1691395373167110, guid: bdec8f2dfa96e9c4e828b4cdba570fdc,
+  pillarOfFire: {fileID: 7656256878436638396, guid: ca0ef996d1031414c895a00087dad58e,
     type: 3}
   durationPillarsLastInSeconds: 5
   summonLocation: {fileID: 0}
@@ -202,9 +203,10 @@ MonoBehaviour:
     type: 3}
   musicSource: {fileID: 0}
   dialogueAmbience: {fileID: 8300000, guid: c1bb5927de75f2d429f58e047d6e913f, type: 3}
-  FireBallSound: {fileID: 8300000, guid: a8083e37b6b3744438f3c3e70afa18b1, type: 3}
+  FireBallSound: {fileID: 8300000, guid: 2e7317363076aba4dbd2d315a763c82d, type: 3}
   evilLaugh: {fileID: 8300000, guid: 6fbc8776821173c4f9a1495380bc509f, type: 3}
   summonMinionSound: {fileID: 8300000, guid: eb5f6c573991e424f9d73e21e662f14f, type: 3}
+  dieSound: {fileID: 0}
 --- !u!114 &8912490814479371809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,22 +341,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!70 &7668049904200043645
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8912490814479371869}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 6, y: 8.1}
-  m_Direction: 0
 --- !u!50 &9106848267865482334
 Rigidbody2D:
   serializedVersion: 4
@@ -367,12 +353,57 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_Mass: 1000000
+  m_LinearDrag: 100
+  m_AngularDrag: 100
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &4173921289284857485
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91a2f53bdba00824aa27aeeef98877e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &6599151196491192861
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912490814479371869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.11621857, y: -0.7699585}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6, y: 8.1}
+    newSize: {x: 8.6, y: 7.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5012665, y: 6.5600834}
+  m_EdgeRadius: 0

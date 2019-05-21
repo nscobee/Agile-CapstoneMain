@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1326686080439248, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4107299161409936, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,52 +279,52 @@ PrefabInstance:
     - target: {fileID: 9142940241626194298, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9142940241626194298, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 207008731886939550, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 207008731886939550, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6473818641596117486, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6473818641596117486, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 897270093582939711, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 897270093582939711, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3083579032681176721, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3083579032681176721, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1622878049, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -333,6 +333,26 @@ PrefabInstance:
     - target: {fileID: 1622878049, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: weakAttackDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: strongAttackDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: weakManaLoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: strongManaLoss
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: currentHealth
@@ -357,26 +377,6 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: weakAttackDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: strongAttackDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: weakManaLoss
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: strongManaLoss
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5385997797898832322, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
@@ -7156,7 +7156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660928347398176, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4190605258874208, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19309,42 +19309,6 @@ PrefabInstance:
       objectReference: {fileID: 1269652473}
     - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
-      propertyPath: summonsMage
-      value: 
-      objectReference: {fileID: 1022283891611942, guid: 701387a6f7f81c944b99b34920ab3fc7,
-        type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: summonsMelee
-      value: 
-      objectReference: {fileID: 1326686080439248, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
-        type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: summonsHealer
-      value: 
-      objectReference: {fileID: 1357274984528016, guid: b8173002b43063f43b59e88abfd90ad9,
-        type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: demonOne
-      value: 
-      objectReference: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
-        type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: demonTwo
-      value: 
-      objectReference: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
-        type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: demonThree
-      value: 
-      objectReference: {fileID: 3451249131234036253, guid: 17eed916db7bacd47ad9714757d82269,
-        type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
       propertyPath: TextPanel
       value: 
       objectReference: {fileID: 1507178450}
@@ -19355,45 +19319,9 @@ PrefabInstance:
       objectReference: {fileID: 616626011}
     - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
-      propertyPath: dialogueAmbience
-      value: 
-      objectReference: {fileID: 8300000, guid: c1bb5927de75f2d429f58e047d6e913f, type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: evilLaugh
-      value: 
-      objectReference: {fileID: 8300000, guid: 6fbc8776821173c4f9a1495380bc509f, type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: FireBallSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 2e7317363076aba4dbd2d315a763c82d, type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: summonMinionSound
-      value: 
-      objectReference: {fileID: 8300000, guid: eb5f6c573991e424f9d73e21e662f14f, type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: pillarOfFire
-      value: 
-      objectReference: {fileID: 7656256878436638396, guid: ca0ef996d1031414c895a00087dad58e,
-        type: 3}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
       propertyPath: summonLocation
       value: 
       objectReference: {fileID: 564035305}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: rateOfAttack
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: MAXHEALTH
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 8912490814479371868, guid: a22db90fbf9378d4caeb2e0011a637be,
         type: 3}
       propertyPath: pillarLocationGroup1.Array.data[0]
@@ -19489,51 +19417,8 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 745691732}
-    - target: {fileID: 9106848267865482334, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106848267865482334, guid: a22db90fbf9378d4caeb2e0011a637be,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7668049904200043645, guid: a22db90fbf9378d4caeb2e0011a637be, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22db90fbf9378d4caeb2e0011a637be, type: 3}
---- !u!1 &1904420088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8912490814479371869, guid: a22db90fbf9378d4caeb2e0011a637be,
-    type: 3}
-  m_PrefabInstance: {fileID: 1904420087}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1904420089
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904420088}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.11621857, y: -0.7699585}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 8.1}
-    newSize: {x: 8.6, y: 7.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.5012665, y: 6.5600834}
-  m_EdgeRadius: 0
 --- !u!1001 &1907892936
 PrefabInstance:
   m_ObjectHideFlags: 0
