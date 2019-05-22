@@ -42,6 +42,7 @@ public class BasicMovement : MonoBehaviour
         phantomRigid = phantom.GetComponent<Rigidbody2D>();
         reaper = phantom.GetComponent<ReaperCountdown>();
         phantomControls = phantom.GetComponent<PhantomControls>();
+        aiControls = this.gameObject.GetComponent<BasicAI>();
         if(phantomControls == null)
         {
             print("phantom controls not found");
@@ -68,12 +69,13 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && phantomControls.isPossessing)
         {
             WithDraw();
-
+            phantomControls.speed = 5;
             reaper.outOfBody = true;
             phantomControls.enabled = true;
             phantomControls.isPossessing = false;
             phantom.GetComponent<ReaperCountdown>().despawnTime = 0;
             //mainCamera.transform.parent = phantom.gameObject.transform;
+            phantomControls.speed = 5;
         }
 
         if(phantomControls.isPossessing)
@@ -84,7 +86,7 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             isLookingRight = false;
-            if(!source.isPlaying)
+            if(!source.isPlaying && this.gameObject.tag != "Scribe")
                 source.PlayOneShot(walking, walkingVolume);
 
         }
@@ -92,21 +94,21 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             isLookingRight = true;
-            if (!source.isPlaying)
+            if (!source.isPlaying && this.gameObject.tag != "Scribe")
                 source.PlayOneShot(walking, walkingVolume);
 
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            if (!source.isPlaying)
+            if (!source.isPlaying && this.gameObject.tag != "Scribe")
                 source.PlayOneShot(walking, walkingVolume);
 
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            if (!source.isPlaying)
+            if (!source.isPlaying && this.gameObject.tag != "Scribe")
                 source.PlayOneShot(walking, walkingVolume);
 
         }
@@ -163,6 +165,7 @@ public class BasicMovement : MonoBehaviour
         phantomMesh.enabled = true; //^^^what he said
         phantomRigid.WakeUp();
         aiControls.resetTag();
+        phantomControls.speed = 5;
 
         phantom.transform.parent = null;
         

@@ -121,6 +121,7 @@ public class BasicAI : MonoBehaviour
         phantomRigid = phantom.GetComponent<Rigidbody2D>();
         UIControls = this.gameObject.GetComponent<UIController>();
         PossessionIcon = this.gameObject.GetComponent<PossessIcon>();
+        playerMovement = this.gameObject.GetComponent<BasicMovement>();
         playerObjTransform = phantom.transform;
 
         if (possessOnLowHealth) canPossess = false;
@@ -130,133 +131,148 @@ public class BasicAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
+        if (this.gameObject.tag != "Scribe")
         {
-            if (GameObject.FindGameObjectWithTag("Possessed"))
-                this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime);
-            // if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
-            // {
-            //      this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
-            //  }
-            //  else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-            print("I'm moving towards the possessed!");
-        }
-        if (GameObject.FindGameObjectWithTag("Possessed"))
-            distanceBetweenPlayer = Vector3.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position);
-
-        if (isRetaliating)
-        {
-            Vector3 heading = GameObject.FindGameObjectWithTag("Possessed").transform.position - transform.position;
-            dirNum = AngleDir(transform.forward, heading, transform.up);
-            print("I'm retaliating!");
-            isPatrolling = false;
-            retaliate();
-
-            if (dirNum < 0)
+            if (!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
             {
+                if (GameObject.FindGameObjectWithTag("Possessed"))
+                    this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime);
+                // if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
+                // {
+                //      this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+                //  }
+                //  else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                print("I'm moving towards the possessed!");
+            }
+            if (GameObject.FindGameObjectWithTag("Possessed"))
+                distanceBetweenPlayer = Vector3.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position);
 
-                this.gameObject.transform.eulerAngles = new Vector3(0, this.gameObject.transform.eulerAngles.y + 180, 0);
+            if (isRetaliating)
+            {
+                Vector3 heading = GameObject.FindGameObjectWithTag("Possessed").transform.position - transform.position;
+                dirNum = AngleDir(transform.forward, heading, transform.up);
+                print("I'm retaliating!");
+                isPatrolling = false;
+                retaliate();
+
+                if (dirNum < 0)
+                {
+
+                    this.gameObject.transform.eulerAngles = new Vector3(0, this.gameObject.transform.eulerAngles.y + 180, 0);
+
+                }
 
             }
-
         }
     }
 
     private void Update()
     {
-        randNum = Random.Range(0f, 100f);
+        if (this.gameObject.tag != "Scribe")
+        {
 
-        if (isPursuing)
-            ChaseThePlayer();
-       // if (!phantomControls.isPossessing)
-       // {
-            
+            randNum = Random.Range(0f, 100f);
+
+            if (isPursuing)
+                ChaseThePlayer();
+            // if (!phantomControls.isPossessing)
+            // {
+
             //levelMultiplierAP = 1;
             //levelMultiplierHP = 1;
-       // }
+            // }
 
-        float startTime = Time.time;
-        //isPatrolling = true;
-       // if (isRetaliating)
-      //  {
-       //     isPatrolling = false;
+            float startTime = Time.time;
+            //isPatrolling = true;
+            // if (isRetaliating)
+            //  {
+            //     isPatrolling = false;
             //ChaseThePlayer();
-      //  }
+            //  }
 
-        if (isPatrolling)
-        {
-            // if there is no target it gets one
-            if (currentTarget == null && patrolPoints.Count > 0)
+            if (isPatrolling)
             {
-                currentTarget = FindTarget(patrolPoints);
-            }
-
-            if (currentTarget != null)
-            {
-                // Move toward the target
-                Wander(this.transform, currentTarget.transform);
-
-                // checks if its too close to target
-                if (Vector2.Distance(this.transform.position, currentTarget.transform.position) < stopDistance)
+                // if there is no target it gets one
+                if (currentTarget == null && patrolPoints.Count > 0)
                 {
-                    currentTarget = null;
+                    currentTarget = FindTarget(patrolPoints);
+                }
+
+                if (currentTarget != null)
+                {
+                    // Move toward the target
+                    Wander(this.transform, currentTarget.transform);
+
+                    // checks if its too close to target
+                    if (Vector2.Distance(this.transform.position, currentTarget.transform.position) < stopDistance)
+                    {
+                        currentTarget = null;
+                    }
                 }
             }
+
+            nextAIAttack += Time.deltaTime;
+            if (nextAIAttack >= AttackCooldown)
+            {
+                canAttack = true;
+                nextAIAttack = 0;
+            }
+
+            if (UIControls.currentHealth <= 0 && !phantomControls.isPossessing)
+            {
+                UIControls.Die();
+            }
+            /*
+                    if(!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
+                    {
+                        if(GameObject.FindGameObjectWithTag("Possessed"))
+                        this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime);
+                       // if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
+                       // {
+                      //      this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+                      //  }
+                      //  else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                        print("I'm moving towards the possessed!");
+                    }
+                    if(GameObject.FindGameObjectWithTag("Possessed"))
+                    distanceBetweenPlayer = Vector3.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position);
+
+
+
+                    if (isRetaliating)
+                    {
+                        Vector3 heading = GameObject.FindGameObjectWithTag("Possessed").transform.position - transform.position;
+                        dirNum = AngleDir(transform.forward, heading, transform.up);
+                        print("I'm retaliating!");
+                            isPatrolling = false;
+                            retaliate();
+
+                        if (dirNum < 0)
+                            {
+
+                                this.gameObject.transform.eulerAngles = new Vector3(0, this.gameObject.transform.eulerAngles.y + 180, 0);
+
+                            }
+
+                    }*/
+
+            if (!GameObject.FindGameObjectWithTag("Possessed")) isRetaliating = false;
+            if (GameObject.FindGameObjectWithTag("Possessed"))
+                if (tagOverride != "" && GameObject.FindGameObjectWithTag("Possessed").GetComponent<BasicAI>().tagOverride == tagOverride)
+                    isAggressive = false;
+            if (isAggressive && distanceBetweenPlayer <= aggroDistance)
+                isRetaliating = true;
+
+        }
+        else
+        {
+            playerMovement.movementSpeed = 0;
+            isRetaliating = false;
+            canPossess = true;
+            isAggressive = false;
         }
 
-        nextAIAttack += Time.deltaTime;
-        if(nextAIAttack >= AttackCooldown)
-        {
-            canAttack = true;
-            nextAIAttack = 0;
-        }
-
-        if (UIControls.currentHealth <= 0 && !phantomControls.isPossessing)
-        {
-            UIControls.Die();
-        }
-/*
-        if(!playerInRangeToAttack && isRetaliating && this.gameObject.tag != "Possessed" && movingToPlayer)
-        {
-            if(GameObject.FindGameObjectWithTag("Possessed"))
-            this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position, speed * Time.deltaTime);
-           // if((GameObject.FindGameObjectWithTag("Possessed").transform.position.x - this.gameObject.transform.position.x < 0))
-           // {
-          //      this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
-          //  }
-          //  else this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-            print("I'm moving towards the possessed!");
-        }
-        if(GameObject.FindGameObjectWithTag("Possessed"))
-        distanceBetweenPlayer = Vector3.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Possessed").transform.position);
-       
-       
-           
-        if (isRetaliating)
-        {
-            Vector3 heading = GameObject.FindGameObjectWithTag("Possessed").transform.position - transform.position;
-            dirNum = AngleDir(transform.forward, heading, transform.up);
-            print("I'm retaliating!");
-                isPatrolling = false;
-                retaliate();
-
-            if (dirNum < 0)
-                {
         
-                    this.gameObject.transform.eulerAngles = new Vector3(0, this.gameObject.transform.eulerAngles.y + 180, 0);
-     
-                }
-         
-        }*/
-
-        if (!GameObject.FindGameObjectWithTag("Possessed")) isRetaliating = false;
-        if (GameObject.FindGameObjectWithTag("Possessed"))
-            if (tagOverride != "" && GameObject.FindGameObjectWithTag("Possessed").GetComponent<BasicAI>().tagOverride == tagOverride)
-                isAggressive = false;
-        if (isAggressive && distanceBetweenPlayer <= aggroDistance)
-            isRetaliating = true;
-
-
     }
 
     // when the player possess a AI it destories the phantom and enables the player movement on the 
@@ -288,6 +304,11 @@ public class BasicAI : MonoBehaviour
         possessingThisObject = true;
 
         healOnPossess();
+        if (this.gameObject.tag == "Scribe")
+        {
+            phantomControls.speed = 0;
+            this.gameObject.GetComponent<SavePointFunctions>().OnPossess();
+        }
     }
 
     // this is to let the spawner know that it can send out another AI
@@ -382,7 +403,7 @@ public class BasicAI : MonoBehaviour
 
     public void healOnPossess()
     {
-        if (!phantom.GetComponent<levelingScript>().NPC_Levels.Contains(NPC_ID))
+        if (!phantom.GetComponent<levelingScript>().NPC_Levels.Contains(NPC_ID) && this.gameObject.tag != "Scribe")
         {
             UIControls.currentHealth = UIControls.MAXHP;
             UIControls.currentMana = UIControls.MAXMANA;

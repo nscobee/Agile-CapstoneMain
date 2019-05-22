@@ -34,6 +34,9 @@ public class SaveLoadController : MonoBehaviour
 
     private void Update()
     {
+        if (GameObject.FindGameObjectWithTag("Scribe"))
+            GameObject.FindGameObjectWithTag("Scribe").GetComponent<SavePointFunctions>().scontrol = this;
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Scene newScene = SwitchScene(1);

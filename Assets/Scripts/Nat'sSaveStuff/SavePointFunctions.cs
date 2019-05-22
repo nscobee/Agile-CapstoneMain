@@ -5,12 +5,11 @@ using UnityEngine;
 public class SavePointFunctions : MonoBehaviour
 {
     public SaveLoadController scontrol;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnPossess()
     {
-        if(collision.name == "Phantom2.0")
-        {
+       
             scontrol.SaveLevel();
-        }
+        
 
     }
 }
