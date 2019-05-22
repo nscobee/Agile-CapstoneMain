@@ -9,13 +9,14 @@ public static class SaveAndLoad
     public static List<LevelData> savedGames = new List<LevelData>();
     //public static LevelData savedGame = new LevelData();
     public static string saveNameFolder = "ThisIsATest";
-
+    
     public static void Save()
     {
         UnityEngine.Debug.Log("Saving from SaveAndLoad");
         savedGames.Add(LevelData.current);
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/" + saveNameFolder + "/savedGames.txt");
+        var directory = Directory.CreateDirectory(Application.persistentDataPath + "/REVENANTSOUL");
+        FileStream file = File.Create(Application.persistentDataPath + "/" + directory + "/savedGames.txt");
         bf.Serialize(file, SaveAndLoad.savedGames);
         file.Close();
     }
