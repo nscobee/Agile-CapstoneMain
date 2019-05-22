@@ -403,7 +403,7 @@ public class BasicAI : MonoBehaviour
 
     public void healOnPossess()
     {
-        if (!phantom.GetComponent<levelingScript>().NPC_Levels.Contains(NPC_ID) && this.gameObject.tag != "Scribe")
+        if (!phantom.GetComponent<levelingScript>().NPC_Levels.Contains(NPC_ID) && startingTag != "Scribe")
         {
             UIControls.currentHealth = UIControls.MAXHP;
             UIControls.currentMana = UIControls.MAXMANA;
