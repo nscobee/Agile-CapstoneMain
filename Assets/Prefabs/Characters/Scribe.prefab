@@ -151,7 +151,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   phantomMesh: {fileID: 0}
   phantomRigid: {fileID: 0}
   isLookingRight: 1
-  depossessSound: {fileID: 0}
+  depossessSound: {fileID: 8300000, guid: dc6470e481eb8f24f9b444dd823b583d, type: 3}
   walking: {fileID: 0}
   walkingVolume: 0
 --- !u!114 &682591387
@@ -307,8 +307,9 @@ MonoBehaviour:
   possessingThisObject: 0
   canPossess: 1
   possessOnLowHealth: 0
+  isPossessingScribe: 1
   dirNum: 0
-  possessSound: {fileID: 0}
+  possessSound: {fileID: 8300000, guid: 6c6eb9e9300e7384a93ecd6a20b7f046, type: 3}
   swordAttackSound: {fileID: 0}
   heavySwordAttackSound: {fileID: 0}
   MagicAttackSound: {fileID: 0}
@@ -316,6 +317,7 @@ MonoBehaviour:
   HealSound: {fileID: 0}
   dogAttackSound: {fileID: 0}
   demonSlashSound: {fileID: 0}
+  scribeSound: {fileID: 8300000, guid: 9c2f7e23ff1561b4ba518d4d1a4ab9b8, type: 3}
   phantom: {fileID: 0}
   phantomBox: {fileID: 0}
   phantomMesh: {fileID: 0}

@@ -113,7 +113,7 @@ public class BasicMovement : MonoBehaviour
 
         }
 
-        if (isLookingRight)
+        if (isLookingRight && aiControls.startingTag != "Scribe")
         {
             this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
             //mainCamera.transform.eulerAngles = new Vector3(0, 0, 0);
@@ -156,6 +156,7 @@ public class BasicMovement : MonoBehaviour
     // TODO: Make function for becoming non Possed but not killing the AI
     public void WithDraw()
     {
+       
         source.PlayOneShot(depossessSound);
 
         
