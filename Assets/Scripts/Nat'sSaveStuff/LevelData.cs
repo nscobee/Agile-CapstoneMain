@@ -27,6 +27,8 @@ public class EnemyData
     public float xPos, yPos, zPos;
     public float currentHealth;
     public float currentMana;
+    public int npcLevel;
+    public int npcID;
 }
 
 [Serializable]
@@ -35,6 +37,7 @@ public class PlayerData
     public float xPos, yPos, zPos;
     public float currentHealth;
     public bool isPossessing;
+    public List<int> npcs = new List<int>();
 }
 
 

@@ -23,11 +23,11 @@ public static class SaveAndLoad
 
     public static LevelData Load()
     {
-        if(File.Exists(Application.persistentDataPath + "/" + saveNameFolder + "/savedGames.txt"))
+        if(File.Exists(Application.persistentDataPath + "/REVENANTSOUL" + "/savedGames.txt"))
         {
-            UnityEngine.Debug.Log("Loading from file: " + Application.persistentDataPath + "/" + saveNameFolder + "/savedGames.txt");
+            UnityEngine.Debug.Log("Loading from file: " + Application.persistentDataPath + "/REVENANTSOUL" + "/savedGames.txt");
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/" + saveNameFolder + "/savedGames.txt", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/REVENANTSOUL" + "/savedGames.txt", FileMode.Open);
             SaveAndLoad.savedGames = (List<LevelData>)bf.Deserialize(file);
             file.Close();
         }

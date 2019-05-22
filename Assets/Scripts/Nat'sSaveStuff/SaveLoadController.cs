@@ -222,6 +222,8 @@ public class SaveLoadController : MonoBehaviour
         playerDat.yPos = player.gameObject.transform.position.y;
         playerDat.zPos = player.gameObject.transform.position.z;
 
+        playerDat.npcs = player.gameObject.GetComponent<levelingScript>().NPC_Levels;
+
         playerDat.isPossessing = player.isPossessing;
         levelData.player = playerDat;
 
@@ -236,6 +238,8 @@ public class SaveLoadController : MonoBehaviour
 
             enemyDat.currentHealth = meleeEnemy.gameObject.GetComponent<UIController>().currentHealth;
             enemyDat.currentMana = meleeEnemy.gameObject.GetComponent<UIController>().currentMana;
+            enemyDat.npcLevel = meleeEnemy.gameObject.GetComponent<BasicAI>().currentLevel;
+            enemyDat.npcID = meleeEnemy.gameObject.GetComponent<BasicAI>().NPC_ID;
             levelData.enemyList.Add(enemyDat);
         }
 
@@ -250,6 +254,8 @@ public class SaveLoadController : MonoBehaviour
 
             enemyDat.currentHealth = mageEnemy.gameObject.GetComponent<UIController>().currentHealth;
             enemyDat.currentMana = mageEnemy.gameObject.GetComponent<UIController>().currentMana;
+            enemyDat.npcLevel = mageEnemy.gameObject.GetComponent<BasicAI>().currentLevel;
+            enemyDat.npcID = mageEnemy.gameObject.GetComponent<BasicAI>().NPC_ID;
             levelData.enemyList.Add(enemyDat);
         }
 
@@ -263,6 +269,8 @@ public class SaveLoadController : MonoBehaviour
 
             healerDat.currentHealth = healerEnemy.gameObject.GetComponent<UIController>().currentHealth;
             healerDat.currentMana = healerEnemy.gameObject.GetComponent<UIController>().currentMana;
+            healerDat.npcLevel = healerEnemy.gameObject.GetComponent<BasicAI>().currentLevel;
+            healerDat.npcID = healerEnemy.gameObject.GetComponent<BasicAI>().NPC_ID;
             levelData.enemyList.Add(healerDat);
         }
 
@@ -276,6 +284,8 @@ public class SaveLoadController : MonoBehaviour
 
             commonerDat.currentHealth = commonEnemy.gameObject.GetComponent<UIController>().currentHealth;
             commonerDat.currentMana = commonEnemy.gameObject.GetComponent<UIController>().currentMana;
+            commonerDat.npcLevel = commonEnemy.gameObject.GetComponent<BasicAI>().currentLevel;
+            commonerDat.npcID = commonEnemy.gameObject.GetComponent<BasicAI>().NPC_ID;
             levelData.enemyList.Add(commonerDat);
         }
 
