@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1326686080439248, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4107299161409936, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,52 +279,52 @@ PrefabInstance:
     - target: {fileID: 9142940241626194298, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9142940241626194298, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 207008731886939550, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 207008731886939550, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6473818641596117486, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6473818641596117486, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 897270093582939711, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 897270093582939711, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3083579032681176721, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3083579032681176721, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1622878049, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -333,26 +333,6 @@ PrefabInstance:
     - target: {fileID: 1622878049, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.012413025
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: weakAttackDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: strongAttackDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: weakManaLoss
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
-        type: 3}
-      propertyPath: strongManaLoss
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: currentHealth
@@ -377,6 +357,26 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: ceb001ec24bf8484bb3467952012f5e3, type: 3}
       propertyPath: percentOfHealthToPossess
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: weakAttackDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: strongAttackDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: weakManaLoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024292634913850, guid: ceb001ec24bf8484bb3467952012f5e3,
+        type: 3}
+      propertyPath: strongManaLoss
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5385997797898832322, guid: ceb001ec24bf8484bb3467952012f5e3,
         type: 3}
@@ -7156,7 +7156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660928347398176, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4190605258874208, guid: c1c0a45cb3ab5eb49a8ed365cd0d4c17, type: 3}
       propertyPath: m_LocalPosition.x
