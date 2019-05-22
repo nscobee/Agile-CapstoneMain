@@ -731,7 +731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287717906
 GameObject:
@@ -1310,11 +1310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.188839
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7606961
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1338,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4826611559010620, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -89024,6 +89024,21 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: isAggressive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: aggroDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: distanceToForgetPlayer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
 --- !u!1001 &1105963657
@@ -89569,7 +89584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1304761689
 GameObject:
@@ -90334,6 +90349,21 @@ PrefabInstance:
       propertyPath: possessOnLowHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: isAggressive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: aggroDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: distanceToForgetPlayer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
 --- !u!1 &1419223195
@@ -90844,7 +90874,12 @@ PrefabInstance:
     - target: {fileID: 114408053851157008, guid: 701387a6f7f81c944b99b34920ab3fc7,
         type: 3}
       propertyPath: aggroDistance
-      value: 7
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: 701387a6f7f81c944b99b34920ab3fc7,
+        type: 3}
+      propertyPath: distanceToForgetPlayer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: percentOfHealthToPossess
@@ -95280,7 +95315,7 @@ Transform:
   - {fileID: 8705713200635151144}
   - {fileID: 5341711123496850554}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50173866348314892
 Rigidbody2D:

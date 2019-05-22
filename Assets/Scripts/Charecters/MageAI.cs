@@ -97,7 +97,16 @@ public class MageAI : BasicAI
             }
         }
 
-         
+        if (Input.GetKeyDown(KeyCode.LeftControl)) //cheat code to make u stronk
+
+        {
+            if (this.gameObject.tag == "Possessed")
+            {
+                fireballDamageAmount = 100;
+                AOEDamageAmount = 100;
+            }
+        }
+
 
     }
 

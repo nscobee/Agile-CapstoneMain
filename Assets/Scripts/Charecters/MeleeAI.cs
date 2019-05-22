@@ -101,6 +101,15 @@ public class MeleeAI : BasicAI {
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.LeftControl)) //cheat code to make u stronk
+
+        {
+            if (this.gameObject.tag == "Possessed")
+            {
+                weakAttackDamage = 100;
+                strongAttackDamage = 100;
+            }
+        }
     }
 
     public void meleeAttack(float damage)

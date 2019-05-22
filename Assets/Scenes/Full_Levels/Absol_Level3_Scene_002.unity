@@ -491,6 +491,16 @@ PrefabInstance:
       propertyPath: dropChance
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: isAggressive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: aggroDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5385997797898832322, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1313,7 +1323,7 @@ Transform:
   - {fileID: 1903682693}
   - {fileID: 1103977417}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &536288533
 PrefabInstance:
@@ -1658,7 +1668,7 @@ Transform:
   - {fileID: 324355925}
   - {fileID: 2126136876}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &658864900
 PrefabInstance:
@@ -44590,6 +44600,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: 701387a6f7f81c944b99b34920ab3fc7,
+        type: 3}
+      propertyPath: isAggressive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114408053851157008, guid: 701387a6f7f81c944b99b34920ab3fc7,
+        type: 3}
+      propertyPath: aggroDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1199884532, guid: 701387a6f7f81c944b99b34920ab3fc7, type: 3}
       propertyPath: rateOfManaRegen
       value: 5
@@ -44790,6 +44810,16 @@ PrefabInstance:
     - target: {fileID: 1275089142, guid: 8606e0c14bfbd0441ab52c2e5cf1b479, type: 3}
       propertyPath: dropChance
       value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: isAggressive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114343144908863274, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
+        type: 3}
+      propertyPath: aggroDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5385997797898832322, guid: 8606e0c14bfbd0441ab52c2e5cf1b479,
         type: 3}
@@ -45005,7 +45035,7 @@ Transform:
   - {fileID: 329357457}
   - {fileID: 1554224506}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126136875
 GameObject:

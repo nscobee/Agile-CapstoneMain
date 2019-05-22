@@ -99,6 +99,17 @@ public class healerAI : BasicAI {
                 
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl)) //cheat code to make u stronk
+
+        {
+            if (this.gameObject.tag == "Possessed")
+            {
+                fireballDamageAmount = 100;
+                fireballDamageAmount = 100;
+                healPlayerAmount = 100;
+            }
+        }
     }
 
 
@@ -111,16 +122,17 @@ public class healerAI : BasicAI {
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
 
-        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
-        
-        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+        /* GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
 
-        projectileBullet.GetComponent<Projectile>().setTarget(target);
+         projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
 
-        this.GetComponent<UIController>().useMana(fireManaLoss);
+         projectileBullet.GetComponent<Projectile>().setTarget(target);
 
-        //destroys bullet after 4 seconds ish
-        Destroy(projectileBullet, 4f);
+         this.GetComponent<UIController>().useMana(fireManaLoss);
+
+         //destroys bullet after 4 seconds ish
+         Destroy(projectileBullet, 4f);*/
+        StartCoroutine(AttackAtAnimationTime(.2f, target));
     }
 
     public void FireAttack(Transform playerTransform)
@@ -135,14 +147,15 @@ public class healerAI : BasicAI {
             Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
 
-            GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
-            projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
-            projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
+            /* GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+             projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+             projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
 
-            this.GetComponent<UIController>().useMana(fireManaLoss);
+             this.GetComponent<UIController>().useMana(fireManaLoss);
 
-            //destroys bullet after 4 seconds ish
-            Destroy(projectileBullet, 4f);
+             //destroys bullet after 4 seconds ish
+             Destroy(projectileBullet, 4f);*/
+            StartCoroutine(AttackAtAnimationTime(.2f, playerObjTransform));
         }
     }
 
@@ -178,6 +191,36 @@ public class healerAI : BasicAI {
         {
             playerInRange = false;
         }
+    }
+
+    private IEnumerator AttackAtAnimationTime(float animTime, Vector3 target)
+    {
+
+        yield return new WaitForSeconds(animTime);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+        projectileBullet.GetComponent<Projectile>().setTarget(target);
+
+        this.GetComponent<UIController>().useMana(fireManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBullet, 4f);
+    }
+
+    private IEnumerator AttackAtAnimationTime(float animTime, Transform playerTransform)
+    {
+
+        yield return new WaitForSeconds(animTime);
+        GameObject projectileBullet = Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity, this.gameObject.transform);
+
+        projectileBullet.GetComponent<Projectile>().damage = fireballDamageAmount;
+        projectileBullet.GetComponent<Projectile>().setTarget(playerTransform.position);
+
+        this.GetComponent<UIController>().useMana(fireManaLoss);
+
+        //destroys bullet after 4 seconds ish
+        Destroy(projectileBullet, 4f);
     }
 
 
